@@ -1,0 +1,47 @@
+[staticPage]
+==
+{% component 'staticPage' %}<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+                                
+        <meta name="author" content="JumpLink">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        
+        <meta name="theme-color" content="#1E88E5">
+        {% styles %}
+        {# assets/scss/theme.scss #}
+        <link href="{{ [
+            'assets/css/theme.css', 
+        ]|theme }}" rel="stylesheet">
+    
+    </head>
+    <body id="{{ str_studly(this.page.title) }}">
+    
+        {% partial 'navbar' %}
+        
+        {# Content #}
+        <section id="layout-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>{{ this.page.title }}</h1>
+                        <hr>
+                       {% page %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {# Scripts #}
+        <script src="{{ [
+            'assets/vendor/jquery/dist/jquery.min.js',
+            'assets/vendor/bootstrap/dist/js/bootstrap.js',
+            'assets/vendor/slick-carousel/slick/slick.js',
+        ]|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+        
+    </body>
+</html>

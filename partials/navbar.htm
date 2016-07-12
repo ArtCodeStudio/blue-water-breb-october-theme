@@ -1,0 +1,12 @@
+[staticMenu main]
+code = "main"
+
+[viewBag]
+==
+<nav class="navbar navbar-light bg-faded" id="navbar-main">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container hidden-sm-down">
+        <a href="{{ 'home' | page }}" class="navbar-brand">&nbsp;</a>
+        {% partial 'navigation/navbar-items' items=main.menuItems class='nav navbar-nav pull-xs-right hidden-sm-down' itemClass='nav-item' %}
+    </div>
+</nav>

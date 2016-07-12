@@ -1,0 +1,29 @@
+{
+  "name": "breb-october-theme",
+  "authors": [
+    "Pascal Garber <pascal@jumplink.eu>",
+    "Marc Wensauer <marc@jumplink.me>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "http://www.jumplink.eu/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.2",
+    "slick-carousel": "^1.6.0",
+    "font-awesome": "^4.6.3",
+    "simpler-sidebar": "^1.4.11",
+    "jquery": "2.*"
+  },
+  "resolutions": {
+    "jquery": "1.9.1 - 2",
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}

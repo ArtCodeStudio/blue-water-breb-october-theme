@@ -1,0 +1,12 @@
+// change the default values, if so remove `!default` on the and of the variable
+@import 'variables';
+@import '../vendor/bootstrap/scss/bootstrap.scss';
+@import '../vendor/font-awesome/scss/font-awesome.scss';
+@import '../vendor/slick-carousel/slick/slick.scss';
+@import '../vendor/slick-carousel/slick/slick-theme.scss';
+
+@import 'helper';
+@import 'layout';
+@import 'slideshow';
+
+
