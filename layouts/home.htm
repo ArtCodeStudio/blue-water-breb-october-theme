@@ -1,0 +1,72 @@
+[slideshow]
+slideshow = 2
+numberOfSlide = 5
+injectSlickAssets = 0
+injectSlickTheme = 0
+injectJLSlideshowCSS = 0
+aspectRatio = "ratio-1-1"
+captionPosition = "middle center"
+autoplayOnShow = 1
+nextSlideOnEnd = 1
+accessibility = 1
+autoplay = 1
+autoplaySpeed = 3000
+arrows = 0
+prevArrow = "<button type=\"button\" class=\"slick-prev\">Previous</button>;"
+nextArrow = "<button type=\"button\" class=\"slick-next\">Next</button>;"
+centerPadding = "50px"
+cssEase = "ease"
+dotsClass = "slick-dots"
+draggable = 1
+easing = "linear"
+edgeFriction = 0.15
+infinite = 1
+initialSlide = 0
+lazyLoad = "ondemand"
+pauseOnFocus = 1
+pauseOnHover = 1
+respondTo = "window"
+rows = 1
+slidesPerRow = 1
+slidesToShow = 1
+slidesToScroll = 1
+speed = 300
+swipe = 1
+touchMove = 1
+touchThreshold = 5
+useCSS = 1
+useTransform = 1
+waitForAnimate = 1
+zIndex = 1000
+
+[staticPage]
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'html_head' %}
+    </head>
+    <body id="{{ str_studly(this.page.title) }}">
+    
+        {% partial 'navbar' %}
+        
+        {% component 'slideshow' %}
+        
+        {# Content #}
+        <section id="layout-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>{{ this.page.title }}</h1>
+                        <hr>
+                       {% page %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        {% partial 'body_foot' %}    
+        
+    </body>
+</html>
