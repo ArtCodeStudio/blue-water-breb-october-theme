@@ -1,12 +1,25 @@
-// change the default values, if so remove `!default` on the and of the variable
+// change the default values, if so remove `!default` on the end of the variable
+
 @import 'variables';
+
 @import '../vendor/bootstrap/scss/bootstrap.scss';
-@import '../vendor/font-awesome/scss/font-awesome.scss';
+
 @import '../vendor/slick-carousel/slick/slick.scss';
 @import '../vendor/slick-carousel/slick/slick-theme.scss';
+
+@import '../vendor/font-awesome/scss/font-awesome.scss';
+
 
 @import 'helper';
 @import 'layout';
 @import 'slideshow';
 
+@import 'navbar';
 
+.bg-faded {
+    background-color: white;
+}
+
+#overview .container .row div p {
+    height:137px;
+}
