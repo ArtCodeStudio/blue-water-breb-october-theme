@@ -1,2 +1,7 @@
 static-pages:
     index: {  }
+    shipping: {  }
+    liner-services: {  }
+    port-agency: {  }
+    offshore: {  }
+    contact: {  }

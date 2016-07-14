@@ -1,21 +1,62 @@
 name: main
 items:
     -
-        title: Startseite
-        nesting: '0'
-        type: static-page
+        title: Shipping
+        nesting: ''
+        type: url
+        url: /shipping
         code: ''
-        reference: index
-        replace: '0'
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
-        title: 'New menu item 2'
+        title: 'Liner Services'
         nesting: ''
         type: url
-        url: /
+        url: /liner-services
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Port Agency'
+        nesting: ''
+        type: url
+        url: /port-agency
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Offshore
+        nesting: ''
+        type: url
+        url: /offshore
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Contact
+        nesting: ''
+        type: url
+        url: /contact
         code: ''
         reference: ''
         cmsPage: ''
