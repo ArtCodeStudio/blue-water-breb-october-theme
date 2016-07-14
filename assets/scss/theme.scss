@@ -3,23 +3,39 @@
 @import 'variables';
 
 @import '../vendor/bootstrap/scss/bootstrap.scss';
-
-@import '../vendor/slick-carousel/slick/slick.scss';
-@import '../vendor/slick-carousel/slick/slick-theme.scss';
-
 @import '../vendor/font-awesome/scss/font-awesome.scss';
 
 
 @import 'helper';
 @import 'layout';
 @import 'slideshow';
-
+@import 'shadow';
+@import 'buttons';
 @import 'navbar';
+
 
 .bg-faded {
     background-color: white;
 }
 
-#overview .container .row div p {
-    height:137px;
+
+#about-teaser-text{
+    
+}
+
+.section-headline-text .border-top {
+    
+    border-top: solid $brand-primary 4px;
+    margin-bottom: 14px;
+    width: 61px;
+    
+}
+
+.overview-content-container {
+     min-height:177px;
+     text-align: justify;
+}
+
+h3, h4{
+    color: $brand-primary !important;
 }

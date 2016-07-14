@@ -1,0 +1,15 @@
+$navbar-brand-height: 37px;
+$navbar-brand-width: 150px;
+
+.navbar{
+    
+    .navbar-brand {
+        min-width: $navbar-brand-width;
+        height: $navbar-brand-height;
+        background-image: url(../images/logo/BX_RZ_BremerReederei_pos_RGB.png);
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: 100% auto;   
+    }
+    
+}
