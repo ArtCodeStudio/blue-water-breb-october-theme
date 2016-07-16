@@ -6995,9 +6995,6 @@ a.bg-danger:focus, a.bg-danger:hover {
       color: #3a599f;
       opacity: 1; }
 
-.slick-slide {
-  position: relative; }
-
 .carousel-caption-wrapper {
   position: absolute;
   display: -webkit-box;
@@ -7022,53 +7019,6 @@ a.bg-danger:focus, a.bg-danger:hover {
     .carousel-caption-wrapper.center img {
       margin-left: auto;
       margin-right: auto; }
-  .carousel-caption-wrapper.middle {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    bottom: 0;
-    top: 0;
-    height: 100%; }
-  .carousel-caption-wrapper.bottom {
-    bottom: 0;
-    padding-bottom: 0; }
-  .carousel-caption-wrapper.left {
-    left: 0;
-    right: inherit; }
-  .carousel-caption-wrapper.right {
-    left: inherit;
-    right: 0; }
-  .carousel-caption-wrapper .carousel-caption-content {
-    padding: 15px; }
-
-.carousel-caption-wrapper {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .carousel-caption-wrapper .carousel-caption-wrapper.top {
-    top: 0;
-    padding-top: 0; }
-  .carousel-caption-wrapper.center {
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
   .carousel-caption-wrapper.middle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7259,3 +7209,6 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 h3, h4 {
   color: #3a599f !important; }
+
+.card {
+  border: 1px solid #3a599f !important; }
