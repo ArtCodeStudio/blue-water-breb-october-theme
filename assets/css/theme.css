@@ -7119,8 +7119,11 @@ a.bg-danger:focus, a.bg-danger:hover {
       color: white;
       border-color: white; }
   .btn.btn-red-outline {
-    color: red;
-    border-color: red; }
+    color: #d9534f;
+    border: 2px solid #d9534f; }
+  .btn.btn-blue-outline {
+    color: #3a599f;
+    border: 2px solid #3a599f; }
   .btn.btn-primary:hover {
     background-color: #466abc;
     border-color: #466abc; }
@@ -7207,8 +7210,31 @@ a.bg-danger:focus, a.bg-danger:hover {
   min-height: 177px;
   text-align: justify; }
 
-h3, h4 {
+h3, h4, .card-block .text-sm-right {
   color: #3a599f !important; }
 
 .card {
   border: 1px solid #3a599f !important; }
+
+.card-block img {
+  margin-bottom: 15px;
+  width: 100%;
+  position: relative;
+  margin-left: -20px;
+  margin-top: -20px; }
+
+.card-block .text-sm-right {
+  margin-bottom: 15px; }
+
+.learn-more a {
+  color: #d9534f !important; }
+
+.carousel-video-wrapper video, .carousel-image-wrapper img {
+  opacity: 0.6 !important; }
+
+#latest-blog-posts-row {
+  background-color: #3a599f !important;
+  margin-bottom: 28px !important; }
+
+#footer-brand-logo-container {
+  text-align: center !important; }

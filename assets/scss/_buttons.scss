@@ -21,8 +21,19 @@
     
     &.btn-red-outline {
        // @extend .btn-info-outline;
-        color: red;
-        border-color: red;
+        color: $brand-danger;
+        border: 2px solid $brand-danger;
+        &:hover {
+            //color: white;
+            //border-color: white;
+            // background-color: lighten($brand-primary, 8%);
+        }
+    }  
+    &.btn-blue-outline {
+       // @extend .btn-info-outline;
+        color: $brand-primary;
+       // border-color: $brand-primary;
+        border: 2px solid  $brand-primary;
         &:hover {
             //color: white;
             //border-color: white;
