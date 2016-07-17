@@ -21,10 +21,10 @@ function onEnd(){
 ==
 <div id="press-releases" data-target="#press-releases"> 
 
-    <div class="container-fluid text-xs-center p-y-3">
+    <div class="container text-xs-center p-y-3">
 
         <div class="row">
-            <div class="col-xs-12 section-headline-text" >
+            <div class="col-xs-12 section-headline-text  p-y-3" >
                 <div class="border-top"></div>
                 <h3 class="text-xs-left">Press Releases</h3>               
             </div>
@@ -66,7 +66,7 @@ function onEnd(){
                 </div>
 
             {% else %}
-                <li class="no-data">{{ noPostsMessage }}</li>
+                <div class="no-data">{{ noPostsMessage }}</div>
             {% endfor %}
                 
         </div>
