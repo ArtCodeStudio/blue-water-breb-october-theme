@@ -7298,3 +7298,6 @@ h3, h4, .card-block .text-sm-right {
 #liner-services #liner-services-sliedeshow-container {
   margin: 0 !important;
   padding: 0 !important; }
+
+.slick-prev, .slick-next {
+  background-color: red !important; }

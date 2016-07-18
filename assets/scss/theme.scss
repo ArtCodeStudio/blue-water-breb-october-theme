@@ -169,3 +169,8 @@ h3, h4, .card-block .text-sm-right{
     margin: 0 !important;
     padding: 0 !important;
 }
+
+// 2do : fix position and arrow color, slick carousel to wider , need no content padding left and right
+    .slick-prev, .slick-next{
+        background-color: red !important;
+    }
