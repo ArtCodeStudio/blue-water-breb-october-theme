@@ -1,0 +1,21 @@
+title = "blog"
+url = "/blog"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog"
+==
+<div id="latest-blog-posts" data-target="#latest-blog-posts"> 
+
+    <div class="container p-y-3">
+
+        {% component 'blogCategories' %}
+
+    </div>
+
+</div>

@@ -8,6 +8,7 @@
     <body id="{{ str_studly(this.page.title) }}">
     
         {% partial 'navbar' %}
+        
         {# Content #}
         <section id="layout-content">
             <div class="container">
@@ -21,6 +22,16 @@
             </div>
         </section>
         
+        {% partial 'footer_brand' %}
+     
+
+        {% partial 'body_foot' %}    
+        
+        {% partial 'footer_navigation' %}    
+        
+        {% partial 'footer_contact' %}    
+        
+        {% partial 'footer_legal' %} 
         
         {% partial 'body_foot' %}    
         
