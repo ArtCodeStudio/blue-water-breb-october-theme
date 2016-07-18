@@ -7292,7 +7292,9 @@ h3, h4, .card-block .text-sm-right {
 .main-navigation {
   margin-top: 40px; }
 
+#liner-services #liner-services-content-container {
+  text-align: justify !important; }
+
 #liner-services #liner-services-sliedeshow-container {
-  text-align: justify !important;
   margin: 0 !important;
   padding: 0 !important; }
