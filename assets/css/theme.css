@@ -7210,6 +7210,13 @@ a.bg-danger:focus, a.bg-danger:hover {
   min-height: 177px;
   text-align: justify; }
 
+.latest-blog-posts-content-container {
+  height: 58px;
+  text-align: justify !important; }
+
+.latest-blog-posts-carousel .learn-more a {
+  color: #3a599f !important; }
+
 h3, h4, .card-block .text-sm-right {
   color: #3a599f !important; }
 
@@ -7238,3 +7245,36 @@ h3, h4, .card-block .text-sm-right {
 
 #footer-brand-logo-container {
   text-align: center !important; }
+
+#footer-brand-logo-container img {
+  width: 114% !important;
+  margin-left: -1%; }
+
+/* the slides */
+#latest-blog-posts-row .slick-slide {
+  margin: 0 16px; }
+
+/* the parent */
+#latest-blog-posts-row .slick-list {
+  margin: 0 -16px; }
+
+#latest-blog-posts-row .slick-slide {
+  height: 200px; }
+
+#footer-brand-logo-container hr {
+  border: 0;
+  border-top: 2px solid #3a599f !important; }
+
+#footer-navigation-container {
+  background-color: #ededed; }
+
+#footer-navigation-container .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top; }
+
+#footer-navigation-container {
+  text-align: center; }
+
+#footer-navigation-container a {
+  margin: 10px; }

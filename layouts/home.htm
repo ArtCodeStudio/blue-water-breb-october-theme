@@ -80,13 +80,15 @@ zIndex = 1000
         
         {% partial 'press_releases' %}
         
-        {% partial 'latest_blog_posts' %}
+        {% partial 'latest_blog_posts' %} 
    
-        <div id="footer-brand-logo-container">
-            <hr>
-            {% content 'overview/Footer_Brand.htm' %}
-        </div>
+        {% partial 'footer_brand' %}
+
         {% partial 'body_foot' %}    
         
+        {% partial 'footer_navigation' %}    
+        
+        {% partial 'footer_contact' %}    
+
     </body>
 </html>

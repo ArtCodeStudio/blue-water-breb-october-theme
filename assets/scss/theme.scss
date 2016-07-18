@@ -35,6 +35,14 @@
      min-height:177px;
      text-align: justify;
 }
+.latest-blog-posts-content-container{
+    height: 58px;
+    text-align: justify !important;
+}
+
+.latest-blog-posts-carousel .learn-more a{
+    color: $brand-primary !important;
+}
 
 h3, h4, .card-block .text-sm-right{
     color: $brand-primary !important;
@@ -74,6 +82,50 @@ h3, h4, .card-block .text-sm-right{
 #footer-brand-logo-container{
     text-align: center !important;
 }
+
+// DIRTY HACK until we have the final edited logo
+#footer-brand-logo-container img {
+    width: 114% !important;
+    margin-left: -1%;
+}
 // #latest-blog-posts-container{
 //     margin-top:0 !important;
 // }
+
+/* the slides */
+#latest-blog-posts-row .slick-slide {
+    margin: 0 16px;
+}
+/* the parent */
+#latest-blog-posts-row .slick-list {
+    margin: 0 -16px;
+}
+
+#latest-blog-posts-row .slick-slide {
+   height:200px;
+}
+
+#footer-brand-logo-container hr {
+    border: 0;
+    border-top: 2px solid $brand-primary !important;
+}
+
+// !! not final color
+#footer-navigation-container{
+    background-color: #ededed;
+}
+
+#footer-navigation-container .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+#footer-navigation-container {
+    text-align: center;
+}
+
+
+#footer-navigation-container a {
+    margin:10px;
+}
