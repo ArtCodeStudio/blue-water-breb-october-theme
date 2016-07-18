@@ -7250,11 +7250,9 @@ h3, h4, .card-block .text-sm-right {
   width: 114% !important;
   margin-left: -1%; }
 
-/* the slides */
 #latest-blog-posts-row .slick-slide {
   margin: 0 16px; }
 
-/* the parent */
 #latest-blog-posts-row .slick-list {
   margin: 0 -16px; }
 
@@ -7278,3 +7276,12 @@ h3, h4, .card-block .text-sm-right {
 
 #footer-navigation-container a {
   margin: 10px; }
+
+#footer-contact-container {
+  line-height: 20px; }
+
+#footer-contact-container .col-xs-3 {
+  margin-right: 10%; }
+
+#footer-contact-container .row {
+  margin-left: 3%; }
