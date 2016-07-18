@@ -1,0 +1,68 @@
+[viewBag]
+snippetCode = "liner_services"
+snippetName = "Liner Services"
+
+[slideshow]
+slideshow = 3
+numberOfSlide = 999
+injectSlickAssets = 0
+injectSlickTheme = 0
+injectJLSlideshowCSS = 0
+injectJQuery = 0
+aspectRatio = "ratio-16-9"
+captionPosition = "middle center"
+autoplayOnShow = 1
+nextSlideOnEnd = 1
+accessibility = 1
+adaptiveHeight = 0
+autoplay = 1
+arrows = 0
+centerMode = 0
+dots = 0
+draggable = 1
+fade = 0
+focusOnSelect = 0
+infinite = 1
+mobileFirst = 0
+pauseOnFocus = 1
+pauseOnHover = 1
+pauseOnDotsHover = 0
+respondTo = "window"
+slidesToShow = 1
+swipe = 1
+swipeToSlide = 0
+touchMove = 1
+useCSS = 1
+useTransform = 1
+variableWidth = 0
+vertical = 0
+verticalSwiping = 0
+rtl = 0
+waitForAnimate = 1
+==
+<div id="liner-services" data-target="#liner-services"> 
+
+    <div class="container-fluid text-xs-center p-y-3">
+    
+        <div class="row">
+            
+            <div class="col-xs-12 col-md-5 section-headline-text" >
+                <div class="border-top"></div>
+                <h3 class="text-xs-left">Liner Services</h3>  
+                <div id="liner-services-content-container" class="p-y-3">             
+                    {% content 'liner_services.htm' %}
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-7" id="liner-services-sliedeshow-container">
+               {# slideshow comes here 
+                 die bildergroessen in der slideshow haben sich automatisch anzupassen
+                 #}
+
+                {% component 'slideshow' %}
+            </div>
+            
+        </div>
+                
+    </div>
+</div>

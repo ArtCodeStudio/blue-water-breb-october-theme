@@ -35,7 +35,8 @@
      min-height:177px;
      text-align: justify;
 }
-.latest-blog-posts-content-container{
+
+.latest-blog-posts-content-container {
     height: 58px;
     text-align: justify !important;
 }
@@ -111,21 +112,28 @@ h3, h4, .card-block .text-sm-right{
 }
 
 // !! not final color
-    #footer-navigation-container{
+    #footer-navigation-wrapper{
         background-color: #ededed;
     }
 
-#footer-navigation-container .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
+#footer-legal-wrapper {
+    background-color: $brand-primary;
 }
 
-#footer-navigation-container {
+#footer-legal-wrapper a {
+    color: white;
+}
+// #footer-navigation-container .navbar-nav {
+//   display: inline-block;
+//   float: none;
+//   vertical-align: top;
+// }
+
+.footer-navigation-container {
     text-align: center;
 }
 
-#footer-navigation-container a {
+.footer-navigation-container a {
     margin:10px;
 }
 
@@ -134,11 +142,28 @@ h3, h4, .card-block .text-sm-right{
 }
 
 #footer-contact-container .col-xs-3{
-    margin-right:10%;
+   // margin-right:10%;
 }
 
 // there must be a better way 
 #footer-contact-container .row {
     margin-left:3%;
 
+}
+
+
+.navbar .navbar-brand {
+    min-width: 420px !important;
+    height: 64px !important;
+    margin-top: 30px !important;
+}
+
+.main-navigation{
+    margin-top: 40px;
+}
+
+#liner-services #liner-services-sliedeshow-container {
+    text-align: justify !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }

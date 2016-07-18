@@ -7263,25 +7263,36 @@ h3, h4, .card-block .text-sm-right {
   border: 0;
   border-top: 2px solid #3a599f !important; }
 
-#footer-navigation-container {
+#footer-navigation-wrapper {
   background-color: #ededed; }
 
-#footer-navigation-container .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top; }
+#footer-legal-wrapper {
+  background-color: #3a599f; }
 
-#footer-navigation-container {
+#footer-legal-wrapper a {
+  color: white; }
+
+.footer-navigation-container {
   text-align: center; }
 
-#footer-navigation-container a {
+.footer-navigation-container a {
   margin: 10px; }
 
 #footer-contact-container {
   line-height: 20px; }
 
-#footer-contact-container .col-xs-3 {
-  margin-right: 10%; }
-
 #footer-contact-container .row {
   margin-left: 3%; }
+
+.navbar .navbar-brand {
+  min-width: 420px !important;
+  height: 64px !important;
+  margin-top: 30px !important; }
+
+.main-navigation {
+  margin-top: 40px; }
+
+#liner-services #liner-services-sliedeshow-container {
+  text-align: justify !important;
+  margin: 0 !important;
+  padding: 0 !important; }
