@@ -14,11 +14,4 @@ sortOrder = "published_at desc"
 categoryPage = "all-reports"
 postPage = "post"
 ==
-<div id="reports" class="blog-content-wrapper" data-target="#reports"> 
-
-    <div class="container">
-          {% component 'blogPosts' %}
-
-                            
-    </div>
-</div>
+{% partial 'blog_category' %}
