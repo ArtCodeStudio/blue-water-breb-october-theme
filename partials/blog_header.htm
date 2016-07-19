@@ -1,12 +1,45 @@
 [viewBag]
 ==
+<?php
+function onEnd() 
+{    
+    if( $this->param('slug') == null ) {
+        echo "no query string";
+        $this['queryString' ] = "all";
+    }else{
+        echo  $this->param('slug');
+        $this['queryString' ]= $this->param('slug');
+    }
+}
+?>
+==
 <div class="container-fluid" id="blog-header-wrapper">
 
+    {% set currentCategory = post.categories[0].slug %}
     <div class="container blog-header-container">
+   
+   {{ queryString }}
+ {{ currentCategory }}
+
         <nav id="blog-filter">
-            <a href="/reports" class="nav-link btn btn-white-outline">All Reports</a>  
-            <a href="/reports/category/press-release" class="nav-link btn">Press Release</a>     
-            <a href="/reports/category/blog" class="nav-link btn">Blog</a>          
+            <a href="/reports" class="nav-link btn 
+                {% if queryString == 'all' %} 
+                    btn-white-outline 
+                {%endif%}">
+                All Reports
+            </a>  
+            <a href="/reports/category/press-release" class="nav-link btn 
+                {% if currentCategory == 'press-release' or queryString == 'press-release' %} 
+                    btn-white-outline 
+                {%endif%}">
+                Press Release
+            </a>     
+            <a href="/reports/category/blog" class="nav-link btn 
+                {% if currentCategory == 'blog' or queryString == 'blog' %} 
+                    btn-white-outline 
+                {%endif%}">
+                Blog
+            </a>          
         </nav>
 
 
