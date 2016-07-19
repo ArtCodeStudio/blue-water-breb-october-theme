@@ -4,10 +4,10 @@
 function onEnd() 
 {    
     if( $this->param('slug') == null ) {
-        echo "no query string";
+        //echo "no query string";
         $this['queryString' ] = "all";
     }else{
-        echo  $this->param('slug');
+        //echo  $this->param('slug');
         $this['queryString' ]= $this->param('slug');
     }
 }
@@ -17,18 +17,18 @@ function onEnd()
 
     {% set currentCategory = post.categories[0].slug %}
     <div class="container blog-header-container">
-   
+{# 
    {{ queryString }}
- {{ currentCategory }}
-
+    {{ currentCategory }}
+#}
         <nav id="blog-filter">
-            <a href="/reports" class="nav-link btn 
+            <a href="/reports" class="nav-link btn
                 {% if queryString == 'all' %} 
                     btn-white-outline 
                 {%endif%}">
                 All Reports
             </a>  
-            <a href="/reports/category/press-release" class="nav-link btn 
+            <a href="/reports/category/press-release" class="nav-link btn  
                 {% if currentCategory == 'press-release' or queryString == 'press-release' %} 
                     btn-white-outline 
                 {%endif%}">

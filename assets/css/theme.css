@@ -7111,12 +7111,13 @@ a.bg-danger:focus, a.bg-danger:hover {
   transition-property: all;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease; }
+  .btn:hover {
+    border-color: white; }
   .btn.btn-white-outline {
     color: white;
     border-color: white; }
     .btn.btn-white-outline:hover {
-      color: white;
-      border-color: white; }
+      color: white; }
   .btn.btn-red-outline {
     color: #d9534f;
     border: 2px solid #d9534f; }

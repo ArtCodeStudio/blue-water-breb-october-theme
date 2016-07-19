@@ -6,6 +6,7 @@
    // @extend .z-depth-1;
     &:hover {
         @extend .z-depth-1-half;
+         border-color: white;
     }
 
     &.btn-white-outline {
@@ -14,7 +15,7 @@
         border-color: white;
         &:hover {
             color: white;
-            border-color: white;
+           // border-color: white;
             // background-color: lighten($brand-primary, 8%);
         }
     }
