@@ -9,7 +9,7 @@
     }
 
     &.btn-white-outline {
-        @extend .btn-info-outline;
+       // @extend .btn-info-outline;
         color: white;
         border-color: white;
         &:hover {
@@ -18,7 +18,7 @@
             // background-color: lighten($brand-primary, 8%);
         }
     }
-    
+
     &.btn-red-outline {
        // @extend .btn-info-outline;
         color: $brand-danger;

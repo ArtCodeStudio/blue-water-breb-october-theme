@@ -41,7 +41,7 @@
     text-align: justify !important;
 }
 
-.latest-blog-posts-carousel .learn-more a{
+.latest-blog-posts-carousel .learn-more a, #reports .learn-more a{
     color: $brand-primary !important;
 }
 
@@ -116,7 +116,7 @@ h3, h4, .card-block .text-sm-right{
         background-color: #ededed;
     }
 
-#footer-legal-wrapper {
+#footer-legal-wrapper, #blog-header-wrapper {
     background-color: $brand-primary;
 }
 
@@ -141,9 +141,9 @@ h3, h4, .card-block .text-sm-right{
     line-height: 20px;
 }
 
-#footer-contact-container .col-xs-3{
-   // margin-right:10%;
-}
+// #footer-contact-container .col-xs-3{
+//    // margin-right:10%;
+// }
 
 // there must be a better way 
 #footer-contact-container .row {
@@ -174,3 +174,42 @@ h3, h4, .card-block .text-sm-right{
     .slick-prev, .slick-next{
         background-color: red !important;
     }
+
+// BLOG 
+#blog-header-wrapper {
+    width:100%;
+    margin-top: 110px; // m-y-4 nicht vergfuegbar ?
+    position: fixed;
+    position:fixed;
+    height:135px;
+    z-index:999;
+}
+
+.blog-header-container{
+    text-align:center;
+}
+#blog-filter{
+
+}
+
+.blog-header-container .nav-link{
+    color: white;
+    margin-top:45px;
+}
+
+// all blog categories
+.blog-content-wrapper {
+    margin-top:264px;
+}
+// dort funktioniert es http://jsfiddle.net/daslicht/zonh5qjw/3/
+// hier nicht 
+    .blog-header-container .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        text-align: center;
+    }
+
+    .blog-header-container .navbar {
+        text-align: center;
+    }
+

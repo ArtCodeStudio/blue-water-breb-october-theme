@@ -30,7 +30,16 @@ function onEnd(){
             </div>
         </div>
 
-
+{#
+<div class="card">
+  <img class="card-img-top" data-src="..." alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+#}
         <div class="row">
 
             {% for post in posts %}
@@ -39,7 +48,7 @@ function onEnd(){
                     <div class="card card-block">
 
                         {% if post.featured_images.count %}
-                            <div class="featured-images text-center">
+                            <div class="featured-images text-center "> {# card-img-top #}
                                 {% for image in post.featured_images %}
                                     <img 
                                         data-src="{{ image.filename }}"
