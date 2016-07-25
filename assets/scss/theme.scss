@@ -12,6 +12,7 @@
 @import 'shadow';
 @import 'buttons';
 @import 'navbar';
+@import 'sidebar';
 
 
 .bg-faded {
@@ -19,7 +20,7 @@
 }
 
 
-#about-teaser-text{
+#about-teaser-text {
     
 }
 
@@ -28,24 +29,15 @@
     border-top: solid $brand-primary 4px;
     margin-bottom: 14px;
     width: 61px;
-    
 }
 
 .overview-content-container {
-    //  min-height:177px;
+     min-height:191px;
      text-align: justify;
 }
 
-.latest-blog-posts-content-container {
-    height: 58px;
-    text-align: justify !important;
-}
 
-.latest-blog-posts-carousel .learn-more a, #reports .learn-more a{
-    color: $brand-primary !important;
-}
-
-h3, h4, .card-block .text-sm-right{
+h3, h4, .card-block .text-sm-right {
     color: $brand-primary !important;
 }
 
@@ -55,32 +47,63 @@ h3, h4, .card-block .text-sm-right{
 
 .card-block {
   //  padding:0 !important;
-}
-.card-block img {
-    margin-bottom: 15px;
-    width: 100%;
-    position: relative;
-    margin-left: -20px;
-    margin-top: -20px;
-}
-.card-block .text-sm-right {
-    margin-bottom: 15px;
+  
+    img {
+        margin-bottom: 15px;
+        width: 100%;
+        position: relative;
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+    .text-sm-right {
+        margin-bottom: 15px;
+    }
 }
 
-.learn-more a{
+
+.learn-more a {
     color: $brand-danger !important;
 }
 
-.carousel-video-wrapper video, .carousel-image-wrapper img{
+.carousel-video-wrapper video, .carousel-image-wrapper img {
         opacity: 0.6 !important;
 }
 
-#latest-blog-posts-row {
-    background-color: $brand-primary !important;
-    margin-bottom:28px !important;
+#latest-blog-posts {
+    
+    #latest-blog-posts-row {
+        //margin-bottom:28px !important;
+    }
+    
+    .latest-blog-posts-content-container {
+        height: 58px;
+        text-align: justify !important;
+    }
+    
+    .latest-blog-posts-carousel .learn-more a, #reports .learn-more a{
+        color: $brand-primary !important;
+    }
+    
+    /*#latest-blog-posts-row {
+            
+        .slick-slide {
+            margin: 0 16px;
+        }
+        
+        .slick-list {
+            margin: 0 -16px;
+        }
+        
+        .slick-slide {
+           height:200px;
+        }
+    
+    }*/
+
 }
 
-#footer-brand-logo-container{
+
+#footer-brand-logo-container {
     text-align: center !important;
 }
 
@@ -94,22 +117,9 @@ h3, h4, .card-block .text-sm-right{
 // }
 
 
-#latest-blog-posts-row .slick-slide {
-    margin: 0 16px;
-}
 
-#latest-blog-posts-row .slick-list {
-    margin: 0 -16px;
-}
 
-#latest-blog-posts-row .slick-slide {
-   height:200px;
-}
 
-#footer-brand-logo-container hr {
-    border: 0;
-    border-top: 2px solid $brand-primary !important;
-}
 
 // !! not final color
     #footer-navigation-wrapper{
@@ -170,11 +180,6 @@ h3, h4, .card-block .text-sm-right{
     padding: 0 !important;
 }
 
-// 2do : fix position and arrow color, slick carousel to wider , need no content padding left and right
-    .slick-prev, .slick-next{
-        background-color: red !important;
-    }
-
 // BLOG 
 #blog-header-wrapper {
     width:100%;
@@ -185,14 +190,14 @@ h3, h4, .card-block .text-sm-right{
     z-index:999;
 }
 
-.blog-header-container{
+.blog-header-container {
     text-align:center;
 }
 #blog-filter{
 
 }
 
-.blog-header-container .nav-link{
+.blog-header-container .nav-link {
     color: white;
     margin-top:45px;
 }

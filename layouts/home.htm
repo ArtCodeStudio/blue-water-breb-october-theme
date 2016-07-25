@@ -1,6 +1,5 @@
 [slideshow]
 slideshow = 2
-numberOfSlide = 5
 injectSlickAssets = 0
 injectSlickTheme = 0
 injectJLSlideshowCSS = 0
@@ -67,30 +66,32 @@ zIndex = 1000
         
         {# Content #}
         <section id="layout-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        {#<h1>{{ this.page.title }}</h1>#}
-                        <hr>
-                       {% page %}
-                    </div>
-                </div>
-            </div>
+
+            {#<h1>{{ this.page.title }}</h1>#}
+            <hr>
+           {% page %}
+                       
+                       
+            {% partial 'latest_blog_posts' %}
+            
+
         </section>
         
-        {% partial 'press_releases' %}
         
-        {% partial 'latest_blog_posts' %} 
-   
         {% partial 'footer_brand' %}
 
-        {% partial 'footer_navigation' %}    
+        {% partial 'footer_navigation' %}
         
-        {% partial 'footer_contact' %}    
+        {% partial 'footer_contact' %}
         
-        {% partial 'footer_legal' %} 
+        {% partial 'footer_legal' %}     
 
-        {% partial 'body_foot' %}    
         
+        {% put scripts %}
+            <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
+        {% endput %}
+
+        {% partial 'body_foot' %}
+                
     </body>
 </html>
