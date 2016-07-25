@@ -13,15 +13,15 @@
 @import 'buttons';
 @import 'navbar';
 @import 'sidebar';
-
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border:-1; //
+    border-top: 1px solid #3a599f !important;
+}
 
 .bg-faded {
     background-color: white;
-}
-
-
-#about-teaser-text {
-    
 }
 
 .section-headline-text .border-top {
@@ -47,14 +47,13 @@ h3, h4, .card-block .text-sm-right {
 
 .card-block {
   //  padding:0 !important;
-  
-    img {
-        margin-bottom: 15px;
-        width: 100%;
-        position: relative;
-        margin-left: -20px;
-        margin-top: -20px;
-    }
+    // img {
+    //     margin-bottom: 15px;
+    //     width: 100%;
+    //     position: relative;
+    //     margin-left: -20px;
+    //     margin-top: -20px;
+    // }
     .text-sm-right {
         margin-bottom: 15px;
     }
@@ -84,7 +83,7 @@ h3, h4, .card-block .text-sm-right {
         color: $brand-primary !important;
     }
     
-    /*#latest-blog-posts-row {
+    #latest-blog-posts-row {
             
         .slick-slide {
             margin: 0 16px;
@@ -98,20 +97,53 @@ h3, h4, .card-block .text-sm-right {
            height:200px;
         }
     
-    }*/
+    }
 
 }
 
+.footer {
+    &#footer-brand-logo-container {
+        text-align: center !important;
+        margin-top: 163px; // besser loesen 
+        img{
+            width: 114% !important;
+            // margin-left: -1%;
+        }
+    }
 
-#footer-brand-logo-container {
-    text-align: center !important;
+    &#footer-navigation-wrapper{
+        background-color: #ededed;
+    }
+
+    &#footer-legal-wrapper, #blog-header-wrapper {
+        background-color: $brand-primary;
+        a{
+            color: white;
+        }
+    }
+
+    // &#footer-legal-wrapper a {
+    // }
+
+    .footer-navigation-container {
+        text-align: center;
+    }
+
+    .footer-navigation-container a {
+        margin:10px;
+    }
+
+    #footer-contact-container {
+        line-height: 20px;
+        .row {
+            margin-left:3%;
+        }
+    }
 }
 
 // DIRTY HACK until we have the final edited logo
-    #footer-brand-logo-container img {
-        width: 114% !important;
-        margin-left: -1%;
-    }
+    // #footer-brand-logo-container img {
+    // }
 // #latest-blog-posts-container{
 //     margin-top:0 !important;
 // }
@@ -122,54 +154,50 @@ h3, h4, .card-block .text-sm-right {
 
 
 // !! not final color
-    #footer-navigation-wrapper{
-        background-color: #ededed;
-    }
 
-#footer-legal-wrapper, #blog-header-wrapper {
-    background-color: $brand-primary;
-}
 
-#footer-legal-wrapper a {
-    color: white;
-}
 // #footer-navigation-container .navbar-nav {
 //   display: inline-block;
 //   float: none;
 //   vertical-align: top;
 // }
 
-.footer-navigation-container {
-    text-align: center;
-}
-
-.footer-navigation-container a {
-    margin:10px;
-}
-
-#footer-contact-container {
-    line-height: 20px;
-}
 
 // #footer-contact-container .col-xs-3{
 //    // margin-right:10%;
 // }
 
-// there must be a better way 
-#footer-contact-container .row {
-    margin-left:3%;
-
+#navbar-main {
+     transition: all .25s ease-in-out;
 }
-
 .navbar .navbar-brand {
     min-width: 420px !important;
     height: 64px !important;
     margin-top: 30px !important;
+    transition: opacity .25s ease-in-out;
 }
 
-.main-navigation{
+.main-navigation {
     margin-top: 40px;
+    transition: all .25s ease-in-out;
 }
+
+.nav-low-height {
+     margin-top:0;
+}
+
+.border-bottom {
+    border-bottom: 1px solid;
+}
+
+.main-navigation.small{
+    margin-top:0;
+}
+
+.brand-hidden {
+    opacity:0 !important;;    
+}
+
 
 #liner-services #liner-services-content-container {
     text-align: justify !important;
@@ -208,13 +236,16 @@ h3, h4, .card-block .text-sm-right {
 }
 // dort funktioniert es http://jsfiddle.net/daslicht/zonh5qjw/3/
 // hier nicht 
-    .blog-header-container .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        text-align: center;
-    }
+.blog-header-container .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    text-align: center;
+}
 
-    .blog-header-container .navbar {
-        text-align: center;
-    }
+.blog-header-container .navbar {
+    text-align: center;
+}
 
+#default-layout-container {
+    margin-top: 140px;
+}

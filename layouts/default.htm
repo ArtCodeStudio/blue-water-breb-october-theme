@@ -11,24 +11,34 @@
         
         {# Content #}
         <section id="layout-content">
-            <div class="container">
+            {#<div class="container" id="default-layout-container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1>{{ this.page.title }}</h1>
-                        <hr>
-                       {% page %}
+                         <div class="col-xs-12 col-md-5 section-headline-text" >
+                            <div class="border-top"></div>
+                            <h3 class="text-xs-left">{{ this.page.title }}</h3>  
+                         </div>
                     </div>
+                </div>#}
+                <div class="container" id="default-layout-container">
+                    {% page %}
                 </div>
-            </div>
+
+            {#</div>#}
         </section>
         
-        {% partial 'footer_brand' %}
+      
+        {% partial 'footer/footer_brand' %}
+
+        {% partial 'footer/footer_navigation' %}
         
-        {% partial 'footer_navigation' %}
+        {% partial 'footer/footer_contact' %}
         
-        {% partial 'footer_contact' %}
-        
-        {% partial 'footer_legal' %}
+        {% partial 'footer/footer_legal' %}     
+
+        {% put scripts %}
+            <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
+        {% endput %}
         
         {% partial 'body_foot' %}
                 

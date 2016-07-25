@@ -2,10 +2,14 @@
 snippetCode = "history"
 snippetName = "History"
 ==
-<div id="liner-services" data-target="#liner-services"> 
+<div id="history" data-target="#history"> 
 
-    <div class="container-fluid text-xs-center p-y-3">
-        <div class="row">
+    <div class="row">
+        <div class="col-xs-12 col-md-5 section-headline-text" >
+            <div class="border-top"></div>
+            <h3 class="text-xs-left">{{ this.page.title }}</h3>  
+        </div>
+        <div class="col-xs-12 col-md-7">
             {% content 'history.htm' %}
         </div>
     </div>

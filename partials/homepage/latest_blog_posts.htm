@@ -25,47 +25,48 @@ postPage = "post"
                 </div>
             </div>
 
+            <div class=" bg-blue">
+                <div class="container">
+                    <div class="col-xs-12  section-headline-text"  id="latest-blog-posts-row">
+                        <div class="row p-x-1 p-y-3">
+            
+                            <div class="latest-blog-posts-carousel">
+                            
+                                {% for post in posts %}
 
-            <div class="container-fluid">
-                <div class="col-xs-12  section-headline-text"  id="latest-blog-posts-row">
-                    <div class="row p-x-1 p-y-3">
-          
-                        <div class="latest-blog-posts-carousel">
-                        
-                            {% for post in posts %}
+                                    <div class="card card-block">
 
-                                <div class="card card-block">
+                                        <div class="text-sm-right">
+                                            {{ post.published_at|date('M d, Y') }}
+                                        </div>
 
-                                    <div class="text-sm-right">
-                                        {{ post.published_at|date('M d, Y') }}
+                                        <h4 class="card-title text-lg-left">{{ post.title }}</h4>
+
+                                        <div class='latest-blog-posts-content-container'>
+                                            {{ post.summary }}
+                                        </div>
+                                        
+                                        <div class="learn-more center-block text-xs-right">
+                                            <a href="{{ post.url }}" class="">read more</a>
+                                        </div>
+
                                     </div>
 
-                                    <h4 class="card-title text-lg-left">{{ post.title }}</h4>
-
-                                    <div class='latest-blog-posts-content-container'>
-                                        {{ post.summary }}
+                                {% else %}
+                                    <div class="no-data">
+                                        {{ noPostsMessage }}
                                     </div>
-                                    
-                                    <div class="learn-more center-block text-xs-right">
-                                        <a href="{{ post.url }}" class="">read more</a>
-                                    </div>
+                                {% endfor %} 
 
-                                </div>
-
-                            {% else %}
-                                <div class="no-data">
-                                    {{ noPostsMessage }}
-                                </div>
-                            {% endfor %} 
-
-                        </div>
-        
-                    </div>        
+                            </div>
+            
+                        </div>        
+                    </div>
                 </div>
             </div>
         
         
-            <div class="col-xs-12 text-xs-center section-headline-text" >
+            <div class="col-xs-12 text-xs-center section-headline-text p-y-3" >
                 <a href="/reports/category/blog" class="btn btn-blue-outline">go to blog</a>
             </div>
      

@@ -69,15 +69,14 @@ zIndex = 1000
 
             {# <h1>{{ this.page.title }}</h1> #}
            
-            <hr>
+            {#<hr>#}
             {#<div class="container">#}
                 {% page %}    
             {#</div>#}
-
         </section>
-        
-        {#{% partial '/homepage/latest_blog_posts' %}#}
-        
+
+
+      
         {% partial 'footer/footer_brand' %}
 
         {% partial 'footer/footer_navigation' %}
@@ -90,6 +89,10 @@ zIndex = 1000
         {% put scripts %}
             <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
         {% endput %}
+        
+        {#{% put scripts %}
+            <script type="text/javascript" src="{{ 'assets/vendor/Hyphenator/home.js' | theme }}"></script>
+        {% endput %}#}
 
         {% partial 'body_foot' %}
                 

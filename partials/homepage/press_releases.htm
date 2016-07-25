@@ -44,19 +44,23 @@ function onEnd(){
                     <div class="col-xs-12 col-md-4">
         
                         <div class="card">
-        
-                            {% if post.featured_images.count %}
-                                {% for image in post.featured_images %}
-                                    <img 
-                                        data-src="{{ image.filename }}"
-                                        src="{{ image.path }}"
-                                        alt="{{ image.description }}"
-                                        class="card-img-top img-fluid"
-                                    />
-                                {% endfor %}
-                            {% else%}
-                                <img class="card-img-top img-fluid" src="http://placehold.it/340x173"/>
-                            {% endif %}
+                            <div class='box ratio-16-9'> 
+                                <div class='content'>
+                                    {% if post.featured_images.count %}
+                                        {% for image in post.featured_images %}
+                                            <img 
+                                                data-src="{{ image.filename }}"
+                                                src="{{ image.path }}"
+                                                alt="{{ image.description }}"
+                                                class="card-img-top img-fluid"
+                                            />
+                                        {% endfor %}
+
+                                    {% else %}
+                                        <img class="card-img-top img-fluid" src="http://placehold.it/340x173"/>
+                                    {% endif %}
+                                </div> 
+                            </div>
                             
                             <div class="card-block">
                                 <p class="text-xs-right">{{ post.published_at|date('M d, Y') }}</p>
