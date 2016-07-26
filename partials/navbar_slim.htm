@@ -3,16 +3,26 @@
 [staticMenu main]
 code = "main"
 ==
-<nav class="navbar navbar-fixed-top navbar-light bg-faded" id="navbar-main">
+
+
+<nav class="navbar navbar-fixed-top navbar-light bg-faded" id="navbar-slim">
     <!-- <a class="navbar-brand" href="#"></a> -->
     <div class="container hidden-sm-down ">
         {#{{ 'home' | page }}#}
-        <a href="/" class="navbar-brand">&nbsp;</a>
+        {#<a href="/" class="navbar-brand">&nbsp;</a>#}
         {% partial 'navigation/navbar-items' 
             items=main.menuItems 
-            class='nav navbar-nav pull-xs-right hidden-sm-down'
+            class='nav navbar-nav pull-xs-right hidden-sm-down nav-low-height'
             itemClass='nav-item'
         %}
 
     </div>
+
 </nav>
+
+
+<!--<div class="container">
+    <row>
+        <hr>
+    </row
+</div>-->

@@ -1,6 +1,6 @@
 [viewBag]
 ==
-<ul class="{{ class }} main-navigation">
+<ul class="{{ class }} main-navigation  ">
     {% for item in items %}
         <li class="nav-item {{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }} {{ item.items ? 'dropdown' : '' }}">
 

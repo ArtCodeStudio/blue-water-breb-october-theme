@@ -42,6 +42,15 @@ nav .container {
 	padding-left: 0;
 }
 
+#navbar-slim:after {
+	content: "";
+    border-bottom: 1px solid #3a599f;
+    width: 1110px;
+    display: block;
+    margin: 0 auto;
+}
+
+
 #default-layout-container {
 	margin-top: 140px;
 }
@@ -282,14 +291,13 @@ nav .container {
 
 	}
 
-
 	#blog-header-wrapper {
 
 		top:0;
 		width: 100%;
 		position: fixed;
 		position: fixed;
-		height: 210px;
+		height: 219px;
 		z-index: 999;
 		transition: all .25s ease-in-out;
 
@@ -299,7 +307,7 @@ nav .container {
 
 		.blog-header-container #blog-filter .nav-link {
 			color: white;
-			margin-top: 140px;
+			margin-top: 117px;
 		}
 
 		.blog-header-container .navbar .navbar-nav {

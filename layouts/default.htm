@@ -7,7 +7,7 @@
     </head>
     <body id="{{ str_studly(this.page.title) }}">
     
-        {% partial 'navbar' %}
+        {% partial 'navbar_slim' %}
         
         {# Content #}
         <section id="layout-content">
@@ -37,7 +37,7 @@
         {% partial 'footer/footer_legal' %}     
 
         {% put scripts %}
-            <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
+            <!--<script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>-->
         {% endput %}
         
         {% partial 'body_foot' %}
