@@ -7267,12 +7267,14 @@ hr {
   margin-bottom: 14px;
   width: 61px; }
 
-.overview-content-container {
-  min-height: 191px;
-  text-align: justify; }
-
 h3, h4, .card-block .text-sm-right {
   color: #3a599f !important; }
+
+nav .container {
+  padding-left: 0; }
+
+#default-layout-container {
+  margin-top: 140px; }
 
 .card {
   border: 1px solid #3a599f !important; }
@@ -7280,37 +7282,9 @@ h3, h4, .card-block .text-sm-right {
 .card-block .text-sm-right {
   margin-bottom: 15px; }
 
-.carousel-video-wrapper video, .carousel-image-wrapper img {
-  opacity: 0.6 !important; }
-
-#press-releases .learn-more {
-  position: absolute;
-  bottom: 15px;
-  right: 15px; }
-
-#press-releases .learn-more a {
-  color: #d9534f; }
-
-#latest-blog-posts .latest-blog-posts-content-container {
-  height: 58px;
-  text-align: justify !important; }
-
-#latest-blog-posts .latest-blog-posts-carousel .learn-more a, #latest-blog-posts #reports .learn-more a {
-  color: #3a599f !important; }
-
-#latest-blog-posts #latest-blog-posts-row .slick-slide {
-  margin: 0 0.9375rem;
-  height: 200px; }
-
-#latest-blog-posts #latest-blog-posts-row .slick-list {
-  margin: -1.875rem; }
-
-#latest-blog-posts #latest-blog-posts-row .slick-prev {
-  left: -40px; }
-
-#latest-blog-posts #latest-blog-posts-row .slick-next {
-  right: -40px; }
-
+/*
+ * FOOTER  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+**/
 .footer#footer-brand-logo-container {
   text-align: center !important;
   margin-top: 163px; }
@@ -7336,22 +7310,28 @@ h3, h4, .card-block .text-sm-right {
   .footer #footer-contact-container .row {
     margin-left: 3%; }
 
+/*
+* MAIN NAVIGATION –––––––––––––––––––––––––––––––––––––––––––––––––––
+**/
 #navbar-main {
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out; }
-
-.navbar .navbar-brand {
-  min-width: 420px !important;
-  height: 64px !important;
-  margin-top: 30px !important;
-  -webkit-transition: opacity .25s ease-in-out;
-  transition: opacity .25s ease-in-out; }
 
 .main-navigation {
   margin-top: 40px;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out; }
 
+.navbar-brand {
+  min-width: 420px !important;
+  height: 64px !important;
+  margin-top: 30px !important;
+  -webkit-transition: opacity .25s ease-in-out;
+  transition: opacity .25s ease-in-out; }
+
+/*
+	* MAIN NAVIGATION STATE CLASSES
+	**/
 .nav-low-height {
   margin-top: 0; }
 
@@ -7365,10 +7345,51 @@ h3, h4, .card-block .text-sm-right {
   opacity: 0 !important;
   display: none; }
 
-#liner-services #liner-services-content-container {
+/*
+ * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+**/
+#Home .overview-content-container {
+  min-height: 191px;
+  text-align: justify; }
+
+#Home #latest-blog-posts .latest-blog-posts-content-container {
+  height: 58px;
   text-align: justify !important; }
 
-#liner-services #liner-services-sliedeshow-container {
+#Home #latest-blog-posts .latest-blog-posts-carousel .learn-more a, #Home #latest-blog-posts #reports .learn-more a {
+  color: #3a599f !important; }
+
+#Home #latest-blog-posts #latest-blog-posts-row .slick-slide {
+  margin: 0 0.9375rem;
+  height: 200px; }
+
+#Home #latest-blog-posts #latest-blog-posts-row .slick-list {
+  margin: -1.875rem; }
+
+#Home #latest-blog-posts #latest-blog-posts-row .slick-prev {
+  left: -40px; }
+
+#Home #latest-blog-posts #latest-blog-posts-row .slick-next {
+  right: -40px; }
+
+#Home .carousel-video-wrapper video, #Home .carousel-image-wrapper img {
+  opacity: 0.6 !important; }
+
+#Home #press-releases .learn-more {
+  position: absolute;
+  bottom: 15px;
+  right: 15px; }
+
+#Home #press-releases .learn-more a {
+  color: #d9534f; }
+
+/*
+ * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ **/
+#LinerServices #liner-services #liner-services-content-container {
+  text-align: justify !important; }
+
+#LinerServices #liner-services #liner-services-sliedeshow-container {
   margin: 0 !important;
   padding: 0 !important; }
 
@@ -7380,8 +7401,7 @@ h3, h4, .card-block .text-sm-right {
   height: 210px;
   z-index: 999;
   -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
-  /* top: 110px; */ }
+  transition: all .25s ease-in-out; }
   #blog-header-wrapper .blog-header-container {
     text-align: center; }
   #blog-header-wrapper .blog-header-container #blog-filter .nav-link {
@@ -7393,9 +7413,25 @@ h3, h4, .card-block .text-sm-right {
     text-align: center; }
   #blog-header-wrapper #blog-filter .btn {
     font-size: 1.1rem !important; }
+  #blog-header-wrapper .blog-header-container .navbar {
+    text-align: center; }
 
 #Category .blog-content-wrapper, #AllReports .blog-content-wrapper {
   background-color: #eceeef; }
+
+#Category #all-posts-container, #AllReports #all-posts-container {
+  padding-top: 185px; }
+
+#Category .grid, #AllReports .grid {
+  background: #EEE;
+  /* center */
+  margin: 0 auto; }
+
+#Category .grid-item, #AllReports .grid-item {
+  width: 350px;
+  float: left;
+  margin-bottom: 30px;
+  background-color: white; }
 
 #Post #blog-content-column {
   padding-top: 241px; }
@@ -7404,44 +7440,26 @@ h3, h4, .card-block .text-sm-right {
   margin-top: 7px;
   color: #3a599f; }
 
-.blog-content-wrapper #all-posts-container {
-  padding-top: 185px; }
-
-.blog-content-wrapper #blog-posts-list {
+#Post .blog-content-wrapper #blog-posts-list {
   background-color: #eceeef;
   padding-top: 243px; }
-  .blog-content-wrapper #blog-posts-list #blog-sidebar-title {
+  #Post .blog-content-wrapper #blog-posts-list #blog-sidebar-title {
     padding-left: 20px; }
 
-.blog-content-wrapper .card {
+#Post .blog-content-wrapper .card {
   border: 0 !important; }
 
-.blog-content-wrapper .learn-more {
+#Post .blog-content-wrapper .learn-more {
   color: #3a599f; }
 
+/*
+	* BLOG  NAVIGATION STATE CLASSES
+	**/
 .blog-nav-small {
   margin-top: 15px !important; }
-
-.blog-header-container .navbar {
-  text-align: center; }
 
 .blog-nav-low-height {
   width: 100% !important;
   margin-top: 54px !important;
   height: 72px !important;
   top: 0 !important; }
-
-#default-layout-container {
-  margin-top: 140px; }
-
-grid {
-  background: #EEE;
-  /* center */
-  margin: 0 auto; }
-
-/* ---- grid-item ---- */
-.grid-item {
-  width: 350px;
-  float: left;
-  margin-bottom: 30px;
-  background-color: white; }
