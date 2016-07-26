@@ -7373,6 +7373,7 @@ h3, h4, .card-block .text-sm-right {
   padding: 0 !important; }
 
 #blog-header-wrapper {
+  top: 0;
   width: 100%;
   position: fixed;
   position: fixed;
@@ -7409,6 +7410,8 @@ h3, h4, .card-block .text-sm-right {
 .blog-content-wrapper #blog-posts-list {
   background-color: #eceeef;
   padding-top: 243px; }
+  .blog-content-wrapper #blog-posts-list #blog-sidebar-title {
+    padding-left: 20px; }
 
 .blog-content-wrapper .card {
   border: 0 !important; }

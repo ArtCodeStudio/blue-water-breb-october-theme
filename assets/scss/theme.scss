@@ -238,7 +238,7 @@ h3, h4, .card-block .text-sm-right {
     // height:135px;
     // z-index:999;
     // transition: all .25s ease-in-out;
-    // top:110px;
+     top:0;
 
     width: 100%;
     position: fixed;
@@ -294,6 +294,10 @@ h3, h4, .card-block .text-sm-right {
     #blog-posts-list {
         background-color: $gray-lighter;
         padding-top:243px;
+        
+        #blog-sidebar-title {
+            padding-left:20px; //p-l-1 ist zu wenihger und p-l-2 zu viel
+        }
     }
 
     .card{
