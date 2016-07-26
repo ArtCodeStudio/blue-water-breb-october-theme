@@ -166,8 +166,8 @@ nav .container {
 			#latest-blog-posts-row {
 
 				.slick-slide {
-					margin: 0 $grid-gutter-width/2;
-				height:200px;
+					margin: 0 $grid-gutter-width/2; // result  0 0.9375rem
+					height:200px;
 				}
 
 				.slick-list {
@@ -175,11 +175,11 @@ nav .container {
 				}
 
 				.slick-prev {
-					left: -40px;
+					left: -48px;
 				}
 
 				.slick-next {
-					right: -40px;
+					right: -49px; //by intention! +1
 				}
 			}
 		}
