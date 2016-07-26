@@ -12,18 +12,19 @@
         
         {# Content #}
         <section id="layout-content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
+            {#<div class="container">#}
+                {#<div class="row">
+                    <div class="col-xs-12">#}
                         {#<h1>{{ this.page.title }}</h1>#}
-
                        {% page %}
-                    </div>
-                </div>
-            </div>
+                    {#</div>#}
+                {#</div>#}
+            {#</div>#}
+         
         </section>
            
-      
+
+        
         {% partial 'footer/footer_brand' %}
 
         {% partial 'footer/footer_navigation' %}
@@ -33,7 +34,7 @@
         {% partial 'footer/footer_legal' %}    
 
        {% put scripts %}
-            <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
+            <script type="text/javascript" src="{{ 'assets/javascript/pages/blog.js' | theme }}"></script>
         {% endput %}
         
         {% partial 'body_foot' %}    

@@ -13,7 +13,8 @@
 @import 'buttons';
 @import 'navbar';
 @import 'sidebar';
-hr{
+
+hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border:-1; //
@@ -86,20 +87,25 @@ h3, h4, .card-block .text-sm-right {
     #latest-blog-posts-row {
             
         .slick-slide {
-            margin: 0 16px;
+           margin: 0 $grid-gutter-width/2;
+           height:200px;
         }
         
         .slick-list {
-            margin: 0 -16px;
+           margin: 0 -$grid-gutter-width;
         }
         
-        .slick-slide {
-           height:200px;
+        .slick-prev {
+          left: -40px;  
         }
-    
+        
+        .slick-next {
+          right: -40px;
+        }
     }
 
 }
+
 
 .footer {
     &#footer-brand-logo-container {
@@ -195,7 +201,8 @@ h3, h4, .card-block .text-sm-right {
 }
 
 .brand-hidden {
-    opacity:0 !important;;    
+    opacity:0 !important;
+    display:none;   
 }
 
 
@@ -210,40 +217,74 @@ h3, h4, .card-block .text-sm-right {
 
 // BLOG 
 #blog-header-wrapper {
+    
     width:100%;
-    margin-top: 110px; // m-y-4 nicht vergfuegbar ?
+    // margin-top: 110px; 
     position: fixed;
     position:fixed;
     height:135px;
     z-index:999;
+    transition: all .25s ease-in-out;
+    top:110px;
+
+    .blog-header-container {
+        text-align:center;
+    }
+    
+    .blog-header-container .nav-link {
+        color: white;
+        margin-top: 45px;
+    }
+
+    .blog-header-container .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        text-align: center;
+    }
+
+    #blog-filter .btn {
+        font-size: 1.1rem !important;
+    }
+ 
+
 }
 
-.blog-header-container {
-    text-align:center;
-}
-#blog-filter{
+.blog-content-wrapper {
 
+    #blog-content-column, #blog-posts-list {
+        margin-top:236px;
+    }
+    
+    #blog-posts-list {
+        background-color:rgb(241, 240, 240);
+    }
+
+    .card{
+        border: 0 !important
+    }
 }
 
-.blog-header-container .nav-link {
-    color: white;
-    margin-top:45px;
+.blog-nav-small {
+    margin-top: 15px !important;
 }
+
 
 // all blog categories
-.blog-content-wrapper {
-    margin-top:264px;
-}
+// .blog-content-wrapper {
+//     margin-top:264px;
+// }
 // dort funktioniert es http://jsfiddle.net/daslicht/zonh5qjw/3/
 // hier nicht 
-.blog-header-container .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    text-align: center;
-}
 
 .blog-header-container .navbar {
     text-align: center;
+}
+
+.blog-nav-low-height{
+    width: 100% !important;
+    margin-top: 54px !important;
+    height: 72px !important;
+    top:0 !important;
 }
 
 #default-layout-container {

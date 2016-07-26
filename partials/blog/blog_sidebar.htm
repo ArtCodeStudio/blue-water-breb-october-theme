@@ -1,0 +1,46 @@
+[viewBag]
+snippetName = "Blog Sidebar"
+==
+{% set currentCategory = "" %} 
+
+<div class="col-xs-4  section-headline-text"  id="blog-posts-list">
+        <div class="p-y-2">
+            <div class="border-top"></div>
+            <h3 class="text-xs-left">Lastest
+                {% if post.categories.count %} 
+                    {% for category in post.categories %}
+                        <!-- interesing ...  category.url != category.name here :) -->
+                        {{ category.name }}
+                        {% set currentCategory = category.slug %}
+                
+                        {% if not loop.last %}, {% endif %}
+                    {% endfor %} 
+                {% endif %}    
+            </h3>   
+        </div>
+        {% for post in posts %}
+                {% if post.categories.count %} 
+                    {% for category in post.categories %}
+                        {% if category.slug == currentCategory %}
+                            <div class="card card-block">
+
+                                <div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
+                                <h4 class="card-title text-lg-left">{{ post.title }}</h4>
+
+                                <div class='latest-blog-posts-content-container'>
+                                    {{ post.summary }}
+                                </div>
+                                
+                                <div class="learn-more center-block text-xs-right">
+                                    <a href="{{ post.url }}" class="">read more</a>
+                                </div>
+                                
+                            </div>
+                        {% endif%}
+
+                    {% endfor %} 
+                {% endif %}
+        {% else %}
+            <div class="no-data">{{ noPostsMessage }}</div>
+        {% endfor %}                
+</div>

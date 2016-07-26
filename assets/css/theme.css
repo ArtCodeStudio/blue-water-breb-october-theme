@@ -7294,13 +7294,17 @@ h3, h4, .card-block .text-sm-right {
   color: #3a599f !important; }
 
 #latest-blog-posts #latest-blog-posts-row .slick-slide {
-  margin: 0 16px; }
+  margin: 0 0.9375rem;
+  height: 200px; }
 
 #latest-blog-posts #latest-blog-posts-row .slick-list {
-  margin: 0 -16px; }
+  margin: -1.875rem; }
 
-#latest-blog-posts #latest-blog-posts-row .slick-slide {
-  height: 200px; }
+#latest-blog-posts #latest-blog-posts-row .slick-prev {
+  left: -40px; }
+
+#latest-blog-posts #latest-blog-posts-row .slick-next {
+  right: -40px; }
 
 .footer#footer-brand-logo-container {
   text-align: center !important;
@@ -7353,7 +7357,8 @@ h3, h4, .card-block .text-sm-right {
   margin-top: 0; }
 
 .brand-hidden {
-  opacity: 0 !important; }
+  opacity: 0 !important;
+  display: none; }
 
 #liner-services #liner-services-content-container {
   text-align: justify !important; }
@@ -7364,29 +7369,45 @@ h3, h4, .card-block .text-sm-right {
 
 #blog-header-wrapper {
   width: 100%;
-  margin-top: 110px;
   position: fixed;
   position: fixed;
   height: 135px;
-  z-index: 999; }
+  z-index: 999;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  top: 110px; }
+  #blog-header-wrapper .blog-header-container {
+    text-align: center; }
+  #blog-header-wrapper .blog-header-container .nav-link {
+    color: white;
+    margin-top: 45px; }
+  #blog-header-wrapper .blog-header-container .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    text-align: center; }
+  #blog-header-wrapper #blog-filter .btn {
+    font-size: 1.1rem !important; }
 
-.blog-header-container {
-  text-align: center; }
+.blog-content-wrapper #blog-content-column, .blog-content-wrapper #blog-posts-list {
+  margin-top: 236px; }
 
-.blog-header-container .nav-link {
-  color: white;
-  margin-top: 45px; }
+.blog-content-wrapper #blog-posts-list {
+  background-color: #f1f0f0; }
 
-.blog-content-wrapper {
-  margin-top: 264px; }
+.blog-content-wrapper .card {
+  border: 0 !important; }
 
-.blog-header-container .navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  text-align: center; }
+.blog-nav-small {
+  margin-top: 15px !important; }
 
 .blog-header-container .navbar {
   text-align: center; }
+
+.blog-nav-low-height {
+  width: 100% !important;
+  margin-top: 54px !important;
+  height: 72px !important;
+  top: 0 !important; }
 
 #default-layout-container {
   margin-top: 140px; }

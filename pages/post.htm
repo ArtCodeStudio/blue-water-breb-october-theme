@@ -17,13 +17,11 @@ sortOrder = "published_at desc"
 categoryPage = "all-reports"
 postPage = "post"
 ==
-<div id="reports" class="blog-content-wrapper" data-target="#reports"> 
-
-
+<div class="blog-content-wrapper" data-target="#blog-content-wrapper" id="blog-content-wrapper"> 
 
     <div class="container">
 
-        <div class="col-xs-8  section-headline-text"  id="">
+        <div class="col-xs-8  section-headline-text"  id="blog-content-column">
             <div class="text-sm-right p-y-1">{{ post.published_at|date('M d, Y') }}</div>
             <h3 class="card-title text-lg-left">{{ post.title }}</h3>
             <div class="content">{{ post.content_html|raw }}</div>
@@ -44,9 +42,9 @@ postPage = "post"
 
         </div>
         
-        {% set currentCategory = "" %} 
+        {% set currentCategory = "" %}
         
-        <div class="col-xs-4  section-headline-text"  id="">
+        <div class="col-xs-4  section-headline-text"  id="blog-posts-list">
                 <div class="p-y-2">
                     <div class="border-top"></div>
                     <h3 class="text-xs-left">Lastest
@@ -84,8 +82,8 @@ postPage = "post"
                         {% endif %}
                 {% else %}
                     <div class="no-data">{{ noPostsMessage }}</div>
-                {% endfor %} 
-                            
+                {% endfor %}                
         </div>
+
     </div>
 </div>

@@ -17,7 +17,7 @@ $(document).ready(function() {
     //     console.log('init')
     // }, false);
 
-    /*
+    /* Callbacks for addClass
      * http://stackoverflow.com/questions/14567990/how-to-add-a-callback-function-to-the-addclass-method-of-jquery
      **/
     (function ($) {
@@ -37,27 +37,27 @@ $(document).ready(function() {
     //window.dispatchEvent(init);
    
     var slide_show = $("#slideshow");
-        slide_show.height() 
-    var slideshow_height = $("#slideshow").height() - 35;
-    console.log('slideshow_height',slideshow_height);
+    var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
+    
     //console.log('scroll',$("#slideshow").height());
     $(window).scroll( function (event) {
         var scroll_pos = $(window).scrollTop();
-       //  console.log('scroll_pos',scroll_pos);
+         console.log('scroll_pos',scroll_pos);
         
         if(scroll_pos >= slideshow_height) {
-            $('.navbar-brand').addClass("brand-hidden" ,250,"swing", function(){
-          
-                 setTimeout(function(){  
-                       $('.navbar-brand').css("display","none");
-                }, 125);
-                console.log('end');
-            });
+            // $('.navbar-brand').addClass("brand-hidden" ,250,"swing", function(){
+            //      setTimeout(function(){  
+            //            $('.navbar-brand').css("display","none");
+            //     }, 250);
+            //     console.log('end');
+            // });
+
+            $('.navbar-brand').addClass("brand-hidden" );
 
             $('.main-navigation').addClass('nav-low-height');
             $('#navbar-main').addClass("border-bottom");
         }else{
-            $('.navbar-brand').css("display","block");
+            //$('.navbar-brand').css("display","block");
             $('.navbar-brand').removeClass("brand-hidden");
             $('.main-navigation').removeClass('nav-low-height');
             $('#navbar-main').removeClass("border-bottom");
