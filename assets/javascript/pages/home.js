@@ -1,118 +1,136 @@
 $(document).ready(function() {
 
-    // var $latest-blog-posts-container = $("latest-blog-posts-container");
-    $(".latest-blog-posts-carousel").slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        centerMode: false,
-        centerPadding: '0',
-    });
-    // var init = new Event('init');
-    // window.jumplink = window.jumplink || {};   
+	/**
+	 * Special scroll events for jQuery
+	 * @see http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
+	 */
+	(function(){
 
-    // // Listen for the event.
-    // window.addEventListener('init', function (e) {
-    //     console.log('init')
-    // }, false);
+		var special = jQuery.event.special,
+					uid1 = 'D' + (+new Date()),
+					uid2 = 'D' + (+new Date() + 1);
 
-    /* Callbacks for addClass
-     * http://stackoverflow.com/questions/14567990/how-to-add-a-callback-function-to-the-addclass-method-of-jquery
-     **/
-    (function ($) {
-        var oAddClass = $.fn.addClass;
-        $.fn.addClass = function () {
-            for (var i in arguments) {
-                var arg = arguments[i];
-                if ( !! (arg && arg.constructor && arg.call && arg.apply)) {
-                    arg();
-                    delete arg;
-                }
-            }
-            return oAddClass.apply(this, arguments);
-        }
-    })(jQuery);
+		special.scrollstart = {
+			setup: function() {
 
-    //window.dispatchEvent(init);
-   
-    var slide_show = $("#slideshow");
-    var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
-    
-    //console.log('scroll',$("#slideshow").height());
-    $(window).scroll( function (event) {
-        var scroll_pos = $(window).scrollTop();
-         console.log('scroll_pos',scroll_pos);
-        
-        if(scroll_pos >= slideshow_height) {
-            // $('.navbar-brand').addClass("brand-hidden" ,250,"swing", function(){
-            //      setTimeout(function(){  
-            //            $('.navbar-brand').css("display","none");
-            //     }, 250);
-            //     console.log('end');
-            // });
+				var timer,
+					handler =  function(evt) {
 
-            $('.navbar-brand').addClass("brand-hidden" );
+						var _self = this,
+							_args = arguments;
 
-            $('.main-navigation').addClass('nav-low-height');
-            $('#navbar-main').addClass("border-bottom");
-        }else{
-            //$('.navbar-brand').css("display","block");
-            $('.navbar-brand').removeClass("brand-hidden");
-            $('.main-navigation').removeClass('nav-low-height');
-            $('#navbar-main').removeClass("border-bottom");
-        }
-       
-    });
+						if (timer) {
+							clearTimeout(timer);
+						} else {
+							evt.type = 'scrollstart';
+							jQuery.event.dispatch.apply(_self, _args);
+						}
 
-        // var changeNavbar = function () {
-        //     var $slideshow_height = $("#slideshow").height();
-        //     var windowScrollTop = $(window).scrollTop();
-        //     var viewportHeight = $( window ).height();
-        //     var mainNavbarHeight = 94; //$('#navbar-main').height();// 54; 
-        //     var actionPosition = viewportHeight  - $slideshow_height ;
-        //     console.log('actionPosition',mainNavbarHeight);
+						timer = setTimeout( function(){
+							timer = null;
+						}, special.scrollstop.latency);
 
-        //     if(windowScrollTop >= actionPosition ) {
-        //          console.log('pling',mainNavbarHeight);
-        //         //$('#navbar-main, #sidebar').removeClass('navbar-big');
-        //        // $('#navbar-main').removeClass('bg-white-transparent');
-        //         $('.main-navigation').addClass('nav-low-height');
-        //         $('.navbar-brand').addClass("brand-hidden");
-        //     } else {
-        //         console.log('plong');
-        //         // $('#navbar-main, #sidebar').addClass('navbar-big');
-        //         // $('#navbar-main').addClass('bg-white-transparent');
-        //         // $('#navbar-main, #sidebar').removeClass('bg-white');
-        //         $('.main-navigation').removeClass('nav-low-height');
-        //         $('.navbar-brand').removeClass("brand-hidden");
-        //     }
-        // }
-    /**
-     * Navbar
-     */
+					};
 
-    // $(window).on('scrollstop',function() {
-       
-    //         console.log('resize scrollstop');
-    //     changeNavbar();
-    // });
+				jQuery(this).bind('scroll touchmove', handler).data(uid1, handler);
 
-    // $(window).scroll(function() {
-       
-    //         console.log('resize scrollstop');
-    //     changeNavbar();
-    // });
-    // changeNavbar();
+			},
+			teardown: function(){
+				jQuery(this).unbind( 'scroll touchmove', jQuery(this).data(uid1) );
+			}
+		};
+
+		special.scrollstop = {
+			latency: 100, // default is 300
+			setup: function() {
+
+				var timer,
+						handler = function(evt) {
+
+						var _self = this,
+							_args = arguments;
+
+						if (timer) {
+							clearTimeout(timer);
+						}
+
+						timer = setTimeout( function(){
+
+							timer = null;
+							evt.type = 'scrollstop';
+							jQuery.event.dispatch.apply(_self, _args);
+
+						}, special.scrollstop.latency);
+
+					};
+
+				jQuery(this).bind('scroll touchmove', handler).data(uid2, handler);
+
+			},
+			teardown: function() {
+				jQuery(this).unbind('scroll touchmove', jQuery(this).data(uid2) );
+			}
+		};
+	})();
 
 
-    // $(window).scroll($.debounce( 250, true, function(){
-    //     $('#scrollMsg').html('SCROLLING!');
-    // }));
+	var setCardHeight = function() {
+		var maxHeight = 0;
+		$('#press-releases .card-block').each( function(i, obj) {
+			var $self = $(this);
+			console.log($(this).height());
+			if( $self.height() < maxHeight ){
+				console.log('if');
+				$self.height(maxHeight + 72);
+			}else{
+				console.log('else');
+				maxHeight = $self.height();
+				$self.height(maxHeight + 72)
+			}
+			//maxHeight = obj.heigth();
+		})
 
-    // $(window).scroll($.debounce( 250, function(){
-    //     $('#scrollMsg').html('DONE!');
-    //     changeNavbar();
-    // }));
-     
+	}
+	setCardHeight();
+	
+
+	var initCarousel= function(){
+		// var $latest-blog-posts-container = $("latest-blog-posts-container");
+		$(".latest-blog-posts-carousel").slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			autoplay: false,
+			autoplaySpeed: 2000,
+			centerMode: false,
+			centerPadding: '0',
+		});
+
+	}
+	initCarousel();
+
+
+	var changeNavbar = function (event) {
+		var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
+		var scroll_pos = $(window).scrollTop();
+		console.log('scroll_pos',scroll_pos);
+		if(scroll_pos >= slideshow_height) {
+			$('.navbar-brand').addClass("brand-hidden" );
+
+			$('.main-navigation').addClass('nav-low-height');
+			$('#navbar-main').addClass("border-bottom");
+		}else{
+			//$('.navbar-brand').css("display","block");
+			$('.navbar-brand').removeClass("brand-hidden");
+			$('.main-navigation').removeClass('nav-low-height');
+			$('#navbar-main').removeClass("border-bottom");
+		}
+
+	};
+
+	$(window).on('scrollstop',function() {
+	    changeNavbar();
+	});
+
+	 changeNavbar();
+
 });

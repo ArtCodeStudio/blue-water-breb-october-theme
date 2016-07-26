@@ -6808,7 +6808,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 /*
  * ASPECT RATIO for background images
- * 
+ *
  * @authors Marc Hinse, Pascal Garber
  * @see: http://www.jumplink.eu/blog/post/onlineshop-immer-einheitlich-grosse-produktbilder
  * @see: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
@@ -7285,6 +7285,11 @@ h3, h4, .card-block .text-sm-right {
 
 .carousel-video-wrapper video, .carousel-image-wrapper img {
   opacity: 0.6 !important; }
+
+#press-releases .learn-more {
+  position: absolute;
+  bottom: 15px;
+  right: 15px; }
 
 #latest-blog-posts .latest-blog-posts-content-container {
   height: 58px;

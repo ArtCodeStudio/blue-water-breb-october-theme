@@ -19,68 +19,87 @@ postPage = "post"
 function onEnd(){
 
  //   var_dump($posts);
- 
+
 }
 ?>
 ==
-<div id="press-releases" data-target="#press-releases"> 
+<div id="press-releases" data-target="#press-releases">
 
-    <div class="container text-xs-center p-y-3">
+	<div class="container text-xs-center p-y-3">
 
-        <div class="row">
-            <div class="col-xs-12 section-headline-text" >
-                <div class="border-top"></div>
-                <h3 class="text-xs-left">{{title}}</h3>               
-            </div>
-        </div>
-    </div>
-    
-    <div class="container">
+		<div class="row">
+			<div class="col-xs-12 section-headline-text" >
+				<div class="border-top"></div>
+				<h3 class="text-xs-left">{{title}}</h3>
+			</div>
+		</div>
+	</div>
 
-        <div class="row">
-            <div class="card-group">
-                {% for post in posts %}
-                
-                    <div class="col-xs-12 col-md-4">
-        
-                        <div class="card">
-                            <div class='box ratio-16-9'> 
-                                <div class='content'>
-                                    {% if post.featured_images.count %}
-                                        {% for image in post.featured_images %}
-                                            <img 
-                                                data-src="{{ image.filename }}"
-                                                src="{{ image.path }}"
-                                                alt="{{ image.description }}"
-                                                class="card-img-top img-fluid"
-                                            />
-                                        {% endfor %}
+	<div class="container">
+		<div class="row">
+			{% for post in posts %}
+				<div class="col-xs-12 col-sm-4 text-center">
+					<div class="card">
+						{% if post.featured_images.count %}
+							{% for image in post.featured_images %}
+								<a href="{{ post.url }}" class="background-box ratio-16-9" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a>
+							{% endfor %}
+						{% else %}
+							<img class="card-img-top img-fluid" src="http://placehold.it/340x173"/>
+						{% endif %}					
+						<div class="card-block">
+							<p class="text-xs-right">{{ post.published_at|date('M d, Y') }}</p>
+							<h4 class="card-title text-xs-left">{{ post.title }}</h4>
+							<div class="description">
+								{{ post.summary }}
+							</div>
+							<div class="learn-more center-block text-xs-right">
+								<a href="{{ post.url }}" class="">read more</a>
+							</div>
+						</div>
+					</div>
 
-                                    {% else %}
-                                        <img class="card-img-top img-fluid" src="http://placehold.it/340x173"/>
-                                    {% endif %}
-                                </div> 
-                            </div>
-                            
-                            <div class="card-block">
-                                <p class="text-xs-right">{{ post.published_at|date('M d, Y') }}</p>
-                                <h4 class="card-title text-xs-left">{{ post.title }}</h4>
-                                <div class='overview-content-container'>
-                                    {{ post.summary }}
-                                </div>
-                                <div class="learn-more center-block text-xs-right">
-                                    <a href="{{ post.url }}" class="">read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-    
-    
-                {% else %}
-                    <div class="no-data">{{ noPostsMessage }}</div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
+				</div>
+			{% else %}
+				<div class="no-data">{{ noPostsMessage }}</div>
+			{% endfor %}
+		</div>
+
+	{#
+		<div class="row">
+			<div class="card-group">
+				{% for post in posts %}
+					<div class="col-xs-12 col-md-4">
+						<div class="card">
+							<div class='content'>
+								{% if post.featured_images.count %}
+									{% for image in post.featured_images %}
+										<a href="#" class="background-box ratio-16-9 m-x-1" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a>
+									{% endfor %}
+								{% else %}
+									<img class="card-img-top img-fluid" src="http://placehold.it/340x173"/>
+								{% endif %}		
+							</div>
+							
+							<div class="card-block">
+								<p class="text-xs-right">{{ post.published_at|date('M d, Y') }}</p>
+								<h4 class="card-title text-xs-left">{{ post.title }}</h4>
+								<div class='overview-content-container'>
+									{{ post.summary }}
+								</div>
+								<div class="learn-more center-block text-xs-right">
+									<a href="{{ post.url }}" class="">read more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				{% else %}
+					<div class="no-data">{{ noPostsMessage }}</div>
+				{% endfor %}
+			</div>
+		</div>
+	#}
+	</div>
+
+	
 </div>
