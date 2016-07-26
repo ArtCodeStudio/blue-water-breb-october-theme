@@ -76,7 +76,7 @@ h3, h4, .card-block .text-sm-right {
         bottom: 15px;
         right: 15px;
     }
-    
+
 }
 
 
@@ -229,22 +229,30 @@ h3, h4, .card-block .text-sm-right {
 // BLOG 
 #blog-header-wrapper {
     
-    width:100%;
-    // margin-top: 110px; 
-    position: fixed;
-    position:fixed;
-    height:135px;
-    z-index:999;
-    transition: all .25s ease-in-out;
-    top:110px;
+    // width:100%;
+    // // margin-top: 110px; 
+    // position: fixed;
+    // position:fixed;
+    // height:135px;
+    // z-index:999;
+    // transition: all .25s ease-in-out;
+    // top:110px;
 
+    width: 100%;
+    position: fixed;
+    position: fixed;
+    height: 210px;
+    z-index: 999;
+    transition: all .25s ease-in-out;
+
+    /* top: 110px; */
     .blog-header-container {
         text-align:center;
     }
     
-    .blog-header-container .nav-link {
+    .blog-header-container #blog-filter .nav-link {
         color: white;
-        margin-top: 45px;
+        margin-top: 140px;
     }
 
     .blog-header-container .navbar .navbar-nav {

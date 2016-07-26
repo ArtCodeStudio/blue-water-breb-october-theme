@@ -7376,16 +7376,16 @@ h3, h4, .card-block .text-sm-right {
   width: 100%;
   position: fixed;
   position: fixed;
-  height: 135px;
+  height: 210px;
   z-index: 999;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
-  top: 110px; }
+  /* top: 110px; */ }
   #blog-header-wrapper .blog-header-container {
     text-align: center; }
-  #blog-header-wrapper .blog-header-container .nav-link {
+  #blog-header-wrapper .blog-header-container #blog-filter .nav-link {
     color: white;
-    margin-top: 45px; }
+    margin-top: 140px; }
   #blog-header-wrapper .blog-header-container .navbar .navbar-nav {
     display: inline-block;
     float: none;

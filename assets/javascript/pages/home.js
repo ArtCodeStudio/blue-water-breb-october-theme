@@ -112,7 +112,7 @@ $(document).ready(function() {
 	var changeNavbar = function (event) {
 		var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
 		var scroll_pos = $(window).scrollTop();
-		console.log('scroll_pos',scroll_pos);
+		// console.log('scroll_pos',scroll_pos);
 		if(scroll_pos >= slideshow_height) {
 			$('.navbar-brand').addClass("brand-hidden" );
 
@@ -127,7 +127,7 @@ $(document).ready(function() {
 
 	};
 
-	$(window).on('scrollstop',function() {
+	$(window).on('scrollstop', function() {
 	    changeNavbar();
 	});
 
