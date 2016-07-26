@@ -63,9 +63,7 @@ h3, h4, .card-block .text-sm-right {
 }
 
 
-.learn-more a {
-    color: $brand-danger !important;
-}
+
 
 .carousel-video-wrapper video, .carousel-image-wrapper img {
         opacity: 0.6 !important;
@@ -77,6 +75,9 @@ h3, h4, .card-block .text-sm-right {
         position: absolute;
         bottom: 15px;
         right: 15px;
+    }
+    .learn-more a {
+        color: $brand-danger;
     }
 
 }
@@ -302,6 +303,10 @@ h3, h4, .card-block .text-sm-right {
 
     .card{
         border: 0 !important
+    }
+
+    .learn-more {
+        color: $brand-primary;
     }
 }
 

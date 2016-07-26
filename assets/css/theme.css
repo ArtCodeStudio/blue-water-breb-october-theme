@@ -7280,9 +7280,6 @@ h3, h4, .card-block .text-sm-right {
 .card-block .text-sm-right {
   margin-bottom: 15px; }
 
-.learn-more a {
-  color: #d9534f !important; }
-
 .carousel-video-wrapper video, .carousel-image-wrapper img {
   opacity: 0.6 !important; }
 
@@ -7290,6 +7287,9 @@ h3, h4, .card-block .text-sm-right {
   position: absolute;
   bottom: 15px;
   right: 15px; }
+
+#press-releases .learn-more a {
+  color: #d9534f; }
 
 #latest-blog-posts .latest-blog-posts-content-container {
   height: 58px;
@@ -7415,6 +7415,9 @@ h3, h4, .card-block .text-sm-right {
 
 .blog-content-wrapper .card {
   border: 0 !important; }
+
+.blog-content-wrapper .learn-more {
+  color: #3a599f; }
 
 .blog-nav-small {
   margin-top: 15px !important; }
