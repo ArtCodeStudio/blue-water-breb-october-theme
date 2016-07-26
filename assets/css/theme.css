@@ -7430,3 +7430,15 @@ h3, h4, .card-block .text-sm-right {
 
 #default-layout-container {
   margin-top: 140px; }
+
+grid {
+  background: #EEE;
+  /* center */
+  margin: 0 auto; }
+
+/* ---- grid-item ---- */
+.grid-item {
+  width: 350px;
+  float: left;
+  margin-bottom: 30px;
+  background-color: white; }

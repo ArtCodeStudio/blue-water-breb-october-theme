@@ -1,0 +1,39 @@
+[viewBag]
+==
+<div id="reports" class="blog-content-wrapper"> 
+	<div class="container m-t-3" id="all-posts-container">
+
+		<div class="row p-x-1 p-y-3">
+
+			{% for post in posts %}
+			
+				<div class="col-xs-4 p-y-1">
+					<div class="card">
+						{% if post.featured_images.count %}
+							<div class="featured-images text-center "> 
+								{% set image = post.featured_images[0] %}
+								<a href="{{ post.url }}" class="background-box ratio-16-9" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a>
+							</div>
+						{% endif %}
+						<div class="card-block">
+							<div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
+							<h4 class="card-title text-lg-left">{{ post.title }}</h4>
+							<div class='latest-blog-posts-content-container'>
+								{{ post.summary }} {{colums}}
+							</div>
+
+							<div class="learn-more center-block text-xs-right">
+								<a href="{{ post.url }}" class="">read more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			{% else %}
+				<div class="no-data">{{ noPostsMessage }}</div>
+			{% endfor %} 
+
+		</div>    
+
+	</div>
+</div>

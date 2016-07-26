@@ -102,7 +102,26 @@ $(document).ready(function(){
 
 	changeNavbar();
 
+	// var initMasonry = function() {
+	// 	$('#all-posts-container').masonry({
+	// 		itemSelector: '.card',
+	// 		//columnWidth: '.card',//118
+	// 		columnWidth: '.grid-sizer',
+	// 		gutter: '.gutter-sizer',
+	// 		percentPosition: true,
+	// 		//gutter: 20
+	// 	});
+	// }
 
+	var initMasonry = function() {
+		$('.grid').masonry({
+		itemSelector: '.grid-item',
+		columnWidth: 350,
+		isFitWidth: true,
+		gutter:30
+		});
+	}
+	initMasonry();
 
 
 })

@@ -331,3 +331,25 @@ h3, h4, .card-block .text-sm-right {
 #default-layout-container {
     margin-top: 140px;
 }
+
+
+grid {
+  background: #EEE;
+  /* center */
+  margin: 0 auto;
+}
+
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 350px;
+ // height: 120px;
+  float: left;
+  //background: #D26;
+  //border: 1px solid $brand-primary;
+  //border-color: hsla(0, 0%, 0%, 0.5);
+  //border-radius: 5px;
+  margin-bottom: 30px;
+  background-color: white;
+}
