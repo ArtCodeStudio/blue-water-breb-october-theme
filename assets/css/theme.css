@@ -7420,6 +7420,12 @@ nav .container {
 #LinerServices .slick-prev:before, #LinerServices .slick-next:before {
   color: #d9534f; }
 
+#LinerServices #fullscreen-button {
+  position: absolute;
+  z-index: 999;
+  right: 5px;
+  top: 5px; }
+
 #LinerServices #gallery_slideshow_2 {
   overflow: hidden; }
   #LinerServices #gallery_slideshow_2 .slick-slide {

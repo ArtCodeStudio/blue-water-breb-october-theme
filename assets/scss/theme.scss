@@ -253,7 +253,12 @@ nav .container {
 		.slick-prev:before, .slick-next:before {
 			color: $brand-danger;
 		}
-
+		#fullscreen-button{
+			position: absolute;
+			z-index: 999;
+			right: 5px;
+			top: 5px;
+		}
 		#gallery_slideshow_2 {
 			overflow: hidden;
 			.slick-slide {

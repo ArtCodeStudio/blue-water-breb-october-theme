@@ -1,9 +1,11 @@
 [viewBag]
 ==
 {% if __SELF__.slideshow.slides %}
+	<div id="fullscreen-button">fullscreen icon</div> <!--<i class="icon-fullscreen"></i>-->
 	<div id='{{__SELF__.alias}}' class="slick-carousel">
 		{% for i, slide in __SELF__.slideshow.slides %}
-			<a href="{{ slide.link }}" id="{{__SELF__.alias}}-slide-{{loop.index}}" class="slick-slide">
+			{#<a href="{{ slide.link }}" id="{{__SELF__.alias}}-slide-{{loop.index}}" class="slick-slide">#}
+			<div id="{{__SELF__.alias}}-slide-{{loop.index}}" class="slick-slide">
 				{% if slide.mp4 != blank or slide.webm != blank or slide.ogg != blank %}
 					{% if slide.aspect_ratio == 'custom' %}
 						<!-- TODO Moritz -->
@@ -43,9 +45,12 @@
 						</div>
 					</div>
 				{% endif %}
-			</a>
+				
+			</div>
 		{% endfor %}
+		
 	</div>
+
 
 	<div id='gallery_slideshow_2' class="slick-carousel m-t-2">
 		{% for i, slide in __SELF__.slideshow.slides %}
@@ -154,6 +159,10 @@
 				focusOnSelect: true,
 				arrows: false
 			});
+
+			$("#fullscreen-button").on('click',function(e) {
+				alert('FULLSCREEN!');
+			})
 
 
 			{{ __SELF__.property('nextSlideOnEnd') == 1 ? '' : '/*'}}
