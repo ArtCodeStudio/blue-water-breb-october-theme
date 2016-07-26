@@ -14,6 +14,8 @@
 @import 'navbar';
 @import 'sidebar';
 
+
+
 hr {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -268,14 +270,30 @@ h3, h4, .card-block .text-sm-right {
 
 }
 
-.blog-content-wrapper {
-
-    #blog-content-column, #blog-posts-list {
-        margin-top:236px;
+#Category, #AllReports {
+    .blog-content-wrapper {
+        background-color: $gray-lighter;
+    }
+}
+#Post{
+    #blog-content-column {
+        padding-top: 241px;
+    }
+    #post-date{
+        margin-top: 7px;
+        color: $brand-primary;
     }
     
+}
+.blog-content-wrapper {
+
+    #all-posts-container {
+        padding-top: 185px;
+    }
+
     #blog-posts-list {
-        background-color:rgb(241, 240, 240);
+        background-color: $gray-lighter;
+        padding-top:243px;
     }
 
     .card{

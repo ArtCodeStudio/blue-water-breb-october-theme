@@ -7393,11 +7393,22 @@ h3, h4, .card-block .text-sm-right {
   #blog-header-wrapper #blog-filter .btn {
     font-size: 1.1rem !important; }
 
-.blog-content-wrapper #blog-content-column, .blog-content-wrapper #blog-posts-list {
-  margin-top: 236px; }
+#Category .blog-content-wrapper, #AllReports .blog-content-wrapper {
+  background-color: #eceeef; }
+
+#Post #blog-content-column {
+  padding-top: 241px; }
+
+#Post #post-date {
+  margin-top: 7px;
+  color: #3a599f; }
+
+.blog-content-wrapper #all-posts-container {
+  padding-top: 185px; }
 
 .blog-content-wrapper #blog-posts-list {
-  background-color: #f1f0f0; }
+  background-color: #eceeef;
+  padding-top: 243px; }
 
 .blog-content-wrapper .card {
   border: 0 !important; }

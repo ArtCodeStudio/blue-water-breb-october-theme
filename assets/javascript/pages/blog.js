@@ -77,7 +77,7 @@ $(document).ready(function(){
 		//console.log('scroll',$("#slideshow").height());
 		//$(window).scroll( function (event) {
 		var scroll_pos = $(window).scrollTop();
-		console.log('blog scroll_pos',scroll_pos);
+		// console.log('blog scroll_pos',scroll_pos);
 		
 		if(scroll_pos >= threshold) {
 			$('.navbar-brand').addClass("brand-hidden" );
