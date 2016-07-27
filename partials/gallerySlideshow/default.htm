@@ -2,6 +2,7 @@
 ==
 {% if __SELF__.slideshow.slides %}
 	<div id="fullscreen-button">fullscreen icon</div> <!--<i class="icon-fullscreen"></i>-->
+	<!--<i class="icon-expand"></i>-->
 	<div id='{{__SELF__.alias}}' class="slick-carousel">
 		{% for i, slide in __SELF__.slideshow.slides %}
 			{#<a href="{{ slide.link }}" id="{{__SELF__.alias}}-slide-{{loop.index}}" class="slick-slide">#}

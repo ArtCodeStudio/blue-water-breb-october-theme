@@ -1,4 +1,21 @@
 $(document).ready(function() {
+	
+	/* Callbacks for addClass
+	 * http://stackoverflow.com/questions/14567990/how-to-add-a-callback-function-to-the-addclass-method-of-jquery
+	 **/
+	(function ($) {
+		var oAddClass = $.fn.addClass;
+		$.fn.addClass = function () {
+			for (var i in arguments) {
+				var arg = arguments[i];
+				if ( !! (arg && arg.constructor && arg.call && arg.apply)) {
+					arg();
+					delete arg;
+				}
+			}
+			return oAddClass.apply(this, arguments);
+		}
+	})(jQuery);
 
 	/**
 	 * Special scroll events for jQuery
@@ -115,14 +132,23 @@ $(document).ready(function() {
 		// console.log('scroll_pos',scroll_pos);
 		if(scroll_pos >= slideshow_height) {
 			$('.navbar-brand').addClass("brand-hidden" );
+			setTimeout( function() { 
+				//alert("Hello"); 
+				$('.navbar-brand').css("display","none");
+		
+				$('#navbar-main').addClass("navbar-slim");
+			}, 250);
 
-			$('.main-navigation').addClass('nav-low-height');
-			$('#navbar-main').addClass("border-bottom");
+			//$('.main-navigation').addClass('nav-low-height');
 		}else{
-			//$('.navbar-brand').css("display","block");
-			$('.navbar-brand').removeClass("brand-hidden");
-			$('.main-navigation').removeClass('nav-low-height');
-			$('#navbar-main').removeClass("border-bottom");
+			//$('.navbar-brand').removeClass("brand-hidden");
+			//
+			//$('.main-navigation').removeClass('nav-low-height');
+			$('#navbar-main').removeClass("navbar-slim");
+			setTimeout( function() { 
+				$('.navbar-brand').css("display","block");
+				$('.navbar-brand').removeClass("brand-hidden");
+			}, 250);
 		}
 
 	};

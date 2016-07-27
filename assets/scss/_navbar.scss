@@ -13,3 +13,14 @@ $navbar-brand-width: 150px;
     }
     
 }
+
+#navbar-slim {
+	padding-bottom: 0 !important;
+	&:after{
+		content: "";
+		border-bottom: 1px solid #3a599f;
+		width: 1110px;
+		display: block;
+		margin: -1px auto;
+	}
+}
