@@ -270,6 +270,11 @@ nav .container {
 			.description {
 				margin-bottom: 2rem;
 			}
+			.card-group-flex {
+			    .card {
+			        margin: 0 $grid-gutter-width/2;
+			    }
+			}
 		}
 
 	}

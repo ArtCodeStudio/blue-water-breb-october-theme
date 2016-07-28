@@ -37,16 +37,20 @@ function onEnd(){
 
 	<div class="container">
 		<div class="row">
-			{% for post in posts %}
-				<div class="col-xs-12 col-sm-4 text-center">
-					<div class="card">
+			<div class="card-group-flex">
+
+				{% for post in posts %}
+
+					<div class="card text-center">
+						
 						{% if post.featured_images.count %}
 							{% for image in post.featured_images %}
 								<a href="{{ post.url }}" class="background-box ratio-16-9" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a>
 							{% endfor %}
 						{% else %}
 							<img class="card-img-top img-fluid" src="http://placehold.it/340x173"/>
-						{% endif %}					
+						{% endif %}		
+
 						<div class="card-block">
 							<p class="text-xs-right">{{ post.published_at|date('M d, Y') }}</p>
 							<h4 class="card-title text-xs-left">{{ post.title }}</h4>
@@ -57,11 +61,14 @@ function onEnd(){
 								<a href="{{ post.url }}" class="">read more</a>
 							</div>
 						</div>
+						
 					</div>
-				</div>
-			{% else %}
-				<div class="no-data">{{ noPostsMessage }}</div>
-			{% endfor %}
+
+				{% else %}
+					<div class="no-data">{{ noPostsMessage }}</div>
+				{% endfor %}
+
+			</div>
 		</div>
 
 	{#

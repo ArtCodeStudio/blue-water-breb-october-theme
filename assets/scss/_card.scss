@@ -1,4 +1,3 @@
-
 //
 // Flex Card set
 //
@@ -25,11 +24,11 @@
 @include media-breakpoint-up(sm) {
   .card-group-flex {
 
-      display: flex;
-      flex-flow: row wrap;
+    display: flex;
+    flex-flow: row wrap;
 
     .card {
-        flex: 1 0 0;
+      flex: 1 0 0;
 
 
       + .card {
