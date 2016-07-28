@@ -187,17 +187,19 @@ $(document).ready(function() {
                 $this.css('min-height',t);
             }
         });
+
     }
 
    	var init = function () {
 		console.log('resize');
+		//Hyphenator.run();
 		sameHeightCards('#press-releases .card-block');
-		sameHeightCards('.overview-content-container');
-		
+		sameHeightCards('.overview-content-container');	
 	} 
     
 	$(window).on('resize', function() {
-		init();
+		//init();
+		Hyphenator.run();
     });
     init();
 
@@ -208,10 +210,19 @@ $(document).ready(function() {
 
 	 changeNavbar();
 
-     Hyphenator.config({
-                displaytogglebox : true,
-                minwordlength : 4
-     });
-	 Hyphenator.run();
+    //  Hyphenator.config({
+    //             displaytogglebox : true,
+    //             minwordlength : 4
+    //  });
+	 //Hyphenator.run();
+
+	 Hyphenator.config({
+        'onafterwordhyphenation': function (hword, lang) {
+           // console.log(lang + ': ' + hword.replace(new RegExp(String.fromCharCode(173), 'g'), '-'));
+		    init();
+            return hword;
+        }
+    });
+    Hyphenator.run();
 
 });

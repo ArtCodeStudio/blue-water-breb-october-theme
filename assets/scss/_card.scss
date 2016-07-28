@@ -1,0 +1,74 @@
+
+//
+// Flex Card set
+//
+
+@include media-breakpoint-up(sm) {
+    .card-deck-flex {
+      display: flex;
+      flex-flow: row wrap;
+      margin-right: -.625rem;
+      margin-left: -.625rem;
+
+      .card {
+        flex: 1 0 0;
+        margin-right: .625rem;
+        margin-left: .625rem;
+      }
+    }
+}
+
+//
+// Flex Card groups
+//
+
+@include media-breakpoint-up(sm) {
+  .card-group-flex {
+
+      display: flex;
+      flex-flow: row wrap;
+
+    .card {
+        flex: 1 0 0;
+
+
+      + .card {
+        margin-left: 0;
+        border-left: 0;
+      }
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &:first-child {
+          @include border-right-radius(0);
+
+          .card-img-top {
+            border-top-right-radius: 0;
+          }
+          .card-img-bottom {
+            border-bottom-right-radius: 0;
+          }
+        }
+        &:last-child {
+          @include border-left-radius(0);
+
+          .card-img-top {
+            border-top-left-radius: 0;
+          }
+          .card-img-bottom {
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+
+          .card-img-top,
+          .card-img-bottom {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
