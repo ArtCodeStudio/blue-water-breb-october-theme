@@ -4,6 +4,7 @@
 	<div class="container m-t-3" id="all-posts-container">
 
 	<div class="grid">
+
 		{% for post in posts %}
 			<div class="grid-item">
 
@@ -16,7 +17,7 @@
 
 				<div class="card-block">
 					<div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
-					<h4 class="card-title text-lg-left">{{ post.title }}</h4>
+					<h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
 					<div class='latest-blog-posts-content-container'>
 						{{ post.summary }} {{colums}}
 					</div>
@@ -27,41 +28,7 @@
 				</div>
 			</div>
 		{% endfor %} 
+
 	</div>
 
-
-	{#	<div class="grid-sizer"></div>
-		<div class="gutter-sizer"></div>
-
-		{% for post in posts %}
-
-		
-			<div class="card m-b-2" style="width:29%">
-				{% if post.featured_images.count %}
-					<div class="featured-images text-center "> 
-						{% set image = post.featured_images[0] %}
-						<a href="{{ post.url }}" class="background-box ratio-16-9" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a>
-					</div>
-				{% endif %}
-				<div class="card-block">
-					<div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
-					<h4 class="card-title text-lg-left">{{ post.title }}</h4>
-					<div class='latest-blog-posts-content-container'>
-						{{ post.summary }} {{colums}}
-					</div>
-
-					<div class="learn-more center-block text-xs-right ">
-						<a href="{{ post.url }}" class="">read more</a>
-					</div>
-				</div>
-			</div>
-		
-		{% else %}
-		
-			<div class="no-data">{{ noPostsMessage }}</div>
-		
-		{% endfor %} 
-
-
-	</div> #}
 </div>

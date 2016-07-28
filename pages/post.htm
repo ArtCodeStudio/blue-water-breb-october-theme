@@ -24,11 +24,11 @@ postPage = "post"
         <div class="col-xs-8  section-headline-text"  id="blog-content-column">
             
             <div class="col-xs-10 p-b-2 p-l-0">
-                <h3 class="card-title text-lg-left">{{ post.title }}</h3>
+                <h3 class="card-title text-lg-left text-serif">{{ post.title }}</h3>
             </div>
             
             <div class="col-xs-2">
-                <div class="text-sm-right" id="post-date">{{ post.published_at|date('M d, Y') }}</div>
+                <div class="text-sm-right" id="post-date">{{ post.published_at|date('m.d.y') }}</div>
             </div>
             
             <div class="col-xs-12 p-l-0 p-b-3">
@@ -57,7 +57,7 @@ postPage = "post"
                 
                 <div class="p-y-2" id="blog-sidebar-title">
                     <div class="border-top"></div>
-                    <h3 class="text-xs-left">Lastest
+                    <h3 class="text-xs-left text-serif">Lastest
                         {% if post.categories.count %} 
                             {% for category in post.categories %}
                                 <!-- interesing ...  category.url != category.name here :) -->
@@ -67,6 +67,9 @@ postPage = "post"
                                 {% if not loop.last %}, {% endif %}
                             {% endfor %} 
                         {% endif %}    
+                        {% if currentCategory == 'blog' %}
+                            Posts
+                        {% endif%}
                     </h3>   
                 </div>
                 
@@ -77,7 +80,7 @@ postPage = "post"
                                     <div class="card card-block">
 
                                         <div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
-                                        <h4 class="card-title text-lg-left">{{ post.title }}</h4>
+                                        <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
 
                                         <div class='latest-blog-posts-content-container'>
                                             {{ post.summary }}

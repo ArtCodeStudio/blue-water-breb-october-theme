@@ -3,58 +3,58 @@
 <?php
 function onEnd() 
 {    
-    if( $this->param('slug') == null ) {
-        //echo "no query string";
-        $this['queryString' ] = "all";
-    }else{
-        //echo  $this->param('slug');
-        $this['queryString' ]= $this->param('slug');
-    }
+	if( $this->param('slug') == null ) {
+		//echo "no query string";
+		$this['queryString' ] = "all";
+	}else{
+		//echo  $this->param('slug');
+		$this['queryString' ]= $this->param('slug');
+	}
 }
 ?>
 ==
 <div class="bg-primary" id="blog-header-wrapper">
 
-    {% set currentCategory = post.categories[0].slug %}
-    <div class="container blog-header-container">
+	{% set currentCategory = post.categories[0].slug %}
+	<div class="container blog-header-container">
 {# 
    {{ queryString }}
-    {{ currentCategory }}
+	{{ currentCategory }}
 #}
-        <nav id="blog-filter">
-            <a href="/reports" class="nav-link btn
-                {% if queryString == 'all' %} 
-                    btn-white-outline 
-                {%endif%}">
-                All Reports
-            </a>  
-            <a href="/reports/category/press-release" class="nav-link btn  
-                {% if currentCategory == 'press-release' or queryString == 'press-release' %} 
-                    btn-white-outline 
-                {%endif%}">
-                Press Release
-            </a>     
-            <a href="/reports/category/blog" class="nav-link btn 
-                {% if currentCategory == 'blog' or queryString == 'blog' %} 
-                    btn-white-outline 
-                {%endif%}">
-                Blog
-            </a>          
-        </nav>
+		<nav id="blog-filter">
+			<a href="/reports" class="nav-link btn text-serif
+				{% if queryString == 'all' %} 
+					btn-white-outline 
+				{%endif%}">
+				All Reports
+			</a>  
+			<a href="/reports/category/press-release" class="nav-link btn text-serif 
+				{% if currentCategory == 'press-release' or queryString == 'press-release' %} 
+					btn-white-outline 
+				{%endif%}">
+				Press Release
+			</a>     
+			<a href="/reports/category/blog" class="nav-link btn text-serif 
+				{% if currentCategory == 'blog' or queryString == 'blog' %} 
+					btn-white-outline 
+				{%endif%}">
+				Blog
+			</a>          
+		</nav>
 
 
 <!--
-    // dort funktioniert es http://jsfiddle.net/daslicht/zonh5qjw/3/
+	// dort funktioniert es http://jsfiddle.net/daslicht/zonh5qjw/3/
 // hier nicht 
-        <nav class="navbar navbar-default" role="navigation">
-            <ul class="nav navbar-nav">
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
-            </ul>
-        </nav>-->
+		<nav class="navbar navbar-default" role="navigation">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</nav>-->
 
-    </div>
+	</div>
 
 </div>
