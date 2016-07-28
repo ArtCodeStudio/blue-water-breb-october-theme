@@ -190,25 +190,31 @@ $(document).ready(function() {
 
     }
 
-   	var init = function () {
-		console.log('resize');
-		//Hyphenator.run();
-		sameHeightCards('#press-releases .card-block');
-		sameHeightCards('.overview-content-container');	
-	} 
     
 	$(window).on('resize', function() {
-		//init();
-		//Hyphenator.run();
+		init();
+		
     });
-    //init();
-
-
+  
 	$(window).on('scrollstop', function() {
 	    changeNavbar();
 	});
 
-	 changeNavbar();
+   	var init = function () {
+		console.log('resize');
+		
+		changeNavbar();
+		//sameHeightCards('#press-releases .card-block');
+		//sameHeightCards('.overview-content-container');	
+	} 
+	init();
+
+	Hyphenator.config({
+		displaytogglebox : true,
+		minwordlength : 4
+    });
+
+	Hyphenator.run();
 
     //  Hyphenator.config({
     //             displaytogglebox : true,
@@ -216,13 +222,13 @@ $(document).ready(function() {
     //  });
 	 //Hyphenator.run();
 
-	 Hyphenator.config({
-        'onafterwordhyphenation': function (hword, lang) {
-           // console.log(lang + ': ' + hword.replace(new RegExp(String.fromCharCode(173), 'g'), '-'));
-		    init();
-            return hword;
-        }
-    });
+	//  Hyphenator.config({
+    //     'onafterwordhyphenation': function (hword, lang) {
+    //        // console.log(lang + ': ' + hword.replace(new RegExp(String.fromCharCode(173), 'g'), '-'));
+	// 	    //init();
+    //         return hword;
+    //     }
+    // });
    // Hyphenator.run();
 
 });
