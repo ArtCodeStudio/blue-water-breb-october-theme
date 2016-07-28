@@ -7491,7 +7491,7 @@ nav .container {
 #LinerServices .slick-prev, #LinerServices .slick-next {
   position: absolute;
   z-index: 999;
-  margin-top: 9.03rem; }
+  margin-top: 6.6rem; }
 
 #LinerServices .slick-prev:before, #LinerServices .slick-next:before {
   color: #d9534f; }
@@ -7502,17 +7502,10 @@ nav .container {
   right: 5px;
   top: 5px; }
 
-#LinerServices #gallery_slideshow_2 {
+#LinerServices #gallerySlideshow2 {
   overflow: hidden; }
-  #LinerServices #gallery_slideshow_2 .slick-slide {
-    margin: 0 0.9375rem;
-    height: 200px; }
-  #LinerServices #gallery_slideshow_2 .slick-list {
-    margin: -1.875rem; }
-  #LinerServices #gallery_slideshow_2 .slick-prev {
-    left: -48px; }
-  #LinerServices #gallery_slideshow_2 .slick-next {
-    right: -49px; }
+  #LinerServices #gallerySlideshow2 .carousel-caption-wrapper {
+    display: none; }
 
 #blog-header-wrapper {
   top: 0;

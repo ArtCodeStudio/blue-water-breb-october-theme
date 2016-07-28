@@ -296,6 +296,7 @@ nav .container {
 
 	#LinerServices {
 
+
 		#liner-services{
 			#liner-services-content-container {
 				text-align: justify !important;
@@ -315,7 +316,7 @@ nav .container {
 		.slick-prev, .slick-next {
 			position: absolute;
 			z-index: 999;
-			margin-top: 9.03rem;
+			margin-top: 6.6rem
 		}
 		.slick-prev:before, .slick-next:before {
 			color: $brand-danger;
@@ -328,24 +329,28 @@ nav .container {
 			top: 5px;
 		}
 
-		#gallery_slideshow_2 {
+
+		#gallerySlideshow2 {
+			.carousel-caption-wrapper {
+				display:none;
+			}
 			overflow: hidden;
-			.slick-slide {
-				margin: 0 $grid-gutter-width/2; // result  0 0.9375rem
-				height:200px;
-			}
+			// .slick-slide {
+			// 	margin: 0 $grid-gutter-width/2; // result  0 0.9375rem
+			// 	height:200px;
+			// }
 
-			.slick-list {
-				margin: 0 -$grid-gutter-width;
-			}
+			// .slick-list {
+			// 	margin: 0 -$grid-gutter-width;
+			// }
 
-			.slick-prev {
-				left: -48px;
-			}
+			// .slick-prev {
+			// 	left: -48px;
+			// }
 
-			.slick-next {
-				right: -49px; //by intention! +1
-			}
+			// .slick-next {
+			// 	right: -49px; //by intention! +1
+			// }
 		}
 
 
