@@ -37,11 +37,11 @@ function onEnd(){
 
 	<div class="container">
 		<div class="row">
-			<div class="card-group-flex">
+			<div class="card-group-flex-lg">
 
 				{% for post in posts %}
 
-					<div class="card text-center">
+					<div class="card text-center m-y-1">
 						
 						{% if post.featured_images.count %}
 							{% for image in post.featured_images %}

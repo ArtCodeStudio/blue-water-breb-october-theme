@@ -199,9 +199,9 @@ $(document).ready(function() {
     
 	$(window).on('resize', function() {
 		//init();
-		Hyphenator.run();
+		//Hyphenator.run();
     });
-    init();
+    //init();
 
 
 	$(window).on('scrollstop', function() {
@@ -223,6 +223,6 @@ $(document).ready(function() {
             return hword;
         }
     });
-    Hyphenator.run();
+   // Hyphenator.run();
 
 });

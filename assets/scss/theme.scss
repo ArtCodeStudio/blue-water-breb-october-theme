@@ -270,7 +270,10 @@ nav .container {
 			.description {
 				margin-bottom: 2rem;
 			}
-			.card-group-flex {
+			.card-group-flex,
+			.card-group-flex-sm,
+			.card-group-flex-md,
+			.card-group-flex-lg {
 			    .card {
 			        margin: 0 $grid-gutter-width/2;
 			    }
@@ -368,12 +371,12 @@ nav .container {
 
 	#blog-header-wrapper {
 
-		top:0;
+		top: 2.71rem;
 		width: 100%;
 		position: fixed;
 		position: fixed;
-		height: 219px;
-		z-index: 999;
+		height: 8.8rem;
+		z-index: 1031;
 		transition: all .25s ease-in-out;
 		transition-delay: 0s;
 		transition-duration: 0.3s;
@@ -385,9 +388,16 @@ nav .container {
 			text-align:center;
 		}
 
-		.blog-header-container #blog-filter .nav-link {
-			color: white;
-			margin-top: 117px;
+		.blog-header-container {
+			#blog-filter {
+				.nav-link {
+					color: white;
+					margin-top: 3rem;
+					&.blog-nav-small {
+						margin-top: 15px !important;
+					}
+				}
+			}
 		}
 
 		.blog-header-container .navbar .navbar-nav {
@@ -403,6 +413,19 @@ nav .container {
 		.blog-header-container .navbar {
 			text-align: center;
 		}
+	   
+	   /*
+		* BLOG  NAVIGATION STATE CLASSES
+		**/
+	
+
+		&.blog-nav-low-height{
+			width: 100% !important;
+			margin-top: 2.71rem !important;
+			height: 72px !important;
+			top:0 !important;
+		}
+
 
 	}
 
@@ -471,17 +494,4 @@ nav .container {
 		}
 	}
 
-	/*
-	* BLOG  NAVIGATION STATE CLASSES
-	**/
-		.blog-nav-small {
-			margin-top: 15px !important;
-		}
-
-		.blog-nav-low-height{
-			width: 100% !important;
-			margin-top: 46px !important;
-			height: 72px !important;
-			top:0 !important;
-		}
 
