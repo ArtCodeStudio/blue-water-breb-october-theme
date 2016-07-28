@@ -7366,17 +7366,19 @@ nav .container {
 .footer#footer-contact-container {
   line-height: 20px; }
   .footer#footer-contact-container .row > div {
-    height: 210px; }
+    height: 210px;
+    border-right: 1px solid #3a599f; }
     @media (max-width: 543px) {
-      .footer#footer-contact-container .row > div .column {
-        padding-left: 8rem; } }
+      .footer#footer-contact-container .row > div {
+        border-right: none !important; }
+        .footer#footer-contact-container .row > div .column {
+          padding-left: 8rem; } }
 
 @media (min-width: 544px) and (max-width: 991px) {
   .footer#footer-contact-container .row > div .column {
-    padding-left: 2rem; } }
-    @media (min-width: 544px) {
-      .footer#footer-contact-container .row > div {
-        border-right: 1px solid #3a599f; } }
+    padding-left: 2rem; }
+  .footer#footer-contact-container .row > div.column-2, .footer#footer-contact-container .row > div.column-4 {
+    border-right: none; } }
     @media (min-width: 992px) {
       .footer#footer-contact-container .row > div:last-child {
         border-right: none; } }
@@ -7479,10 +7481,6 @@ nav .container {
 
 #LinerServices #liner-services #liner-services-content-container {
   text-align: justify !important; }
-
-#LinerServices #liner-services #liner-services-sliedeshow-container {
-  margin: 0 !important;
-  padding: 0 !important; }
 
 #LinerServices .slick-prev {
   left: 1rem; }

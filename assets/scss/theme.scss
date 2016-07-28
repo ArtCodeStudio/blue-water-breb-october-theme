@@ -95,14 +95,21 @@ nav .container {
 				> div{
 					height:210px;
 
+					border-right : 1px solid $brand-primary;
+
 					@include media-breakpoint-down(xs) {
+						border-right : none !important;
 						.column {
 							padding-left: 8rem;
 						}
 					}
 					@include media-breakpoint-between(sm,md) {
+						
 						.column {
 							padding-left: 2rem;
+						}
+						&.column-2, &.column-4 {
+							border-right : none;
 						}
 					}
 					// @include media-breakpoint-only(sm) {
@@ -111,13 +118,11 @@ nav .container {
 					// 	}
 					// }
 					@include media-breakpoint-up(sm) {
-						border-right : 1px solid $brand-primary;
-						// .column {
-						// 	//padding-left: 2rem;
-						// }
+
 					}
 
 					@include media-breakpoint-up(lg) {
+						//border-right : 1px solid $brand-primary;
 						&:last-child{
 							border-right : none;
 						}
