@@ -212,7 +212,7 @@ nav .container {
 	#Home{
 
 		.overview-content-container {
-			min-height:191px;
+			margin:2rem;
 			text-align: justify;
 		}
 		
@@ -265,6 +265,9 @@ nav .container {
 			}
 			.learn-more a {
 				color: $brand-danger;
+			}
+			.description {
+				margin-bottom: 2rem;
 			}
 		}
 
@@ -328,6 +331,7 @@ nav .container {
 			right: 5px;
 			top: 5px;
 		}
+
 
 
 		#gallerySlideshow2 {

@@ -7430,7 +7430,7 @@ nav .container {
  * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
 #Home .overview-content-container {
-  min-height: 191px;
+  margin: 2rem;
   text-align: justify; }
 
 #Home #latest-blog-posts .latest-blog-posts-content-container {
@@ -7463,6 +7463,9 @@ nav .container {
 
 #Home #press-releases .learn-more a {
   color: #d9534f; }
+
+#Home #press-releases .description {
+  margin-bottom: 2rem; }
 
 /*
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––

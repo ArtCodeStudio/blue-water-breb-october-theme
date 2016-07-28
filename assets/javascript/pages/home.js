@@ -91,28 +91,33 @@ $(document).ready(function() {
 	})();
 
 
-	var setCardHeight = function() {
-		var maxHeight = 0;
-		$('#press-releases .card-block').each( function(i, obj) {
-			var $self = $(this);
-			console.log($(this).height());
-			if( $self.height() < maxHeight ){
-				console.log('if');
-				$self.height(maxHeight + 72);
-			}else{
-				console.log('else');
-				maxHeight = $self.height();
-				$self.height(maxHeight + 72)
-			}
-			//maxHeight = obj.heigth();
-		})
+	// var setCardHeight = function(id) {
+	// 	var maxHeight = 0;
 
-	}
-	setCardHeight();
+
+
+	// 	$(id).each( function(i, obj) {
+	// 		var $self = $(this);
+	// 		console.log($(this).height());
+	// 		if( $self.height() < maxHeight ){
+	// 			 console.log('if');
+	// 			 $self.height(maxHeight);
+	// 			//$self.height(maxHeight + 72); //padding to read more link 
+	// 		}else{
+	// 			 console.log('else');
+	// 			maxHeight = $self.height();
+	// 			//$self.height(maxHeight + 72)
+	// 			$self.height(maxHeight)
+	// 		}
+	// 		//maxHeight = obj.heigth();
+	// 	})
+
+	// }
+	// setCardHeight('#press-releases .card-block');
 	
 
 	var initCarousel= function(){
-		// var $latest-blog-posts-container = $("latest-blog-posts-container");
+
 		$(".latest-blog-posts-carousel").slick({
 			slidesToShow: 3,
 			slidesToScroll: 1,
@@ -153,11 +158,56 @@ $(document).ready(function() {
 
 	};
 
+
+
+  	//var $cards= $('#development .card');
+    
+    /**
+     * Set each card to the height of the heightest card to get all cards with the same height 
+     */
+    var sameHeightCards = function (selector) {
+        var t = 0;
+        var t_elem;
+		$cards = $(selector);
+        // get heightest height
+        $cards.each(function () {
+            $this = $(this);
+            // reset height
+            $this.css('min-height', 'auto');
+            if ( $this.outerHeight() > t ) {
+                t_elem=this;
+                t=$this.outerHeight();
+            }
+        });
+        
+        // set all smaller cards to the height of the heightest card
+        $cards.each(function () {
+            $this = $(this);
+            if($this.outerHeight() != t) {
+                $this.css('min-height',t);
+            }
+        });
+    }
+
+   	var init = function () {
+		console.log('resize');
+		sameHeightCards('#press-releases .card-block');
+		sameHeightCards('.overview-content-container');
+		
+	} 
+    
+	$(window).on('resize', function() {
+		init();
+    });
+    init();
+
+
 	$(window).on('scrollstop', function() {
 	    changeNavbar();
 	});
 
 	 changeNavbar();
+
      Hyphenator.config({
                 displaytogglebox : true,
                 minwordlength : 4
