@@ -7,25 +7,37 @@
 
 		{% for post in posts %}
 			<div class="grid-item">
+				<a href="{{ post.url }}" class="">
 
-				{% if post.featured_images.count %}
-					<div class="featured-images text-center "> 
-						{% set image = post.featured_images[0] %}
-						<a href="{{ post.url }}" class="background-box ratio-16-9" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a>
-					</div>
-				{% endif %}
+					{% if post.featured_images.count %}
+						<div class="featured-images text-center "> 
+							{% set image = post.featured_images[0] %}
+							{# <a href="{{ post.url }}" class="background-box ratio-16-9" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a> #}
+							<div class="background-box ratio-16-9" 
+									style="display:block; background-image: url({{ image.path }});" 
+									title="{{ image.description }}">
+							</div>
+						</div>
+					{% endif %}
 
-				<div class="card-block">
-					<div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
-					<h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
-					<div class='latest-blog-posts-content-container'>
-						{{ post.summary }} {{colums}}
+					<div class="card-block">
+						
+						<div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
+						<h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
+
+						<div class='latest-blog-posts-content-container'>
+							{{ post.summary }} {{colums}}
+						</div>
+
+						<div class="learn-more center-block text-xs-right p-t-1">
+							{#<a href="{{ post.url }}" class="">read more</a>#}
+							<div>read more</div>
+						</div>
+
 					</div>
 
-					<div class="learn-more center-block text-xs-right p-t-1">
-						<a href="{{ post.url }}" class="">read more</a>
-					</div>
-				</div>
+				</a>
+
 			</div>
 		{% endfor %} 
 
