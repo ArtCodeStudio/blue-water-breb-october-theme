@@ -7498,7 +7498,7 @@ nav .container {
 	* MAIN NAVIGATION STATE CLASSES
 	**/
 .navbar-slim {
-  height: 44px !important;
+  height: 3rem !important;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
   border-bottom: 1px solid #4053a4; }
@@ -7606,7 +7606,7 @@ nav .container {
     display: none; }
 
 #blog-header-wrapper {
-  top: 2.71rem;
+  top: 2.96rem;
   width: 100%;
   position: fixed;
   position: fixed;
