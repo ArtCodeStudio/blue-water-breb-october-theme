@@ -55,48 +55,50 @@ postPage = "post"
         
         <div class="col-xs-4  section-headline-text"  id="blog-posts-list">
                 
-                <div class="p-y-2" id="blog-sidebar-title">
-                    <div class="border-top"></div>
-                    <h3 class="text-xs-left text-serif">Lastest
-                        {% if post.categories.count %} 
-                            {% for category in post.categories %}
-                                <!-- interesing ...  category.url != category.name here :) -->
-                                {{ category.name }}
-                                {% set currentCategory = category.slug %}
-                     
-                                {% if not loop.last %}, {% endif %}
-                            {% endfor %} 
-                        {% endif %}    
-                        {% if currentCategory == 'blog' %}
-                            Posts
-                        {% endif%}
-                    </h3>   
-                </div>
-                
-                {% for post in posts %}
-                        {% if post.categories.count %} 
-                            {% for category in post.categories %}
-                                {% if category.slug == currentCategory %}
-                                    <div class="card card-block">
+            <div class="p-y-2" id="blog-sidebar-title">
+                <div class="border-top"></div>
+                <h3 class="text-xs-left text-serif">Lastest
+                    {% if post.categories.count %} 
+                        {% for category in post.categories %}
+                            <!-- interesing ...  category.url != category.name here :) -->
+                            {{ category.name }}
+                            {% set currentCategory = category.slug %}
+                    
+                            {% if not loop.last %}, {% endif %}
+                        {% endfor %} 
+                    {% endif %}    
+                    {% if currentCategory == 'blog' %}
+                        Posts
+                    {% endif%}
+                </h3>   
+            </div>
+            
+            {% for post in posts %}
+                {% if post.categories.count %} 
+                    {% for category in post.categories %}
+                        {% if category.slug == currentCategory %}
+                            <div class="card card-block">
+                                <a href="{{ post.url }}">
+                                    <div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
+                                    <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
 
-                                        <div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
-                                        <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
-
-                                        <div class='latest-blog-posts-content-container'>
-                                            {{ post.summary }}
-                                        </div>
-                                        
-                                        <div class="learn-more center-block text-xs-right">
-                                            <a href="{{ post.url }}" class="">read more</a>
-                                        </div>
+                                    <div class='latest-blog-posts-content-container'>
+                                        {{ post.summary }}
                                     </div>
-                                {% endif%}
+                                    
+                                    <div class="learn-more center-block text-xs-right">
+                                    {# <a href="{{ post.url }}" class="">read more</a>#}
+                                        <div>read more</div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif%}
 
-                            {% endfor %} 
-                        {% endif %}
-                {% else %}
-                    <div class="no-data">{{ noPostsMessage }}</div>
-                {% endfor %}                
+                    {% endfor %} 
+                {% endif %}
+            {% else %}
+                <div class="no-data">{{ noPostsMessage }}</div>
+            {% endfor %}                
         </div>
 
         <div class="grid">

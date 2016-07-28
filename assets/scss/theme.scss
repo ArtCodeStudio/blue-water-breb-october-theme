@@ -446,7 +446,14 @@ nav .container {
 				transition-duration: 0.3s;
 				transition-property: all;
 				transition-timing-function: ease;
-
+				border: 1px solid  $transparent;
+				> * {
+					text-decoration: none;
+					transition-delay: 0s;
+					transition-duration: 0.3s;
+					transition-property: all;
+					transition-timing-function: ease;
+				}
 				&:hover {
 					@extend .z-depth-1-half;
 					border: 1px solid  $brand-primary;
@@ -487,7 +494,19 @@ nav .container {
 			}
 
 			.card{
-				border: 0 !important
+				border: 0 !important;
+				transition-delay: 0s;
+				transition-duration: 0.3s;
+				transition-property: all;
+				transition-timing-function: ease;
+				> * {
+					text-decoration: none;
+				}
+				&:hover {
+					@extend .z-depth-1-half;
+					border: 1px solid  $brand-primary;
+					text-decoration: none;
+				}
 			}
 
 			.learn-more {

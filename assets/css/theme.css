@@ -7138,7 +7138,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 .z-depth-1 {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
-.z-depth-1-half, .btn:hover, #Category #all-posts-container .grid-item:hover, #AllReports #all-posts-container .grid-item:hover {
+.z-depth-1-half, .btn:hover, #Category #all-posts-container .grid-item:hover, #AllReports #all-posts-container .grid-item:hover, #Post .blog-content-wrapper .card:hover {
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
 
 .z-depth-2 {
@@ -7663,7 +7663,18 @@ nav .container {
     -webkit-transition-property: all;
     transition-property: all;
     -webkit-transition-timing-function: ease;
-            transition-timing-function: ease; }
+            transition-timing-function: ease;
+    border: 1px solid rgba(1, 1, 1, 0); }
+    #Category #all-posts-container .grid-item > *, #AllReports #all-posts-container .grid-item > * {
+      text-decoration: none;
+      -webkit-transition-delay: 0s;
+              transition-delay: 0s;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-timing-function: ease;
+              transition-timing-function: ease; }
     #Category #all-posts-container .grid-item:hover, #AllReports #all-posts-container .grid-item:hover {
       border: 1px solid #4053a4; }
 
@@ -7686,7 +7697,20 @@ nav .container {
     padding-left: 20px; }
 
 #Post .blog-content-wrapper .card {
-  border: 0 !important; }
+  border: 0 !important;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
+  #Post .blog-content-wrapper .card > * {
+    text-decoration: none; }
+  #Post .blog-content-wrapper .card:hover {
+    border: 1px solid #4053a4;
+    text-decoration: none; }
 
 #Post .blog-content-wrapper .learn-more {
   color: #4053a4; }
