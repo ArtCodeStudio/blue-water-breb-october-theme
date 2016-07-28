@@ -46,7 +46,7 @@ nav .container {
 }
 
 .card {
-	border: 1px solid $brand-primary !important;
+	border: 1px solid $brand-primary;
 }
 
 .card-block {
@@ -55,6 +55,14 @@ nav .container {
 	}
 }
 
+.nav-link, .card-block  {
+	transition: all .25s ease-in-out;
+	transition-delay: 0s;
+	transition-duration: 0.3s;
+	transition-property: all;
+	transition-timing-function: ease;
+	  
+}
 
 /*
  * FOOTER  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -162,11 +170,12 @@ nav .container {
 		}
 
 	}
-	//  ?! funktioniert nuicht unter #navbar-main
+	//  ?! funktioniert nicht unter #navbar-main
 	.main-navigation {
 		margin-top: 40px;		
 		transition: all .25s ease-in-out;
 	}
+
 
 
 	/*
@@ -216,6 +225,23 @@ nav .container {
 			margin:2rem;
 			text-align: justify;
 		}
+		#overview{
+			.learn-more {
+				//position:absolute;
+				//left: 50%;
+				a{
+					position: absolute;
+					bottom: 0;
+					left: 25%;
+				}
+			}
+			.card {
+				border: 1px solid  $transparent;
+			}
+			.card-block{
+				 margin-bottom: 2rem;
+			}
+		}
 		
 		#latest-blog-posts {
 
@@ -236,7 +262,7 @@ nav .container {
 
 				.slick-slide {
 					margin: 0 $grid-gutter-width/2; // result  0 0.9375rem
-					height:200px;
+					height: 200px;
 				}
 
 				.slick-list {
@@ -276,7 +302,16 @@ nav .container {
 			.card-group-flex-lg {
 			    .card {
 			        margin: 0 $grid-gutter-width/2;
+					border-left: 1px solid $brand-primary !important;
 			    }
+			}
+		}
+
+		#about{
+			#about-teaser-text{
+				p{
+					margin-bottom: 2.5rem;
+				}
 			}
 		}
 

@@ -7424,10 +7424,22 @@ nav .container {
   margin-top: 140px; }
 
 .card {
-  border: 1px solid #4053a4 !important; }
+  border: 1px solid #4053a4; }
 
 .card-block .text-sm-right {
   margin-bottom: 15px; }
+
+.nav-link, .card-block {
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
 
 /*
  * FOOTER  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -7522,6 +7534,17 @@ nav .container {
   margin: 2rem;
   text-align: justify; }
 
+#Home #overview .learn-more a {
+  position: absolute;
+  bottom: 0;
+  left: 25%; }
+
+#Home #overview .card {
+  border: 1px solid rgba(1, 1, 1, 0); }
+
+#Home #overview .card-block {
+  margin-bottom: 2rem; }
+
 #Home #latest-blog-posts .latest-blog-posts-content-container {
   height: 58px;
   text-align: justify !important; }
@@ -7560,7 +7583,11 @@ nav .container {
 #Home #press-releases .card-group-flex-sm .card,
 #Home #press-releases .card-group-flex-md .card,
 #Home #press-releases .card-group-flex-lg .card {
-  margin: 0 0.9375rem; }
+  margin: 0 0.9375rem;
+  border-left: 1px solid #4053a4 !important; }
+
+#Home #about #about-teaser-text p {
+  margin-bottom: 2.5rem; }
 
 /*
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
