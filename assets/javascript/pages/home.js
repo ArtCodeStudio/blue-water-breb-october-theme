@@ -158,5 +158,10 @@ $(document).ready(function() {
 	});
 
 	 changeNavbar();
+     Hyphenator.config({
+                displaytogglebox : true,
+                minwordlength : 4
+     });
+	 Hyphenator.run();
 
 });

@@ -3,8 +3,13 @@
 {% if __SELF__.slideshow.slides %}
 
     {% set autoplayIndex = -1 %}
-
-    <div id='{{__SELF__.alias}}' class="slick-carousel">
+	
+	{# 
+	 # Full Screen Button 
+	 ##}
+	<div id="fullscreen-button">fullscreen icon</div> <!--<i class="icon-fullscreen"></i>-->
+    
+	<div id='{{__SELF__.alias}}' class="slick-carousel">
         {% for i, slide in __SELF__.slideshow.slides %}
             <a href="{{ slide.link }}" id="{{__SELF__.alias}}-slide-{{loop.index}}" class="slick-slide">
                 {% if slide.mp4 != blank or slide.webm != blank or slide.ogg != blank %}
@@ -124,6 +129,133 @@
         {% endfor %}
     </div>
 
+
+
+	{# 
+	 # Second Slideshow 
+	 ##}
+	<div id='gallery_slideshow_2' class="slick-carousel">
+		{% for i, slide in __SELF__.slideshow.slides %}
+			<a href="{{ slide.link }}" id="{{__SELF__.alias}}-slide-{{loop.index}}" class="slick-slide">
+				{% if slide.mp4 != blank or slide.webm != blank or slide.ogg != blank %}
+
+					{% if __SELF__.property('autoplayOnShow') and loop.index == (__SELF__.property('initialSlide') != blank ? __SELF__.property('initialSlide') + 1 : 1) %}
+						{% set autoplayIndex = loop.index %}
+					{% endif %}
+
+					<div class="carousel-video-wrapper">
+						{% if slide.aspect_ratio == 'custom' %}
+							<div class="box" style="padding-top: {{ 100.0 / slide.custom_ratio}};">
+								<video id="{{__SELF__.alias}}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+									{% if slide.mp4 != blank %}
+										<source src="{{slide.mp4.path}}" type="video/mp4">
+									{% endif %}
+									{% if slide.ogg != blank %}
+										<source src="{{slide.ogg.path}}" type="video/ogg">
+									{% endif %}
+									{% if slide.webm != blank %}
+										<source src="{{slide.webm.path}}" type="video/webm">
+									{% endif %}
+								</video>
+							</div>
+						{% elseif slide.aspect_ratio != blank %}
+							<div class="box {{slide.aspect_ratio}}">
+								<video id="{{__SELF__.alias}}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+									{% if slide.mp4 != blank %}
+										<source src="{{slide.mp4.path}}" type="video/mp4">
+									{% endif %}
+									{% if slide.ogg != blank %}
+										<source src="{{slide.ogg.path}}" type="video/ogg">
+									{% endif %}
+									{% if slide.webm != blank %}
+										<source src="{{slide.webm.path}}" type="video/webm">
+									{% endif %}
+								</video>
+							</div>
+						{% elseif __SELF__.property('aspect_ratio') == 'custom' %}
+							<div class="box {{slide.aspect_ratio}}" style="padding-top: {{ 100.0 / __SELF__.property('captionPosition') }}">
+								<video id="{{__SELF__.alias}}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+									{% if slide.mp4 != blank %}
+										<source src="{{slide.mp4.path}}" type="video/mp4">
+									{% endif %}
+									{% if slide.ogg != blank %}
+										<source src="{{slide.ogg.path}}" type="video/ogg">
+									{% endif %}
+									{% if slide.webm != blank %}
+										<source src="{{slide.webm.path}}" type="video/webm">
+									{% endif %}
+								</video>
+							</div>
+						{% elseif __SELF__.property('aspect_ratio') != blank %}
+							<div class="box {{ __SELF__.property('aspect_ratio') }}">
+								<video id="{{__SELF__.alias}}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+									{% if slide.mp4 != blank %}
+										<source src="{{slide.mp4.path}}" type="video/mp4">
+									{% endif %}
+									{% if slide.ogg != blank %}
+										<source src="{{slide.ogg.path}}" type="video/ogg">
+									{% endif %}
+									{% if slide.webm != blank %}
+										<source src="{{slide.webm.path}}" type="video/webm">
+									{% endif %}
+								</video>
+							</div>
+						{% else %}
+							<video id="{{__SELF__.alias}}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+								{% if slide.mp4 != blank %}
+									<source src="{{slide.mp4.path}}" type="video/mp4">
+								{% endif %}
+								{% if slide.ogg != blank %}
+									<source src="{{slide.ogg.path}}" type="video/ogg">
+								{% endif %}
+								{% if slide.webm != blank %}
+									<source src="{{slide.webm.path}}" type="video/webm">
+								{% endif %}
+							</video>
+						{% endif %}
+
+						{% if slide.name != blank or slide.description != blank  %}
+							<div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : __SELF__.property('captionPosition')}}">
+								<div class="carousel-caption-content">
+									<h2>{{ slide.name | raw }}</h2>
+									{{ slide.description | raw }}
+								</div>
+							</div>
+						{% endif %}
+
+					</div>
+				{% else %}
+					<div class="carousel-image-wrapper">
+
+						{% if slide.aspect_ratio == 'custom' %}
+							<div class="background-box" style="padding-top: {{ 100.0 / slide.custom_ratio}}; background-image: url({{ slide.image.path }});" alt="{{ slide.image.path }}"></div>
+						{% elseif slide.aspect_ratio != blank %}
+							<div class="background-box {{slide.aspect_ratio}}" style="background-image: url({{ slide.image.path }});" alt="{{ slide.image.path }}"></div>
+						{% elseif __SELF__.property('aspect_ratio') == 'custom' %}
+							<div class="background-box" style="padding-top: {{ 100.0 / __SELF__.property('customRatio') }} background-image: url({{ slide.image.path }});" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
+						{% elseif __SELF__.property('aspect_ratio') != blank %}
+							<div class="background-box {{ __SELF__.property('aspect_ratio') }}" style="background-image: url({{ slide.image.path }});" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
+						{% else %}
+							<div class="img-responsive img-fluid" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
+						{% endif %}
+
+						{% if slide.name != blank or slide.description != blank  %}
+							<div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : __SELF__.property('captionPosition')}}">
+								<div class="carousel-caption-content">
+									<h2>{{ slide.name | raw }}</h2>
+									{{ slide.description | raw }}
+								</div>
+							</div>
+						{% endif %}
+
+					</div>
+				{% endif %}
+			</a>
+		{% endfor %}
+	</div>
+
+
+
     {% put scripts %}
         <script type="text/javascript">
             var slickSettings = {
@@ -177,7 +309,8 @@
                 {{ __SELF__.property('rtl') == blank ? '//' : '' }}              rtl:                Boolean( {{ __SELF__.property('rtl') }} ) === true,
                 {{ __SELF__.property('waitForAnimate') == blank ? '//' : '' }}   waitForAnimate:     Boolean( {{ __SELF__.property('waitForAnimate') }} ) === true,
                 {{ __SELF__.property('zIndex') == blank ? '//' : '' }}           zIndex:             Number( {{ __SELF__.property('zIndex') }}),
-            };
+        		asNavFor: '#gallery_slideshow_2'    
+		};
         
     {% endput %}
 
@@ -242,6 +375,26 @@
     {% endif %}
     {% put scripts %}
             $('#{{__SELF__.alias}}').slick(slickSettings);
+
+			/*
+			 * Initalize second linked Sliudeshow, see the added 'asNavFor' option added to 'slickSettings' above  (last line)
+			 **/
+			$('#gallery_slideshow_2').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '#{{__SELF__.alias}}',
+				dots: false,
+				centerMode: false,
+				focusOnSelect: true,
+				arrows: false
+			});
+
+			$("#fullscreen-button").on('click',function(e) {
+				alert('FULLSCREEN!');
+			})
+
+
+
         </script>
     {% endput %}
 {% endif %}

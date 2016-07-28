@@ -54,7 +54,7 @@ zIndex = 1000
 [staticPage]
 ==
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         {% partial 'html_head' %}
     </head>
@@ -84,15 +84,19 @@ zIndex = 1000
         {% partial 'footer/footer_contact' %}
         
         {% partial 'footer/footer_legal' %}     
-
+{#
+assets/vendor/Hyphenator/Hyphenator.js' | theme 
+http://breb.jumplink.eu/themes/breb/assets/vendor/Hyphenator/Hyphenator.js#}
+        {% put scripts %}
+            <script type="text/javascript" src="{{ 'assets/vendor/Hyphenator/Hyphenator.js' | theme }}""></script>
+        {% endput %}
         
         {% put scripts %}
             <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
         {% endput %}
         
-        {#{% put scripts %}
-            <script type="text/javascript" src="{{ 'assets/vendor/Hyphenator/home.js' | theme }}"></script>
-        {% endput %}#}
+
+
 
         {% partial 'body_foot' %}
                 
