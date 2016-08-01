@@ -7,8 +7,12 @@ code: breb
 # Indentation MUST be Spaces not Tabs !
 form:
     fields:
-        location_bremen:
+        bremen_logo:
             label: Bremen
+            type: mediafinder
+            mode: image
+        location_bremen:
+            #label: Bremen
             #comment: The website name as it should appear on the front-end
             default: BREB GmbH & Co.KG
         location_breme1:
@@ -21,9 +25,12 @@ form:
             default: Tel. +49 (0)421 32278-0
         location_bremen5:
             default: Fax +49 (0)421 32278-78
-
-        location_cuxhaven:
+        
+        cuxhaven_logo:
             label: Cuxhaven
+            type: mediafinder
+            mode: image
+        location_cuxhaven:
             default: BREB GmbH & Co.KG
         location_cuxhaven1:
             default: Havenhostel Cuxhaven
@@ -36,8 +43,11 @@ form:
         location_cuxhaven5:
             default: Fax +49 (0)4721 590 54 99
 
-        location_sassnitz:
+        sassnitz_logo:
             label: Sassnitz
+            type: mediafinder
+            mode: image
+        location_sassnitz:
             default: BREB GmbH & Co.KG
         location_sassnitz1:
             default: Hafeneingangsgebäude Sassnitz
@@ -49,9 +59,12 @@ form:
             default: Tel. +49 (0)38392 55 44 0
         location_sassnitz5:
             default: 
-            
-        location_zeebrugge:
+
+        zeebrugge_logo:
             label: Zeebrugge
+            type: mediafinder
+            mode: image          
+        location_zeebrugge:
             default: BREB Belgium bvba
         location_zeebrugge1:
             default:
