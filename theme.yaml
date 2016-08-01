@@ -60,7 +60,7 @@ form:
         location_sassnitz5:
             default: 
 
-        zeebrugge_logo:
+        Zeebrugge_logo:
             label: Zeebrugge
             type: mediafinder
             mode: image          

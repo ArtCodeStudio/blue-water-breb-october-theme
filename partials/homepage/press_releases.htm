@@ -55,7 +55,8 @@ function onEnd(){
 							<p class="text-xs-right">{{ post.published_at|date('M d, Y') }}</p>
 							<h4 class="card-title text-xs-left text-serif">{{ post.title }}</h4>
 							<div class="description">
-								{{ post.summary }}
+								{{ str_limit(post.summary, 200, ' ...') }}
+								{#	{{ post.summary }} #}
 							</div>
 							<div class="learn-more center-block text-xs-right">
 								<a href="{{ post.url }}" class="">read more</a>

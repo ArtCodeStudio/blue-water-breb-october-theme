@@ -42,7 +42,7 @@ postPage = "post"
                                         <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
 
                                         <div class='latest-blog-posts-content-container'>
-                                            {{ post.summary }}
+                                            {{ str_limit(post.summary, 80, ' ...') }}
                                         </div>
                                         
                                         <div class="learn-more center-block text-xs-right">
