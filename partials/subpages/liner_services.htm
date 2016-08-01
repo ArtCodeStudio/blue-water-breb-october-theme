@@ -10,36 +10,37 @@ injectJLSlideshowCSS = 0
 injectJQuery = 0
 aspectRatio = "ratio-16-9"
 captionPosition = "middle center"
-autoplayOnShow = 1
-nextSlideOnEnd = 1
-accessibility = 1
 adaptiveHeight = 0
-autoplay = 0
-arrows = 1
-asNavFor = "#gallerySlideshow2"
 centerMode = 1
 centerPadding = "0px"
+autoplayOnShow = 1
+nextSlideOnEnd = 1
+autoplay = 0
+fade = 0
+infinite = 1
+slidesToShow = 1
+rtl = 0
+waitForAnimate = 1
+accessibility = 1
+arrows = 1
+asNavFor = "#gallerySlideshow2"
 dots = 0
 draggable = 1
-fade = 0
 focusOnSelect = 0
-infinite = 1
-mobileFirst = 0
 pauseOnFocus = 1
 pauseOnHover = 1
 pauseOnDotsHover = 0
-respondTo = "window"
-slidesToShow = 1
 swipe = 1
 swipeToSlide = 0
 touchMove = 1
+verticalSwiping = 0
+mobileFirst = 0
+respondTo = "window"
+responsive = "responsive"
 useCSS = 1
 useTransform = 1
 variableWidth = 0
 vertical = 0
-verticalSwiping = 0
-rtl = 0
-waitForAnimate = 1
 
 [slideshow gallerySlideshow2]
 slideshow = 3
@@ -49,37 +50,37 @@ injectJLSlideshowCSS = 0
 injectJQuery = 0
 aspectRatio = "ratio-16-9"
 captionPosition = "middle center"
-adaptiveHeight = 0
-centerMode = 0
-centerPadding = 0
 autoplayOnShow = 1
 nextSlideOnEnd = 1
-autoplay = 1
-fade = 0
-infinite = 1
-slidesPerRow = 3
-slidesToShow = 3
-rtl = 0
-waitForAnimate = 1
 accessibility = 1
+adaptiveHeight = 0
+autoplay = 1
 arrows = 0
 asNavFor = "#gallerySlideshow"
+centerMode = 0
+centerPadding = 0
 dots = 0
 draggable = 1
+fade = 0
 focusOnSelect = 1
+infinite = 1
+mobileFirst = 0
 pauseOnFocus = 1
 pauseOnHover = 1
 pauseOnDotsHover = 0
+respondTo = "window"
+slidesPerRow = 3
+slidesToShow = 3
 swipe = 1
 swipeToSlide = 0
 touchMove = 1
-verticalSwiping = 0
-mobileFirst = 0
-respondTo = "window"
 useCSS = 1
 useTransform = 1
 variableWidth = 0
 vertical = 0
+verticalSwiping = 0
+rtl = 0
+waitForAnimate = 1
 ==
 <div id="liner-services" data-target="#liner-services"> 
 
@@ -97,6 +98,36 @@ vertical = 0
                 
          
        <div class="col-xs-12 col-md-7" id="liner-services-sliedeshow-container">
+
+
+           <script>
+            var responsive= [
+			// {
+			// 	breakpoint: 1024,
+			// 	settings: {
+			// 		slidesToShow: 3,
+			// 		slidesToScroll: 3,
+			// 		infinite: true,
+			// 		dots: true
+			// 	}
+			// },
+			// {
+			// 	breakpoint: 632,
+			// 		settings: {
+			// 			slidesToShow: 2,
+			// 			slidesToScroll: 2
+			// 		}
+			// },
+			// {
+			// 	breakpoint: 480,
+			// 		settings: {
+			// 			slidesToShow: 1,
+			// 			slidesToScroll: 1
+			// 		}
+			// }
+
+			]
+            </script>
            {% component 'gallerySlideshow' %}
            {% component 'gallerySlideshow2' %}
         </div>

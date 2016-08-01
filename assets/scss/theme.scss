@@ -400,7 +400,6 @@ nav .container {
 
 	#LinerServices {
 
-
 		#liner-services{
 			#liner-services-content-container {
 				text-align: justify !important;
@@ -420,7 +419,17 @@ nav .container {
 		.slick-prev, .slick-next {
 			position: absolute;
 			z-index: 999;
-			margin-top: 6.6rem
+			@include media-breakpoint-up(xl) {
+				margin-top: 8.6rem;
+			}
+			@include media-breakpoint-down(lg) {
+				margin-top: 6.6rem;
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: 4.3rem;
+		
+			}
+		
 		}
 		.slick-prev:before, .slick-next:before {
 			color: $brand-danger;

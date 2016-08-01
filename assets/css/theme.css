@@ -7644,8 +7644,16 @@ nav .container {
 
 #LinerServices .slick-prev, #LinerServices .slick-next {
   position: absolute;
-  z-index: 999;
-  margin-top: 6.6rem; }
+  z-index: 999; }
+  @media (min-width: 1200px) {
+    #LinerServices .slick-prev, #LinerServices .slick-next {
+      margin-top: 8.6rem; } }
+  @media (max-width: 1199px) {
+    #LinerServices .slick-prev, #LinerServices .slick-next {
+      margin-top: 6.6rem; } }
+  @media (max-width: 991px) {
+    #LinerServices .slick-prev, #LinerServices .slick-next {
+      margin-top: 4.3rem; } }
 
 #LinerServices .slick-prev:before, #LinerServices .slick-next:before {
   color: #ef2a21; }
