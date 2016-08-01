@@ -1,8 +1,9 @@
 $(document).ready(function() {
 	
-	/* Callbacks for addClass
+	/**
+	 * Callbacks for addClass
 	 * http://stackoverflow.com/questions/14567990/how-to-add-a-callback-function-to-the-addclass-method-of-jquery
-	 **/
+	 */
 	(function ($) {
 		var oAddClass = $.fn.addClass;
 		$.fn.addClass = function () {
@@ -90,32 +91,9 @@ $(document).ready(function() {
 		};
 	})();
 
-
-	// var setCardHeight = function(id) {
-	// 	var maxHeight = 0;
-
-
-
-	// 	$(id).each( function(i, obj) {
-	// 		var $self = $(this);
-	// 		console.log($(this).height());
-	// 		if( $self.height() < maxHeight ){
-	// 			 console.log('if');
-	// 			 $self.height(maxHeight);
-	// 			//$self.height(maxHeight + 72); //padding to read more link 
-	// 		}else{
-	// 			 console.log('else');
-	// 			maxHeight = $self.height();
-	// 			//$self.height(maxHeight + 72)
-	// 			$self.height(maxHeight)
-	// 		}
-	// 		//maxHeight = obj.heigth();
-	// 	})
-
-	// }
-	// setCardHeight('#press-releases .card-block');
-	
-
+	/**
+	 * Homepage Latest log Posts Carousel
+	 */
 	var initCarousel= function(){
 
 		$(".latest-blog-posts-carousel").slick({
@@ -125,6 +103,33 @@ $(document).ready(function() {
 			autoplaySpeed: 2000,
 			centerMode: false,
 			centerPadding: '0',
+			responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 632,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+			},
+			{
+				breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+			}
+
+			]
+			
 		});
 
 	}
@@ -209,12 +214,14 @@ $(document).ready(function() {
 	} 
 	init();
 
+    /*
 	Hyphenator.config({
 		displaytogglebox : true,
 		minwordlength : 4
     });
 
 	Hyphenator.run();
+	*/
 
     //  Hyphenator.config({
     //             displaytogglebox : true,

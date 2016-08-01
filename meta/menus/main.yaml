@@ -2,65 +2,45 @@ name: main
 items:
     -
         title: Shipping
-        nesting: ''
         type: url
         url: /shipping
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
+        code: shipping
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: 'Liner Services'
-        nesting: ''
         type: url
         url: /liner-services
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
+        code: liner-services
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: 'Port Agency'
-        nesting: ''
         type: url
         url: /port-agency
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
+        code: port-agency
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Offshore
-        nesting: ''
         type: url
         url: /offshore
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
+        code: offshore
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Contact
-        nesting: ''
         type: url
         url: /contact
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
+        code: contact
         viewBag:
             isHidden: '0'
             cssClass: ''

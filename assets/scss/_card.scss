@@ -13,6 +13,10 @@
         flex: 1 0 0;
         margin-right: .625rem;
         margin-left: .625rem;
+        
+        .card-block {
+            height: 100%;
+        }
       }
     }
 }
@@ -28,6 +32,10 @@
         flex: 1 0 0;
         margin-right: .625rem;
         margin-left: .625rem;
+        
+        .card-block {
+            height: 100%;
+        }
       }
     }
 }
@@ -46,43 +54,13 @@
     .card {
       flex: 1 0 0;
 
+        .card-block {
+            height: 100%;
+        }
 
       + .card {
         margin-left: 0;
         border-left: 0;
-      }
-
-      // Handle rounded corners
-      @if $enable-rounded {
-        &:first-child {
-          @include border-right-radius(0);
-
-          .card-img-top {
-            border-top-right-radius: 0;
-          }
-          .card-img-bottom {
-            border-bottom-right-radius: 0;
-          }
-        }
-        &:last-child {
-          @include border-left-radius(0);
-
-          .card-img-top {
-            border-top-left-radius: 0;
-          }
-          .card-img-bottom {
-            border-bottom-left-radius: 0;
-          }
-        }
-
-        &:not(:first-child):not(:last-child) {
-          border-radius: 0;
-
-          .card-img-top,
-          .card-img-bottom {
-            border-radius: 0;
-          }
-        }
       }
     }
   }
@@ -96,6 +74,10 @@
 
     .card {
       flex: 1 0 0;
+      
+        .card-block {
+            height: 100%;
+        }
 
 
       + .card {
@@ -149,6 +131,10 @@
       flex: 1 0 0;
 
 
+        .card-block {
+            height: 100%;
+        }
+        
       + .card {
         margin-left: 0;
         border-left: 0;

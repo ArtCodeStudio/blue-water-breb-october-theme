@@ -67,7 +67,29 @@ nav .container {
 /*
  * FOOTER  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
+
+
 	.footer {
+		display:flex;
+		justify-content: space-between;
+		&.footer-contact-container-small{
+			//justify-content: space-around;
+			@include media-breakpoint-up(md) {
+				>div:first-child {
+					border-right: 1px solid $brand-primary;
+					padding-right:22.1%; //perfect center
+				}
+			}
+			@include media-breakpoint-down(sm) {
+				>div:first-child {
+					border-right: 1px solid $brand-primary;
+					padding-right:14.8%; //perfect center
+				}
+			}
+		}
+		&::after{
+			content:none;
+		}
 		&#footer-brand-logo-container {
 			text-align: center !important;
 			margin-top: 163px; // besser loesen
@@ -97,7 +119,18 @@ nav .container {
 
 
 		&#footer-contact-container {
+			display:flex;
+			justify-content: space-between;
 			line-height: 20px;
+			&::after{
+				content:none;
+			}
+
+			> div:not(:last-child) {
+				border-right: 1px solid $brand-primary;
+				padding-right: 24px;
+			}
+
 			.row {
 				//margin-left:3%;
 				// all items get right border except the last 
@@ -109,7 +142,7 @@ nav .container {
 					@include media-breakpoint-down(xs) {
 						border-right : none !important;
 						.column {
-							padding-left: 8rem;
+							padding-left: 30%;
 						}
 					}
 					@include media-breakpoint-between(sm,md) {
@@ -222,26 +255,29 @@ nav .container {
 	#Home{
 
 		.overview-content-container {
-			margin:2rem;
-			text-align: justify;
+			margin-top: 1.5rem;
+			text-align: center;
 		}
 		#overview{
 			.learn-more {
-				//position:absolute;
-				//left: 50%;
-				a{
-					position: absolute;
-					bottom: 0;
-					left: 25%;
-				}
+				position: absolute;
+				bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
 			}
 			.card {
 				border: 1px solid  $transparent;
+				@include media-breakpoint-down(lg) {
+					margin-bottom: 3.75rem;
+				}
 			}
 			.card-block{
-				 margin-bottom: 2rem;
+				margin-bottom: 4rem;
 			}
 		}
+		
+
 		
 		#latest-blog-posts {
 

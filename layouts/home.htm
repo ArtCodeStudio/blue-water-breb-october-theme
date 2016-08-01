@@ -12,7 +12,7 @@ centerPadding = 0
 lazyLoad = "ondemand"
 autoplayOnShow = 1
 nextSlideOnEnd = 1
-autoplay = 1
+autoplay = 0
 autoplaySpeed = 3000
 cssEase = "ease"
 fade = 0
@@ -61,10 +61,10 @@ zIndex = 1000
     <body id="{{ str_studly(this.page.title) }}">
     
         {% partial 'navbar' %}
-        
+           {#  
         {% component 'slideshow' %}
         
-
+#}
         <section id="layout-content">
 
             {# <h1>{{ this.page.title }}</h1> #}
@@ -84,13 +84,12 @@ zIndex = 1000
         {% partial 'footer/footer_contact' %}
         
         {% partial 'footer/footer_legal' %}     
-{#
-assets/vendor/Hyphenator/Hyphenator.js' | theme 
-http://breb.jumplink.eu/themes/breb/assets/vendor/Hyphenator/Hyphenator.js#}
-        {% put scripts %}
-            <script type="text/javascript" src="{{ 'assets/vendor/Hyphenator/Hyphenator.js' | theme }}""></script>
-        {% endput %}
         
+        {#
+        {% put scripts %}
+            <script type="text/javascript" src="{{ 'assets/vendor/Hyphenator/Hyphenator-off.js' | theme }}""></script>
+        {% endput %}
+        #}
         {% put scripts %}
             <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
         {% endput %}
