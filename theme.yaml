@@ -3,3 +3,63 @@ description: ''
 author: JumpLink
 homepage: 'http://jumplink.eu/'
 code: breb
+
+# Indentation MUST be Spaces not Tabs !
+form:
+    fields:
+        location_bremen:
+            label: Bremen
+            #comment: The website name as it should appear on the front-end
+            default: BREB GmbH & Co.KG
+        location_breme1:
+            default:
+        location_bremen2:
+            default: Universitätsallee 5 
+        location_bremen3:
+            default: 28359 Bremen
+        location_bremen4:
+            default: Tel. +49 (0)421 32278-0
+        location_bremen5:
+            default: Fax +49 (0)421 32278-78
+
+        location_cuxhaven:
+            label: Cuxhaven
+            default: BREB GmbH & Co.KG
+        location_cuxhaven1:
+            default: Havenhostel Cuxhaven
+        location_cuxhaven2:
+            default: Kpt.-Alexander-Str. 16
+        location_cuxhaven3:
+            default: 27472 Cuxhaven
+        location_cuxhaven4:
+            default: Tel. +49 (0)4721 590 54 0
+        location_cuxhaven5:
+            default: Fax +49 (0)4721 590 54 99
+
+        location_sassnitz:
+            label: Sassnitz
+            default: BREB GmbH & Co.KG
+        location_sassnitz1:
+            default: Hafeneingangsgebäude Sassnitz
+        location_sassnitz2:
+            default: Fährhafen 20b
+        location_sassnitz3:
+            default: 18546 Sassnitz
+        location_sassnitz4:
+            default: Tel. +49 (0)38392 55 44 0
+        location_sassnitz5:
+            default: 
+            
+        location_zeebrugge:
+            label: Zeebrugge
+            default: BREB Belgium bvba
+        location_zeebrugge1:
+            default:
+        location_zeebrugge2:
+            default: Rederskaai 30
+        location_zeebrugge3:
+            default: 8380 Zeebrugge
+        location_zeebrugge4:
+            default: 
+        location_zeebrugge5:
+            default: 

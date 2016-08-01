@@ -7479,8 +7479,13 @@ nav .container {
     .footer#footer-contact-container::after {
       content: none; }
     .footer#footer-contact-container > div:not(:last-child) {
-      border-right: 1px solid #4053a4;
-      padding-right: 24px; }
+      border-right: 1px solid #4053a4; }
+      @media (min-width: 1200px) {
+        .footer#footer-contact-container > div:not(:last-child) {
+          padding-right: 58px; } }
+      @media (max-width: 1199px) {
+        .footer#footer-contact-container > div:not(:last-child) {
+          padding-right: 24px; } }
     .footer#footer-contact-container .row > div {
       height: 210px;
       border-right: 1px solid #4053a4; }
