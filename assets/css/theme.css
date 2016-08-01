@@ -7270,6 +7270,59 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: block;
     margin: -1px auto; }
 
+/*
+* MAIN NAVIGATION –––––––––––––––––––––––––––––––––––––––––––––––––––
+**/
+#navbar-main {
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  height: 110px; }
+  #navbar-main .navbar-brand {
+    min-width: 420px !important;
+    height: 64px !important;
+    margin-top: 30px !important;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    position: fixed; }
+    @media (max-width: 991px) {
+      #navbar-main .navbar-brand {
+        margin-top: 17px !important;
+        min-width: 238px !important; } }
+
+.main-navigation {
+  margin-top: 40px;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out; }
+
+/*
+	* MAIN NAVIGATION STATE CLASSES
+	**/
+.navbar-slim {
+  height: 3rem !important;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  border-bottom: 1px solid #4053a4; }
+  .navbar-slim .main-navigation {
+    margin-top: 0 !important;
+    height: 36px; }
+
+.border-bottom {
+  border-bottom: 1px solid; }
+
+.main-navigation.small {
+  margin-top: 0; }
+
+.brand-hidden {
+  opacity: 0 !important; }
+
+.sidebar-wrapper {
+  position: relative;
+  height: 100%;
+  overflow: auto; }
+
+#sidebar {
+  display: none; }
+
 @media (min-width: 544px) {
   .card-deck-flex, .card-deck-flex-sm {
     display: -webkit-box;
@@ -7507,51 +7560,6 @@ nav .container {
       height: 200px; }
 
 /*
-* MAIN NAVIGATION –––––––––––––––––––––––––––––––––––––––––––––––––––
-**/
-#navbar-main {
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
-  height: 110px; }
-  #navbar-main .navbar-brand {
-    min-width: 420px !important;
-    height: 64px !important;
-    margin-top: 30px !important;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out;
-    position: fixed; }
-    @media (max-width: 991px) {
-      #navbar-main .navbar-brand {
-        margin-top: 17px !important;
-        min-width: 238px !important; } }
-
-.main-navigation {
-  margin-top: 40px;
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out; }
-
-/*
-	* MAIN NAVIGATION STATE CLASSES
-	**/
-.navbar-slim {
-  height: 3rem !important;
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
-  border-bottom: 1px solid #4053a4; }
-  .navbar-slim .main-navigation {
-    margin-top: 0 !important;
-    height: 36px; }
-
-.border-bottom {
-  border-bottom: 1px solid; }
-
-.main-navigation.small {
-  margin-top: 0; }
-
-.brand-hidden {
-  opacity: 0 !important; }
-
-/*
  * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
 #Home .overview-content-container {
@@ -7728,8 +7736,8 @@ nav .container {
             transition-delay: 0s;
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
-    -webkit-transition-property: all;
-    transition-property: all;
+    -webkit-transition-property: box-shadow;
+    transition-property: box-shadow;
     -webkit-transition-timing-function: ease;
             transition-timing-function: ease;
     border: 1px solid rgba(1, 1, 1, 0); }

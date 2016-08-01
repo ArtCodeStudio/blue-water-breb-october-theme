@@ -62,7 +62,7 @@ zIndex = 1000
     
         {% partial 'navbar' %}
           
-       {# {% component 'slideshow' %} #}
+        {% component 'slideshow' %}
         
 
         <section id="layout-content">
@@ -90,11 +90,14 @@ zIndex = 1000
             <script type="text/javascript" src="{{ 'assets/vendor/Hyphenator/Hyphenator-off.js' | theme }}""></script>
         {% endput %}
         #}
+
         {% put scripts %}
             <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
         {% endput %}
         
-
+        {% put scripts %}
+            <script type="text/javascript" src="{{ 'assets/javascript/pages/navigation.js' | theme }}"></script>
+        {% endput %}
 
 
         {% partial 'body_foot' %}

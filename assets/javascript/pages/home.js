@@ -147,9 +147,12 @@ $(document).ready(function() {
 		
 				$('#navbar-main').addClass("navbar-slim");
 			}, 250);
-
+			//console.log($('#slideshow'));
 			//$('.main-navigation').addClass('nav-low-height');
+			//$('#slideshow').fadeOut();
 		}else{
+			//$('#slideshow').fadeIn();
+		//	$('#slideshow').css('display','inherit');
 			//$('.navbar-brand').removeClass("brand-hidden");
 			//
 			//$('.main-navigation').removeClass('nav-low-height');
@@ -236,5 +239,10 @@ $(document).ready(function() {
     //     }
     // });
    // Hyphenator.run();
+
+
+   
+
+
 
 });

@@ -16,7 +16,6 @@
 @import 'card';
 
 
-
 hr {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -189,73 +188,6 @@ nav .container {
 
 
 
-
-/*
-* MAIN NAVIGATION –––––––––––––––––––––––––––––––––––––––––––––––––––
-**/
-	#navbar-main {
-		transition: all .25s ease-in-out;
-		height:110px;
-
-		.navbar-brand {
-			min-width: 420px !important;
-			height: 64px !important;
-			margin-top: 30px !important;
-			transition: all .25s ease-in-out;
-			position: fixed;
-			@include media-breakpoint-down(md) {
-				margin-top: 17px !important;
-			    min-width: 238px !important;
-			}
-		}
-
-	}
-	//  ?! funktioniert nicht unter #navbar-main
-	.main-navigation {
-		margin-top: 40px;		
-		transition: all .25s ease-in-out;
-	}
-
-
-
-	/*
-	* MAIN NAVIGATION STATE CLASSES
-	**/
-		// .nav-low-height {
-		// 	//margin-top:0;
-		// 	//height:80px;
-		// }
-
-		.navbar-slim {
-			height: 3rem !important;
-			transition: all .25s ease-in-out;
-			border-bottom: 1px solid $brand-primary;
-			.main-navigation {
-				margin-top:0 !important;
-				height:36px;
-			}
-			// &:after {
-			// 	content: "";
-			// 	border-bottom: 1px solid #3a599f;
-			// 	width: 1110px;
-			// 	display: block;
-			// 	margin: -1px auto;
-			// }
-		}
-
-
-		.border-bottom {
-			border-bottom: 1px solid;
-		}
-
-		.main-navigation.small{
-			margin-top:0;
-		}
-
-		.brand-hidden {
-			opacity:0 !important;
-			//display:none;
-		}
 /*
  * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
@@ -548,7 +480,7 @@ nav .container {
 				background-color: white;
 				transition-delay: 0s;
 				transition-duration: 0.3s;
-				transition-property: all;
+				transition-property: box-shadow;
 				transition-timing-function: ease;
 				border: 1px solid  $transparent;
 				> * {
