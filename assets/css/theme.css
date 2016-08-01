@@ -7517,9 +7517,13 @@ nav .container {
     min-width: 420px !important;
     height: 64px !important;
     margin-top: 30px !important;
-    -webkit-transition: opacity .25s ease-in-out;
-    transition: opacity .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     position: fixed; }
+    @media (max-width: 991px) {
+      #navbar-main .navbar-brand {
+        margin-top: 17px !important;
+        min-width: 238px !important; } }
 
 .main-navigation {
   margin-top: 40px;

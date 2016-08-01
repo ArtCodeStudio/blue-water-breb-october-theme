@@ -201,8 +201,12 @@ nav .container {
 			min-width: 420px !important;
 			height: 64px !important;
 			margin-top: 30px !important;
-			transition: opacity .25s ease-in-out;
+			transition: all .25s ease-in-out;
 			position: fixed;
+			@include media-breakpoint-down(md) {
+				margin-top: 17px !important;
+			    min-width: 238px !important;
+			}
 		}
 
 	}
@@ -427,7 +431,6 @@ nav .container {
 			}
 			@include media-breakpoint-down(md) {
 				margin-top: 4.3rem;
-		
 			}
 		
 		}
