@@ -2,3 +2,43 @@
 @import '../../../../plugins/jumplink/slideshow/assets/vendor/slick-carousel/slick/slick-theme.scss';
 
 @import '../../../../plugins/jumplink/slideshow/assets/scss/slideshow.scss';
+
+#animatedModal{
+	.close-animatedModal {
+		color: white;
+		position: fixed;
+		z-index: 1;
+		right: 1rem;
+		top: 1rem;
+	}
+
+	.modal-content{
+
+		.slick-prev {
+			left: 1rem;
+			
+		}
+		.slick-next {
+			right: 1rem;
+		}
+		.slick-prev, .slick-next {
+			position: absolute;
+			z-index: 999;
+			@include media-breakpoint-up(xl) {
+				margin-top: 19rem;
+			}
+			@include media-breakpoint-down(lg) {
+				margin-top: 6.6rem;
+			}
+			@include media-breakpoint-down(md) {
+				margin-top: 4.3rem;
+			}
+		
+		}
+		.slick-prev:before, .slick-next:before {
+			color: $brand-danger;
+		}
+		
+
+	}
+}

@@ -15,7 +15,6 @@ $(document).ready(function(){
 				quitter: ".close-sidebar" // the new closingLinks
 			},
 			animation: {
-
 				//duration: 500, // that is default, you can remove this line, // already tried to uncomment
 				easing: "easeOutQuint"
 			},
@@ -36,8 +35,6 @@ $(document).ready(function(){
 				}
 			}
 		} );
-
-		console.log('navigation.js called');
 
 
 });

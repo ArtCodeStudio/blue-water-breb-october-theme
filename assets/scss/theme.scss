@@ -370,12 +370,12 @@ nav .container {
 			color: $brand-danger;
 		}
 
-		#fullscreen-button{
-			position: absolute;
-			z-index: 999;
-			right: 5px;
-			top: 5px;
-		}
+		// #fullscreen-button{
+		// 	position: absolute;
+		// 	z-index: 999;
+		// 	right: 5px;
+		// 	top: 5px;
+		// }
 
 
 
@@ -384,22 +384,27 @@ nav .container {
 				display:none;
 			}
 			overflow: hidden;
-			// .slick-slide {
-			// 	margin: 0 $grid-gutter-width/2; // result  0 0.9375rem
-			// 	height:200px;
-			// }
 
-			// .slick-list {
-			// 	margin: 0 -$grid-gutter-width;
-			// }
+			.carousel-image-wrapper{
+				
+				// margin-left:2rem;
+			}
+			.slick-slide {
+				margin: 4rem $grid-gutter-width/2; // result  0 0.9375rem
+				height:200px;
+			}
 
-			// .slick-prev {
-			// 	left: -48px;
-			// }
+			.slick-list {
+				margin: 0 -$grid-gutter-width;
+			}
 
-			// .slick-next {
-			// 	right: -49px; //by intention! +1
-			// }
+			.slick-prev {
+				left: -48px;
+			}
+
+			.slick-next {
+				right: -49px; //by intention! +1
+			}
 		}
 
 

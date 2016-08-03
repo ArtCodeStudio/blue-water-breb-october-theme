@@ -7132,6 +7132,35 @@ a.bg-danger:focus, a.bg-danger:hover {
   .box.ratio-3-4:before {
     padding-top: 133.33%; }
 
+#animatedModal .close-animatedModal {
+  color: white;
+  position: fixed;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem; }
+
+#animatedModal .modal-content .slick-prev {
+  left: 1rem; }
+
+#animatedModal .modal-content .slick-next {
+  right: 1rem; }
+
+#animatedModal .modal-content .slick-prev, #animatedModal .modal-content .slick-next {
+  position: absolute;
+  z-index: 999; }
+  @media (min-width: 1200px) {
+    #animatedModal .modal-content .slick-prev, #animatedModal .modal-content .slick-next {
+      margin-top: 19rem; } }
+  @media (max-width: 1199px) {
+    #animatedModal .modal-content .slick-prev, #animatedModal .modal-content .slick-next {
+      margin-top: 6.6rem; } }
+  @media (max-width: 991px) {
+    #animatedModal .modal-content .slick-prev, #animatedModal .modal-content .slick-next {
+      margin-top: 4.3rem; } }
+
+#animatedModal .modal-content .slick-prev:before, #animatedModal .modal-content .slick-next:before {
+  color: #ef2a21; }
+
 .z-depth-0 {
   box-shadow: none !important; }
 
@@ -7670,16 +7699,19 @@ nav .container {
 #LinerServices .slick-prev:before, #LinerServices .slick-next:before {
   color: #ef2a21; }
 
-#LinerServices #fullscreen-button {
-  position: absolute;
-  z-index: 999;
-  right: 5px;
-  top: 5px; }
-
 #LinerServices #gallerySlideshow2 {
   overflow: hidden; }
   #LinerServices #gallerySlideshow2 .carousel-caption-wrapper {
     display: none; }
+  #LinerServices #gallerySlideshow2 .slick-slide {
+    margin: 4rem 0.9375rem;
+    height: 200px; }
+  #LinerServices #gallerySlideshow2 .slick-list {
+    margin: -1.875rem; }
+  #LinerServices #gallerySlideshow2 .slick-prev {
+    left: -48px; }
+  #LinerServices #gallerySlideshow2 .slick-next {
+    right: -49px; }
 
 #blog-header-wrapper {
   top: 2.96rem;
