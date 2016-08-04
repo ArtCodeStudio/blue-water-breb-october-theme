@@ -11,8 +11,8 @@ captionPosition = "middle center"
 adaptiveHeight = 0
 centerMode = 1
 centerPadding = "0px"
-autoplayOnShow = 1
-nextSlideOnEnd = 1
+autoplayOnShow = 0
+nextSlideOnEnd = 0
 autoplay = 0
 fade = 0
 infinite = 1
@@ -20,12 +20,12 @@ slidesToShow = 1
 rtl = 0
 waitForAnimate = 1
 accessibility = 1
-arrows = 1
-dots = 0
+arrows = 0
+dots = 1
 draggable = 1
 focusOnSelect = 0
-pauseOnFocus = 1
-pauseOnHover = 1
+pauseOnFocus = 0
+pauseOnHover = 0
 pauseOnDotsHover = 0
 swipe = 1
 swipeToSlide = 0
@@ -43,14 +43,26 @@ vertical = 0
     {% set autoplayIndex = -1 %}
 
     <div id='{{ str_camel(fullscreenSlideshow.alias) }}' class="slick-carousel">
+        
         {% for i, slide in fullscreenSlideshow.slideshow.slides %}
+        
             {% if fullscreenSlideshow.slideshow.slides %}
+                
                 {% if slide.link %}
                     {% set slickSlideElement = 'a' %}
                 {% else %}
                     {% set slickSlideElement = 'div' %}
                 {% endif %}
-                <{{slickSlideElement}} href="{{ slide.link }}" id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}" class="slick-slide">
+
+                {% if slide.mp4 != blank or slide.webm != blank or slide.ogg != blank %}
+                    {% set slide_type = 'video'%}
+                {% else %}
+                    {% set slide_type = 'image'%}
+                {% endif %}
+
+
+                <{{slickSlideElement}} href="{{ slide.link }}" id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}" class="slick-slide" data-slide-type="{{slide_type}}">
+                   
                     {% if slide.mp4 != blank or slide.webm != blank or slide.ogg != blank %}
 
                         {% if fullscreenSlideshow.property('autoplayOnShow') and loop.index == (fullscreenSlideshow.property('initialSlide') != blank ? fullscreenSlideshow.property('initialSlide') + 1 : 1) %}
@@ -60,7 +72,7 @@ vertical = 0
                         <div class="carousel-video-wrapper">
                             {% if slide.aspect_ratio == 'custom' %}
                                 <div class="box" style="padding-top: {{ 100.0 / slide.custom_ratio}}%;">
-                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
                                         {% if slide.mp4 != blank %}
                                             <source src="{{slide.mp4.path}}" type="video/mp4">
                                         {% endif %}
@@ -74,7 +86,7 @@ vertical = 0
                                 </div>
                             {% elseif slide.aspect_ratio != blank %}
                                 <div class="box {{slide.aspect_ratio}}">
-                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
                                         {% if slide.mp4 != blank %}
                                             <source src="{{slide.mp4.path}}" type="video/mp4">
                                         {% endif %}
@@ -88,7 +100,7 @@ vertical = 0
                                 </div>
                             {% elseif fullscreenSlideshow.property('aspectRatio') == 'custom' %}
                                 <div class="box" style="padding-top: {{ 100.0 / fullscreenSlideshow.property('customtRatio') }}%">
-                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
                                         {% if slide.mp4 != blank %}
                                             <source src="{{slide.mp4.path}}" type="video/mp4">
                                         {% endif %}
@@ -102,7 +114,7 @@ vertical = 0
                                 </div>
                             {% elseif fullscreenSlideshow.property('aspectRatio') != blank %}
                                 <div class="box {{ fullscreenSlideshow.property('aspectRatio') }}">
-                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+                                    <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
                                         {% if slide.mp4 != blank %}
                                             <source src="{{slide.mp4.path}}" type="video/mp4">
                                         {% endif %}
@@ -115,7 +127,7 @@ vertical = 0
                                     </video>
                                 </div>
                             {% else %}
-                                <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload autoplay muted width="100%" poster="{{ slide.image.path }}">
+                                <video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
                                     {% if slide.mp4 != blank %}
                                         <source src="{{slide.mp4.path}}" type="video/mp4">
                                     {% endif %}
@@ -226,11 +238,138 @@ vertical = 0
                 {{ fullscreenSlideshow.property('waitForAnimate') == blank ? '//' : '' }}   waitForAnimate:     Boolean( {{ fullscreenSlideshow.property('waitForAnimate') }} ) === true,
                 {{ fullscreenSlideshow.property('zIndex') == blank ? '//' : '' }}           zIndex:             Number( {{ fullscreenSlideshow.property('zIndex') }}),
             };
+            
+          
+
+        $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('init', function( event, slick ) { 
+            setTimeout( function(){
+                console.log('init',slick);
+    
+                var currentSlideType = $(".slick-current").data("slide-type");
+                console.log('currentSlideType:', currentSlideType);
+
+                var slider = slick.$slider;
+                //see: https://github.com/kenwheeler/slick/issues/1501
+                
+
+//document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+                switch( currentSlideType ) {
+                        
+                    case 'video': {
+                        console.log('case: video');
+                        var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{autoplayIndex}}-video';
+                        console.log("theVideo with id", theId);
+
+                        var theVideo = document.getElementById(theId);
+                        var theVideo = $("#"+theId);
+                            theVideo[0].play();
+
+                        var onVideoEnd = function() {
+                            slider.slick("slickNext");
+                            theVideo.off('ended', onVideoEnd);
+                        }
+                        theVideo.on('ended', onVideoEnd );
+                        
+                        setTimeout( function() { 
+                            slider.slick('slickPause');
+                            $("#fullscreenSlideshow").slick("slickPause");
+                        },5);
+                    
+
+
+                    };break;
+
+                    case 'image': {
+                        console.log('case: image');
+
+                    };break;
+
+                }
+
+            },5);
         
+        });
+          
+
+        /**
+         * RE INIT
+         */ 
+        $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('reInit', function( event, slick ) { 
+            console.log('reInit');
+        });
+            
+     
+
+
+        /**
+         * BEFORE CHANGE
+         */ 
+        $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('beforeChange', function( event, slick ) { 
+            console.log('beforeChange');
+
+        });
+
+
+        /**
+         * AFTER CHANGE
+         */ 
+        $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('afterChange', function( event, slick ) { 
+            console.log('afterChange');
+            var currentSlideType = $(".slick-current").data("slide-type");
+            var slider = slick.$slider;
+            console.log('currentSlideType:', currentSlideType);
+            switch( currentSlideType ) {
+                    
+                case 'video': {
+                    console.log('afterChange/ case: video');          
+                    
+
+                    setTimeout( function() { 
+                        slider.slick('slickPause');
+                    },5);
+                    
+                    var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{autoplayIndex}}-video';
+                    console.log("afterChange/ theVideo with id", theId);
+                   // var theVideo = document.getElementById(theId);
+                    var theVideo = $("#"+theId);
+
+                    setTimeout( function() { 
+                       // theVideo[0].load();
+                        //theVideo[0].currentTime= 0
+                      
+                        theVideo[0].play();
+                    },1000); // delay 
+
+                    var onVideoEnd = function() {
+                       // setTimeout( function() { 
+                            console.log('afterChange/ onVideoEnd')
+                            slider.slick("slickNext");
+                       // },1000);
+                        theVideo.off('ended', onVideoEnd);
+                    }
+                    theVideo.on('ended', onVideoEnd );
+                    
+
+                };break;
+
+                case 'image': {
+                    console.log('afterChange/ case: image');
+                    slider.slick('slickSetOption', 'autoplay', true,true);
+
+                };break;
+
+            }
+            
+        });
+
+        /**
+         * Initialize Slick
+         */
+        $('#{{ str_camel(fullscreenSlideshow.alias) }}').slick( {{ str_camel(fullscreenSlideshow.alias) }}Settings );
+    
     {% endput %}
 
-    {# TODO: CLEAN UP THE FOLLOWING MESS AND ADD SOME COMMENTING #}
-
+{# 
     {% if fullscreenSlideshow.property('nextSlideOnEnd') == 1 %}
         {% put scripts %}
             var onVideoEnd = function() {
@@ -239,8 +378,9 @@ vertical = 0
             var onFirstVideoEnd = function() {
                 var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-'+{{autoplayIndex}}+'-video';
                 var theVideo = document.getElementById(theId);
-                if (theVideo != null)
+                if (theVideo != null) {
                     theVideo.addEventListener('ended', onVideoEnd);
+                }
                 $('#{{ str_camel(fullscreenSlideshow.alias) }}').slick('slickSetOption', 'autoplay', Boolean( {{ fullscreenSlideshow.property('autoplay') }} ) === true, true);
                 $('#{{ str_camel(fullscreenSlideshow.alias) }}').slick('slickPlay');
             };
@@ -258,38 +398,79 @@ vertical = 0
             }
         {% endput %}
     {% endif %}
+#}
     {% if fullscreenSlideshow.property('autoplayOnShow') == 1 %}
-        {% put scripts %}
+
+{#   
+         {% put scripts %}
             $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('afterChange', function(event, slick, currentSlide){
                 console.log("onAfterChange", currentSlide);
                 var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-'+(currentSlide+1)+'-video';
                 var theVideo = document.getElementById(theId);
+                
                 if (theVideo != null) {
                     $('#{{ str_camel(fullscreenSlideshow.alias) }}').slick('slickPause');
                     theVideo.play();
                 }
             });
         {% endput %}
-        {% if autoplayIndex != -1 %}
+#}
+       {% if autoplayIndex != -1 %}
+
             {% put scripts %}
-            $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('init reInit', function(event, slick) {
-                console.log("on", event.type);
-                var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{autoplayIndex}}-video';
-                console.log("theVideo with id", theId);
-                var theVideo = document.getElementById(theId);
-                if (theVideo != null) {
-                    console.log("!= null");
-                    {{ str_camel(fullscreenSlideshow.alias) }}Settings.autoplay=false;
-                    //$('#{{ str_camel(fullscreenSlideshow.alias) }}').slick('slickPause');
-                    theVideo.play();
-                }
-                else console.log("== null");
-            });
+                
+             /*   console.log('check',{{fullscreenSlideshow}}.id );
+
+                 $("#fullscreenSlideshow").slick("slickPause");
+                var slideshowID = {{fullscreenSlideshow}}.id;
+                console.log("slideshowID", slideshowID);
+                console.log("slideshowobject", $("#"+slideshowID) );
+
+                var $slideshow =  $("#"+slideshowID);*/
+
+               // console.log('slickCurrentSlide type',$(".slick-current").data("slide-type") ); //$slideshow.slick("slickCurrentSlide") );
+             //   var currentSlideType = $slideshow.
+                // check if current element is video or image
+                //fullscreenSlideshow-slide-1
+               // data-slide_type
+                //console.log('foo', {{fullscreenSlideshow.alias}});
+                // $('#fullscreenSlideshow').on('init', function( event, slick ) {
+                //     console.log("on", event.type);
+                    
+                //     var currentSlideType = $(".slick-current").data("slide-type") 
+                    
+
+                //     console.log("on", event.type);
+                //     var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{autoplayIndex}}-video';
+                //     console.log("theVideo with id", theId);
+                //     var theVideo = document.getElementById(theId);
+                    
+                //     theVideo.addEventListener('ended',function() {
+                           
+                //            // $("#{{fullscreenSlideshow}}")
+                //             $slideshow .slick("slickNext");
+                //     });
+
+                //     if (theVideo != null) {
+                //         console.log("!= null");
+                //        // {{ str_camel(fullscreenSlideshow.alias) }}Settings.autoplay=false;
+                //         //$('#{{ str_camel(fullscreenSlideshow.alias) }}').slick('slickPause');
+                //         theVideo.play();
+                //          //$("#{{fullscreenSlideshow}}")
+                //          $("#fullscreenSlideshow").slick("slickPause");
+                    
+                //     } else { 
+                //         console.log("== null");
+                //     }
+
+                // });
             {% endput%}
         {% endif %}
     {% endif %}
+
     {% put scripts %}
-            $('#{{ str_camel(fullscreenSlideshow.alias) }}').slick({{ str_camel(fullscreenSlideshow.alias) }}Settings);
+       
         </script>
     {% endput %}
+
 {% endif %}
