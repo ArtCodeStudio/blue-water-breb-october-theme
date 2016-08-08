@@ -1,18 +1,23 @@
 $navbar-brand-height: 37px;
 $navbar-brand-width: 150px;
 
-.navbar{
-    
+
     .navbar-brand {
-        min-width: $navbar-brand-width;
-        height: $navbar-brand-height;
-        background-image: url(../images/logo/BX_RZ_BremerReederei_pos_RGB.png);
-        background-repeat: no-repeat;
-        background-position: center bottom;
-        background-size: 100% auto;   
+		min-width: 770px;
+		height: 157px;
+		background-image: url(../images/logo/BX_RZ_BremerReederei_pos_RGB.png);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 100% auto;
+		position: absolute;
+		margin-top: 135px;
+		z-index: 999;
+		@include media-breakpoint-down(sm) {
+			min-width: 530px;
+			height: 99px;
+		}
+
     }
-    
-}
 
 #navbar-slim {
 	padding-bottom: 0 !important;
@@ -31,6 +36,7 @@ $navbar-brand-width: 150px;
 /*
 * MAIN NAVIGATION –––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
+
 	#navbar-main {
 		transition: all .25s ease-in-out;
 		height:110px;

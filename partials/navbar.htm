@@ -7,9 +7,9 @@ code = "main"
     <div class="container hidden-sm-down ">
         <nav class="navbar navbar-light" id="navbar-main">
 
-            <div>
+            <!--<div>
                 <a href="/" class="navbar-brand">&nbsp;</a>
-            </div>
+            </div>-->
             {% partial 'navigation/navbar-items' 
                 items=main.menuItems 
                 class='nav navbar-nav pull-xs-right hidden-sm-down main-navigation'
@@ -18,5 +18,11 @@ code = "main"
         </nav>
     </div>
 </div>
-
+<div class="container ">
+    <div class="row">
+        <div class="col-xs-4">
+            <a href="/" class="navbar-brand">&nbsp;</a>
+        </div>
+    </div>
+</div>
 {% partial 'navigation/sidebar' %} 
