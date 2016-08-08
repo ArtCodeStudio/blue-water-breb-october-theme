@@ -33,6 +33,7 @@ touchMove = 1
 verticalSwiping = 0
 mobileFirst = 0
 respondTo = "window"
+responsive = ""
 useCSS = 1
 useTransform = 1
 variableWidth = 0
@@ -43,13 +44,17 @@ vertical = 0
     {% set autoplayIndex = -1 %}
 
     <div id='{{ str_camel(fullscreenSlideshow.alias) }}' class="slick-carousel">
+
         {% for i, slide in fullscreenSlideshow.slideshow.slides %}
+            
             {% if fullscreenSlideshow.slideshow.slides %}
+            
                 {% if slide.link %}
                     {% set slickSlideElement = 'a' %}
                 {% else %}
                     {% set slickSlideElement = 'div' %}
                 {% endif %}
+                
                 <{{slickSlideElement}} href="{{ slide.link }}" id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}" class="slick-slide">
                     {% if slide.mp4 != blank or slide.webm != blank or slide.ogg != blank %}
 
@@ -156,12 +161,12 @@ vertical = 0
 
                             {% if slide.name != blank or slide.description != blank  %}
                                <div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : fullscreenSlideshow.property('captionPosition')}}">
-                                    <div class="carousel-caption-content">
-                                        <h2>{{ slide.name | raw }}</h2>
+                                    <div class="carousel-caption-content text-serif">
+                                        <h1>{{ slide.name | raw }}</h2>
                                         {{ slide.description | raw }}
                                     </div>
                                 </div>
-                            
+
                             {% endif %}
 
                         </div>
@@ -174,6 +179,27 @@ vertical = 0
 
     {% put scripts %}
         <script type="text/javascript">
+            //broken
+
+            // var fullscreenSlideshow_responsive = [
+			// 	// {
+			// 	// 	breakpoint: 1024,
+			// 	// 	settings: {
+			// 	// 	}
+			// 	// },
+			// 	// {
+			// 	// 	breakpoint: 632,
+			// 	// 		settings: {
+			// 	// 		}
+			// 	// },
+			// 	{
+			// 		breakpoint: 480,
+			// 			settings: {
+			// 				arrows: false
+			// 			}
+			// 	}
+			// ];
+
             var {{ str_camel(fullscreenSlideshow.alias) }}Settings = {
                 {{ fullscreenSlideshow.property('accessibility') == blank ? '//' : '' }}    accessibility:      Boolean( {{ fullscreenSlideshow.property('accessibility') }} ) === true ,
                 {{ fullscreenSlideshow.property('adaptiveHeight') == blank ? '//' : '' }}   adaptiveHeight:     Boolean( {{ fullscreenSlideshow.property('adaptiveHeight') }} ) === true,

@@ -103,26 +103,53 @@ $(document).ready(function(){
 
 	changeNavbar();
 
-	// var initMasonry = function() {
-	// 	$('#all-posts-container').masonry({
-	// 		itemSelector: '.card',
-	// 		//columnWidth: '.card',//118
-	// 		columnWidth: '.grid-sizer',
-	// 		gutter: '.gutter-sizer',
-	// 		percentPosition: true,
-	// 		//gutter: 20
-	// 	});
-	// }
-
+// var $grid = $('.grid').isotope({
+//   itemSelector: '.grid-item',
+//   layoutMode: 'masonry',
+//   masonry: {
+//     columnWidth: 350,
+// 	isFitWidth: true,
+// 	gutter:30
+//   },
+// });
 	var initMasonry = function() {
 		$('.grid').masonry({
-		itemSelector: '.grid-item',
-		columnWidth: 350,
-		isFitWidth: true,
-		gutter:30
+			itemSelector: '.grid-item',
+			columnWidth: 350,
+			isFitWidth: true,
+			gutter:30
 		});
+		// $('.grid').multipleFilterMasonry({
+		// 	itemSelector: '.grid-item',
+		// 	filtersGroupSelector:'.filters',
+		// 	columnWidth: 350,
+		// 	isFitWidth: true,
+		// 	gutter:30,
+		// 	//selectorType: 'list'
+		// });
 	}
 	initMasonry();
 
 
-})
+
+	// $(document).on('click', "#blog-filter a", function(e){
+	// 	e.preventDefault();
+
+	// 	/**
+	// 	 * ISOTOPE
+	// 	 */
+	// 		var $category = $(this).data("category") ;
+	// 		console.log("check",$(this).data("category"));
+	// 		$grid.isotope({ filter: '.' + $category });
+
+	// 		if($category == 'all') {
+	// 			$grid.isotope({ filter: '' });
+	// 		}
+
+	// });
+	
+
+
+});
+
+

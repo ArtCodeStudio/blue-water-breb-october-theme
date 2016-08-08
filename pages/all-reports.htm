@@ -1,5 +1,5 @@
 title = "All Reports"
-url = "/reports"
+url = "/reports/:page?"
 layout = "blog"
 is_hidden = 0
 robot_index = "index"
@@ -7,7 +7,7 @@ robot_follow = "follow"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
-postsPerPage = 10
+postsPerPage = 2
 noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "all-reports"

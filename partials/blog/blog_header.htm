@@ -22,27 +22,54 @@ function onEnd()
 	{{ currentCategory }}
 #}
 		<nav id="blog-filter">
-			<a href="/reports" class="nav-link btn text-serif
+			<a href="/reports" class="nav-link btn text-serif 
 				{% if queryString == 'all' %} 
 					btn-white-outline 
-				{%endif%}">
+				{%endif%}",
+				data-category="all">
 				All Reports
 			</a>  
 			<a href="/reports/category/press-release" class="nav-link btn text-serif 
 				{% if currentCategory == 'press-release' or queryString == 'press-release' %} 
 					btn-white-outline 
-				{%endif%}">
+				{%endif%}"
+				data-category="press-release">
 				Press Release
 			</a>     
 			<a href="/reports/category/blog" class="nav-link btn text-serif 
 				{% if currentCategory == 'blog' or queryString == 'blog' %} 
 					btn-white-outline 
-				{%endif%}">
+				{%endif%}"
+				data-category="blog">
 				Blog
 			</a>          
 		</nav>
 
+<!--<div class="button-group filters-button-group">
+  <button class="button is-checked" data-filter="*">All Reports</button>
+  <button class="button" data-filter=".press-release">Press Release</button>
+  <button class="button" data-filter=".blog">Blog Posts</button>
+</div>-->
+		<!--<div class="btn-toolbar filters">
+			<div data-toggle="buttons" class="btn-group">
+				<label class="btn btn-default">
+				<input type="checkbox" value="all" >
+				All Reports
+				</label>
+				<label class="btn btn-default">
+				<input type="checkbox" value="blog" >
+				Blog
+				</label>
+				<label class="btn btn-default">
+				<input type="checkbox" value="press-release" >
+				Press Releases
+				</label>
+			</div>
+		</div>
 
+		<ul>
+			<li></li>
+		</ul>-->
 <!--
 	// dort funktioniert es http://jsfiddle.net/daslicht/zonh5qjw/3/
 // hier nicht 
