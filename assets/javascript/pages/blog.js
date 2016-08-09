@@ -161,8 +161,11 @@ $(document).ready(function(){
 
 		/**
 		 * PAGER
-		 * /
-	
+		 */
+		// $(document).on('click', ".pagination li a", function(e) {
+		// 	e.preventDefault();
+
+		// });
 
 
 });

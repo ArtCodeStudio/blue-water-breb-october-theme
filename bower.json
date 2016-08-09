@@ -25,7 +25,8 @@
     "Hyphenator": "^5.1.0",
     "masonry": "^4.1.0",
     "jquery-ui": "^1.12.0",
-    "isotope": "^3.0.1"
+    "isotope": "^3.0.1",
+    "barba.js": "luruke/barba.js#^0.0.10"
   },
   "resolutions": {
     "jquery": "1.9.1 - 2",
