@@ -147,9 +147,7 @@ $(document).ready(function() {
 		
 				$('#navbar-main').addClass("navbar-slim");
 			}, 250);
-			//console.log($('#slideshow'));
-			//$('.main-navigation').addClass('nav-low-height');
-			//$('#slideshow').fadeOut();
+
 		}else{
 			//$('#slideshow').fadeIn();
 		//	$('#slideshow').css('display','inherit');

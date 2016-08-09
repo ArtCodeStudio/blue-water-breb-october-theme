@@ -62,19 +62,17 @@ zIndex = 1000
     
         {% partial 'navbar' %}
           
-      {#  {% component 'slideshow' %} #}
-        
-        {% partial 'homepage/slideshow_debug'%}
+        <div id="barba-wrapper">
+            <div class="barba-container">
 
-        <section id="layout-content">
+                {#  {% component 'slideshow' %} #}
+                {% partial 'homepage/slideshow_debug'%}
 
-            {# <h1>{{ this.page.title }}</h1> #}
-           
-            {#<hr>#}
-            {#<div class="container">#}
-                {% page %}    
-            {#</div>#}
-        </section>
+                <section id="layout-content">
+                    {% page %}                     
+                </section>
+            </div>
+        </div>
 
 
       
@@ -100,6 +98,9 @@ zIndex = 1000
             <script type="text/javascript" src="{{ 'assets/javascript/pages/navigation.js' | theme }}"></script>
         {% endput %}
 
+        {% put scripts %}
+            <script type="text/javascript" src="{{ 'assets/javascript/pages/main.js' | theme }}"></script>
+        {% endput %}
 
         {% partial 'body_foot' %}
                 
