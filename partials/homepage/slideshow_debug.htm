@@ -281,7 +281,7 @@ vertical = 0
 		 *  Switch to next slide after video ends, and rewinds it.
 		 *	( eventhandler function which gets called after video 'ended' )
 		 */		
-		var onVideoEnd = function() {
+		function onVideoEnd() {
 			// console.log('afterChange/ onVideoEnd')
 			var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
 			var theVideo = $("#"+theId);
@@ -296,7 +296,7 @@ vertical = 0
 		 *  Start Video Playback
 		 *  ( start video and add event handler see:  onVideoEnd )
 		 */		
-		var startVideoPlayback = function(){
+		function startVideoPlayback() {
 			var theId = '{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
 			// console.log("theVideo with id", theId);
 			var theVideo = document.getElementById(theId);
@@ -315,7 +315,6 @@ vertical = 0
 			$slider.slick('slickPause');
 			var theId = '{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
 			// console.log("theVideo with id", theId);
-
 			var theVideo = $("#"+theId);
 				theVideo.off('ended', onVideoEnd);
 				theVideo[0].pause();
@@ -323,36 +322,12 @@ vertical = 0
 		}
 
 		/**
-		 *  Initialize Slideshow
-		 *  ( called on first page load and after pause )
-		 */
-		function init_slideshow() {
-		
-			var currentSlideType = $(".slick-current").data("slide-type");
-			// console.log('currentSlideType:', currentSlideType);
-			handleSlideType( currentSlideType );
-			/*switch( currentSlideType ) {
-
-				case 'video': {
-					startVideoPlayback();
-				};break;
-
-				case 'image': {
-					console.log('case: image');
-
-				};break;
-
-			}*/
-
-		}
-
-		/**
 		 *  Handle Slide Type
-		 *  ( )
+		 *  ( do something depending on the current slide type )
 		 */
 		 function handleSlideType(currentSlideType) {
-			switch( currentSlideType ) {
-
+			switch( currentSlideType ) 
+			{
 				case 'video': {
 					startVideoPlayback();
 				};break;
@@ -364,6 +339,16 @@ vertical = 0
 			}
 		 }
 
+
+		/**
+		 *  Initialize Slideshow
+		 *  ( called on first page load and after pause )
+		 */
+		function init_slideshow() {
+			var currentSlideType = $(".slick-current").data("slide-type");
+			// console.log('currentSlideType:', currentSlideType);
+			handleSlideType( currentSlideType );
+		}
 
 
 		/**
