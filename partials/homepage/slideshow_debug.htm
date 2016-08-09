@@ -257,7 +257,7 @@ vertical = 0
                         
                     case 'video': {
                         console.log('case: video');
-                        var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{autoplayIndex}}-video';
+                        var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
                         console.log("theVideo with id", theId);
 
                         var theVideo = document.getElementById(theId);
@@ -267,6 +267,8 @@ vertical = 0
                         var onVideoEnd = function() {
                             slider.slick("slickNext");
                             theVideo.off('ended', onVideoEnd);
+                            theVideo[0].pause(); 
+                            theVideo[0].currentTime = 0;
                         }
                         theVideo.on('ended', onVideoEnd );
                         
@@ -306,7 +308,6 @@ vertical = 0
          */ 
         $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('beforeChange', function( event, slick ) { 
             console.log('beforeChange');
-
         });
 
 
@@ -314,38 +315,30 @@ vertical = 0
          * AFTER CHANGE
          */ 
         $('#{{ str_camel(fullscreenSlideshow.alias) }}').on('afterChange', function( event, slick ) { 
-            console.log('afterChange');
+           // console.log('afterChange');
             var currentSlideType = $(".slick-current").data("slide-type");
             var slider = slick.$slider;
-            console.log('currentSlideType:', currentSlideType);
+           // console.log('currentSlideType:', currentSlideType);
             switch( currentSlideType ) {
                     
                 case 'video': {
                     console.log('afterChange/ case: video');          
                     
-
-                    setTimeout( function() { 
-                        slider.slick('slickPause');
-                    },5);
-                    
-                    var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{autoplayIndex}}-video';
+             
+                    var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
                     console.log("afterChange/ theVideo with id", theId);
-                   // var theVideo = document.getElementById(theId);
+                    // var theVideo = document.getElementById(theId);
                     var theVideo = $("#"+theId);
-
-                    setTimeout( function() { 
-                       // theVideo[0].load();
-                        //theVideo[0].currentTime= 0
-                      
-                        theVideo[0].play();
-                    },1000); // delay 
-
+                    theVideo[0].play();
+                    
+                    slider.slick('slickPause');
+                    
                     var onVideoEnd = function() {
-                       // setTimeout( function() { 
-                            console.log('afterChange/ onVideoEnd')
-                            slider.slick("slickNext");
-                       // },1000);
+                        console.log('afterChange/ onVideoEnd')
+                        slider.slick("slickNext");
                         theVideo.off('ended', onVideoEnd);
+                        theVideo[0].pause(); 
+                        theVideo[0].currentTime = 0;
                     }
                     theVideo.on('ended', onVideoEnd );
                     

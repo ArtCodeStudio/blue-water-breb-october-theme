@@ -1,7 +1,7 @@
 $(document).ready( function() {
 
 // $("#fullscreenSlideshow").slick('setPosition');
- $("#demo01").animatedModal({
+ $("#fullscreenButton").animatedModal({
 	"color": "rgb(64, 83, 164)", //primary-barnd,
 	"overflow":"hidden",
 	beforeOpen: function() { //not working properly in safari....

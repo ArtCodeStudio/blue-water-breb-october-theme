@@ -126,6 +126,40 @@
 
 #LinerServices {
 
+	#fullscreenButton {
+		background-image: url(../images/icons/small-w.svg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 100% auto;
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		z-index: 999;
+		// right: 45px;
+		// top: 29px;
+
+		right: 35px;
+    	top: 23px;
+
+		&:hover{
+			background-image: url(../images/icons/small-r.svg);
+		}
+	}
+	.close-animatedModal {
+		background-image: url(../images/icons/big-close-w.svg);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: 100% auto;
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		z-index: 999;
+		right: 22px;
+		top: 25px;
+		&:hover{
+			background-image: url(../images/icons/big-close-r.svg);
+		}		
+	}
 
 	.carousel-caption-wrapper .carousel-caption-content {
 		// padding-left: 59px;

@@ -103,50 +103,65 @@ $(document).ready(function(){
 
 	changeNavbar();
 
-// var $grid = $('.grid').isotope({
-//   itemSelector: '.grid-item',
-//   layoutMode: 'masonry',
-//   masonry: {
-//     columnWidth: 350,
-// 	isFitWidth: true,
-// 	gutter:30
-//   },
-// });
-	var initMasonry = function() {
-		$('.grid').masonry({
+
+
+	// /**
+	//  * MASONRY
+	//  */
+	// 	var initMasonry = function() {
+	// 		$('.grid').masonry({
+	// 			itemSelector: '.grid-item',
+	// 			columnWidth: 350,
+	// 			isFitWidth: true,
+	// 			gutter:30
+	// 		});
+	// 		// $('.grid').multipleFilterMasonry({
+	// 		// 	itemSelector: '.grid-item',
+	// 		// 	filtersGroupSelector:'.filters',
+	// 		// 	columnWidth: 350,
+	// 		// 	isFitWidth: true,
+	// 		// 	gutter:30,
+	// 		// 	//selectorType: 'list'
+	// 		// });
+	// 	}
+	// 	initMasonry();
+
+
+	/**
+	 * ISOTOPE
+	 * http://isotope.metafizzy.co/methods.html#adding-and-removing-items
+	 */
+		var $grid = $('.grid').isotope({
 			itemSelector: '.grid-item',
-			columnWidth: 350,
-			isFitWidth: true,
-			gutter:30
+			layoutMode: 'masonry',
+			masonry: {
+				columnWidth: 350,
+				isFitWidth: true,
+				gutter:30
+			},
 		});
-		// $('.grid').multipleFilterMasonry({
-		// 	itemSelector: '.grid-item',
-		// 	filtersGroupSelector:'.filters',
-		// 	columnWidth: 350,
-		// 	isFitWidth: true,
-		// 	gutter:30,
-		// 	//selectorType: 'list'
-		// });
-	}
-	initMasonry();
+
+		/**
+		 * FILTER 
+		 */
+		$(document).on('click', "#blog-filter a", function(e) {
+			e.preventDefault();
+			var $category = $(this).data("category") ;
+			console.log("check",$(this).data("category"));
+			$grid.isotope({ filter: '.' + $category });
+			if($category == 'all') {
+				$grid.isotope({ filter: '' });
+			}
+		});
+
+		/**
+		 * REINITIALIZE
+		 */
 
 
-
-	// $(document).on('click', "#blog-filter a", function(e){
-	// 	e.preventDefault();
-
-	// 	/**
-	// 	 * ISOTOPE
-	// 	 */
-	// 		var $category = $(this).data("category") ;
-	// 		console.log("check",$(this).data("category"));
-	// 		$grid.isotope({ filter: '.' + $category });
-
-	// 		if($category == 'all') {
-	// 			$grid.isotope({ filter: '' });
-	// 		}
-
-	// });
+		/**
+		 * PAGER
+		 * /
 	
 
 

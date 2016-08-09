@@ -147,9 +147,8 @@ $grid-gutter-width:          1.875rem !default; // 30px
 // Typography
 //
 // Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:     "OpenSansRegular", Helvetica, Arial, sans-serif;
-                            
-$font-family-serif:          "PlayfairDisplayRegular", "Times New Roman", Times, serif !default;
+$font-family-sans-serif:     'Open Sans', sans-serif;       
+$font-family-serif:          'Playfair Display', serif;      
 $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:           $font-family-sans-serif !default;
 

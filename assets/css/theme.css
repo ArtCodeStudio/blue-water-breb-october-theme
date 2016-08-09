@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i';
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic,900,900italic);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -258,7 +260,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
@@ -3787,7 +3789,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3866,7 +3868,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6807,10 +6809,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   background-color: #fff; }
 
 .text-sans-serif {
-  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .text-serif {
-  font-family: "PlayfairDisplayRegular", "Times New Roman", Times, serif; }
+  font-family: "Playfair Display", serif; }
 
 /* Slider */
 .slick-slider {
@@ -7202,6 +7204,34 @@ a.bg-danger:focus, a.bg-danger:hover {
 #Home #latest-blog-posts #latest-blog-posts-row .slick-next {
   right: -49px; }
 
+#LinerServices #fullscreenButton {
+  background-image: url(../images/icons/small-w.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  z-index: 999;
+  right: 35px;
+  top: 23px; }
+  #LinerServices #fullscreenButton:hover {
+    background-image: url(../images/icons/small-r.svg); }
+
+#LinerServices .close-animatedModal {
+  background-image: url(../images/icons/big-close-w.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 999;
+  right: 22px;
+  top: 25px; }
+  #LinerServices .close-animatedModal:hover {
+    background-image: url(../images/icons/big-close-r.svg); }
+
 #LinerServices .carousel-caption-wrapper .carousel-caption-content {
   position: fixed;
   /* top: 0; */
@@ -7572,14 +7602,6 @@ a.bg-danger:focus, a.bg-danger:hover {
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-top,
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-bottom {
           border-radius: 0; } }
-
-@font-face {
-  font-family: OpenSansRegular;
-  src: url(//breb.jumplink.eu/themes/breb/assets/fonts/OpenSans/OpenSans-Regular.ttf); }
-
-@font-face {
-  font-family: PlayfairDisplayRegular;
-  src: url(//breb.jumplink.eu/themes/breb/assets/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf); }
 
 hr {
   margin-top: 1rem;
