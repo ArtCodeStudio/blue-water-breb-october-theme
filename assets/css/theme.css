@@ -258,7 +258,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
@@ -3787,7 +3787,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -3866,7 +3866,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6807,10 +6807,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   background-color: #fff; }
 
 .text-sans-serif {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "OpenSansRegular", Helvetica, Arial, sans-serif; }
 
 .text-serif {
-  font-family: Georgia, "Times New Roman", Times, serif; }
+  font-family: "PlayfairDisplayRegular", "Times New Roman", Times, serif; }
 
 /* Slider */
 .slick-slider {
@@ -7572,6 +7572,14 @@ a.bg-danger:focus, a.bg-danger:hover {
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-top,
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-bottom {
           border-radius: 0; } }
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: url(//breb.jumplink.eu/themes/breb/assets/fonts/OpenSans/OpenSans-Regular.ttf); }
+
+@font-face {
+  font-family: PlayfairDisplayRegular;
+  src: url(//breb.jumplink.eu/themes/breb/assets/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf); }
 
 hr {
   margin-top: 1rem;
