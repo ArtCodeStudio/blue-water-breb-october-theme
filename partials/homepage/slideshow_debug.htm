@@ -307,12 +307,14 @@ vertical = 0
 		}
 
 
+		
 		/**
 		 *  Stop Slideshow
 		 *  ( stop video, remove event handler, stop slick )
 		 */		
 		function stop_slideshow() {
 			$slider.slick('slickPause');
+
 			var theId = '{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
 			// console.log("theVideo with id", theId);
 			var theVideo = $("#"+theId);
@@ -359,6 +361,7 @@ vertical = 0
 			$('#{{ str_camel(fullscreenSlideshow.alias) }}').slick( {{ str_camel(fullscreenSlideshow.alias) }}Settings );
 			init_slideshow();
 			// stop_slideshow();
+			console.log("// 2do:  get ride of autoplayIndex and get video somehow else")
 		}
 		init();
 
