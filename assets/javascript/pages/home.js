@@ -134,6 +134,7 @@ $(document).ready(function() {
 	}
 	initCarousel();
 
+// 2do, dynamic slideshow height !
 
 	var changeNavbar = function (event) {
 		var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
@@ -142,10 +143,10 @@ $(document).ready(function() {
 		if(scroll_pos >= slideshow_height) {
 			$('.navbar-brand').addClass("brand-hidden" );
 			setTimeout( function() { 
-				//alert("Hello"); 
 				$('.navbar-brand').css("display","none");
-		
 				$('#navbar-main').addClass("navbar-slim");
+				$('#fullscreenSlideshow').trigger('jumplink_slideshow_stop');
+				//console.log('stop slideshow triggert');
 			}, 250);
 
 		}else{
@@ -158,10 +159,13 @@ $(document).ready(function() {
 			setTimeout( function() { 
 				$('.navbar-brand').css("display","block");
 				$('.navbar-brand').removeClass("brand-hidden");
+				$('#fullscreenSlideshow').trigger('jumplink_init_slideshow');
+				//console.log('init slideshow triggert');
 			}, 250);
 		}
 
 	};
+
 
 
 

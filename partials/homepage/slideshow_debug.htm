@@ -307,22 +307,6 @@ vertical = 0
 		}
 
 
-		
-		/**
-		 *  Stop Slideshow
-		 *  ( stop video, remove event handler, stop slick )
-		 */		
-		function stop_slideshow() {
-			$slider.slick('slickPause');
-
-			var theId = '{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
-			// console.log("theVideo with id", theId);
-			var theVideo = $("#"+theId);
-				theVideo.off('ended', onVideoEnd);
-				theVideo[0].pause();
-				theVideo[0].currentTime = 0;
-		}
-
 		/**
 		 *  Handle Slide Type
 		 *  ( do something depending on the current slide type )
@@ -341,28 +325,52 @@ vertical = 0
 			}
 		 }
 
+/////////////////////////////////////////////////////////////////////////////
 
 		/**
 		 *  Initialize Slideshow
 		 *  ( called on first page load and after pause )
+		 *  associated event: jumplink_init_slideshow
 		 */
 		function init_slideshow() {
+			// console.log('init slideshow');
 			var currentSlideType = $(".slick-current").data("slide-type");
 			// console.log('currentSlideType:', currentSlideType);
 			handleSlideType( currentSlideType );
 		}
+		$slider.on('jumplink_init_slideshow', init_slideshow);
 
+
+		/**
+		 *  Stop Slideshow
+		 *  ( stop video, remove event handler, stop slick )
+		 *  associated event: jumplink_slideshow_stop
+		 */		
+		function stop_slideshow() {
+			// console.log('stop slideshow');
+			$slider.slick('slickPause');
+			var theId = '{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
+			// console.log("theVideo with id", theId);
+			var theVideo = $("#"+theId);
+				theVideo.off('ended', onVideoEnd);
+				theVideo[0].pause();
+				theVideo[0].currentTime = 0;
+		}
+		$slider.on('jumplink_slideshow_stop', stop_slideshow);
 
 		/**
 		 * SLIDESHOW CONSTRUCTOR
 		 * ( anything starts here :)
 		 */
 		function init() {
-			$('#{{ str_camel(fullscreenSlideshow.alias) }}').slick( {{ str_camel(fullscreenSlideshow.alias) }}Settings );
+			$slider.slick( {{ str_camel(fullscreenSlideshow.alias) }}Settings );
 			init_slideshow();
 			// stop_slideshow();
+				
 			console.log("// 2do:  get ride of autoplayIndex and get video somehow else")
 		}
+
+
 		init();
 
 		</script>
