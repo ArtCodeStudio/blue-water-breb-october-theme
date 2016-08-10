@@ -239,6 +239,8 @@ vertical = 0
 				{{ fullscreenSlideshow.property('zIndex') == blank ? '//' : '' }}           zIndex:             Number( {{ fullscreenSlideshow.property('zIndex') }}),
 			};
 
+/////////////////////////////////////////////////////////////////////////////
+
 // Slick Events
 		/**
 		 * INIT
@@ -273,6 +275,7 @@ vertical = 0
 		});
 // Slick Events
 
+/////////////////////////////////////////////////////////////////////////////
 
 		var $slider = $('#{{ str_camel(fullscreenSlideshow.alias) }}');
 
@@ -358,6 +361,7 @@ vertical = 0
 		}
 		$slider.on('jumplink_slideshow_stop', stop_slideshow);
 
+
 		/**
 		 * SLIDESHOW CONSTRUCTOR
 		 * ( anything starts here :)
@@ -365,12 +369,8 @@ vertical = 0
 		function init() {
 			$slider.slick( {{ str_camel(fullscreenSlideshow.alias) }}Settings );
 			init_slideshow();
-			// stop_slideshow();
-				
 			console.log("// 2do:  get ride of autoplayIndex and get video somehow else")
 		}
-
-
 		init();
 
 		</script>
