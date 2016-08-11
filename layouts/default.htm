@@ -5,27 +5,21 @@
     <head>
         {% partial 'html_head' %}
     </head>
-    <body id="{{ str_studly(this.page.title) }}">
+    <body>
     
         {% partial 'navbar_slim' %}
         
-        {# Content #}
-        <section id="layout-content">
-            {#<div class="container" id="default-layout-container">
-                <div class="row">
-                    <div class="col-xs-12">
-                         <div class="col-xs-12 col-md-5 section-headline-text" >
-                            <div class="border-top"></div>
-                            <h3 class="text-xs-left">{{ this.page.title }}</h3>  
-                         </div>
+        <div id="barba-wrapper">
+            <div
+                class="barba-container"
+                data-namespace="{{ str_studly(this.page.title) | lower }}">
+                <section id="layout-content">
+                    <div class="container" id="default-layout-container">
+                        {% page %}
                     </div>
-                </div>#}
-                <div class="container" id="default-layout-container">
-                    {% page %}
-                </div>
-
-            {#</div>#}
-        </section>
+                </section>
+            </div>
+        </div>
         
       
         {% partial 'footer/footer_brand' %}
@@ -35,23 +29,8 @@
         {% partial 'footer/footer_contact' %}
         
         {% partial 'footer/footer_legal' %}     
-
-        {% put scripts %}
-            <!--<script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>-->
-        {% endput %}
-
-        {% put scripts %}
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/3.0.0/screenfull.min.js"></script>
-            <script type="text/javascript" src="{{ 'assets/javascript/pages/navigation.js' | theme }}"></script>
-            <script type="text/javascript" src="{{ 'assets/javascript/pages/fullscreen.js' | theme }}"></script>
-        {% endput %}
-        
-
-        
-     
+ 
         {% partial 'body_foot' %}
-
-
                 
     </body>
 </html>

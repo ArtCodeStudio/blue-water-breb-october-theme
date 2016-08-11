@@ -58,23 +58,21 @@ zIndex = 1000
     <head>
         {% partial 'html_head' %}
     </head>
-    <body id="{{ str_studly(this.page.title) }}">
+    <body>
     
         {% partial 'navbar' %}
           
         <div id="barba-wrapper">
-            <div class="barba-container">
-
+            <div
+                class="barba-container"
+                data-namespace="{{ str_studly(this.page.title) | lower }}">
                 {#  {% component 'slideshow' %} #}
                 {% partial 'homepage/slideshow_debug'%}
-
                 <section id="layout-content">
                     {% page %}                     
                 </section>
             </div>
         </div>
-
-
       
         {% partial 'footer/footer_brand' %}
 
@@ -83,24 +81,6 @@ zIndex = 1000
         {% partial 'footer/footer_contact' %}
         
         {% partial 'footer/footer_legal' %}     
-        
-        {# DISABLED
-            {% put scripts %}
-                <script type="text/javascript" src="{{ 'assets/vendor/Hyphenator/Hyphenator-off.js' | theme }}""></script>
-            {% endput %}
-        #}
-
-        {% put scripts %}
-            <script type="text/javascript" src="{{ 'assets/javascript/pages/home.js' | theme }}"></script>
-        {% endput %}
-        
-        {% put scripts %}
-            <script type="text/javascript" src="{{ 'assets/javascript/pages/navigation.js' | theme }}"></script>
-        {% endput %}
-
-        {% put scripts %}
-            <script type="text/javascript" src="{{ 'assets/javascript/pages/main.js' | theme }}"></script>
-        {% endput %}
 
         {% partial 'body_foot' %}
                 

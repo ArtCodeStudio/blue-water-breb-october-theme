@@ -1,8 +1,8 @@
-name: breb
+name: breb-barba
 description: ''
 author: JumpLink
 homepage: 'http://jumplink.eu/'
-code: breb
+code: breb-barba
 
 # Indentation MUST be Spaces not Tabs !
 form:
