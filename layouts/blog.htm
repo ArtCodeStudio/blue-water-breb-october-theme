@@ -10,6 +10,7 @@
         <div id="barba-wrapper">
             <div
                 class="barba-container"
+                id="{{ str_studly(this.page.title) | lower }}"
                 data-namespace="{{ str_studly(this.page.title) | lower }}">
                 {% partial 'blog/blog_header' %} 
                 <section id="layout-content">

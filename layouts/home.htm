@@ -63,6 +63,7 @@ zIndex = 1000
         <div id="barba-wrapper">
             <div
                 class="barba-container"
+                id="{{ str_studly(this.page.title) | lower }}"
                 data-namespace="{{ str_studly(this.page.title) | lower }}">
                 {#  {% component 'slideshow' %} #}
                 {% partial 'homepage/slideshow_debug'%}

@@ -6,7 +6,7 @@ var cache = {
 /**
  * Homepage Latest log Posts Carousel
  */
-var initCarousel= function(){
+var initCarousel = function(){
 
 	$(".latest-blog-posts-carousel").slick({
 		slidesToShow: 3,
@@ -46,6 +46,7 @@ var initCarousel= function(){
 }
 initCarousel();
 
+
 // 2do, dynamic slideshow height !
 var changeNavbar = function (event) {
 	var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
@@ -70,6 +71,7 @@ var changeNavbar = function (event) {
 	}
 
 };
+
 
 /**
  * Set each card to the height of the heightest card to get all cards with the same height 
@@ -98,6 +100,10 @@ var sameHeightCards = function (selector) {
     });
 }
 
+
+/**
+ * 
+ */
 var initFullscreen = function(dataset) {
      $("#fullscreenButton").animatedModal({
     	"color": "rgb(64, 83, 164)", //primary-barnd,
@@ -111,6 +117,10 @@ var initFullscreen = function(dataset) {
      });
 }
 
+
+/**
+ * 
+ */
 var initNavigation = function (dataset) {
 	/**
 	 * Special scroll events for jQuery
@@ -214,6 +224,10 @@ var initNavigation = function (dataset) {
 	});
 }
 
+
+/**
+ * 
+ */
 var initHome = function (dataset) {
 	/**
 	 * Callbacks for addClass
@@ -248,34 +262,66 @@ var initHome = function (dataset) {
 	init();
 };
 
+
+/**
+ * 
+ */
 var initShipping = function (dataset) {
 
 };
 
+
+/**
+ * 
+ */
 var initOffshore = function (dataset) {
 
 };
 
+
+/**
+ * 
+ */
 var initPortagency = function (dataset) {
     
 };
 
+
+/**
+ * 
+ */
 var initLinerservices = function (dataset) {
     
 };
 
+
+/**
+ * 
+ */
 var initLinerservices = function (dataset) {
     
 };
 
+
+/**
+ * 
+ */
 var initContact = function (dataset) {
     
 };
 
+
+/**
+ * 
+ */
 var initAbout = function (dataset) {
 
 };
 
+
+/**
+ * 
+ */
 var initBlog = function (dataset) {
     /**
      * Special scroll events for jQuery
@@ -393,10 +439,18 @@ var initBlog = function (dataset) {
     });
 }
 
+
+/**
+ * 
+ */
 var initCategory = function () {
     initBlog();
 }
 
+
+/**
+ * 
+ */
 var initPost = function () {
     initBlog();
 }
@@ -419,18 +473,22 @@ var initTemplate = {
     'blog': initBlog,
 }
 
+
 /**
  * 
  */
 var resetNav = function () {
    cache.$navbarMain.find('ul.nav.navbar-nav li').removeClass('active');
 }
+
+
 /**
  * 
  */
 var setNav = function (selector) {
    cache.$navbarMain.find('ul.nav.navbar-nav li'+selector).addClass('active');
 }
+
 
 /**
  * 
@@ -443,6 +501,7 @@ var setNavActive = function(namespace) {
     break;
   }
 }
+
 
 /**
  * Init Javascripts insite of barba.js
@@ -473,6 +532,9 @@ var initTemplates = function () {
 }
 
 
+/**
+ * 
+ */
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     /**
@@ -523,6 +585,7 @@ var FadeTransition = Barba.BaseTransition.extend({
   }
 });
 
+
 /**
  * 
  */
@@ -543,6 +606,10 @@ var initBarba = function () {
   Barba.Pjax.start();
 }
 
+
+/**
+ * 
+ */
 $(document).ready(function(){
     initBarba();
 
