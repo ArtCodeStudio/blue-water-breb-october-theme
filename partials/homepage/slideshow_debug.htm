@@ -1,6 +1,6 @@
 [viewBag]
 
-[slideshow fullscreenSlideshow]
+[slideshow homepageSlideshow]
 slideshow = 2
 injectSlickAssets = 0
 injectSlickTheme = 0
@@ -38,15 +38,15 @@ useTransform = 1
 variableWidth = 0
 vertical = 0
 ==
-{% if fullscreenSlideshow.slideshow.slides %}
+{% if homepageSlideshow.slideshow.slides %}
 
 	{% set autoplayIndex = -1 %}
 
-	<div id='{{ str_camel(fullscreenSlideshow.alias) }}' class="slick-carousel">
+	<div id='{{ str_camel(homepageSlideshow.alias) }}' class="slick-carousel">
 
-		{% for i, slide in fullscreenSlideshow.slideshow.slides %}
+		{% for i, slide in homepageSlideshow.slideshow.slides %}
 
-			{% if fullscreenSlideshow.slideshow.slides %}
+			{% if homepageSlideshow.slideshow.slides %}
 
 				{% if slide.link %}
 					{% set slickSlideElement = 'a' %}
@@ -61,18 +61,18 @@ vertical = 0
 				{% endif %}
 
 
-				<{{slickSlideElement}} href="{{ slide.link }}" id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}" class="slick-slide" data-slide-type="{{slide_type}}">
+				<{{slickSlideElement}} href="{{ slide.link }}" id="{{ str_camel(homepageSlideshow.alias) }}-slide-{{loop.index}}" class="slick-slide" data-slide-type="{{slide_type}}">
 
 					{% if slide.mp4 != blank or slide.webm != blank or slide.ogg != blank %}
 
-						{% if fullscreenSlideshow.property('autoplayOnShow') and loop.index == (fullscreenSlideshow.property('initialSlide') != blank ? fullscreenSlideshow.property('initialSlide') + 1 : 1) %}
+						{% if homepageSlideshow.property('autoplayOnShow') and loop.index == (homepageSlideshow.property('initialSlide') != blank ? homepageSlideshow.property('initialSlide') + 1 : 1) %}
 							{% set autoplayIndex = loop.index %}
 						{% endif %}
 
 						<div class="carousel-video-wrapper">
 							{% if slide.aspect_ratio == 'custom' %}
 								<div class="box" style="padding-top: {{ 100.0 / slide.custom_ratio}}%;">
-									<video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
+									<video id="{{ str_camel(homepageSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
 										{% if slide.mp4 != blank %}
 											<source src="{{slide.mp4.path}}" type="video/mp4">
 										{% endif %}
@@ -86,7 +86,7 @@ vertical = 0
 								</div>
 							{% elseif slide.aspect_ratio != blank %}
 								<div class="box {{slide.aspect_ratio}}">
-									<video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
+									<video id="{{ str_camel(homepageSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
 										{% if slide.mp4 != blank %}
 											<source src="{{slide.mp4.path}}" type="video/mp4">
 										{% endif %}
@@ -98,9 +98,9 @@ vertical = 0
 										{% endif %}
 									</video>
 								</div>
-							{% elseif fullscreenSlideshow.property('aspectRatio') == 'custom' %}
-								<div class="box" style="padding-top: {{ 100.0 / fullscreenSlideshow.property('customtRatio') }}%">
-									<video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
+							{% elseif homepageSlideshow.property('aspectRatio') == 'custom' %}
+								<div class="box" style="padding-top: {{ 100.0 / homepageSlideshow.property('customtRatio') }}%">
+									<video id="{{ str_camel(homepageSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
 										{% if slide.mp4 != blank %}
 											<source src="{{slide.mp4.path}}" type="video/mp4">
 										{% endif %}
@@ -112,9 +112,9 @@ vertical = 0
 										{% endif %}
 									</video>
 								</div>
-							{% elseif fullscreenSlideshow.property('aspectRatio') != blank %}
-								<div class="box {{ fullscreenSlideshow.property('aspectRatio') }}">
-									<video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
+							{% elseif homepageSlideshow.property('aspectRatio') != blank %}
+								<div class="box {{ homepageSlideshow.property('aspectRatio') }}">
+									<video id="{{ str_camel(homepageSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
 										{% if slide.mp4 != blank %}
 											<source src="{{slide.mp4.path}}" type="video/mp4">
 										{% endif %}
@@ -127,7 +127,7 @@ vertical = 0
 									</video>
 								</div>
 							{% else %}
-								<video id="{{ str_camel(fullscreenSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
+								<video id="{{ str_camel(homepageSlideshow.alias) }}-slide-{{loop.index}}-video" preload  muted width="100%" poster="{{ slide.image.path }}">
 									{% if slide.mp4 != blank %}
 										<source src="{{slide.mp4.path}}" type="video/mp4">
 									{% endif %}
@@ -141,7 +141,7 @@ vertical = 0
 							{% endif %}
 
 							{% if slide.name != blank or slide.description != blank  %}
-								<div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : fullscreenSlideshow.property('captionPosition')}}">
+								<div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : homepageSlideshow.property('captionPosition')}}">
 									<div class="carousel-caption-content">
 										<h2>{{ slide.name | raw }}</h2>
 										{{ slide.description | raw }}
@@ -158,16 +158,16 @@ vertical = 0
 								<div class="background-box" style="padding-top: {{ 100.0 / slide.custom_ratio}}%; background-image: url({{ slide.image.path }});" alt="{{ slide.image.path }}"></div>
 							{% elseif slide.aspect_ratio != blank %}
 								<div class="background-box {{slide.aspect_ratio}}" style="background-image: url({{ slide.image.path }});" alt="{{ slide.image.path }}"></div>
-							{% elseif fullscreenSlideshow.property('aspectRatio') == 'custom' %}
-								<div class="background-box" style="padding-top: {{ 100.0 / fullscreenSlideshow.property('customRatio') }}%; background-image: url({{ slide.image.path }});" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
-							{% elseif fullscreenSlideshow.property('aspectRatio') != blank %}
-								<div class="background-box {{ fullscreenSlideshow.property('aspectRatio') }}" style="background-image: url({{ slide.image.path }});" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
+							{% elseif homepageSlideshow.property('aspectRatio') == 'custom' %}
+								<div class="background-box" style="padding-top: {{ 100.0 / homepageSlideshow.property('customRatio') }}%; background-image: url({{ slide.image.path }});" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
+							{% elseif homepageSlideshow.property('aspectRatio') != blank %}
+								<div class="background-box {{ homepageSlideshow.property('aspectRatio') }}" style="background-image: url({{ slide.image.path }});" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
 							{% else %}
 								<div class="img-responsive img-fluid" src="{{ slide.image.path }}" alt="{{ slide.image.path }}"></div>
 							{% endif %}
 
 							{% if slide.name != blank or slide.description != blank  %}
-							   <div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : fullscreenSlideshow.property('captionPosition')}}">
+							   <div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : homepageSlideshow.property('captionPosition')}}">
 									<div class="carousel-caption-content">
 										<h2>{{ slide.name | raw }}</h2>
 										{{ slide.description | raw }}
@@ -186,57 +186,57 @@ vertical = 0
 
 	{% put scripts %}
 		<script type="text/javascript">
-			var {{ str_camel(fullscreenSlideshow.alias) }}Settings = {
-				{{ fullscreenSlideshow.property('accessibility') == blank ? '//' : '' }}    accessibility:      Boolean( {{ fullscreenSlideshow.property('accessibility') }} ) === true ,
-				{{ fullscreenSlideshow.property('adaptiveHeight') == blank ? '//' : '' }}   adaptiveHeight:     Boolean( {{ fullscreenSlideshow.property('adaptiveHeight') }} ) === true,
-				{{ fullscreenSlideshow.property('autoplay') == blank ? '//' : '' }}         autoplay:           Boolean( {{ fullscreenSlideshow.property('autoplay') }} ) === true,
-				{{ fullscreenSlideshow.property('autoplaySpeed') == blank ? '//' : '' }}    autoplaySpeed:      Number( {{ fullscreenSlideshow.property('autoplaySpeed') }} ),
-				{{ fullscreenSlideshow.property('arrows') == blank ? '//' : '' }}           arrows:             Boolean( {{ fullscreenSlideshow.property('arrows') }} ) === true,
-				{{ fullscreenSlideshow.property('asNavFor') == blank ? '//' : '' }}         asNavFor:           String("{{ fullscreenSlideshow.property('asNavFor') }}"),
-				{{ fullscreenSlideshow.property('appendArrows') == blank ? '//' : '' }}     appendArrows:       {{ fullscreenSlideshow.property('appendArrows') | raw}},
-				{{ fullscreenSlideshow.property('appendDots') == blank ? '//' : '' }}       appendDots:         {{ fullscreenSlideshow.property('appendDots') | raw}},
-				{{ fullscreenSlideshow.property('prevArrow') == blank ? '//' : '' }}        prevArrow:          String('{{ fullscreenSlideshow.property("prevArrow") | raw}}'),
-				{{ fullscreenSlideshow.property('nextArrow') == blank ? '//' : '' }}        nextArrow:          String('{{ fullscreenSlideshow.property("nextArrow") | raw}}'),
-				{{ fullscreenSlideshow.property('centerMode') == blank ? '//' : '' }}       centerMode:         Boolean("{{ fullscreenSlideshow.property('accessibility') }}") === true,
-				{{ fullscreenSlideshow.property('centerPadding') == blank ? '//' : '' }}    centerPadding:      String("{{fullscreenSlideshow.property('centerPadding')}}"),
-				{{ fullscreenSlideshow.property('cssEase') == blank ? '//' : '' }}          cssEase:            String("{{fullscreenSlideshow.property('cssEase')}}"),
-				{{ fullscreenSlideshow.property('customPaging') == blank ? '//' : '' }}     customPaging:       {{fullscreenSlideshow.property('customPaging') | raw}} ,
-				{{ fullscreenSlideshow.property('dots') == blank ? '//' : '' }}             dots:               Boolean( {{ fullscreenSlideshow.property('dots') }} ) === true,
-				{{ fullscreenSlideshow.property('dotsClass') == blank ? '//' : '' }}        dotsClass:          String("{{fullscreenSlideshow.property('dotsClass')}}"),
-				{{ fullscreenSlideshow.property('draggable') == blank ? '//' : '' }}        draggable:          Boolean( {{ fullscreenSlideshow.property('draggable') }} ) === true,
-				{{ fullscreenSlideshow.property('fade') == blank ? '//' : '' }}             fade:               Boolean( {{ fullscreenSlideshow.property('fade') }} ) === true,
-				{{ fullscreenSlideshow.property('focusOnSelect') == blank ? '//' : '' }}    focusOnSelect:      Boolean( {{ fullscreenSlideshow.property('focusOnSelect') }} ) === true,
-				{{ fullscreenSlideshow.property('easing') == blank ? '//' : '' }}           easing:             String("{{fullscreenSlideshow.property('easing')}}"),
-				{{ fullscreenSlideshow.property('edgeFriction') == blank ? '//' : '' }}     edgeFriction:       parseFloat({{fullscreenSlideshow.property('edgeFriction')}}),
-				{{ fullscreenSlideshow.property('infinite') == blank ? '//' : '' }}         infinite:           Boolean( {{ fullscreenSlideshow.property('infinite') }} ) === true,
-				{{ fullscreenSlideshow.property('initialSlide') == blank ? '//' : '' }}     initialSlide:       Number( {{ fullscreenSlideshow.property('initialSlide') }} ),
-				{{ fullscreenSlideshow.property('lazyLoad') == blank ? '//' : '' }}         lazyLoad:           String("{{fullscreenSlideshow.property('lazyLoad')}}"),
-				{{ fullscreenSlideshow.property('mobileFirst') == blank ? '//' : '' }}      mobileFirst:        Boolean( {{ fullscreenSlideshow.property('mobileFirst') }} ) === true,
-				{{ fullscreenSlideshow.property('pauseOnFocus') == blank ? '//' : '' }}     pauseOnFocus:       Boolean( {{ fullscreenSlideshow.property('pauseOnFocus') }} ) === true,
-				{{ fullscreenSlideshow.property('pauseOnHover') == blank ? '//' : '' }}     pauseOnHover:       Boolean( {{ fullscreenSlideshow.property('pauseOnHover') }} ) === true,
-				{{ fullscreenSlideshow.property('pauseOnDotsHover') == blank ? '//' : '' }} pauseOnDotsHover:   Boolean( {{ fullscreenSlideshow.property('pauseOnDotsHover') }} ) === true,
-				{{ fullscreenSlideshow.property('respondTo') == blank ? '//' : '' }}        respondTo:          String("{{fullscreenSlideshow.property('respondTo')}}"),
+			var {{ str_camel(homepageSlideshow.alias) }}Settings = {
+				{{ homepageSlideshow.property('accessibility') == blank ? '//' : '' }}    accessibility:      Boolean( {{ homepageSlideshow.property('accessibility') }} ) === true ,
+				{{ homepageSlideshow.property('adaptiveHeight') == blank ? '//' : '' }}   adaptiveHeight:     Boolean( {{ homepageSlideshow.property('adaptiveHeight') }} ) === true,
+				{{ homepageSlideshow.property('autoplay') == blank ? '//' : '' }}         autoplay:           Boolean( {{ homepageSlideshow.property('autoplay') }} ) === true,
+				{{ homepageSlideshow.property('autoplaySpeed') == blank ? '//' : '' }}    autoplaySpeed:      Number( {{ homepageSlideshow.property('autoplaySpeed') }} ),
+				{{ homepageSlideshow.property('arrows') == blank ? '//' : '' }}           arrows:             Boolean( {{ homepageSlideshow.property('arrows') }} ) === true,
+				{{ homepageSlideshow.property('asNavFor') == blank ? '//' : '' }}         asNavFor:           String("{{ homepageSlideshow.property('asNavFor') }}"),
+				{{ homepageSlideshow.property('appendArrows') == blank ? '//' : '' }}     appendArrows:       {{ homepageSlideshow.property('appendArrows') | raw}},
+				{{ homepageSlideshow.property('appendDots') == blank ? '//' : '' }}       appendDots:         {{ homepageSlideshow.property('appendDots') | raw}},
+				{{ homepageSlideshow.property('prevArrow') == blank ? '//' : '' }}        prevArrow:          String('{{ homepageSlideshow.property("prevArrow") | raw}}'),
+				{{ homepageSlideshow.property('nextArrow') == blank ? '//' : '' }}        nextArrow:          String('{{ homepageSlideshow.property("nextArrow") | raw}}'),
+				{{ homepageSlideshow.property('centerMode') == blank ? '//' : '' }}       centerMode:         Boolean("{{ homepageSlideshow.property('accessibility') }}") === true,
+				{{ homepageSlideshow.property('centerPadding') == blank ? '//' : '' }}    centerPadding:      String("{{homepageSlideshow.property('centerPadding')}}"),
+				{{ homepageSlideshow.property('cssEase') == blank ? '//' : '' }}          cssEase:            String("{{homepageSlideshow.property('cssEase')}}"),
+				{{ homepageSlideshow.property('customPaging') == blank ? '//' : '' }}     customPaging:       {{homepageSlideshow.property('customPaging') | raw}} ,
+				{{ homepageSlideshow.property('dots') == blank ? '//' : '' }}             dots:               Boolean( {{ homepageSlideshow.property('dots') }} ) === true,
+				{{ homepageSlideshow.property('dotsClass') == blank ? '//' : '' }}        dotsClass:          String("{{homepageSlideshow.property('dotsClass')}}"),
+				{{ homepageSlideshow.property('draggable') == blank ? '//' : '' }}        draggable:          Boolean( {{ homepageSlideshow.property('draggable') }} ) === true,
+				{{ homepageSlideshow.property('fade') == blank ? '//' : '' }}             fade:               Boolean( {{ homepageSlideshow.property('fade') }} ) === true,
+				{{ homepageSlideshow.property('focusOnSelect') == blank ? '//' : '' }}    focusOnSelect:      Boolean( {{ homepageSlideshow.property('focusOnSelect') }} ) === true,
+				{{ homepageSlideshow.property('easing') == blank ? '//' : '' }}           easing:             String("{{homepageSlideshow.property('easing')}}"),
+				{{ homepageSlideshow.property('edgeFriction') == blank ? '//' : '' }}     edgeFriction:       parseFloat({{homepageSlideshow.property('edgeFriction')}}),
+				{{ homepageSlideshow.property('infinite') == blank ? '//' : '' }}         infinite:           Boolean( {{ homepageSlideshow.property('infinite') }} ) === true,
+				{{ homepageSlideshow.property('initialSlide') == blank ? '//' : '' }}     initialSlide:       Number( {{ homepageSlideshow.property('initialSlide') }} ),
+				{{ homepageSlideshow.property('lazyLoad') == blank ? '//' : '' }}         lazyLoad:           String("{{homepageSlideshow.property('lazyLoad')}}"),
+				{{ homepageSlideshow.property('mobileFirst') == blank ? '//' : '' }}      mobileFirst:        Boolean( {{ homepageSlideshow.property('mobileFirst') }} ) === true,
+				{{ homepageSlideshow.property('pauseOnFocus') == blank ? '//' : '' }}     pauseOnFocus:       Boolean( {{ homepageSlideshow.property('pauseOnFocus') }} ) === true,
+				{{ homepageSlideshow.property('pauseOnHover') == blank ? '//' : '' }}     pauseOnHover:       Boolean( {{ homepageSlideshow.property('pauseOnHover') }} ) === true,
+				{{ homepageSlideshow.property('pauseOnDotsHover') == blank ? '//' : '' }} pauseOnDotsHover:   Boolean( {{ homepageSlideshow.property('pauseOnDotsHover') }} ) === true,
+				{{ homepageSlideshow.property('respondTo') == blank ? '//' : '' }}        respondTo:          String("{{homepageSlideshow.property('respondTo')}}"),
 
-				{{ fullscreenSlideshow.property('responsive') == blank ? '//' : '' }}       responsive:         {{fullscreenSlideshow.property('responsive') | raw}},
+				{{ homepageSlideshow.property('responsive') == blank ? '//' : '' }}       responsive:         {{homepageSlideshow.property('responsive') | raw}},
 
-				{{ fullscreenSlideshow.property('rows') == blank ? '//' : '' }}             rows:               Number( {{ fullscreenSlideshow.property('rows') }} ),
-				{{ fullscreenSlideshow.property('slide') == blank ? '//' : '' }}            slide:              String("{{fullscreenSlideshow.property('slide')}}"),
-				{{ fullscreenSlideshow.property('slidesPerRow') == blank ? '//' : '' }}     slidesPerRow:       Number( {{ fullscreenSlideshow.property('slidesPerRow') }} ),
-				{{ fullscreenSlideshow.property('slidesToShow') == blank ? '//' : '' }}     slidesToShow:       Number( {{ fullscreenSlideshow.property('slidesToShow') }} ),
-				{{ fullscreenSlideshow.property('slidesToScroll') == blank ? '//' : '' }}   slidesToScroll:     Number( {{ fullscreenSlideshow.property('slidesToScroll') }} ),
-				{{ fullscreenSlideshow.property('speed') == blank ? '//' : '' }}            speed:              Number( {{ fullscreenSlideshow.property('speed') }} ),
-				{{ fullscreenSlideshow.property('swipe') == blank ? '//' : '' }}            swipe:              Boolean( {{ fullscreenSlideshow.property('swipe') }} ) === true,
-				{{ fullscreenSlideshow.property('swipeToSlide') == blank ? '//' : '' }}     swipeToSlide:       Boolean( {{ fullscreenSlideshow.property('swipeToSlide') }} ) === true,
-				{{ fullscreenSlideshow.property('touchMove') == blank ? '//' : '' }}        touchMove:          Boolean( {{ fullscreenSlideshow.property('touchMove') }} ) === true,
-				{{ fullscreenSlideshow.property('touchThreshold') == blank ? '//' : '' }}   touchThreshold:     Number( {{ fullscreenSlideshow.property('touchThreshold') }} ),
-				{{ fullscreenSlideshow.property('useCSS') == blank ? '//' : '' }}           useCSS:             Boolean( {{ fullscreenSlideshow.property('useCSS') }} ) === true,
-				{{ fullscreenSlideshow.property('useTransform') == blank ? '//' : '' }}     useTransform:       Boolean( {{ fullscreenSlideshow.property('useTransform') }} ) === true,
-				{{ fullscreenSlideshow.property('variableWidth') == blank ? '//' : '' }}    variableWidth:      Boolean( {{ fullscreenSlideshow.property('variableWidth') }} ) === true,
-				{{ fullscreenSlideshow.property('vertical') == blank ? '//' : '' }}         vertical:           Boolean( {{ fullscreenSlideshow.property('vertical') }} ) === true,
-				{{ fullscreenSlideshow.property('verticalSwiping') == blank ? '//' : '' }}  verticalSwiping:    Boolean( {{ fullscreenSlideshow.property('verticalSwiping') }} ) === true,
-				{{ fullscreenSlideshow.property('rtl') == blank ? '//' : '' }}              rtl:                Boolean( {{ fullscreenSlideshow.property('rtl') }} ) === true,
-				{{ fullscreenSlideshow.property('waitForAnimate') == blank ? '//' : '' }}   waitForAnimate:     Boolean( {{ fullscreenSlideshow.property('waitForAnimate') }} ) === true,
-				{{ fullscreenSlideshow.property('zIndex') == blank ? '//' : '' }}           zIndex:             Number( {{ fullscreenSlideshow.property('zIndex') }}),
+				{{ homepageSlideshow.property('rows') == blank ? '//' : '' }}             rows:               Number( {{ homepageSlideshow.property('rows') }} ),
+				{{ homepageSlideshow.property('slide') == blank ? '//' : '' }}            slide:              String("{{homepageSlideshow.property('slide')}}"),
+				{{ homepageSlideshow.property('slidesPerRow') == blank ? '//' : '' }}     slidesPerRow:       Number( {{ homepageSlideshow.property('slidesPerRow') }} ),
+				{{ homepageSlideshow.property('slidesToShow') == blank ? '//' : '' }}     slidesToShow:       Number( {{ homepageSlideshow.property('slidesToShow') }} ),
+				{{ homepageSlideshow.property('slidesToScroll') == blank ? '//' : '' }}   slidesToScroll:     Number( {{ homepageSlideshow.property('slidesToScroll') }} ),
+				{{ homepageSlideshow.property('speed') == blank ? '//' : '' }}            speed:              Number( {{ homepageSlideshow.property('speed') }} ),
+				{{ homepageSlideshow.property('swipe') == blank ? '//' : '' }}            swipe:              Boolean( {{ homepageSlideshow.property('swipe') }} ) === true,
+				{{ homepageSlideshow.property('swipeToSlide') == blank ? '//' : '' }}     swipeToSlide:       Boolean( {{ homepageSlideshow.property('swipeToSlide') }} ) === true,
+				{{ homepageSlideshow.property('touchMove') == blank ? '//' : '' }}        touchMove:          Boolean( {{ homepageSlideshow.property('touchMove') }} ) === true,
+				{{ homepageSlideshow.property('touchThreshold') == blank ? '//' : '' }}   touchThreshold:     Number( {{ homepageSlideshow.property('touchThreshold') }} ),
+				{{ homepageSlideshow.property('useCSS') == blank ? '//' : '' }}           useCSS:             Boolean( {{ homepageSlideshow.property('useCSS') }} ) === true,
+				{{ homepageSlideshow.property('useTransform') == blank ? '//' : '' }}     useTransform:       Boolean( {{ homepageSlideshow.property('useTransform') }} ) === true,
+				{{ homepageSlideshow.property('variableWidth') == blank ? '//' : '' }}    variableWidth:      Boolean( {{ homepageSlideshow.property('variableWidth') }} ) === true,
+				{{ homepageSlideshow.property('vertical') == blank ? '//' : '' }}         vertical:           Boolean( {{ homepageSlideshow.property('vertical') }} ) === true,
+				{{ homepageSlideshow.property('verticalSwiping') == blank ? '//' : '' }}  verticalSwiping:    Boolean( {{ homepageSlideshow.property('verticalSwiping') }} ) === true,
+				{{ homepageSlideshow.property('rtl') == blank ? '//' : '' }}              rtl:                Boolean( {{ homepageSlideshow.property('rtl') }} ) === true,
+				{{ homepageSlideshow.property('waitForAnimate') == blank ? '//' : '' }}   waitForAnimate:     Boolean( {{ homepageSlideshow.property('waitForAnimate') }} ) === true,
+				{{ homepageSlideshow.property('zIndex') == blank ? '//' : '' }}           zIndex:             Number( {{ homepageSlideshow.property('zIndex') }}),
 			};
 
 /////////////////////////////////////////////////////////////////////////////
@@ -245,7 +245,7 @@ vertical = 0
 		/**
 		 * INIT
 		 */
-		$('#{{ str_camel(fullscreenSlideshow.alias) }}').on('init', function( event, slick ) {
+		$('#{{ str_camel(homepageSlideshow.alias) }}').on('init', function( event, slick ) {
 		  	// console.log('Init');
 		});
 
@@ -253,7 +253,7 @@ vertical = 0
 		/**
 		 * RE INIT
 		 */
-		$('#{{ str_camel(fullscreenSlideshow.alias) }}').on('reInit', function( event, slick ) {
+		$('#{{ str_camel(homepageSlideshow.alias) }}').on('reInit', function( event, slick ) {
 			// console.log('reInit');
 		});
 
@@ -261,7 +261,7 @@ vertical = 0
 		/**
 		 * BEFORE CHANGE
 		 */
-		$('#{{ str_camel(fullscreenSlideshow.alias) }}').on('beforeChange', function( event, slick ) {
+		$('#{{ str_camel(homepageSlideshow.alias) }}').on('beforeChange', function( event, slick ) {
 			// console.log('beforeChange');
 		});
 
@@ -269,7 +269,7 @@ vertical = 0
 		/**
 		 * AFTER CHANGE
 		 */
-		$('#{{ str_camel(fullscreenSlideshow.alias) }}').on('afterChange', function( event, slick ) {
+		$('#{{ str_camel(homepageSlideshow.alias) }}').on('afterChange', function( event, slick ) {
 			var currentSlideType = $(".slick-current").data("slide-type");
 			handleSlideType(currentSlideType)
 		});
@@ -277,7 +277,7 @@ vertical = 0
 
 /////////////////////////////////////////////////////////////////////////////
 
-		var $slider = $('#{{ str_camel(fullscreenSlideshow.alias) }}');
+		var $slider = $('#{{ str_camel(homepageSlideshow.alias) }}');
 
 
 		/**
@@ -286,7 +286,7 @@ vertical = 0
 		 */		
 		function onVideoEnd() {
 			// console.log('afterChange/ onVideoEnd')
-			var theId='{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
+			var theId='{{ str_camel(homepageSlideshow.alias) }}-slide{{autoplayIndex}}-video';
 			var theVideo = $("#"+theId);
 			$slider.slick("slickNext");
 				theVideo.off('ended', onVideoEnd);
@@ -300,7 +300,7 @@ vertical = 0
 		 *  ( start video and add event handler see:  onVideoEnd )
 		 */		
 		function startVideoPlayback() {
-			var theId = '{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
+			var theId = '{{ str_camel(homepageSlideshow.alias) }}-slide{{autoplayIndex}}-video';
 			// console.log("theVideo with id", theId);
 			var theVideo = document.getElementById(theId);
 			var theVideo = $("#"+theId);
@@ -333,15 +333,16 @@ vertical = 0
 		/**
 		 *  Initialize Slideshow
 		 *  ( called on first page load and after pause )
-		 *  associated event: jumplink_init_slideshow
+		 *  associated event: jumplink_re_init_slideshow
 		 */
-		function init_slideshow() {
-			// console.log('init slideshow');
+		function re_init_slideshow() {
+			console.log('re_init_slideshow');
+
 			var currentSlideType = $(".slick-current").data("slide-type");
 			// console.log('currentSlideType:', currentSlideType);
 			handleSlideType( currentSlideType );
 		}
-		$slider.on('jumplink_init_slideshow', init_slideshow);
+		$slider.on('jumplink_re_init_slideshow', re_init_slideshow);
 
 
 		/**
@@ -350,9 +351,9 @@ vertical = 0
 		 *  associated event: jumplink_slideshow_stop
 		 */		
 		function stop_slideshow() {
-			// console.log('stop slideshow');
+			console.log('stop slideshow');
 			$slider.slick('slickPause');
-			var theId = '{{ str_camel(fullscreenSlideshow.alias) }}-slide{{autoplayIndex}}-video';
+			var theId = '{{ str_camel(homepageSlideshow.alias) }}-slide{{autoplayIndex}}-video';
 			// console.log("theVideo with id", theId);
 			var theVideo = $("#"+theId);
 				theVideo.off('ended', onVideoEnd);
@@ -364,13 +365,17 @@ vertical = 0
 
 		/**
 		 * SLIDESHOW CONSTRUCTOR
-		 * ( anything starts here :)
+		 * ( anything starts here )
+		 * associated event: jumplink_init_slideshow
 		 */
 		function init() {
-			$slider.slick( {{ str_camel(fullscreenSlideshow.alias) }}Settings );
-			init_slideshow();
-			console.log("// 2do:  get ride of autoplayIndex and get video somehow else")
+			
+			$slider.slick( {{ str_camel(homepageSlideshow.alias) }}Settings );
+			$slider.slick('setPosition');
+			re_init_slideshow();
+			console.log("init()")
 		}
+		$slider.on('jumplink_init_slideshow', init);
 		init();
 
 		</script>

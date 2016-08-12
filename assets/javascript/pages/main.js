@@ -1,3 +1,5 @@
+
+
 var cache = {
     lastElementClicked: null,
     $navbarMain: $('#navbar-main'),
@@ -6,7 +8,7 @@ var cache = {
 /**
  * Homepage Latest log Posts Carousel
  */
-var initCarousel = function(){
+var initCarousel = function () {
 
 	$(".latest-blog-posts-carousel").slick({
 		slidesToShow: 3,
@@ -44,29 +46,33 @@ var initCarousel = function(){
 	});
 
 }
-initCarousel();
 
 
-// 2do, dynamic slideshow height !
+
+/**
+ * 
+ * // 2do, dynamic slideshow height 
+ */
 var changeNavbar = function (event) {
+	console.log('changeNavbar called');
 	var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
 	var scroll_pos = $(window).scrollTop();
 	if(scroll_pos >= slideshow_height) {
 		$('.navbar-brand').addClass("brand-hidden" );
-		setTimeout( function() { 
+		setTimeout( function () { 
 			$('.navbar-brand').css("display","none");
 			$('#navbar-main').addClass("navbar-slim");
-			$('#fullscreenSlideshow').trigger('jumplink_slideshow_stop');
-			//console.log('stop slideshow triggert');
+			$('#homepageSlideshow').trigger('jumplink_slideshow_stop');
+			console.log('stop slideshow triggert');
 		}, 250);
 
 	} else {
 		$('#navbar-main').removeClass("navbar-slim");
-		setTimeout( function() { 
+		setTimeout( function () { 
 			$('.navbar-brand').css("display","block");
 			$('.navbar-brand').removeClass("brand-hidden");
-			$('#fullscreenSlideshow').trigger('jumplink_init_slideshow');
-			//console.log('init slideshow triggert');
+			$('#homepageSlideshow').trigger('jumplink_init_slideshow');
+			console.log('init slideshow triggert');
 		}, 250);
 	}
 
@@ -102,16 +108,16 @@ var sameHeightCards = function (selector) {
 
 
 /**
- * 
+ * Liner Services Slideshow Fullscreen
  */
-var initFullscreen = function(dataset) {
+var initFullscreen = function (dataset) {
      $("#fullscreenButton").animatedModal({
     	"color": "rgb(64, 83, 164)", //primary-barnd,
     	"overflow":"hidden",
-    	beforeOpen: function() { //not working properly in safari....
+    	beforeOpen: function () { //not working properly in safari....
     		 $("#fullscreenSlideshow").slick('setPosition');
     	},
-    	afterOpen: function(){ //... safari fix.
+    	afterOpen: function (){ //... safari fix.
     		 $("#fullscreenSlideshow").slick('setPosition');
     	 },
      });
@@ -119,81 +125,10 @@ var initFullscreen = function(dataset) {
 
 
 /**
- * 
+ *  
  */
 var initNavigation = function (dataset) {
-	/**
-	 * Special scroll events for jQuery
-	 * @see http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
-	 */
-	(function(){
 
-		var special = jQuery.event.special,
-		uid1 = 'D' + (+new Date()),
-		uid2 = 'D' + (+new Date() + 1);
-
-		special.scrollstart = {
-			setup: function() {
-
-				var timer,
-					handler =  function(evt) {
-
-						var _self = this,
-							_args = arguments;
-
-						if (timer) {
-							clearTimeout(timer);
-						} else {
-							evt.type = 'scrollstart';
-							jQuery.event.dispatch.apply(_self, _args);
-						}
-
-						timer = setTimeout( function(){
-							timer = null;
-						}, special.scrollstop.latency);
-
-					};
-
-				jQuery(this).bind('scroll touchmove', handler).data(uid1, handler);
-
-			},
-			teardown: function(){
-				jQuery(this).unbind( 'scroll touchmove', jQuery(this).data(uid1) );
-			}
-		};
-
-		special.scrollstop = {
-			latency: 100, // default is 300
-			setup: function() {
-
-				var timer,
-						handler = function(evt) {
-
-						var _self = this,
-							_args = arguments;
-
-						if (timer) {
-							clearTimeout(timer);
-						}
-
-						timer = setTimeout( function(){
-
-							timer = null;
-							evt.type = 'scrollstop';
-							jQuery.event.dispatch.apply(_self, _args);
-
-						}, special.scrollstop.latency);
-
-					};
-
-				jQuery(this).bind('scroll touchmove', handler).data(uid2, handler);
-
-			},
-			teardown: function() {
-				jQuery(this).unbind('scroll touchmove', jQuery(this).data(uid2) );
-			}
-		};
-	})();
     
  	/**
      * @see http://dcdeiv.github.io/simpler-sidebar/
@@ -229,38 +164,26 @@ var initNavigation = function (dataset) {
  * 
  */
 var initHome = function (dataset) {
-	/**
-	 * Callbacks for addClass
-	 * http://stackoverflow.com/questions/14567990/how-to-add-a-callback-function-to-the-addclass-method-of-jquery
-	 */
-	(function ($) {
-		var oAddClass = $.fn.addClass;
-		$.fn.addClass = function () {
-			for (var i in arguments) {
-				var arg = arguments[i];
-				if ( !! (arg && arg.constructor && arg.call && arg.apply)) {
-					arg();
-					delete arg;
-				}
-			}
-			return oAddClass.apply(this, arguments);
-		}
-	})(jQuery);
 
-    
-	$(window).on('resize', function() {
+	$(window).on('resize', function () {
+		console.log('resize...');
 		init();
     });
   
-	$(window).on('scrollstop', function() {
-	    changeNavbar();
+	$(window).on('scrollstop', function () {
+	   // changeNavbar();
 	});
 
    	var init = function () {
-		changeNavbar();	
+		//changeNavbar();	
+		initCarousel();
+		//$('#homepageSlideshow').trigger('jumplink_init_slideshow');
+		console.log('init home');
 	} 
 	init();
 };
+
+
 
 
 /**
@@ -323,6 +246,8 @@ var initAbout = function (dataset) {
  * 
  */
 var initBlog = function (dataset) {
+
+	console.log('initBlog called');
     /**
      * Special scroll events for jQuery
      * @see http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
@@ -332,10 +257,10 @@ var initBlog = function (dataset) {
 	var uid2 = 'D' + (+new Date() + 1);
     
     special.scrollstart = {
-    	setup: function() {
+    	setup: function () {
     
     		var timer,
-    			handler =  function(evt) {
+    			handler =  function (evt) {
     
     				var _self = this,
     					_args = arguments;
@@ -347,7 +272,7 @@ var initBlog = function (dataset) {
     					jQuery.event.dispatch.apply(_self, _args);
     				}
     
-    				timer = setTimeout( function(){
+    				timer = setTimeout( function (){
     					timer = null;
     				}, special.scrollstop.latency);
     
@@ -356,17 +281,17 @@ var initBlog = function (dataset) {
     		jQuery(this).bind('scroll touchmove', handler).data(uid1, handler);
     
     	},
-    	teardown: function(){
+    	teardown: function (){
     		jQuery(this).unbind( 'scroll touchmove', jQuery(this).data(uid1) );
     	}
     };
     
     special.scrollstop = {
     	latency: 100, // default is 300
-    	setup: function() {
+    	setup: function () {
     
     		var timer,
-    				handler = function(evt) {
+    				handler = function (evt) {
     
     				var _self = this,
     					_args = arguments;
@@ -375,7 +300,7 @@ var initBlog = function (dataset) {
     					clearTimeout(timer);
     				}
     
-    				timer = setTimeout( function(){
+    				timer = setTimeout( function (){
     
     					timer = null;
     					evt.type = 'scrollstop';
@@ -388,7 +313,7 @@ var initBlog = function (dataset) {
     		jQuery(this).bind('scroll touchmove', handler).data(uid2, handler);
     
     	},
-    	teardown: function() {
+    	teardown: function () {
     		jQuery(this).unbind('scroll touchmove', jQuery(this).data(uid2) );
     	}
     };
@@ -405,7 +330,7 @@ var initBlog = function (dataset) {
     	}
     }
     
-    $(window).on('scrollstop', function() {
+    $(window).on('scrollstop', function () {
         changeNavbar();
     });
     
@@ -428,7 +353,7 @@ var initBlog = function (dataset) {
     /**
      * FILTER 
      */
-    $(document).on('click', "#blog-filter a", function(e) {
+    $(document).on('click', "#blog-filter a", function (e) {
     	e.preventDefault();
     	var $category = $(this).data("category") ;
     	console.log("check",$(this).data("category"));
@@ -444,7 +369,7 @@ var initBlog = function (dataset) {
  * 
  */
 var initCategory = function () {
-    initBlog();
+    //initBlog();
 }
 
 
@@ -452,7 +377,7 @@ var initCategory = function () {
  * 
  */
 var initPost = function () {
-    initBlog();
+   // initBlog();
 }
 
 
@@ -493,7 +418,7 @@ var setNav = function (selector) {
 /**
  * 
  */
-var setNavActive = function(namespace) {
+var setNavActive = function (namespace) {
   resetNav();
   setNav('.'+namespace);
   switch(namespace) {
@@ -508,15 +433,16 @@ var setNavActive = function(namespace) {
  */
 var initTemplates = function () {
     
-  Barba.Dispatcher.on('linkClicked', function(el) {
+  Barba.Dispatcher.on('linkClicked', function (el) {
     cache.lastElementClicked = el;
   });
   
-  Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container) {
+  Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
       
     console.log("barba.js new page ready. Dataset: ", container.dataset);
-      
-    // TODO is a new load necessary?
+    
+	//$('#homepageSlideshow').trigger('jumplink_init_slideshow');
+	// TODO is a new load necessary?
     // Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs
     
     initNavigation();
@@ -533,10 +459,10 @@ var initTemplates = function () {
 
 
 /**
- * 
+ * Custom Transition
  */
 var FadeTransition = Barba.BaseTransition.extend({
-  start: function() {
+  start: function () {
     /**
      * This function is automatically called as soon the Transition starts
      * this.newContainerLoading is a Promise for the loading of the new container
@@ -549,7 +475,7 @@ var FadeTransition = Barba.BaseTransition.extend({
       .then(this.fadeIn.bind(this));
   },
 
-  fadeOut: function() {
+  fadeOut: function () {
     /**
      * this.oldContainer is the HTMLElement of the old Container
      */
@@ -557,7 +483,7 @@ var FadeTransition = Barba.BaseTransition.extend({
     return $(this.oldContainer).animate({ opacity: 0 }).promise();
   },
 
-  fadeIn: function() {
+  fadeIn: function () {
     /**
      * this.newContainer is the HTMLElement of the new Container
      * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
@@ -574,7 +500,7 @@ var FadeTransition = Barba.BaseTransition.extend({
       opacity : 0
     });
 
-    $el.animate({ opacity: 1 }, 400, function() {
+    $el.animate({ opacity: 1 }, 400, function () {
       /**
        * Do not forget to call .done() as soon your transition is finished!
        * .done() will automatically remove from the DOM the old Container
@@ -587,13 +513,13 @@ var FadeTransition = Barba.BaseTransition.extend({
 
 
 /**
- * 
+ * Barba Constructor
  */
 var initBarba = function () {
   /**
    * Next step, you have to tell Barba to use the new Transition
    */
-  Barba.Pjax.getTransition = function() {
+  Barba.Pjax.getTransition = function () {
     /**
      * Here you can use your own logic!
      * For example you can use different Transition based on the current page or link...
@@ -610,7 +536,7 @@ var initBarba = function () {
 /**
  * 
  */
-$(document).ready(function(){
+$(document).ready(function (){
     initBarba();
 
 });
