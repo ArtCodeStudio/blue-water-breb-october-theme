@@ -41,7 +41,7 @@ vertical = 0
 ==	
 	{% put scripts %}
 		<script type="text/javascript">
-		$(document).ready(function(){
+	//	$(document).ready(function(){
 
 	
 			var {{ str_camel(homepageSlideshow.alias) }}Settings = {
@@ -165,6 +165,7 @@ vertical = 0
 		
 				var theVideo = document.getElementById(theId);
 				var theVideo = $("#"+theId);*/
+				console.log("startVideoPlayback called");
 				var theVideo = $(".slick-current video");
 					theVideo[0].play();
 					theVideo.on('ended', onVideoEnd );
@@ -184,27 +185,13 @@ vertical = 0
 					};break;
 
 					case 'image': {
-						console.log('afterChange/ case: image');
+						// console.log('afterChange/ case: image');
 						$slider.slick('slickSetOption', 'autoplay', true,true);
 					};break;
 				}
 			}
 
 			/////////////////////////////////////////////////////////////////////////////
-
-			/**
-			*  Initialize Slideshow
-			*  ( called on first page load and after pause )
-			*  associated event: jumplink_re_init_slideshow
-			*/
-			function re_init_slideshow() {
-				console.log('re_init_slideshow');
-
-				var currentSlideType = $(".slick-current").data("slide-type");
-				// console.log('currentSlideType:', currentSlideType);
-				handleSlideType( currentSlideType );
-			}
-			$slider.on('jumplink_re_init_slideshow', re_init_slideshow);
 
 
 			/**
@@ -226,6 +213,30 @@ vertical = 0
 			$slider.on('jumplink_slideshow_stop', stop_slideshow);
 
 
+
+			function resume_slideshow() {
+				console.log('resume_slideshow called');
+				var currentSlideType = $(".slick-current").data("slide-type");
+				handleSlideType( currentSlideType );
+			}
+			$slider.on('jumplink_resume_slideshow', resume_slideshow);
+
+			/**
+			*  Initialize Slideshow
+			*  ( called on first page load and after pause )
+			*  associated event: jumplink_re_init_slideshow
+			*/
+			function re_init_slideshow() {
+				$slider.slick('setPosition');
+				console.log('re_init_slideshow called');
+				//var currentSlideType = $(".slick-current").data("slide-type");
+				var currentSlideType = $("#homepageSlideshow-slide-1").data("slide-type");				
+				console.log('currentSlideType:', currentSlideType);
+				handleSlideType( currentSlideType );
+			}
+			$slider.on('jumplink_re_init_slideshow', re_init_slideshow);
+
+
 			/**
 			* SLIDESHOW CONSTRUCTOR
 			* ( anything starts here )
@@ -234,13 +245,13 @@ vertical = 0
 			function init() {
 				
 				$slider.slick( {{ str_camel(homepageSlideshow.alias) }}Settings );
-				$slider.slick('setPosition');
+		
 				re_init_slideshow();
 				console.log("init()")
 			}
 			$slider.on('jumplink_init_slideshow', init);
 			init();
-		});
+	//	});
 		</script>
 	{% endput %}
 

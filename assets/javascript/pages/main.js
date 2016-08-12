@@ -48,7 +48,6 @@ var initCarousel = function () {
 }
 
 
-
 /**
  * 
  * // 2do, dynamic slideshow height 
@@ -71,8 +70,8 @@ var changeNavbar = function (event) {
 		setTimeout( function () { 
 			$('.navbar-brand').css("display","block");
 			$('.navbar-brand').removeClass("brand-hidden");
-			$('#homepageSlideshow').trigger('jumplink_re_init_slideshow');
-			console.log('init slideshow triggert');
+			$('#homepageSlideshow').trigger('jumplink_resume_slideshow');
+			console.log('jumplink_resume_slideshow  triggert');
 		}, 250);
 	}
 
@@ -443,6 +442,7 @@ var initTemplates = function () {
     console.log("barba.js new page ready. Dataset: ", container.dataset);
     
 	//$('#homepageSlideshow').trigger('jumplink_init_slideshow');
+	$slider.trigger('jumplink_re_init_slideshow');
 	// TODO is a new load necessary?
     // Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs
     
