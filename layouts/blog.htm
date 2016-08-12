@@ -7,14 +7,11 @@
     <body>
     
         {% partial 'navbar_slim' %}
-        
-        {% partial 'blog/blog_header' %} 
-        
-        
         <div id="barba-wrapper">
             <div
                 class="barba-container"
                 data-namespace="{{ str_studly(this.page.title) | lower }}">
+                {% partial 'blog/blog_header' %} 
                 <section id="layout-content">
                     {% page %}
                 </section>
