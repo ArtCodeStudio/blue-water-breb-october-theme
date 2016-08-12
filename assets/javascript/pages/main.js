@@ -71,7 +71,7 @@ var changeNavbar = function (event) {
 		setTimeout( function () { 
 			$('.navbar-brand').css("display","block");
 			$('.navbar-brand').removeClass("brand-hidden");
-			$('#homepageSlideshow').trigger('jumplink_init_slideshow');
+			$('#homepageSlideshow').trigger('jumplink_re_init_slideshow');
 			console.log('init slideshow triggert');
 		}, 250);
 	}
@@ -166,20 +166,21 @@ var initNavigation = function (dataset) {
 var initHome = function (dataset) {
 
 	$(window).on('resize', function () {
-		console.log('resize...');
-		init();
+		// console.log('resize...');
+		//init();
     });
   
 	$(window).on('scrollstop', function () {
-	   // changeNavbar();
+	    changeNavbar();
 	});
 
    	var init = function () {
 		//changeNavbar();	
-		initCarousel();
+		
 		//$('#homepageSlideshow').trigger('jumplink_init_slideshow');
 		console.log('init home');
 	} 
+	initCarousel();
 	init();
 };
 

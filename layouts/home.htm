@@ -67,12 +67,14 @@ zIndex = 1000
                 data-namespace="{{ str_studly(this.page.title) | lower }}">
                 {#  {% component 'slideshow' %} #}
                 {% partial 'homepage/slideshow_debug'%}
+            
                 <section id="layout-content">
                     {% page %}                     
                 </section>
             </div>
         </div>
-      
+        {% partial 'homepage/slideshow_javascript'%}
+        
         {% partial 'footer/footer_brand' %}
 
         {% partial 'footer/footer_navigation' %}
