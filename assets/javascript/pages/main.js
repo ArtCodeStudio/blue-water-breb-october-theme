@@ -1,5 +1,4 @@
 
-
 var cache = {
     lastElementClicked: null,
     $navbarMain: $('#navbar-main'),
@@ -9,43 +8,45 @@ var cache = {
  * Homepage Latest log Posts Carousel
  */
 var initCarousel = function () {
-
-	$(".latest-blog-posts-carousel").slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		autoplay: false,
-		autoplaySpeed: 2000,
-		centerMode: false,
-		centerPadding: '0',
-		infinite: true,
-		responsive: [
-		{
-			breakpoint: 1024,
-			settings: {
-				slidesToShow: 3,
-				slidesToScroll: 3,
-			}
-		},
-		{
-			breakpoint: 992,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-		},
-		{
-			breakpoint: 562,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-		}
-
-		]
-		
-	});
-
-}
+    
+    var $latestBlogPostsCarousel = $(".latest-blog-posts-carousel");
+    
+    // only init if slick is not already initialized
+    if( !$latestBlogPostsCarousel.hasClass('slick-initialized') ) {
+    	$latestBlogPostsCarousel.slick({
+    		slidesToShow: 3,
+    		slidesToScroll: 1,
+    		autoplay: false,
+    		autoplaySpeed: 2000,
+    		centerMode: false,
+    		centerPadding: '0',
+    		infinite: true,
+    		responsive: [
+        		{
+        			breakpoint: 1024,
+        			settings: {
+        				slidesToShow: 3,
+        				slidesToScroll: 3,
+        			}
+        		},
+        		{
+        			breakpoint: 992,
+        				settings: {
+        					slidesToShow: 2,
+        					slidesToScroll: 2
+        				}
+        		},
+        		{
+        			breakpoint: 562,
+        				settings: {
+        					slidesToShow: 1,
+        					slidesToScroll: 1
+        				}
+        		}
+    		]
+    	});
+    }
+};
 
 
 /**
@@ -103,7 +104,7 @@ var sameHeightCards = function (selector) {
             $this.css('min-height',t);
         }
     });
-}
+};
 
 
 /**
@@ -120,7 +121,7 @@ var initFullscreen = function (dataset) {
     		 $("#fullscreenSlideshow").slick('setPosition');
     	 },
      });
-}
+};
 
 
 /**
@@ -156,7 +157,7 @@ var initNavigation = function (dataset) {
 			}
 		}
 	});
-}
+};
 
 
 /**
@@ -172,18 +173,13 @@ var initHome = function (dataset) {
 	$(window).on('scrollstop', function () {
 	    changeNavbar();
 	});
-
-   	var init = function () {
-		//changeNavbar();	
-		
-		//$('#homepageSlideshow').trigger('jumplink_init_slideshow');
-		console.log('init home');
-	} 
+	
+	// So wirds gemacht!
+	slideshowHomeJavaScriptInit('#slideshowHomeHTML');
+	
 	initCarousel();
-	init();
+
 };
-
-
 
 
 /**
@@ -328,7 +324,7 @@ var initBlog = function (dataset) {
     		$('#blog-header-wrapper').removeClass('blog-nav-low-height');
     		$('#blog-header-wrapper .blog-header-container .nav-link').removeClass('blog-nav-small');
     	}
-    }
+    };
     
     $(window).on('scrollstop', function () {
         changeNavbar();
@@ -362,7 +358,7 @@ var initBlog = function (dataset) {
     		$grid.isotope({ filter: '' });
     	}
     });
-}
+};
 
 
 /**
@@ -370,7 +366,7 @@ var initBlog = function (dataset) {
  */
 var initCategory = function () {
     //initBlog();
-}
+};
 
 
 /**
@@ -378,7 +374,7 @@ var initCategory = function () {
  */
 var initPost = function () {
    // initBlog();
-}
+};
 
 
 /**
@@ -396,7 +392,7 @@ var initTemplate = {
     'category': initCategory,
     'post': initPost,
     'blog': initBlog,
-}
+};
 
 
 /**
@@ -404,7 +400,7 @@ var initTemplate = {
  */
 var resetNav = function () {
    cache.$navbarMain.find('ul.nav.navbar-nav li').removeClass('active');
-}
+};
 
 
 /**
@@ -412,7 +408,7 @@ var resetNav = function () {
  */
 var setNav = function (selector) {
    cache.$navbarMain.find('ul.nav.navbar-nav li'+selector).addClass('active');
-}
+};
 
 
 /**
@@ -425,7 +421,7 @@ var setNavActive = function (namespace) {
     case 'home':
     break;
   }
-}
+};
 
 
 /**
@@ -441,8 +437,6 @@ var initTemplates = function () {
       
     console.log("barba.js new page ready. Dataset: ", container.dataset);
     
-	//$('#homepageSlideshow').trigger('jumplink_init_slideshow');
-	$slider.trigger('jumplink_re_init_slideshow');
 	// TODO is a new load necessary?
     // Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs
     
@@ -456,7 +450,7 @@ var initTemplates = function () {
     setNavActive(currentStatus.namespace);
     
   });
-}
+};
 
 
 /**
@@ -531,7 +525,7 @@ var initBarba = function () {
   Barba.Prefetch.init();
   initTemplates();
   Barba.Pjax.start();
-}
+};
 
 
 /**
