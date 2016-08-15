@@ -7204,7 +7204,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 #home #latest-blog-posts #latest-blog-posts-row .slick-next {
   right: -49px; }
 
-#LinerServices #fullscreenButton {
+#linerservices #fullscreenButton {
   background-image: url(../images/icons/small-w.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -7215,10 +7215,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   z-index: 999;
   right: 35px;
   top: 23px; }
-  #LinerServices #fullscreenButton:hover {
+  #linerservices #fullscreenButton:hover {
     background-image: url(../images/icons/small-r.svg); }
 
-#LinerServices .close-animatedModal {
+#linerservices .close-animatedModal {
   background-image: url(../images/icons/big-close-w.svg);
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -7229,55 +7229,55 @@ a.bg-danger:focus, a.bg-danger:hover {
   z-index: 999;
   right: 22px;
   top: 25px; }
-  #LinerServices .close-animatedModal:hover {
+  #linerservices .close-animatedModal:hover {
     background-image: url(../images/icons/big-close-r.svg); }
 
-#LinerServices .carousel-caption-wrapper .carousel-caption-content {
+#linerservices .carousel-caption-wrapper .carousel-caption-content {
   position: fixed;
   /* top: 0; */
   background-color: rgba(255, 255, 255, 0.75);
   width: 100%;
   bottom: 0px;
   padding: 1rem 0 0 3rem; }
-  #LinerServices .carousel-caption-wrapper .carousel-caption-content h2 {
+  #linerservices .carousel-caption-wrapper .carousel-caption-content h2 {
     font-size: 1.25rem; }
-  #LinerServices .carousel-caption-wrapper .carousel-caption-content p {
+  #linerservices .carousel-caption-wrapper .carousel-caption-content p {
     color: black !important; }
 
-#LinerServices .slick-prev {
+#linerservices .slick-prev {
   left: 1rem; }
 
-#LinerServices .slick-next {
+#linerservices .slick-next {
   right: 1rem; }
 
-#LinerServices .slick-prev, #LinerServices .slick-next {
+#linerservices .slick-prev, #linerservices .slick-next {
   position: absolute;
   z-index: 999; }
   @media (min-width: 1200px) {
-    #LinerServices .slick-prev, #LinerServices .slick-next {
+    #linerservices .slick-prev, #linerservices .slick-next {
       margin-top: 8.6rem; } }
   @media (max-width: 1199px) {
-    #LinerServices .slick-prev, #LinerServices .slick-next {
+    #linerservices .slick-prev, #linerservices .slick-next {
       margin-top: 6.6rem; } }
   @media (max-width: 991px) {
-    #LinerServices .slick-prev, #LinerServices .slick-next {
+    #linerservices .slick-prev, #linerservices .slick-next {
       margin-top: 4.3rem; } }
 
-#LinerServices .slick-prev:before, #LinerServices .slick-next:before {
+#linerservices .slick-prev:before, #linerservices .slick-next:before {
   color: #ef2a21; }
 
-#LinerServices #gallerySlideshow2 {
+#linerservices #linerServicesSlideshowHTML2 {
   overflow: hidden; }
-  #LinerServices #gallerySlideshow2 .carousel-caption-wrapper {
+  #linerservices #linerServicesSlideshowHTML2 .carousel-caption-wrapper {
     display: none; }
-  #LinerServices #gallerySlideshow2 .slick-slide {
+  #linerservices #linerServicesSlideshowHTML2 .slick-slide {
     margin: 4rem 0.9375rem;
     height: 200px; }
-  #LinerServices #gallerySlideshow2 .slick-list {
+  #linerservices #linerServicesSlideshowHTML2 .slick-list {
     margin: -1.875rem; }
-  #LinerServices #gallerySlideshow2 .slick-prev {
+  #linerservices #linerServicesSlideshowHTML2 .slick-prev {
     left: -48px; }
-  #LinerServices #gallerySlideshow2 .slick-next {
+  #linerservices #linerServicesSlideshowHTML2 .slick-next {
     right: -49px; }
 
 .z-depth-0 {

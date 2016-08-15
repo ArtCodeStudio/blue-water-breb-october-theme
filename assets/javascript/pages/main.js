@@ -53,27 +53,32 @@ var initCarousel = function () {
  * 
  * // 2do, dynamic slideshow height 
  */
-var changeNavbar = function (event) {
-	console.log('changeNavbar called');
+var changeNavbar = function (dataset) {
+	console.log('changeNavbar called', dataset);
 	var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
 	var scroll_pos = $(window).scrollTop();
-	if(scroll_pos >= slideshow_height) {
-		$('.navbar-brand').addClass("brand-hidden" );
-		setTimeout( function () { 
+
+	if (dataset.namespace === 'home') {
+
+		if (scroll_pos >= slideshow_height) {
+			$('.navbar-brand').addClass("brand-hidden" );
 			$('.navbar-brand').css("display","none");
 			$('#navbar-main').addClass("navbar-slim");
-			$('#homepageSlideshow').trigger('jumplink_slideshow_stop');
+			$('#slideshowHomeHTML').trigger('jumplink_slideshow_stop');
 			console.log('stop slideshow triggert');
-		}, 250);
 
-	} else {
-		$('#navbar-main').removeClass("navbar-slim");
-		setTimeout( function () { 
+		} else {
+			$('#navbar-main').removeClass("navbar-slim");
 			$('.navbar-brand').css("display","block");
 			$('.navbar-brand').removeClass("brand-hidden");
-			$('#homepageSlideshow').trigger('jumplink_resume_slideshow');
+
+			$('#slideshowHomeHTML').trigger('jumplink_resume_slideshow');
 			console.log('jumplink_resume_slideshow  triggert');
-		}, 250);
+		}
+
+	} else {
+		$('.navbar-brand').css("display","none");
+		$('#navbar-main').addClass("navbar-slim");
 	}
 
 };
@@ -108,28 +113,10 @@ var sameHeightCards = function (selector) {
 
 
 /**
- * Liner Services Slideshow Fullscreen
- */
-var initFullscreen = function (dataset) {
-     $("#fullscreenButton").animatedModal({
-    	"color": "rgb(64, 83, 164)", //primary-barnd,
-    	"overflow":"hidden",
-    	beforeOpen: function () { //not working properly in safari....
-    		 $("#fullscreenSlideshow").slick('setPosition');
-    	},
-    	afterOpen: function (){ //... safari fix.
-    		 $("#fullscreenSlideshow").slick('setPosition');
-    	 },
-     });
-};
-
-
-/**
  *  
  */
-var initNavigation = function (dataset) {
+var initSidebar = function (dataset) {
 
-    
  	/**
      * @see http://dcdeiv.github.io/simpler-sidebar/
 	 * https://github.com/simple-sidebar/simpler-sidebar/issues/25#issuecomment-236579696
@@ -171,13 +158,14 @@ var initHome = function (dataset) {
     });
   
 	$(window).on('scrollstop', function () {
-	    changeNavbar();
+	    changeNavbar(dataset);
 	});
 	
-	// So wirds gemacht!
+	// So wirds gemacht! yeah!
 	slideshowHomeJavaScriptInit('#slideshowHomeHTML');
 	
 	initCarousel();
+	console.log('initHome');
 
 };
 
@@ -210,15 +198,23 @@ var initPortagency = function (dataset) {
  * 
  */
 var initLinerservices = function (dataset) {
-    
-};
 
+	// Initialize Fullscreen Slideshow Modal
+     $("#fullscreenButton").animatedModal({
+    	"color": "rgba( 64, 83, 164, 1 )", //primary-barnd,
+    	"overflow":"hidden",
+    	beforeOpen: function () { // not working properly in safari....
+    		 $("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
+    	},
+    	afterOpen: function () { // ... safari fix.
+    		 $("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
+    	 },
+     });
+	
+	linerServicesSlideshowJavaScript1Init('#linerServicesSlideshowHTML1');
+    linerServicesSlideshowJavaScript2Init('#linerServicesSlideshowHTML2');
+	fullscreenLinerServicesSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
 
-/**
- * 
- */
-var initLinerservices = function (dataset) {
-    
 };
 
 
@@ -439,8 +435,8 @@ var initTemplates = function () {
     
 	// TODO is a new load necessary?
     // Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs
-    
-    initNavigation();
+    changeNavbar(container.dataset);
+    initSidebar();
 
     if(typeof(initTemplate[currentStatus.namespace]) === 'function' ) {
       initTemplate[currentStatus.namespace](container.dataset);

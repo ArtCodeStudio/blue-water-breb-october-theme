@@ -124,7 +124,7 @@
 }
 
 
-#LinerServices {
+#linerservices {
 
 	#fullscreenButton {
 		background-image: url(../images/icons/small-w.svg);
@@ -200,7 +200,8 @@
 	.slick-prev:before, .slick-next:before {
 		color: $brand-danger;
 	}
-	#gallerySlideshow2 {
+	
+	#linerServicesSlideshowHTML2 {
 		overflow: hidden;
 		.carousel-caption-wrapper {
 			display:none;
