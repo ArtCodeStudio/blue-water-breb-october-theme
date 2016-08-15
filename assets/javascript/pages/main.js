@@ -57,8 +57,9 @@ var changeNavbar = function (dataset) {
 	console.log('changeNavbar called', dataset);
 	var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
 	var scroll_pos = $(window).scrollTop();
-
-	if (dataset.namespace === 'home') {
+	console.log($("#slick-list").height());
+	//$("#slideshowHomeHTML").height($(".slick-slide ").height()) 
+	if (dataset.namespace === 'home') { // ugly 
 
 		if (scroll_pos >= slideshow_height) {
 			$('.navbar-brand').addClass("brand-hidden" );
@@ -71,7 +72,6 @@ var changeNavbar = function (dataset) {
 			$('#navbar-main').removeClass("navbar-slim");
 			$('.navbar-brand').css("display","block");
 			$('.navbar-brand').removeClass("brand-hidden");
-
 			$('#slideshowHomeHTML').trigger('jumplink_resume_slideshow');
 			console.log('jumplink_resume_slideshow  triggert');
 		}

@@ -61,8 +61,13 @@
 
 }
 
-
 #home {
+
+
+	
+	#slideshowHomeHTML {
+		//min-height: 635px;
+	}
 	.slick-dots {
 		position: absolute;
 		bottom: 20px;
@@ -200,7 +205,9 @@
 	.slick-prev:before, .slick-next:before {
 		color: $brand-danger;
 	}
-	
+	#liner-services-slideshow-container{
+		min-height: 559px;
+	}
 	#linerServicesSlideshowHTML2 {
 		overflow: hidden;
 		.carousel-caption-wrapper {

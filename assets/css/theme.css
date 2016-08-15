@@ -7266,6 +7266,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 #linerservices .slick-prev:before, #linerservices .slick-next:before {
   color: #ef2a21; }
 
+#linerservices #liner-services-slideshow-container {
+  min-height: 559px; }
+
 #linerservices #linerServicesSlideshowHTML2 {
   overflow: hidden; }
   #linerservices #linerServicesSlideshowHTML2 .carousel-caption-wrapper {
