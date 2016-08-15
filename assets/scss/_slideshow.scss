@@ -204,9 +204,24 @@
 	}
 	.slick-prev:before, .slick-next:before {
 		color: $brand-danger;
+		
 	}
-	#liner-services-slideshow-container{
+	#liner-services-slideshow-container {
 		min-height: 559px;
+		@include media-breakpoint-up(xl) {
+			min-height: 626px
+		}
+		@include media-breakpoint-down(lg) {
+			min-height: 559px;
+		}
+		@include media-breakpoint-down(md) {
+			min-height: 487px;
+		}
+		@include media-breakpoint-down(sm) {
+			min-height: 575px;
+		}
+
+		
 	}
 	#linerServicesSlideshowHTML2 {
 		overflow: hidden;

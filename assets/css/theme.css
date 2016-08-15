@@ -7268,6 +7268,18 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 #linerservices #liner-services-slideshow-container {
   min-height: 559px; }
+  @media (min-width: 1200px) {
+    #linerservices #liner-services-slideshow-container {
+      min-height: 626px; } }
+  @media (max-width: 1199px) {
+    #linerservices #liner-services-slideshow-container {
+      min-height: 559px; } }
+  @media (max-width: 991px) {
+    #linerservices #liner-services-slideshow-container {
+      min-height: 487px; } }
+  @media (max-width: 767px) {
+    #linerservices #liner-services-slideshow-container {
+      min-height: 575px; } }
 
 #linerservices #linerServicesSlideshowHTML2 {
   overflow: hidden; }
