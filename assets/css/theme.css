@@ -7796,11 +7796,16 @@ nav .container {
   transition-property: all;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
+  opacity: 0;
+  display: none;
   /*
 		* BLOG  NAVIGATION STATE CLASSES
 		**/ }
   #blog-header-wrapper .blog-header-container {
     text-align: center; }
+  #blog-header-wrapper.active {
+    display: block;
+    opacity: 1; }
   #blog-header-wrapper .blog-header-container #blog-filter .nav-link {
     color: white;
     margin-top: 3rem; }

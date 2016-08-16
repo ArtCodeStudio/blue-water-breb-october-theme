@@ -290,10 +290,14 @@ nav .container {
 		transition-duration: 0.3s;
 		transition-property: all;
 		transition-timing-function: ease;
-
-
+		opacity:0;
+		display:none;
 		.blog-header-container {
 			text-align:center;
+		}
+		&.active {
+			display:block;
+			opacity:1;
 		}
 
 		.blog-header-container {

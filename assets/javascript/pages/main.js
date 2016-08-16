@@ -2,7 +2,12 @@
 var cache = {
     lastElementClicked: null,
     $navbarMain: $('#navbar-main'),
+	$blogFilter: $('#blog-filter'),
+	$blogHeader: $('#blog-header-wrapper'),
+	homeInitialized: false
 };
+
+var currentNamespace = null;
 
 /**
  * Homepage Latest log Posts Carousel
@@ -51,15 +56,16 @@ var initCarousel = function () {
 
 /**
  * 
- * // 2do, dynamic slideshow height 
+ * 
  */
 var changeNavbar = function (dataset) {
-	console.log('changeNavbar called', dataset);
-	var slideshow_height = 809 ;//$("#slideshow").height()// - 35;
+
+	var slideshow_height = 809 ;
 	var scroll_pos = $(window).scrollTop();
-	console.log($("#slick-list").height());
+	//console.log($("#slick-list").height());
 	//$("#slideshowHomeHTML").height($(".slick-slide ").height()) 
-	if (dataset.namespace === 'home') { // ugly 
+	console.log('currentNamespace', currentNamespace)
+	if (currentNamespace === 'home') { 
 
 		if (scroll_pos >= slideshow_height) {
 			$('.navbar-brand').addClass("brand-hidden" );
@@ -88,7 +94,7 @@ var changeNavbar = function (dataset) {
  * Set each card to the height of the heightest card to get all cards with the same height 
  */
 var sameHeightCards = function (selector) {
-    var t = 0;
+	var t = 0;
     var t_elem;
 	$cards = $(selector);
     // get heightest height
@@ -152,21 +158,18 @@ var initSidebar = function (dataset) {
  */
 var initHome = function (dataset) {
 
-	$(window).on('resize', function () {
-		// console.log('resize...');
-		//init();
-    });
-  
-	$(window).on('scrollstop', function () {
-	    changeNavbar(dataset);
-	});
-	
-	// So wirds gemacht! yeah!
-	slideshowHomeJavaScriptInit('#slideshowHomeHTML');
-	
-	initCarousel();
-	console.log('initHome');
+	if( cache.homeInitialized ) {
 
+	}else{
+		$(window).on('scrollstop', function () {
+			console.log('-----onscrollstop');
+		    changeNavbar(dataset);
+		});
+		slideshowHomeJavaScriptInit('#slideshowHomeHTML');
+		initCarousel();
+		cache.homeInitialized = true;
+	}
+		
 };
 
 
@@ -200,17 +203,17 @@ var initPortagency = function (dataset) {
 var initLinerservices = function (dataset) {
 
 	// Initialize Fullscreen Slideshow Modal
-     $("#fullscreenButton").animatedModal({
-    	"color": "rgba( 64, 83, 164, 1 )", //primary-barnd,
-    	"overflow":"hidden",
-    	beforeOpen: function () { // not working properly in safari....
-    		 $("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
-    	},
-    	afterOpen: function () { // ... safari fix.
-    		 $("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
-    	 },
-     });
-	
+	$("#fullscreenButton").animatedModal({
+		"color": "rgba( 64, 83, 164, 1 )", //primary-brand,
+		"overflow":"hidden",
+		beforeOpen: function () { // not working properly in safari....
+			$("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
+		},
+		afterOpen: function () { // ... safari fix.
+			$("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
+		},
+	});
+
 	linerServicesSlideshowJavaScript1Init('#linerServicesSlideshowHTML1');
     linerServicesSlideshowJavaScript2Init('#linerServicesSlideshowHTML2');
 	fullscreenLinerServicesSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
@@ -234,83 +237,15 @@ var initAbout = function (dataset) {
 };
 
 
+
 /**
  * 
  */
 var initBlog = function (dataset) {
 
-	console.log('initBlog called');
-    /**
-     * Special scroll events for jQuery
-     * @see http://james.padolsey.com/javascript/special-scroll-events-for-jquery/
-     */
-    var special = jQuery.event.special;
-	var uid1 = 'D' + (+new Date());
-	var uid2 = 'D' + (+new Date() + 1);
-    
-    special.scrollstart = {
-    	setup: function () {
-    
-    		var timer,
-    			handler =  function (evt) {
-    
-    				var _self = this,
-    					_args = arguments;
-    
-    				if (timer) {
-    					clearTimeout(timer);
-    				} else {
-    					evt.type = 'scrollstart';
-    					jQuery.event.dispatch.apply(_self, _args);
-    				}
-    
-    				timer = setTimeout( function (){
-    					timer = null;
-    				}, special.scrollstop.latency);
-    
-    			};
-    
-    		jQuery(this).bind('scroll touchmove', handler).data(uid1, handler);
-    
-    	},
-    	teardown: function (){
-    		jQuery(this).unbind( 'scroll touchmove', jQuery(this).data(uid1) );
-    	}
-    };
-    
-    special.scrollstop = {
-    	latency: 100, // default is 300
-    	setup: function () {
-    
-    		var timer,
-    				handler = function (evt) {
-    
-    				var _self = this,
-    					_args = arguments;
-    
-    				if (timer) {
-    					clearTimeout(timer);
-    				}
-    
-    				timer = setTimeout( function (){
-    
-    					timer = null;
-    					evt.type = 'scrollstop';
-    					jQuery.event.dispatch.apply(_self, _args);
-    
-    				}, special.scrollstop.latency);
-    
-    			};
-    
-    		jQuery(this).bind('scroll touchmove', handler).data(uid2, handler);
-    
-    	},
-    	teardown: function () {
-    		jQuery(this).unbind('scroll touchmove', jQuery(this).data(uid2) );
-    	}
-    };
-    
-    var changeNavbar = function (event) {
+	// console.log('initBlog called');
+
+    var changeBlogHeaderHeight = function (event) {
     	var threshold = 10 ;
     	var scroll_pos = $(window).scrollTop();
     	if(scroll_pos >= threshold) {
@@ -323,10 +258,10 @@ var initBlog = function (dataset) {
     };
     
     $(window).on('scrollstop', function () {
-        changeNavbar();
+        changeBlogHeaderHeight();
     });
     
-    changeNavbar();
+    changeBlogHeaderHeight();
     
     /**
      * ISOTOPE
@@ -346,22 +281,30 @@ var initBlog = function (dataset) {
      * FILTER 
      */
     $(document).on('click', "#blog-filter a", function (e) {
-    	e.preventDefault();
+    	//e.preventDefault();
     	var $category = $(this).data("category") ;
-    	console.log("check",$(this).data("category"));
+    	// console.log("check",$(this).data("category"));
     	$grid.isotope({ filter: '.' + $category });
     	if($category == 'all') {
     		$grid.isotope({ filter: '' });
     	}
     });
+
+	
 };
 
+/**
+ * 
+ */
+var initAllReports = function () {
+    initBlog();
+};
 
 /**
  * 
  */
 var initCategory = function () {
-    //initBlog();
+    initBlog();
 };
 
 
@@ -369,7 +312,7 @@ var initCategory = function () {
  * 
  */
 var initPost = function () {
-   // initBlog();
+    initBlog();
 };
 
 
@@ -388,6 +331,7 @@ var initTemplate = {
     'category': initCategory,
     'post': initPost,
     'blog': initBlog,
+	'allreports': initAllReports,
 };
 
 
@@ -431,8 +375,8 @@ var initTemplates = function () {
   
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
       
-    console.log("barba.js new page ready. Dataset: ", container.dataset);
-    
+    // console.log("barba.js new page ready. Dataset: ", container.dataset);
+    currentNamespace = currentStatus.namespace;
 	// TODO is a new load necessary?
     // Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs
     changeNavbar(container.dataset);
@@ -443,8 +387,20 @@ var initTemplates = function () {
     } else {
       console.error("Template not defined: "+currentStatus.namespace);
     }
+	
+	/**
+	 * 
+	 */
+	if( currentStatus.namespace === 'blog' || 
+		currentStatus.namespace === 'allreports' || 
+		currentStatus.namespace === 'category' || 
+		currentStatus.namespace === 'post') {
+		cache.$blogHeader.addClass('active');
+	}else{
+		cache.$blogHeader.removeClass('active');
+	}
     setNavActive(currentStatus.namespace);
-    
+
   });
 };
 
