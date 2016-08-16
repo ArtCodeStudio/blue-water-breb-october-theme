@@ -354,12 +354,15 @@ var setNavActive = function (namespace) {
 	var lastClicked = null;
 	if( $(cache.lastElementClicked).data("category") ) {
 		lastClicked = $(cache.lastElementClicked).data("category")
+	}else{
+		lastClicked = "allreports";
 	}
   	resetNav();
   	setNav('.'+namespace);
 
 	var initBlogFilter = function ( lastClicked ) {
 		cache.$blogFilter.find('a').removeClass('btn-white-outline');
+	
 		// Schoener waere es hier das vorhandene data-attribute zuy verwenden, nur fehlt mir nich der passende selektor
 		// cache.$blogFilter.filter('[data-category="'+lastClicked+'"]').addClass('btn-white-outline'); ???
 		cache.$blogFilter.find('a.'+lastClicked).addClass('btn-white-outline');
@@ -378,6 +381,7 @@ var setNavActive = function (namespace) {
 		}
 		break;
 		case 'allreports': {
+				console.log(lastClicked);
 			if(lastClicked != null){
 				initBlogFilter(lastClicked);
 			}
