@@ -1,0 +1,30 @@
+[viewBag]
+==
+<ul class="{{ class }}">
+
+    {% for item in items %}
+        {#  {{item.url}}
+            {% if item.viewBag.cssClass == item.url %}
+                {% set active = 'active' %}
+            {% endif %} 
+        #}
+        <li class="nav-item {{ item.isActive ? 'active' : '' }}{{item.viewBag.cssClass}}">
+            {% if item.url %}
+                <a href="{{ item.url }}" class="nav-link" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+                    {{ item.title }}
+                    {% if item.items %}
+                        <span class="caret"></span>
+                    {% endif %}
+                </a>
+            {% else %}
+                <span class="nav-link" {% if item.items %}data-toggle="dropdown"{% endif %}>{{ item.title }}</span>
+            {% endif %}
+
+
+            {% if item.items %}
+                {% partial 'menu-items' items=item.items class='dropdown-menu' %}
+            {% endif %}
+        </li>
+    {% endfor %}
+
+</ul>

@@ -1,0 +1,25 @@
+{
+  "name": "breb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "bower install",
+    "postinstall": "npm run build",
+    "sass": "node_modules/.bin/node-sass assets/scss/theme.scss assets/css/theme.css",
+    "autoprefixer": "node_modules/.bin/postcss --use autoprefixer assets/css/theme.css -d assets/css/",
+    "build": "npm run sass && npm run autoprefixer",
+    "watch": "npm run sass -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.mediamor.de/jumplink.eu/breb-october-theme.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^6.3.7",
+    "node-sass": "^3.8.0",
+    "postcss-cli": "^2.5.2"
+  }
+}
