@@ -1,4 +1,9 @@
 [viewBag]
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "all-reports"
 ==
 <?php
 function onEnd() 
@@ -17,29 +22,27 @@ function onEnd()
 
 	{% set currentCategory = post.categories[0].slug %}
 	<div class="container blog-header-container">
-
+  		
 		<nav id="blog-filter">
-			<a href="/reports" class="nav-link btn text-serif all
-				{% if queryString == 'all' %} 
-					btn-white-outline 
-				{%endif%}"
-				data-category="all">
-				All Reports
-			</a>  
-			<a href="/reports/category/press-release" class="nav-link btn text-serif press-release
-				{% if currentCategory == 'press-release' or queryString == 'press-release' %} 
-					btn-white-outline 
-				{%endif%}"
-				data-category="press-release">
-				Press Release
-			</a>     
-			<a href="/reports/category/blog" class="nav-link btn text-serif blog
-				{% if currentCategory == 'blog' or queryString == 'blog' %} 
-					btn-white-outline 
-				{%endif%}"
-				data-category="blog">
-				Blog
-			</a>          
+            
+            <a href="/reports" class="nav-link btn text-serif all
+                {% if queryString == 'all' %} 
+                    btn-white-outline 
+                {%endif%}
+                data-category="all">
+                All Reports
+            </a>  
+            
+      		{% for category in blogCategories.categories %}
+               
+    			<a href="/reports/category/{{category.slug}}" class="nav-link btn text-serif {{category.slug}}
+	                {% if currentCategory == '{{category.slug}}' or queryString == '{{category.slug}}' %} 
+					    btn-white-outline 
+				    {%endif%}"
+    				data-category="{{category.slug}}">
+    				{{category.name}}
+    			</a>  
+    		{% endfor %}       
 		</nav>
 
 	</div>

@@ -12,7 +12,6 @@
 						{% if post.featured_images.count %}
 							<div class="featured-images text-center "> 
 								{% set image = post.featured_images[0] %}
-								{# <a href="{{ post.url }}" class="background-box ratio-16-9" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a> #}
 								<div class="background-box ratio-16-9" 
 										style="display:block; background-image: url({{ image.path }});" 
 										title="{{ image.description }}">
@@ -30,7 +29,6 @@
 							</div>
 
 							<div class="learn-more center-block text-xs-right p-t-1">
-								{#<a href="{{ post.url }}" class="">read more</a>#}
 								<div>read more</div>
 							</div>
 
@@ -43,8 +41,8 @@
 		</div>
 
 
-		{##
-		# PAGINATION
+		{#
+		 PAGINATION
 		#}
 
 		{% if posts.lastPage > 1 %}
