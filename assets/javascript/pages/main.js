@@ -352,10 +352,11 @@ var setNav = function (selector) {
  */
 var setNavActive = function (namespace) {
 	var lastClicked = null;
+	console.log($(cache.lastElementClicked).data("category"));
 	if( $(cache.lastElementClicked).data("category") ) {
 		lastClicked = $(cache.lastElementClicked).data("category")
 	}else{
-		lastClicked = "allreports";
+		// lastClicked = "allreports";
 	}
   	resetNav();
   	setNav('.'+namespace);
