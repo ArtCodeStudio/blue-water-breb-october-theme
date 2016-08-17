@@ -242,8 +242,6 @@ var initAbout = function (dataset) {
  */
 var initBlog = function (dataset) {
 
-	// console.log('initBlog called');
-
     var changeBlogHeaderHeight = function (event) {
     	var threshold = 10 ;
     	var scroll_pos = $(window).scrollTop();
@@ -262,6 +260,9 @@ var initBlog = function (dataset) {
     
     changeBlogHeaderHeight();
     
+	/*
+	TODO : replace with masonry
+	*/
     /**
      * ISOTOPE
      * http://isotope.metafizzy.co/methods.html#adding-and-removing-items
@@ -279,15 +280,15 @@ var initBlog = function (dataset) {
     /**
      * FILTER 
      */
-    $(document).on('click', "#blog-filter a", function (e) {
-    	//e.preventDefault();
-    	var $category = $(this).data("category") ;
-    	// console.log("check",$(this).data("category"));
-    	$grid.isotope({ filter: '.' + $category });
-    	if($category == 'all') {
-    		$grid.isotope({ filter: '' });
-    	}
-    });
+    // $(document).on('click', "#blog-filter a", function (e) {
+    // 	//e.preventDefault();
+    // 	var $category = $(this).data("category") ;
+    // 	// console.log("check",$(this).data("category"));
+    // 	$grid.isotope({ filter: '.' + $category });
+    // 	if($category == 'all') {
+    // 		$grid.isotope({ filter: '' });
+    // 	}
+    // });
 
 	
 };
@@ -429,7 +430,6 @@ var initTemplates = function () {
   
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
 
-	$('html,body').animate({ scrollTop: 0 }, 'slow');
     // console.log("barba.js new page ready. Dataset: ", container);
     currentNamespace = currentStatus.namespace;
 	// TODO is a new load necessary?
@@ -474,7 +474,8 @@ var FadeTransition = Barba.BaseTransition.extend({
     // As soon the loading is finished and the old page is faded out, let's fade the new page
     Promise
       .all([this.newContainerLoading, this.fadeOut()])
-      .then(this.fadeIn.bind(this));
+      .then(this.fadeIn.bind(this))
+	  .then(	$('html,body').animate({ scrollTop: 0 }, 'slow') );
   },
 
   fadeOut: function () {
@@ -491,7 +492,6 @@ var FadeTransition = Barba.BaseTransition.extend({
      * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
      * Please note, newContainer is available just after newContainerLoading is resolved!
      */
-
     var _this = this;
     var $el = $(this.newContainer);
 
