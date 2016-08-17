@@ -3,7 +3,8 @@ snippetName = "Blog Sidebar"
 ==
 {% set currentCategory = "" %} 
 
-<div class="col-xs-4  section-headline-text"  id="blog-posts-list">
+{# NOT IN USE YET #}
+<div class="col-xs-4  section-headline-text "  id="blog-posts-list">
         <div class="p-y-2">
             <div class="border-top"></div>
             <h3 class="text-xs-left">Lastest
@@ -37,8 +38,9 @@ snippetName = "Blog Sidebar"
                                 
                             </div>
                         {% endif%}
-
                     {% endfor %} 
+       
+
                 {% endif %}
         {% else %}
             <div class="no-data">{{ noPostsMessage }}</div>

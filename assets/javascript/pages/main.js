@@ -58,6 +58,8 @@ var initCarousel = function () {
  * 
  */
 var changeNavbar = function (dataset) {
+    
+    
 
 	var slideshow_height = 809 ;
 	var scroll_pos = $(window).scrollTop();
@@ -68,13 +70,13 @@ var changeNavbar = function (dataset) {
 			$('.navbar-brand').addClass("brand-hidden" );
 			$('#navbar-main').addClass("navbar-slim");
 			$('#slideshowHomeHTML').trigger('jumplink_slideshow_stop');
-			console.log('stop slideshow triggert');
+			// console.log('stop slideshow triggert');
 
 		} else {
 			$('#navbar-main').removeClass("navbar-slim");
 			$('.navbar-brand').removeClass("brand-hidden");
 			$('#slideshowHomeHTML').trigger('jumplink_resume_slideshow');
-			console.log('jumplink_resume_slideshow  triggert');
+			// console.log('jumplink_resume_slideshow  triggert');
 		}
 
 	} else {
@@ -160,7 +162,7 @@ var initHome = function (dataset) {
 
 	}else{
 		$(window).on('scrollstop', function () {
-			console.log('-----onscrollstop');
+			// console.log('-----onscrollstop');
 		    changeNavbar(dataset);
 		});
 		
@@ -333,14 +335,15 @@ var initTemplate = {
 
 
 /**
- * 
+ * reset main navigation and blog filter
  */
 var resetNav = function () {
-   cache.$navbarMain.find('ul.nav.navbar-nav li').removeClass('active');
+   	cache.$navbarMain.find('ul.nav.navbar-nav li').removeClass('active');
+ 	cache.$blogFilter.find('a').removeClass('btn-white-outline');
 };
 
 /**
- * 
+ * Set active state of main navigation
  */
 var setNav = function (selector) {
   	cache.$navbarMain.find('.main-navigation .nav-item'+selector).addClass('active');
@@ -348,47 +351,67 @@ var setNav = function (selector) {
 
 
 /**
- * 
+ * Handle main Nav / blog filter acyive state
  */
-var setNavActive = function (namespace) {
+var setNavActive = function (dataset, currentStatus) {
+    
+    
 	var lastClicked = null;
-	console.log($(cache.lastElementClicked).data("category") );
-	if( $(cache.lastElementClicked).data("category") ) {
-		lastClicked = $(cache.lastElementClicked).data("category");
-	}else{
-		lastClicked =  cache.$blogFilter.attr('class');
-		if(lastClicked=== 'all'){
-			lastClicked='allreports';
-		}
-	}
-  	resetNav();
-  	setNav('.'+namespace);
-
-	var initBlogFilter = function ( lastClicked ) {
-		cache.$blogFilter.find('a').removeClass('btn-white-outline');
 	
+	// split dataset.blogPostCategories string to array of categories
+	if( dataset && typeof(dataset.blogPostCategories) === 'string' ) {
+	   dataset.blogPostCategories = dataset.blogPostCategories.split(',');
+	   
+    	if( typeof(dataset.blogPostCategories) === 'string' ) {
+    	   dataset.blogPostCategories = [dataset.blogPostCategories]; // not working?
+    	}
+	}
+	
+	if ( lastClicked == 'all'){
+		lastClicked ='allreports';
+	}
+
+	lastClicked = dataset.blogCategorySlug;
+
+	if ( dataset.namespace == 'allreports') {
+		lastClicked ='allreports';
+	}
+
+	if ( dataset.namespace == 'post') {
+
+	}
+
+  	resetNav();
+  	setNav('.'+dataset.namespace);
+		
+	var setBlogFilterActiveState = function ( lastClicked ) {
 		// Schoener waere es hier das vorhandene data-attribute zuy verwenden, nur fehlt mir nich der passende selektor
 		// cache.$blogFilter.filter('[data-category="'+lastClicked+'"]').addClass('btn-white-outline'); ???
 		cache.$blogFilter.find('a.'+lastClicked).addClass('btn-white-outline');
-
 	}
 
-	switch(namespace) {
+	switch(dataset.namespace) {
 		case 'category': {
-			
-			if(lastClicked != null){
-				initBlogFilter(lastClicked);
+			if ( lastClicked != null) {
+				setBlogFilterActiveState( lastClicked );
 			}
-			//cache.$blogFilter.find().addClass('btn-white-outline');
-
-			//cache.$blogFilter.filter('[data-category="{{namespace}}"]').addClass('btn-white-outline');
 		}
 		break;
 		case 'allreports': {
-				console.log(lastClicked);
 			if(lastClicked != null){
-				initBlogFilter(lastClicked);
+				setBlogFilterActiveState( lastClicked );
 			}
+		}
+		break;
+		case 'post': {
+			var $categories = $(dataset.blogPostCategories.split(','));
+			$categories.each( function(index, object) {
+				console.log('each',index, object);
+				if (object != '') {
+					cache.$blogFilter.find('a.'+object).addClass('btn-white-outline');
+				}
+				console.log('each',index, object);
+			});
 		}
 		break;
 	}
@@ -431,7 +454,7 @@ var initTemplates = function () {
 	}else{
 		cache.$blogHeader.removeClass('active');
 	}
-    setNavActive(currentStatus.namespace);
+    setNavActive(container.dataset, currentStatus);
 
   });
 };

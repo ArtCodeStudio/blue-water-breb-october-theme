@@ -16,12 +16,17 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "all-reports"
 postPage = "post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "all-reports"
 ==
 <div class="blog-content-wrapper" data-target="#blog-content-wrapper" id="blog-content-wrapper"> 
 
     <div class="container">
 
-        <div class="col-xs-8  section-headline-text"  id="blog-content-column">
+        <div class="col-xs-8  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-content-column">
             
             <div class="col-xs-10 p-b-2 p-l-0">
                 <h3 class="card-title text-lg-left text-serif">{{ post.title }}</h3>
@@ -53,7 +58,7 @@ postPage = "post"
         
         {% set currentCategory = "" %}
         
-        <div class="col-xs-4  section-headline-text"  id="blog-posts-list">
+        <div class="col-xs-4  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-posts-list">
                 
             <div class="p-y-2" id="blog-sidebar-title">
                 <div class="border-top"></div>
@@ -63,16 +68,17 @@ postPage = "post"
                             <!-- interesing ...  category.url != category.name here :) -->
                             {{ category.name }}
                             {% set currentCategory = category.slug %}
-                    
                             {% if not loop.last %}, {% endif %}
                         {% endfor %} 
-                    {% endif %}    
-                    {% if currentCategory == 'blog' %}
+                    {% else %}
+                        Posts  
+                    {% endif %}  
+                    {#{% if currentCategory == 'blog' %}
                         Posts
-                    {% endif%}
+                    {% endif%}#}
                 </h3>   
             </div>
-            
+            {#{% partial 'blog/blog_sidebar' blogCategories=blogCategories%}#}
             {% for post in posts %}
                 {% if post.categories.count %} 
                     {% for category in post.categories %}
@@ -92,10 +98,28 @@ postPage = "post"
                                     </div>
                                 </a>
                             </div>
-                        {% endif%}
-
+                        {% endif %}
                     {% endfor %} 
+                {% else %}
+                    {% if loop.index <= 5 %}
+                        <div class="card card-block">
+                            <a href="{{ post.url }}">
+                                <div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
+                                <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
+
+                                <div class='latest-blog-posts-content-container'>
+                                    {{ post.summary }}
+                                </div>
+                                
+                                <div class="learn-more center-block text-xs-right">
+                                {# <a href="{{ post.url }}" class="">read more</a>#}
+                                    <div>read more</div>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
                 {% endif %}
+
             {% else %}
                 <div class="no-data">{{ noPostsMessage }}</div>
             {% endfor %}                

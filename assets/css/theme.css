@@ -7848,6 +7848,8 @@ nav .container {
 
 #post #blog-content-column {
   padding-top: 14rem; }
+  #post #blog-content-column.no-nav {
+    padding-top: 6rem; }
 
 #post #post-date {
   margin-top: 7px;
@@ -7858,6 +7860,8 @@ nav .container {
   padding-top: 14rem; }
   #post .blog-content-wrapper #blog-posts-list #blog-sidebar-title {
     padding-left: 20px; }
+  #post .blog-content-wrapper #blog-posts-list.no-nav {
+    padding-top: 6rem; }
 
 #post .blog-content-wrapper .card {
   border: 0 !important;

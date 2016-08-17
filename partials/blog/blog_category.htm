@@ -1,14 +1,14 @@
 [viewBag]
 ==
 <div id="reports" class="blog-content-wrapper"> 
-{{blogCategories.categories|length}}
+
 	<div class="container m-t-3 {% if blogCategories.categories|length == 0 %}no-nav{% endif %}" id="all-posts-container">
 
 		<div class="grid">
 
 			{% for post in posts %}
 				<div class="grid-item {{ post.categories[0].name|slug }}" data-category="{{ post.categories[0].name|slug }}">
-					<a href="{{ post.url }}" class="">
+					<a href="{{ post.url }}" class="" data-category="{{ post.categories[0].name|slug }}">
 
 						{% if post.featured_images.count %}
 							<div class="featured-images text-center "> 

@@ -387,11 +387,14 @@ nav .container {
 	}
 
 	#post{
-		
+		$no-nav-padding: 6rem;
 		$padding-top: 14rem;
 
 		#blog-content-column {
 			padding-top: $padding-top;
+			&.no-nav{
+				padding-top: $no-nav-padding;
+			}
 		}
 		#post-date{
 			margin-top: 7px;
@@ -405,6 +408,9 @@ nav .container {
 				padding-top: $padding-top;
 				#blog-sidebar-title {
 					padding-left:20px; //p-l-1 ist zu wenihger und p-l-2 zu viel
+				}
+				&.no-nav{
+					padding-top: $no-nav-padding;
 				}
 			}
 
