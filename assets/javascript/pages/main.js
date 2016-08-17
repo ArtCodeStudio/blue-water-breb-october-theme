@@ -352,11 +352,14 @@ var setNav = function (selector) {
  */
 var setNavActive = function (namespace) {
 	var lastClicked = null;
-	console.log($(cache.lastElementClicked).data("category"));
+	console.log($(cache.lastElementClicked).data("category") );
 	if( $(cache.lastElementClicked).data("category") ) {
-		lastClicked = $(cache.lastElementClicked).data("category")
+		lastClicked = $(cache.lastElementClicked).data("category");
 	}else{
-		// lastClicked = "allreports";
+		lastClicked =  cache.$blogFilter.attr('class');
+		if(lastClicked=== 'all'){
+			lastClicked='allreports';
+		}
 	}
   	resetNav();
   	setNav('.'+namespace);

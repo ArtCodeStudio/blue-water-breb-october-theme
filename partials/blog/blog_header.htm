@@ -23,7 +23,7 @@ function onEnd()
 	{% set currentCategory = post.categories[0].slug %}
 	<div class="container blog-header-container">
   		
-		<nav id="blog-filter">
+		<nav id="blog-filter" class="{{queryString}}">
             
             <a href="/reports" class="nav-link btn text-serif allreports
                 {% if queryString == 'all' %} 
