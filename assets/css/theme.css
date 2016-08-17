@@ -7811,7 +7811,7 @@ nav .container {
   background-color: #eceeef; }
 
 #category #all-posts-container, #allreports #all-posts-container {
-  padding-top: 14rem !important; }
+  padding-top: 14rem; }
   #category #all-posts-container .grid-item, #allreports #all-posts-container .grid-item {
     width: 350px;
     float: left;
@@ -7838,6 +7838,8 @@ nav .container {
               transition-timing-function: ease; }
     #category #all-posts-container .grid-item:hover, #allreports #all-posts-container .grid-item:hover {
       border: 1px solid #4053a4; }
+  #category #all-posts-container.no-nav, #allreports #all-posts-container.no-nav {
+    padding-top: 3rem; }
 
 #category .grid, #allreports .grid {
   background: #EEE;

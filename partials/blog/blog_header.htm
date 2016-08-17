@@ -6,8 +6,8 @@ displayEmpty = 0
 categoryPage = "all-reports"
 ==
 <?php
-function onEnd() 
-{    
+function onEnd()
+{
 	if( $this->param('slug') == null ) {
 		//echo "no query string";
 		$this['queryString' ] = "all";
@@ -18,33 +18,34 @@ function onEnd()
 }
 ?>
 ==
-<div class="bg-primary" id="blog-header-wrapper">
 
-	{% set currentCategory = post.categories[0].slug %}
-	<div class="container blog-header-container">
-  		
-		<nav id="blog-filter" class="{{queryString}}">
-            
-            <a href="/reports" class="nav-link btn text-serif allreports
-                {% if queryString == 'all' %} 
-                    btn-white-outline 
-                {%endif%}
-                data-category="all">
-                All Reports
-            </a>  
-            
-      		{% for category in blogCategories.categories %}
-               
-    			<a href="/reports/category/{{category.slug}}" class="nav-link btn text-serif {{category.slug}}
-	                {% if currentCategory == '{{category.slug}}' or queryString == '{{category.slug}}' %} 
-					    btn-white-outline 
-				    {%endif%}"
-    				data-category="{{category.slug}}">
-    				{{category.name}}
-    			</a>  
-    		{% endfor %}       
-		</nav>
+{% if blogCategories.categories|length > 0 %}
+	<div class="bg-primary" id="blog-header-wrapper">
+		{% set currentCategory = post.categories[0].slug %}
+		<div class="container blog-header-container">
 
+			<nav id="blog-filter" class="{{queryString}}">
+
+				<a href="/reports" class="nav-link btn text-serif allreports
+					{% if queryString == 'all' %}
+						btn-white-outline
+					{%endif%}
+					data-category="all">
+					All Reports
+				</a>
+
+				{% for category in blogCategories.categories %}
+
+					<a href="/reports/category/{{category.slug}}" class="nav-link btn text-serif {{category.slug}}
+						{% if currentCategory == '{{category.slug}}' or queryString == '{{category.slug}}' %}
+							btn-white-outline
+						{%endif%}"
+						data-category="{{category.slug}}">
+						{{category.name}}
+					</a>
+				{% endfor %}
+			</nav>
+
+		</div>
 	</div>
-
-</div>
+{% endif %}

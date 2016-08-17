@@ -348,7 +348,7 @@ nav .container {
 		}
 
 		#all-posts-container {
-			padding-top: 14rem !important;
+			padding-top: 14rem;
 			.grid-item {
 				width: 350px;
 				float: left;
@@ -370,6 +370,9 @@ nav .container {
 					@extend .z-depth-1-half;
 					border: 1px solid  $brand-primary;
 				}
+			}
+			&.no-nav{
+				padding-top: 3rem;
 			}
 		
 		}
