@@ -333,7 +333,12 @@ var resetNav = function () {
  * Set active state of main navigation
  */
 var setNav = function (selector) {
-  	cache.$navbarMain.find('.main-navigation .nav-item'+selector).addClass('active');
+	// keep highlight for all blog-sub pages
+	if ( selector == '.allreports' || selector == '.category' || selector == '.post') {
+		cache.$navbarMain.find('.main-navigation .nav-item.reports').addClass('active');
+	} else{
+  		cache.$navbarMain.find('.main-navigation .nav-item'+selector).addClass('active');
+	}
 };
 
 
@@ -341,7 +346,6 @@ var setNav = function (selector) {
  * Handle main Nav / blog filter acyive state
  */
 var setNavActive = function (dataset, currentStatus) {
-    
     
 	var lastClicked = null;
 	
@@ -369,6 +373,7 @@ var setNavActive = function (dataset, currentStatus) {
 	}
 
   	resetNav();
+
   	setNav('.'+dataset.namespace);
 		
 	var setBlogFilterActiveState = function ( lastClicked ) {
