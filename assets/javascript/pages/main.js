@@ -260,36 +260,15 @@ var initBlog = function (dataset) {
     
     changeBlogHeaderHeight();
     
-	/*
-	TODO : replace with masonry
-	*/
-    /**
-     * ISOTOPE
-     * http://isotope.metafizzy.co/methods.html#adding-and-removing-items
-     */
-    var $grid = $('.grid').isotope({
-    	itemSelector: '.grid-item',
-    	layoutMode: 'masonry',
-    	masonry: {
-    		columnWidth: 350,
-    		isFitWidth: true,
-    		gutter:30
-    	},
-    });
-    
-    /**
-     * FILTER 
-     */
-    // $(document).on('click', "#blog-filter a", function (e) {
-    // 	//e.preventDefault();
-    // 	var $category = $(this).data("category") ;
-    // 	// console.log("check",$(this).data("category"));
-    // 	$grid.isotope({ filter: '.' + $category });
-    // 	if($category == 'all') {
-    // 		$grid.isotope({ filter: '' });
-    // 	}
-    // });
-
+	var initMasonry = function() {
+		$('.grid').masonry({
+		itemSelector: '.grid-item',
+		columnWidth: 350,
+		isFitWidth: true,
+		gutter:30
+		});
+	}
+	initMasonry();    
 	
 };
 
