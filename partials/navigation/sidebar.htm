@@ -1,4 +1,9 @@
 [viewBag]
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
 ==
 <button class="navbar-toggler hidden-md-up" type="button">
     &#9776;
@@ -9,14 +14,36 @@
         <a href="/" title="home" class="sidebar-brand p-a-1">
             <img class="img-fluid" src="{{'/assets/images/logo/BX_RZ_BremerReederei_pos_RGB.jpg' | theme}}" alt="JumpLink Logo">
         </a>
-
-         <!--<a href="/" class="navbar-brand">&nbsp;</a>-->
-        <div class="list-group">
-            <a href="{% if this.page.id != 'home' %}{{'home'|page}}{% endif %}/shipping" class="close-sidebar list-group-item">Shipping</a></li>
-            <a href="{% if this.page.id != 'home' %}{{'home'|page}}{% endif %}liner-services" class="close-sidebar list-group-item">Liner Services</a></li>
-            <a href="{% if this.page.id != 'home' %}{{'home'|page}}{% endif %}port-agency" class="close-sidebar list-group-item">Port Agency</a>
-            <a href="{% if this.page.id != 'home' %}{{'home'|page}}{% endif %}offshore" class="close-sidebar list-group-item">Offshore</a>
-            <a href="{% if this.page.id != 'home' %}{{'home'|page}}{% endif %}contact" class="close-sidebar list-group-item">Contact</a>          
-        </div>
+        {% for item in items %}
+            <div class="list-group {{item.viewBag.cssClass}}">
+                {% if item.url %}
+                     {% if category.name == 'Blog' %}
+                        <a href="/reports/category/reports/blog" class="close-sidebar list-group-item">
+                            Blog
+                        </a>                
+                     {% else %}
+                        <a href="{{ item.url }}" class="close-sidebar list-group-item">
+                            {{ item.title }} 
+                        </a>
+                     {% endif %}
+                
+                    {% if item.title == 'Blog' %}
+                        <div class="list-group {{item.viewBag.cssClass}}">
+                            <a href="/reports/category/reports" class="m-l-1 close-sidebar list-group-item list-group-sub-item">
+                                All Reports
+                            </a>
+                            {% for category in blogCategories.categories %}
+                                {% if category.name != 'Blog' %}
+                                    <a href="/reports/category/{{ category.slug }}" class="m-l-1 close-sidebar list-group-item list-group-sub-item">
+                                        {{ category.name }}
+                                    </a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                
+                {% endif %}
+            </div>
+        {% endfor %}
     </div>
 </div>

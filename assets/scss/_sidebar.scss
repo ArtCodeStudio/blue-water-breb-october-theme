@@ -1,9 +1,28 @@
-.sidebar-wrapper {
-  position: relative;
-  height: 100%;
-  overflow: auto;
+
+
+
+.navbar-toggler{
+  //color: white;
 }
+
 
 #sidebar {
 	display: none;
+
+  .sidebar-wrapper {
+    
+    position: relative;
+    height: 100%;
+    overflow: auto;
+
+    li {
+      list-style: none;
+    }
+
+    .list-group-sub-item {
+
+    }
+
+  }
 }
+

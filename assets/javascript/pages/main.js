@@ -125,28 +125,35 @@ var initSidebar = function (dataset) {
 	 * https://github.com/simple-sidebar/simpler-sidebar/issues/25#issuecomment-236579696
      */
 	var $sidebar = $( "#sidebar" );
-	$sidebar
-	.show() // already tried to remove
-	.simplerSidebar( {
-		align: "left", // the new sidear.align
-		selectors: {
-			trigger: ".navbar-toggler", // the new opener
-			quitter: ".close-sidebar" // the new closingLinks
-		},
-		animation: {
-			easing: "easeOutQuint"
-		},
-		sidebar: {
-			width: 250
-		},
-		events: {
-			callbacks: {
-				animation: {
-					freezePage: false
+	
+	/* only initialize sidebar once */
+	if ( ! $sidebar.hasClass('initialized') ) { 
+
+		$sidebar
+		.show() // already tried to remove
+		.simplerSidebar( {
+			align: "left", // the new sidear.align
+			selectors: {
+				trigger: ".navbar-toggler", // the new opener
+				quitter: ".close-sidebar" // the new closingLinks
+			},
+			animation: {
+				easing: "easeOutQuint"
+			},
+			sidebar: {
+				width: 250
+			},
+			events: {
+				callbacks: {
+					animation: {
+						freezePage: false
+					}
 				}
 			}
-		}
-	});
+		});
+		$sidebar.addClass('initialized');
+
+	}
 };
 
 
@@ -429,8 +436,8 @@ var initTemplates = function () {
 		currentStatus.namespace === 'allreports' || 
 		currentStatus.namespace === 'category' || 
 		currentStatus.namespace === 'post') {
-			 //wenn ich das direkt in scss setzte gibt es einen srung und kein fade
-			//cache.$blogHeader.addClass('active');
+			// wenn ich das direkt in scss setzte gibt es einen srung und kein fade
+			// cache.$blogHeader.addClass('active');
 			cache.$blogHeader.css('display','block');
 			cache.$blogHeader.animate({opacity:1},250);
 	}else{

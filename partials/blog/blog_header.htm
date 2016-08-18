@@ -19,7 +19,7 @@ function onEnd()
 ?>
 ==
 {% if blogCategories.categories|length > 0 %}
-	<div class="bg-primary" id="blog-header-wrapper">
+	<div class="bg-primary hidden-sm-down" id="blog-header-wrapper">
 
 		{% if post.categories|length == 0 %}
 			{% set currentCategory = 'allreports' %}
