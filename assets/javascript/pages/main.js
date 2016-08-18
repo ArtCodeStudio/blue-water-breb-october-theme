@@ -429,9 +429,18 @@ var initTemplates = function () {
 		currentStatus.namespace === 'allreports' || 
 		currentStatus.namespace === 'category' || 
 		currentStatus.namespace === 'post') {
-		cache.$blogHeader.addClass('active');
+			 //wenn ich das direkt in scss setzte gibt es einen srung und kein fade
+			//cache.$blogHeader.addClass('active');
+			cache.$blogHeader.css('display','block');
+			cache.$blogHeader.animate({opacity:1},250);
 	}else{
-		cache.$blogHeader.removeClass('active');
+		//cache.$blogHeader.removeClass('active');
+		cache.$blogHeader.animate({
+			opacity:0,
+			complete: function() {
+				cache.$blogHeader.css('display','none');
+			}
+		},250);
 	}
     setNavActive(container.dataset, currentStatus);
 

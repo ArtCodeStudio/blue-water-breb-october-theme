@@ -1,6 +1,15 @@
 name: main
 items:
     -
+        title: Blog
+        type: url
+        url: /reports
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: reports
+            isExternal: '0'
+    -
         title: Shipping
         nesting: ''
         type: url
@@ -15,18 +24,26 @@ items:
             isExternal: '0'
     -
         title: 'Liner Services'
+        nesting: ''
         type: url
         url: /liner-services
         code: liner-services
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: linerservices
             isExternal: '0'
     -
         title: 'Port Agency'
+        nesting: ''
         type: url
         url: /port-agency
         code: port-agency
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: portagency

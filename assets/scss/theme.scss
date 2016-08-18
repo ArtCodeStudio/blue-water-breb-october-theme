@@ -296,8 +296,8 @@ nav .container {
 			text-align:center;
 		}
 		&.active {
-			display:block;
-			opacity:1;
+			// display:block;
+			//opacity:1;
 		}
 
 		.blog-header-container {
@@ -408,6 +408,9 @@ nav .container {
 				padding-top: $padding-top;
 				#blog-sidebar-title {
 					padding-left:20px; //p-l-1 ist zu wenihger und p-l-2 zu viel
+				}
+				.category-title{
+					padding:20px;
 				}
 				&.no-nav{
 					padding-top: $no-nav-padding;

@@ -7785,9 +7785,6 @@ nav .container {
 		**/ }
   #blog-header-wrapper .blog-header-container {
     text-align: center; }
-  #blog-header-wrapper.active {
-    display: block;
-    opacity: 1; }
   #blog-header-wrapper .blog-header-container #blog-filter .nav-link {
     color: white;
     margin-top: 3rem; }
@@ -7860,6 +7857,8 @@ nav .container {
   padding-top: 14rem; }
   #post .blog-content-wrapper #blog-posts-list #blog-sidebar-title {
     padding-left: 20px; }
+  #post .blog-content-wrapper #blog-posts-list .category-title {
+    padding: 20px; }
   #post .blog-content-wrapper #blog-posts-list.no-nav {
     padding-top: 6rem; }
 
