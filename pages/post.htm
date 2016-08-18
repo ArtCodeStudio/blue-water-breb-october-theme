@@ -109,15 +109,15 @@ categoryPage = "all-reports"
 
             {% endfor %}
 
-
+{#
             {% for p in posts %}
                 {% if p.categories.count %} 
-                    {% for category in p.categories %}
+                    {% for category in p.categories %}#}
                     {#posts: {{loop.index}} {{category.slug}}{{category.title}} |#}
                         
 
-
-                    {% endfor %} 
+{#
+                    {% endfor %} #}
                 {#{% else %} 
                     {% if loop.index <= 5 %}
                         <div class="card card-block">
@@ -135,11 +135,11 @@ categoryPage = "all-reports"
                             </a>
                         </div>
                     {% endif %}#}
-                {% endif %}
-
+                {#{% endif %}#}
+{#
             {% else %}
                 <div class="no-data">{{ noPostsMessage }}</div>
-            {% endfor %}                
+            {% endfor %}                #}
         </div>
 
     </div>
