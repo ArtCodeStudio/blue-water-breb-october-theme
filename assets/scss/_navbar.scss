@@ -35,7 +35,7 @@
 			background-repeat: no-repeat;
 			background-position: center bottom;
 			background-size: 100% auto;
-			z-index: 999;
+			z-index: -1;
 			&.brand-hidden {
 				opacity:0 !important;
 				height:0 !important;

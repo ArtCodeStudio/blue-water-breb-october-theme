@@ -125,7 +125,7 @@ var initSidebar = function (dataset) {
 	 * https://github.com/simple-sidebar/simpler-sidebar/issues/25#issuecomment-236579696
      */
 	var $sidebar = $( "#sidebar" );
-	
+
 	/* only initialize sidebar once */
 	if ( ! $sidebar.hasClass('initialized') ) { 
 
@@ -401,6 +401,11 @@ var setNavActive = function (dataset, currentStatus) {
 			});
 		}
 		break;
+		default: {
+			//console.log('default');
+			// don't work with teh cached var ?
+			$("#blog-header-wrapper").css('display','none');
+		}
 	}
 };
 
