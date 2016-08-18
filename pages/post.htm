@@ -23,14 +23,6 @@ displayEmpty = 0
 categoryPage = "all-reports"
 ==
 
-<?php
-function onEnd()
-{
-
-//$user = Db::table('users')->where('name', 'John')->first();
-//echo $users;
-}
-?>
 ==
 <div class="blog-content-wrapper" data-target="#blog-content-wrapper" id="blog-content-wrapper"> 
 
@@ -75,18 +67,6 @@ function onEnd()
         
         <div class="col-xs-4  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-posts-list">
 
-
-{#
-currentPost
-posts
-
-POSTS 
-    POST
-        categories
-
-
-
-#}
             {% set currentPost = post %}
 
             <div class="p-y-2" id="blog-sidebar-title">
@@ -104,11 +84,10 @@ POSTS
 
 
             {# SHOW POSTS OF SAME CATEGORIES#}
-            {#{% for category in post.categories %}
-                
+            {% for category in post.categories %}
                 {% for p in posts %}
-                    {% for c in post.categories %}
-                        {% if c.slug == category.slug%}
+                    {% for c in post.categories %} {# categories of current post #}
+                        {% if c.slug == category.slug %} 
                             <div class="card card-block">
                                 <a href="{{ p.url }}">
                                     <div class="text-sm-right">{{ p.published_at|date('M d, Y') }}</div>
@@ -128,7 +107,7 @@ POSTS
                     {% endfor %}
                 {% endfor %}
 
-            {% endfor %}#}
+            {% endfor %}
 
 
             {% for p in posts %}
