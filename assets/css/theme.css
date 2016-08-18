@@ -7881,3 +7881,11 @@ nav .container {
 
 #post .blog-content-wrapper .learn-more {
   color: #4053a4; }
+
+#footer-contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }

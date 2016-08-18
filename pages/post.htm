@@ -22,6 +22,16 @@ slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "all-reports"
 ==
+
+<?php
+function onEnd()
+{
+
+//$user = Db::table('users')->where('name', 'John')->first();
+//echo $users;
+}
+?>
+==
 <div class="blog-content-wrapper" data-target="#blog-content-wrapper" id="blog-content-wrapper"> 
 
     <div class="container">
@@ -55,69 +65,97 @@ categoryPage = "all-reports"
             {% endif %}
 
         </div>
+                    
+        {#{% partial 'blog/blog_sidebar' blogCategories=blogCategories%}#}
         
+        {#
+         BLOG SIDEBAR NAVIGATION
+        #}
         {% set currentCategory = "" %}
         
         <div class="col-xs-4  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-posts-list">
-                
+
+
+{#
+currentPost
+posts
+
+POSTS 
+    POST
+        categories
+
+
+
+#}
+            {% set currentPost = post %}
+
             <div class="p-y-2" id="blog-sidebar-title">
                 <div class="border-top"></div>
                 <h3 class="text-xs-left text-serif">Lastest
                     {% if post.categories.count %} 
                         {% for category in post.categories %}
-                            <!-- interesing ...  category.url != category.name here :) -->
                             {{ category.name }}
                             {% set currentCategory = category.slug %}
                             {% if not loop.last %}, {% endif %}
                         {% endfor %} 
-                    {% else %}
-                        Posts  
                     {% endif %}  
-                    {#{% if currentCategory == 'blog' %}
-                        Posts
-                    {% endif%}#}
                 </h3>   
             </div>
-            {#{% partial 'blog/blog_sidebar' blogCategories=blogCategories%}#}
-            {% for post in posts %}
-                {% if post.categories.count %} 
-                    {% for category in post.categories %}
-                        {% if category.slug == currentCategory %}
+
+
+            {# SHOW POSTS OF SAME CATEGORIES#}
+            {#{% for category in post.categories %}
+                
+                {% for p in posts %}
+                    {% for c in post.categories %}
+                        {% if c.slug == category.slug%}
                             <div class="card card-block">
-                                <a href="{{ post.url }}">
-                                    <div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
-                                    <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
+                                <a href="{{ p.url }}">
+                                    <div class="text-sm-right">{{ p.published_at|date('M d, Y') }}</div>
+                                    <h4 class="card-title text-lg-left text-serif">{{ p.title }}</h4>
 
                                     <div class='latest-blog-posts-content-container'>
-                                        {{ post.summary }}
+                                        {{ p.summary }}
                                     </div>
                                     
                                     <div class="learn-more center-block text-xs-right">
-                                    {# <a href="{{ post.url }}" class="">read more</a>#}
+                            
                                         <div>read more</div>
                                     </div>
                                 </a>
                             </div>
                         {% endif %}
+                    {% endfor %}
+                {% endfor %}
+
+            {% endfor %}#}
+
+
+            {% for p in posts %}
+                {% if p.categories.count %} 
+                    {% for category in p.categories %}
+                    {#posts: {{loop.index}} {{category.slug}}{{category.title}} |#}
+                        
+
+
                     {% endfor %} 
-                {% else %}
+                {#{% else %} 
                     {% if loop.index <= 5 %}
                         <div class="card card-block">
-                            <a href="{{ post.url }}">
-                                <div class="text-sm-right">{{ post.published_at|date('M d, Y') }}</div>
-                                <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
+                            <a href="{{ p.url }}">
+                                <div class="text-sm-right">{{ p.published_at|date('M d, Y') }}</div>
+                                <h4 class="card-title text-lg-left text-serif">{{ p.title }}</h4>
 
                                 <div class='latest-blog-posts-content-container'>
-                                    {{ post.summary }}
+                                    {{ p.summary }}
                                 </div>
                                 
                                 <div class="learn-more center-block text-xs-right">
-                                {# <a href="{{ post.url }}" class="">read more</a>#}
                                     <div>read more</div>
                                 </div>
                             </a>
                         </div>
-                    {% endif %}
+                    {% endif %}#}
                 {% endif %}
 
             {% else %}
