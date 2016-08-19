@@ -1,15 +1,6 @@
 name: main
 items:
     -
-        title: Blog
-        type: url
-        url: /reports
-        code: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: reports
-            isExternal: '0'
-    -
         title: Shipping
         nesting: ''
         type: url
@@ -73,4 +64,13 @@ items:
         viewBag:
             isHidden: '0'
             cssClass: contact
+            isExternal: '0'
+    -
+        title: Reports
+        type: url
+        url: /reports
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: reports
             isExternal: '0'

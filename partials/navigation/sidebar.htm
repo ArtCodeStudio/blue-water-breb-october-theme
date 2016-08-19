@@ -10,34 +10,29 @@ categoryPage = "blog/category"
 </button>
 <!-- http://dcdeiv.github.io/simpler-sidebar/ -->
 <div id="sidebar" class=''>
-    <div id="sidebar-wrapper" class="sidebar-wrapper bg-primary z-depth-1">
+    <div id="sidebar-wrapper" class="sidebar-wrapper bg-body z-depth-1">
         <a href="/" title="home" class="sidebar-brand p-a-1">
             <img class="img-fluid" src="{{'/assets/images/logo/BX_RZ_BremerReederei_pos_RGB.jpg' | theme}}" alt="JumpLink Logo">
         </a>
         {% for item in items %}
             <div class="list-group {{item.viewBag.cssClass}}">
                 {% if item.url %}
-                     {% if category.name == 'Blog' %}
-                        <a href="/reports/category/reports/blog" class="close-sidebar list-group-item">
-                            Blog
-                        </a>                
-                     {% else %}
-                        <a href="{{ item.url }}" class="close-sidebar list-group-item">
-                            {{ item.title }} 
-                        </a>
-                     {% endif %}
+
+                    <a href="{{ item.url }}" class="close-sidebar list-group-item">
+                        {{ item.title }} 
+                    </a>
                 
-                    {% if item.title == 'Blog' %}
+                    {% if item.title == 'Reports' %}
                         <div class="list-group {{item.viewBag.cssClass}}">
-                            <a href="/reports/category/reports" class="m-l-1 close-sidebar list-group-item list-group-sub-item">
+                            <a href="/reports/category/reports" class="p-l-3 close-sidebar list-group-item list-group-sub-item">
                                 All Reports
                             </a>
                             {% for category in blogCategories.categories %}
-                                {% if category.name != 'Blog' %}
-                                    <a href="/reports/category/{{ category.slug }}" class="m-l-1 close-sidebar list-group-item list-group-sub-item">
-                                        {{ category.name }}
-                                    </a>
-                                {% endif %}
+                               
+                                <a href="/reports/category/{{ category.slug }}" class="p-l-3 close-sidebar list-group-item list-group-sub-item">
+                                    {{ category.name }}
+                                </a>
+                         
                             {% endfor %}
                         </div>
                     {% endif %}

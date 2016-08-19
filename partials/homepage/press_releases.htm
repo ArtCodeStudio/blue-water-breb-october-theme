@@ -41,7 +41,7 @@ function onEnd(){
 
 				{% for post in posts %}
 
-					<div class="card text-center m-y-1">
+					<div class="card text-center m-t-1">
 						
 						{% if post.featured_images.count %}
 							{% for image in post.featured_images %}
@@ -71,42 +71,9 @@ function onEnd(){
 
 			</div>
 		</div>
-
-	{#
-		<div class="row">
-			<div class="card-group">
-				{% for post in posts %}
-					<div class="col-xs-12 col-md-4">
-						<div class="card">
-							<div class='content'>
-								{% if post.featured_images.count %}
-									{% for image in post.featured_images %}
-										<a href="#" class="background-box ratio-16-9 m-x-1" style="display:block; background-image: url({{ image.path }});" title="{{ image.description }}"></a>
-									{% endfor %}
-								{% else %}
-									<img class="card-img-top img-fluid" src="http://placehold.it/340x173"/>
-								{% endif %}		
-							</div>
-							
-							<div class="card-block">
-								<p class="text-xs-right">{{ post.published_at|date('M d, Y') }}</p>
-								<h4 class="card-title text-xs-left">{{ post.title }}</h4>
-								<div class='overview-content-container'>
-									{{ post.summary }}
-								</div>
-								<div class="learn-more center-block text-xs-right">
-									<a href="{{ post.url }}" class="">read more</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				{% else %}
-					<div class="no-data">{{ noPostsMessage }}</div>
-				{% endfor %}
-			</div>
-		</div>
-	#}
 	</div>
 
-	
+	<div class="col-xs-12 text-xs-center section-headline-text p-y-3" >
+		<a href="/reports/category/press-release" class="btn btn-blue-outline">go to press</a>
+	</div>	
 </div>

@@ -1,8 +1,11 @@
 
 
 
-.navbar-toggler{
-  //color: white;
+.navbar-toggler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 

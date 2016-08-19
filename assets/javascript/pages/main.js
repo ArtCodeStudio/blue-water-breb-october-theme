@@ -59,8 +59,6 @@ var initCarousel = function () {
  */
 var changeNavbar = function (dataset) {
     
-    
-
 	var slideshow_height = 809 ;
 	var scroll_pos = $(window).scrollTop();
 
@@ -426,7 +424,10 @@ var initTemplates = function () {
   
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
 
-    // console.log("barba.js new page ready. Dataset: ", container);
+	// Stop ALL slideshows
+    $(document).trigger('jumplink_slideshow_stop');
+	
+	// console.log("barba.js new page ready. Dataset: ", container);
     currentNamespace = currentStatus.namespace;
 	// TODO is a new load necessary?
     // Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs

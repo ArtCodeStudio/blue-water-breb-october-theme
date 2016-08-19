@@ -16,6 +16,13 @@
 @import 'card';
 @import 'fonts';
 
+body {
+	max-width: 100%; // fallback
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
+
 hr {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
@@ -42,7 +49,9 @@ nav .container {
 
 #default-layout-container {
 	margin-top: 140px;
+	//position: fixed;
 }
+
 
 .card {
 	border: 1px solid $brand-primary;

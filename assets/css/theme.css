@@ -7440,7 +7440,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   #navbar-main .navbar-brand {
     min-width: 420px;
     height: 64px;
-    margin-top: 30px !important;
+    margin-top: 30px;
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
     position: absolute;
@@ -7452,20 +7452,30 @@ a.bg-danger:focus, a.bg-danger:hover {
     #navbar-main .navbar-brand.brand-hidden {
       opacity: 0 !important;
       height: 0 !important; }
-    @media (max-width: 767px) {
+    @media (min-width: 1200px) {
       #navbar-main .navbar-brand {
-        min-width: 530px;
-        height: 99px; } }
+        min-width: 400px !important;
+        height: 74px; } }
+    @media (min-width: 992px) {
+      #navbar-main .navbar-brand {
+        margin-top: 19px;
+        min-width: 279px; } }
     @media (max-width: 991px) {
       #navbar-main .navbar-brand {
-        margin-top: 17px !important;
-        min-width: 238px !important; } }
+        margin-top: 11px;
+        min-width: 145px; } }
 
 .border-bottom {
   border-bottom: 1px solid; }
 
 .main-navigation.small {
   margin-top: 0; }
+
+.navbar-toggler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; }
 
 #sidebar {
   display: none; }
@@ -7600,6 +7610,11 @@ a.bg-danger:focus, a.bg-danger:hover {
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-top,
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-bottom {
           border-radius: 0; } }
+
+body {
+  max-width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden; }
 
 hr {
   margin-top: 1rem;
