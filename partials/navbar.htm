@@ -2,22 +2,25 @@
 
 [staticMenu main]
 code = "main"
+
+[staticMenu footer]
+code = "footer"
 ==
 <div class="navbar-wrapper bg-body navbar-fixed-top">
-    <div class="container hidden-sm-down ">
-        <nav class="navbar navbar-light" id="navbar-main">
-            <div>
-                <a href="/" class="navbar-brand">&nbsp;</a>
-            </div>
-            {% partial 'navigation/navbar-items' 
-                items=main.menuItems 
-                class='nav navbar-nav pull-xs-right hidden-sm-down main-navigation'
-                itemClass='nav-item'
-            %}
-        </nav>
-    </div>
+	<div class="container hidden-sm-down ">
+		<nav class="navbar navbar-light" id="navbar-main">
+			<div>
+				<a href="/" class="navbar-brand">&nbsp;</a>
+			</div>
+			{% partial 'navigation/navbar-items'
+				items=main.menuItems
+				class='nav navbar-nav pull-xs-right hidden-sm-down main-navigation'
+				itemClass='nav-item'
+			%}
+		</nav>
+	</div>
 </div>
-
-{% partial 'navigation/sidebar' 
-     items=main.menuItems 
+{% partial 'navigation/sidebar'
+	main_items=main.menuItems
+	footer_items=footer.menuItems
 %}

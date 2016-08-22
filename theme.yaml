@@ -12,8 +12,6 @@ form:
             type: mediafinder
             mode: image
         location_bremen:
-            #label: Bremen
-            #comment: The website name as it should appear on the front-end
             default: BREB GmbH & Co.KG
         location_breme1:
             default:

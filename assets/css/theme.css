@@ -7445,6 +7445,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     transition: all .25s ease-in-out;
     position: absolute;
     background-image: url(../images/logo/BX_RZ_BremerReederei_pos_RGB.png);
+    /* BX_RZ_BremerReederei_pos_4d.svg */
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: 100% auto;
@@ -7471,11 +7472,17 @@ a.bg-danger:focus, a.bg-danger:hover {
 .main-navigation.small {
   margin-top: 0; }
 
+.navbar-phone {
+  height: 2.2rem;
+  border-bottom: 1px solid #4053a4; }
+
 .navbar-toggler {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1; }
+  z-index: 10001; }
+  .navbar-toggler:focus {
+    outline: 0; }
 
 #sidebar {
   display: none; }
@@ -7483,6 +7490,37 @@ a.bg-danger:focus, a.bg-danger:hover {
     position: relative;
     height: 100%;
     overflow: auto; }
+    #sidebar .sidebar-wrapper .list-group .list-group-item {
+      border: none;
+      padding: 0.75rem 2.4rem; }
+    #sidebar .sidebar-wrapper .list-group .list-group-sub-item {
+      padding: 0.75rem 0 0rem 3.75rem !important; }
+    #sidebar .sidebar-wrapper .list-group .list-group-alternative-item {
+      padding: 0.75rem 0 0rem 2.5rem !important; }
+    #sidebar .sidebar-wrapper .list-group.contact a {
+      color: #ef2a21; }
+    #sidebar .sidebar-wrapper .list-group.contact a:first-child {
+      padding: 0 0 0rem 2.5rem !important; }
+    #sidebar .sidebar-wrapper .list-group a {
+      color: rgba(0, 0, 0, 0.3);
+      -webkit-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+      -webkit-transition-delay: 0s;
+              transition-delay: 0s;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+      -webkit-transition-property: all;
+      transition-property: all;
+      -webkit-transition-timing-function: ease;
+              transition-timing-function: ease; }
+      #sidebar .sidebar-wrapper .list-group a:hover, #sidebar .sidebar-wrapper .list-group a:focus {
+        background-color: rgba(1, 1, 1, 0) !important;
+        color: #4053a4; }
+    #sidebar .sidebar-wrapper .sidebar-brand img {
+      width: 64%;
+      margin-left: 2rem; }
+    #sidebar .sidebar-wrapper hr {
+      margin-top: 2rem; }
     #sidebar .sidebar-wrapper li {
       list-style: none; }
 

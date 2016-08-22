@@ -1,0 +1,51 @@
+name: footer
+items:
+    -
+        title: About
+        type: url
+        url: /about
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: about
+            isExternal: '0'
+    -
+        title: Jobs
+        type: url
+        url: /jobs
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: jobs
+            isExternal: '0'
+    -
+        title: Agency
+        type: url
+        url: /port-agency
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: agency
+            isExternal: '0'
+    -
+        title: Environment
+        nesting: ''
+        type: url
+        url: /
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: environment
+            isExternal: '0'
+    -
+        title: History
+        type: url
+        url: /history
+        code: history
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
