@@ -312,12 +312,14 @@ var initJobs = function () {
 var initEnvironment = function () {
    
 };
+
 /**
  * 
  */
 var initHistory = function () {
    
 };
+
 /**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
