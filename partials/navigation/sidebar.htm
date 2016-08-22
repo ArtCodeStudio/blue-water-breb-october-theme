@@ -44,10 +44,11 @@ categoryPage = "blog/category"
                     {% endif %}
             {% endfor %}
         </div>
-        
+
         {# LOGO #}
         <a href="/" title="home" class="sidebar-brand p-a-1">
-            <img class="img-fluid" src="{{'/assets/images/logo/BX_RZ_BremerReederei_pos_4d.svg' | theme}}" alt="JumpLink Logo">
+            {#<img class="img-fluid" src="{{'/assets/images/logo/BX_RZ_BremerReederei_pos_4d.svg' | theme}}" alt="Breb Logo">#}
+            <img class="img-fluid" src="{{ this.theme.primary_brand | media }}" alt="Breb Logo">
         </a>
 
         {# CONTACT #}
@@ -69,6 +70,14 @@ categoryPage = "blog/category"
 </div>
 
 {# NAVBAR TOGGLE BUTTON #}
-<button class="navbar-toggler hidden-md-up" type="button">
+{#<button class="navbar-toggler hidden-md-up" type="button">
     &#9776;
-</button>
+</button>#}
+
+<div class="toggle-sidebar">
+    <button type="button" class="hidden-md-up tcon tcon-menu--xcross" aria-label="toggle menu">
+        <span class="tcon-menu__lines" aria-hidden="true"></span>
+        <span class="tcon-visuallyhidden">toggle menu</span>
+    </button>
+</div>
+

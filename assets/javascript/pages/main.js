@@ -8,6 +8,8 @@ var cache = {
 
 var currentNamespace = null;
 
+
+
 /**
  * Homepage Latest log Posts Carousel
  */
@@ -113,10 +115,14 @@ var sameHeightCards = function (selector) {
 };
 
 
+
+
 /**
  *  
  */
 var initSidebar = function (dataset) {
+	
+	transformicons.add('.tcon');
 
  	/**
      * @see http://dcdeiv.github.io/simpler-sidebar/
@@ -132,7 +138,7 @@ var initSidebar = function (dataset) {
 		.simplerSidebar( {
 			align: "left", // the new sidear.align
 			selectors: {
-				trigger: ".navbar-toggler", // the new opener
+				trigger: ".toggle-sidebar", // the new opener
 				quitter: ".close-sidebar" // the new closingLinks
 			},
 			animation: {
@@ -208,7 +214,7 @@ var initLinerservices = function (dataset) {
 
 	// Initialize Fullscreen Slideshow Modal
 	$("#fullscreenButton").animatedModal({
-		"color": "rgba( 64, 83, 164, 1 )", //primary-brand,
+		"color": "#fff", //primary-brand,
 		"overflow":"hidden",
 		beforeOpen: function () { // not working properly in safari....
 			$("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
@@ -321,6 +327,13 @@ var initHistory = function () {
 };
 
 /**
+ * 
+ */
+var initCopyright = function () {
+   
+};
+
+/**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
  */
@@ -338,7 +351,8 @@ var initTemplate = {
 	'allreports': initAllReports,
 	'jobs': initJobs,
 	'environment':initEnvironment,
-	'history':initHistory
+	'history':initHistory,
+	'copyright': initCopyright
 };
 
 
