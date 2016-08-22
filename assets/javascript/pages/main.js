@@ -299,7 +299,25 @@ var initPost = function () {
     initBlog();
 };
 
+/**
+ * 
+ */
+var initJobs = function () {
+   
+};
 
+/**
+ * 
+ */
+var initEnvironment = function () {
+   
+};
+/**
+ * 
+ */
+var initHistory = function () {
+   
+};
 /**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
@@ -316,6 +334,9 @@ var initTemplate = {
     'post': initPost,
     'blog': initBlog,
 	'allreports': initAllReports,
+	'jobs': initJobs,
+	'environment':initEnvironment,
+	'history':initHistory
 };
 
 
