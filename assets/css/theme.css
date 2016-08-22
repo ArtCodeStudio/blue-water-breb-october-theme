@@ -7634,7 +7634,10 @@ nav .container {
   padding-left: 0; }
 
 #default-layout-container {
-  margin-top: 140px; }
+  margin-top: 8rem; }
+  @media (max-width: 767px) {
+    #default-layout-container {
+      margin-top: 3rem; } }
 
 .card {
   border: 1px solid #4053a4; }

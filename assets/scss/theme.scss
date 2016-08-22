@@ -48,7 +48,10 @@ nav .container {
 
 
 #default-layout-container {
-	margin-top: 140px;
+	margin-top: 8rem;
+	@include media-breakpoint-down(sm) {
+		margin-top: 3rem;
+	}
 	//position: fixed;
 }
 
@@ -80,13 +83,13 @@ nav .container {
 	justify-content: space-between;
 	&.footer-contact-container-small{
 			> div:first-child > div {
-			border-right: 1px solid $brand-primary;
-			@include media-breakpoint-up(md) {
-				padding-right: 153px //perfect center
-			}
-			@include media-breakpoint-down(sm) {
-				padding-right:81px //perfect center
-			}
+				border-right: 1px solid $brand-primary;
+				@include media-breakpoint-up(md) {
+					padding-right: 153px //perfect center
+				}
+				@include media-breakpoint-down(sm) {
+					padding-right:81px //perfect center
+				}
 			}
 	}
 	&::after{
