@@ -7786,13 +7786,12 @@ hr {
   border-top: solid #4053a4 4px;
   margin-bottom: 14px;
   width: 61px; }
-  @media (max-width: 767px) {
+  @media (max-width: 543px) {
     .section-headline-text .border-top {
       margin: 0 auto; } }
 
 @media (max-width: 767px) {
   .section-headline-text h3 {
-    text-align: center !important;
     margin-top: 1rem;
     margin-bottom: 1rem; } }
 
@@ -8047,12 +8046,18 @@ nav .container {
 #post #post-date {
   margin-top: 7px;
   color: #4053a4; }
+  @media (max-width: 767px) {
+    #post #post-date {
+      margin-top: 1.42rem; } }
 
 #post .blog-content-wrapper #blog-posts-list {
   background-color: #eceeef;
   padding-top: 14rem; }
   #post .blog-content-wrapper #blog-posts-list #blog-sidebar-title {
     padding-left: 20px; }
+    @media (max-width: 543px) {
+      #post .blog-content-wrapper #blog-posts-list #blog-sidebar-title {
+        padding-left: 0; } }
   #post .blog-content-wrapper #blog-posts-list .category-title {
     padding: 20px; }
   #post .blog-content-wrapper #blog-posts-list.no-nav {

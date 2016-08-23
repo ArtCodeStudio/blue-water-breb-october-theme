@@ -36,13 +36,13 @@ hr {
 		border-top: solid $brand-primary 4px;
 		margin-bottom: 14px;
 		width: 61px;
-		@include media-breakpoint-down(sm) {
+		@include media-breakpoint-down(xs) {
 			margin:0 auto;
 		}
 	}
 	h3 {
 		@include media-breakpoint-down(sm) {
-			text-align: center !important;
+			//text-align: center !important;
 			margin-top: 1rem;
     		margin-bottom: 1rem;
 		}		
@@ -424,6 +424,9 @@ nav .container {
 	#post-date {
 		margin-top: 7px;
 		color: $brand-primary;
+		@include media-breakpoint-down(sm) {
+			margin-top: 1.42rem;
+		}
 	}
 
 	.blog-content-wrapper {
@@ -433,6 +436,9 @@ nav .container {
 			padding-top: $padding-top;
 			#blog-sidebar-title {
 				padding-left:20px; //p-l-1 ist zu wenihger und p-l-2 zu viel
+				@include media-breakpoint-down(xs) {
+					padding-left:0;
+				}
 			}
 			.category-title{
 				padding:20px;

@@ -28,14 +28,24 @@ categoryPage = "all-reports"
 
         <div class="col-xs-12 col-md-8 p-b-3  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-content-column">
             
-            <div class="col-xs-10 p-b-2 p-l-0">
-                <h3 class="card-title text-lg-left text-serif">{{ post.title }}</h3>
-                <div class="text-sm-left hidden-sm-up" id="post-date">{{ post.published_at|date('m.d.y') }}</div>
+            {# TITLE #}
+            <div class="row">
+                <div class="col-xs-9 p-b-2 p-r-2 hidden-sm-down">
+                    <h3 class="card-title text-sm-left text-serif">{{ post.title }}</h3>
+                </div>
+                <div class="col-xs-3 p-b-2  hidden-sm-down">
+                    <div class="text-sm-right" id="post-date">{{ post.published_at|date('m.d.y') }}</div>
+                </div>
             </div>
 
-            <div class="col-xs-2 p-x-0 hidden-xs-down">
-                <div class="text-sm-right " id="post-date">{{ post.published_at|date('m.d.y') }}</div>
+            {# TITLE xs #}
+            <div class="row">
+                <div class="col-xs-12 hidden-md-up">
+                    <h3 class="card-title text-xs-center text-sm-left text-serif">{{ post.title }}</h3>
+                    <div class="text-sm-left text-xs-center m-b-2" id="post-date">{{ post.published_at|date('m.d.y') }}</div>
+                </div>
             </div>
+
             
             {% if post.featured_images.count %}
                 <div class="featured-images text-center">

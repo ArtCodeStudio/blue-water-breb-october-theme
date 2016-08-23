@@ -7,13 +7,13 @@
 
     <div class="p-y-2" id="blog-sidebar-title">
         <div class="border-top"></div>
-        <h3 class="text-xs-left text-serif">Lastest</h3>   
+        <h3 class="text-xs-center  text-sm-left text-serif">Lastest</h3>   
     </div>
 
     {% if post.categories.count %} 
 
         {% for category in post.categories %}
-            <h4 class="text-xs-left text-serif p-y-2">{{ category.name }}</h4>
+            <h4 class="text-xs-center text-sm-left text-serif p-y-2">{{ category.name }}</h4>
             {% for post in category.posts %}
                 {% if loop.index <= 5 %}
                     <div class="card card-block">
