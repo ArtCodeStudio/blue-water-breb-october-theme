@@ -1,0 +1,56 @@
+[viewBag]
+==
+{#
+# BLOG SIDEBAR NAVIGATION
+#}
+<div class="col-xs-12 col-md-4  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-posts-list">
+
+    <div class="p-y-2" id="blog-sidebar-title">
+        <div class="border-top"></div>
+        <h3 class="text-xs-left text-serif">Lastest</h3>   
+    </div>
+
+    {% if post.categories.count %} 
+
+        {% for category in post.categories %}
+            <h4 class="text-xs-left text-serif p-y-2">{{ category.name }}</h4>
+            {% for post in category.posts %}
+                {% if loop.index <= 5 %}
+                    <div class="card card-block">
+                        <a href="{{ post.slug }}">
+                            <div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>
+                            <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
+                            <div class='latest-blog-posts-content-container'>
+                                {{ post.summary }}
+                            </div>
+                            <div class="learn-more center-block text-xs-right">
+                                <div>read more</div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+    {% else %}
+        
+        {% for post in posts %}
+            {% if loop.index <= 5 %}
+                <div class="card card-block">
+                    <a href="{{ post.slug }}">
+                        <div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>
+                        <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
+                        <div class='latest-blog-posts-content-container'>
+                            {{ post.summary }}
+                        </div>
+                        <div class="learn-more center-block text-xs-right">
+                            <div>read more</div>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+
+    {% endif %}   
+
+</div>

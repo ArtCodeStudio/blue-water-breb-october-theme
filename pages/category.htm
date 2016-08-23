@@ -1,0 +1,28 @@
+title = "Category"
+url = "/reports/category/:slug/:page?"
+layout = "blog"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "all-reports"
+postPage = "post"
+
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "blog/category"
+==
+function onStart()
+{
+	// set postsPerPage based on teh theme setting `max_blog_posts` in theme.yaml
+	$this->components['blogPosts']->setProperty('postsPerPage', $this->theme->max_blog_posts);
+}
+==
+{% partial 'blog/blog_category' %}

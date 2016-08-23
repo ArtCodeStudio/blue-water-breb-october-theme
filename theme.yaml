@@ -1,0 +1,124 @@
+name: breb-barba
+description: ''
+author: JumpLink
+homepage: 'http://jumplink.eu/'
+code: breb-barba
+
+# Indentation MUST be Spaces not Tabs !
+form:
+    tabs:
+        fields:
+            bremen_logo:
+                label: Bremen
+                type: mediafinder
+                mode: image
+                tab: Contact
+            location_bremen:
+                default: BREB GmbH & Co.KG
+                tab: Contact
+            location_breme1:
+                default:
+                tab: Contact
+            location_bremen2:
+                default: Universitätsallee 5 
+                tab: Contact
+            location_bremen3:
+                default: 28359 Bremen
+                tab: Contact
+            location_bremen4:
+                default: Tel. +49 (0)421 32278-0
+                tab: Contact
+            location_bremen5:
+                default: Fax +49 (0)421 32278-78
+                tab: Contact
+            
+            cuxhaven_logo:
+                label: Cuxhaven
+                type: mediafinder
+                mode: image
+                tab: Contact
+            location_cuxhaven:
+                default: BREB GmbH & Co.KG
+                tab: Contact
+            location_cuxhaven1:
+                default: Havenhostel Cuxhaven
+                tab: Contact
+            location_cuxhaven2:
+                default: Kpt.-Alexander-Str. 16
+                tab: Contact
+            location_cuxhaven3:
+                default: 27472 Cuxhaven
+                tab: Contact
+            location_cuxhaven4:
+                default: Tel. +49 (0)4721 590 54 0
+                tab: Contact
+            location_cuxhaven5:
+                default: Fax +49 (0)4721 590 54 99
+                tab: Contact
+
+            sassnitz_logo:
+                label: Sassnitz
+                type: mediafinder
+                mode: image
+                tab: Contact
+            location_sassnitz:
+                default: BREB GmbH & Co.KG
+                tab: Contact
+            location_sassnitz1:
+                default: Hafeneingangsgebäude Sassnitz
+                tab: Contact
+            location_sassnitz2:
+                default: Fährhafen 20b
+                tab: Contact
+            location_sassnitz3:
+                default: 18546 Sassnitz
+                tab: Contact
+            location_sassnitz4:
+                default: Tel. +49 (0)38392 55 44 0
+                tab: Contact
+            location_sassnitz5:
+                default: 
+                tab: Contact
+
+            Zeebrugge_logo:
+                label: Zeebrugge
+                type: mediafinder
+                mode: image
+                tab: Contact          
+            location_zeebrugge:
+                default: BREB Belgium bvba
+                tab: Contact
+            location_zeebrugge1:
+                default:
+                tab: Contact
+            location_zeebrugge2:
+                default: Rederskaai 30
+                tab: Contact
+            location_zeebrugge3:
+                default: 8380 Zeebrugge
+                tab: Contact
+            location_zeebrugge4:
+                default: 
+                tab: Contact
+            location_zeebrugge5:
+                default: 
+                tab: Contact
+
+
+            max_blog_posts:
+                label: Max Aricles / Page
+                type: number
+                default: 9
+                tab: Blog
+
+            primary_brand:
+                label: Primary Logo
+                type: mediafinder
+                mode: image
+                tab: Brand 
+
+            secondary_brand:
+                label: Secundary Logo
+                type: mediafinder
+                mode: image
+                tab: Brand 

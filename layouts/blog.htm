@@ -1,0 +1,30 @@
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        {% partial 'html_head' %}
+    </head>
+    <body>
+    
+        {% partial 'navbar' %}
+        {% partial 'blog/blog_header' %} 
+        
+        <div id="barba-wrapper">
+           
+            <div
+                {% partial 'barba-container-attributes' %}
+            >
+                <section id="layout-content">
+                    {% page %}
+                </section>
+            </div>
+        </div>
+           
+        {% partial 'footer/footer_brand' %}
+        {% partial 'footer/footer_navigation' %}
+        {% partial 'footer/footer_contact' %}
+        {% partial 'footer/footer_legal' %}    
+        {% partial 'body_foot' %}    
+        
+    </body>
+</html>
