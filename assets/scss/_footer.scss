@@ -1,0 +1,131 @@
+/*
+ * FOOTER  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+**/
+.footer {
+	display:flex;
+	justify-content: space-between;
+	&.footer-contact-container-small{
+			> div:first-child > div {
+				border-right: 1px solid $brand-primary;
+				@include media-breakpoint-up(md) {
+					padding-right: 153px //perfect center
+				}
+				@include media-breakpoint-down(sm) {
+					padding-right:81px //perfect center
+				}
+			}
+	}
+	&::after{
+		content:none;
+	}
+	&#footer-brand-logo-container {
+		text-align: center !important;
+		margin-top: 163px; // besser loesen
+		img{
+			width: 114% !important;
+		}
+	}
+
+	&#footer-navigation-wrapper{
+		background-color: #ededed;
+	}
+
+	&#footer-legal-wrapper, #blog-header-wrapper {
+		background-color: $brand-primary;
+		a{
+			color: white;
+		}
+	}
+
+	.footer-navigation-container {
+		text-align: center;
+	}
+
+	.footer-navigation-container a {
+		margin:10px;
+	}
+
+
+	&#footer-contact-container {
+		display:flex;
+		justify-content: space-between;
+		line-height: 20px;
+		div {
+			h6 {
+				color: $brand-danger;
+				font-weight:700;
+				&#cuxhaven {
+					color: $brand-primary;
+					img {
+						width: 11px;
+						margin-top: -4px;
+					}
+				}
+			}
+		}
+		&::after{
+			content:none;
+		}
+
+		> div:not(:last-child) {
+			border-right: 1px solid $brand-primary;
+			@include media-breakpoint-up(xl) {
+				padding-right: 58px;
+			}
+			@include media-breakpoint-down(lg) {
+				padding-right: 24px;
+			}
+
+
+		}
+
+		.row {
+			//margin-left:3%;
+			// all items get right border except the last 
+			> div{
+				height:210px;
+
+				border-right : 1px solid $brand-primary;
+
+				@include media-breakpoint-down(xs) {
+					border-right : none !important;
+					.column {
+						padding-left: 30%;
+					}
+				}
+				@include media-breakpoint-between(sm,md) {
+					
+					.column {
+						padding-left: 2rem;
+					}
+					&.column-2, &.column-4 {
+						border-right : none;
+					}
+				}
+				// @include media-breakpoint-only(sm) {
+				// 	.column {
+				// 		padding-left: 2rem;
+				// 	}
+				// }
+				@include media-breakpoint-up(sm) {
+
+				}
+
+				@include media-breakpoint-up(lg) {
+					//border-right : 1px solid $brand-primary;
+					&:last-child{
+						border-right : none;
+					}
+				}
+			}
+		}
+
+		.footer-item-wrapper {
+			height: 200px;
+			
+			
+		}
+
+
+	}
+}
