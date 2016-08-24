@@ -7780,6 +7780,14 @@ a.bg-danger:focus, a.bg-danger:hover {
     @media (max-width: 767px) {
       .footer.footer-contact-container-small > div:first-child > div {
         padding-right: 81px; } }
+  .footer.footer-contact-container-small div h6 {
+    color: #ef2a21;
+    font-weight: 700; }
+    .footer.footer-contact-container-small div h6#cuxhaven {
+      color: #4053a4; }
+      .footer.footer-contact-container-small div h6#cuxhaven img {
+        width: 11px;
+        margin-top: -4px; }
   .footer::after {
     content: none; }
   .footer#footer-brand-logo-container {

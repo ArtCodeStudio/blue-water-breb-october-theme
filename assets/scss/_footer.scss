@@ -4,16 +4,30 @@
 .footer {
 	display:flex;
 	justify-content: space-between;
-	&.footer-contact-container-small{
-			> div:first-child > div {
-				border-right: 1px solid $brand-primary;
-				@include media-breakpoint-up(md) {
-					padding-right: 153px //perfect center
-				}
-				@include media-breakpoint-down(sm) {
-					padding-right:81px //perfect center
+	&.footer-contact-container-small {
+		> div:first-child > div {
+			border-right: 1px solid $brand-primary;
+			@include media-breakpoint-up(md) {
+				padding-right: 153px //perfect center
+			}
+			@include media-breakpoint-down(sm) {
+				padding-right:81px //perfect center
+			}
+		}
+
+		div {
+			h6 {
+				color: $brand-danger;
+				font-weight:700;
+				&#cuxhaven {
+					color: $brand-primary;
+					img {
+						width: 11px;
+						margin-top: -4px;
+					}
 				}
 			}
+		}	
 	}
 	&::after{
 		content:none;
