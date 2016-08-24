@@ -2,40 +2,48 @@ name: footer
 items:
     -
         title: About
+        nesting: ''
         type: url
         url: /about
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: about
             isExternal: '0'
     -
         title: Jobs
+        nesting: ''
         type: url
         url: /jobs
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: jobs
             isExternal: '0'
     -
         title: Agency
+        nesting: ''
         type: url
         url: /port-agency
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: agency
             isExternal: '0'
     -
         title: Environment
-        nesting: ''
         type: url
-        url: /
+        url: /environment
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: environment
@@ -47,5 +55,5 @@ items:
         code: history
         viewBag:
             isHidden: '0'
-            cssClass: ''
+            cssClass: history
             isExternal: '0'

@@ -26,17 +26,6 @@
 
 }
 
-/*
-element.style {
-    width: 100vw;
-    height: 41px;
-    position: fixed;
-    z-index: 3000;
-    background-color: white;
-    top: 0;
-}
-
-*/
 
 
 #sidebar {
@@ -52,6 +41,9 @@ element.style {
 			.list-group-item {
 				border: none;
 				padding: 0.75rem 2.4rem;
+				&.active {
+					background-color: $transparent !important;;
+				}
 			}
 			.list-group-sub-item {
 				padding: 0.75rem 0 0rem 3.75rem !important;
@@ -74,11 +66,12 @@ element.style {
 				transition-duration: 0.3s;
 				transition-property: all;
 				transition-timing-function: ease;
-				&:hover, &:focus{
+				&:hover, &:focus, &.active{
 					background-color: $transparent !important;
 					color: $brand-primary;					
 				}
 			}
+			
 		}
 		.sidebar-brand{
 			img {

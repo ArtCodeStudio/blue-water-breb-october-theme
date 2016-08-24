@@ -3,7 +3,8 @@ var cache = {
     $navbarMain: $('#navbar-main'),
 	$blogFilter: $('#blog-filter'),
 	$blogHeader: $('#blog-header-wrapper'),
-	homeInitialized: false
+	$sidebar: $("#sidebar"),
+	homeInitialized: false,
 };
 
 var currentNamespace = null;
@@ -381,18 +382,27 @@ var initTemplate = {
 var resetNav = function () {
    	cache.$navbarMain.find('ul.nav.navbar-nav li').removeClass('active');
  	cache.$blogFilter.find('a').removeClass('btn-white-outline');
+	cache.$sidebar.find('.list-group a').removeClass('active');
 };
+
 
 /**
  * Set active state of main navigation
  */
-var setNav = function (selector) {
+var setNav = function (selector, dataset) {
 	// keep highlight for all blog-sub pages
 	if ( selector == '.allreports' || selector == '.category' || selector == '.post') {
 		cache.$navbarMain.find('.main-navigation .nav-item.reports').addClass('active');
+		if ( !dataset.blogCategory ) {
+         	dataset.blogCategorySlug = 'allreports';
+		}
+		cache.$sidebar.find('.list-group .reports .'+dataset.blogCategorySlug).addClass('active');
+		console.log('.list-group reports a '+dataset.blogCategorySlug)
 	} else{
   		cache.$navbarMain.find('.main-navigation .nav-item'+selector).addClass('active');
 	}
+
+	cache.$sidebar.find('.list-group a'+selector).addClass('active');
 };
 
 
@@ -400,7 +410,7 @@ var setNav = function (selector) {
  * Handle main Nav / blog filter acyive state
  */
 var setNavActive = function (dataset, currentStatus) {
-    
+    console.log(dataset);
 	var lastClicked = null;
 	
 	// split dataset.blogPostCategories string to array of categories
@@ -428,7 +438,7 @@ var setNavActive = function (dataset, currentStatus) {
 
   	resetNav();
 
-  	setNav('.'+dataset.namespace);
+  	setNav('.'+dataset.namespace,dataset);
 		
 	var setBlogFilterActiveState = function ( lastClicked ) {
 		// Schoener waere es hier das vorhandene data-attribute zuy verwenden, nur fehlt mir nich der passende selektor

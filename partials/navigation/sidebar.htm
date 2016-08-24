@@ -18,11 +18,11 @@ categoryPage = "blog/category"
                         </a>
                         {% if item.title == 'Reports' %}
                             <div class="list-group {{item.viewBag.cssClass}}">
-                                <a href="/reports/category/reports" class="p-l-3 close-sidebar nav-link list-group-item list-group-sub-item">
+                                <a href="/reports/category/reports" class="p-l-3 close-sidebar nav-link list-group-item list-group-sub-item allreports">
                                     All Reports
                                 </a>
                                 {% for category in blogCategories.categories %}
-                                    <a href="/reports/category/{{ category.slug }}" class="p-l-3 nav-link close-sidebar list-group-item list-group-sub-item">
+                                    <a href="/reports/category/{{ category.slug }}" class="p-l-3 nav-link close-sidebar list-group-item list-group-sub-item {{ category.slug }}">
                                         {{ category.name }}
                                     </a>
                                 {% endfor %}
