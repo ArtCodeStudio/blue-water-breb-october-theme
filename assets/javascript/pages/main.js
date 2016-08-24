@@ -207,7 +207,21 @@ var initHome = function (dataset) {
  * 
  */
 var initShipping = function (dataset) {
+	// Initialize Fullscreen Slideshow Modal
+	// $("#fullscreenButton").animatedModal({
+	// 	"color": "#fff", //primary-brand,
+	// 	"overflow":"hidden",
+	// 	beforeOpen: function () { // not working properly in safari....
+	// 		// $("#fullscreenShippingSlideshowHTML").slick('setPosition');
+	// 	},
+	// 	afterOpen: function () { // ... safari fix.
+	// 		// $("#fullscreenShippingSlideshowHTML").slick('setPosition');
+	// 	},
+	// });
 
+	 shippingSlideshowJavaScript1Init('#shippingSlideshowHTML1');
+     shippingSlideshowJavaScript2Init('#shippingSlideshowHTML2');
+//	fullscreenShippingSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
 };
 
 
@@ -233,7 +247,7 @@ var initPortagency = function (dataset) {
 var initLinerservices = function (dataset) {
 
 	// Initialize Fullscreen Slideshow Modal
-	$("#fullscreenButton").animatedModal({
+	$("#liner-services #fullscreenButton").animatedModal({
 		"color": "#fff", //primary-brand,
 		"overflow":"hidden",
 		beforeOpen: function () { // not working properly in safari....
@@ -353,6 +367,15 @@ var initCopyright = function () {
    
 };
 
+
+/**
+ * 
+ */
+var initAgency = function () {
+   
+};
+
+
 /**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
@@ -372,7 +395,8 @@ var initTemplate = {
 	'jobs': initJobs,
 	'environment':initEnvironment,
 	'history':initHistory,
-	'copyright': initCopyright
+	'copyright': initCopyright,
+	'agency': initAgency
 };
 
 

@@ -28,31 +28,35 @@ items:
             isExternal: '0'
     -
         title: Agency
-        nesting: ''
         type: url
-        url: /port-agency
+        url: /agency
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: agency
             isExternal: '0'
     -
         title: Environment
+        nesting: ''
         type: url
         url: /environment
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: environment
             isExternal: '0'
     -
         title: History
+        nesting: ''
         type: url
         url: /history
         code: history
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: history

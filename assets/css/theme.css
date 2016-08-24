@@ -7134,36 +7134,36 @@ a.bg-danger:focus, a.bg-danger:hover {
   .box.ratio-3-4:before {
     padding-top: 133.33%; }
 
-#animatedModal .close-animatedModal {
+#animatedModal .close-animatedModal, .animatedModal .close-animatedModal {
   color: white;
   position: fixed;
   z-index: 1;
   right: 1rem;
   top: 1rem; }
 
-#animatedModal .modal-content .slick-prev {
+#animatedModal .modal-content .slick-prev, .animatedModal .modal-content .slick-prev {
   left: 1rem; }
-  #animatedModal .modal-content .slick-prev.fullscreen {
+  #animatedModal .modal-content .slick-prev.fullscreen, .animatedModal .modal-content .slick-prev.fullscreen {
     margin-bottom: 20px; }
 
-#animatedModal .modal-content .slick-next {
+#animatedModal .modal-content .slick-next, .animatedModal .modal-content .slick-next {
   right: 1rem; }
 
-#animatedModal .modal-content .slick-prev, #animatedModal .modal-content .slick-next {
+#animatedModal .modal-content .slick-prev, #animatedModal .modal-content .slick-next, .animatedModal .modal-content .slick-prev, .animatedModal .modal-content .slick-next {
   z-index: 999;
   margin-top: 23.4vw !important; }
 
-#animatedModal .modal-content .slick-prev:before, #animatedModal .modal-content .slick-next:before {
+#animatedModal .modal-content .slick-prev:before, #animatedModal .modal-content .slick-next:before, .animatedModal .modal-content .slick-prev:before, .animatedModal .modal-content .slick-next:before {
   color: #ef2a21; }
 
-#animatedModal #fullscreenSlideshow .carousel-caption-content {
+#animatedModal #fullscreenSlideshow .carousel-caption-content, .animatedModal #fullscreenSlideshow .carousel-caption-content {
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
   opacity: 0;
   padding: 2.5rem 0 0 5rem; }
-  #animatedModal #fullscreenSlideshow .carousel-caption-content:hover {
+  #animatedModal #fullscreenSlideshow .carousel-caption-content:hover, .animatedModal #fullscreenSlideshow .carousel-caption-content:hover {
     opacity: 1; }
-  #animatedModal #fullscreenSlideshow .carousel-caption-content p {
+  #animatedModal #fullscreenSlideshow .carousel-caption-content p, .animatedModal #fullscreenSlideshow .carousel-caption-content p {
     font-size: 1.68rem; }
 
 #home .slick-dots {
@@ -7204,96 +7204,92 @@ a.bg-danger:focus, a.bg-danger:hover {
 #home #latest-blog-posts #latest-blog-posts-row .slick-next {
   right: -49px; }
 
-#linerservices #fullscreenButton {
-  background-image: url(../images/icons/small-w.svg);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100% auto;
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  z-index: 999;
-  right: 35px;
-  top: 23px; }
-  #linerservices #fullscreenButton:hover {
-    background-image: url(../images/icons/small-r.svg); }
-
-#linerservices .close-animatedModal {
-  background-image: url(../images/icons/big-close-w.svg);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100% auto;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  z-index: 999;
-  right: 22px;
-  top: 25px; }
-  #linerservices .close-animatedModal:hover {
-    background-image: url(../images/icons/big-close-r.svg); }
-
-#linerservices .carousel-caption-wrapper .carousel-caption-content {
-  position: fixed;
-  /* top: 0; */
-  background-color: rgba(255, 255, 255, 0.75);
-  width: 100%;
-  bottom: 0px;
-  padding: 1rem 0 0 3rem; }
-  #linerservices .carousel-caption-wrapper .carousel-caption-content h2 {
-    font-size: 1.25rem; }
-  #linerservices .carousel-caption-wrapper .carousel-caption-content p {
-    color: black !important; }
-
-#linerservices .slick-prev {
-  left: 1rem; }
-
-#linerservices .slick-next {
-  right: 1rem; }
-
-#linerservices .slick-prev, #linerservices .slick-next {
-  position: absolute;
-  z-index: 999; }
-  @media (min-width: 1200px) {
-    #linerservices .slick-prev, #linerservices .slick-next {
-      margin-top: 8.6rem; } }
-  @media (max-width: 1199px) {
-    #linerservices .slick-prev, #linerservices .slick-next {
-      margin-top: 6.6rem; } }
-  @media (max-width: 991px) {
-    #linerservices .slick-prev, #linerservices .slick-next {
-      margin-top: 4.3rem; } }
-
-#linerservices .slick-prev:before, #linerservices .slick-next:before {
-  color: #ef2a21; }
-
-#linerservices #liner-services-slideshow-container {
-  min-height: 559px; }
-  @media (min-width: 1200px) {
-    #linerservices #liner-services-slideshow-container {
-      min-height: 626px; } }
-  @media (max-width: 1199px) {
-    #linerservices #liner-services-slideshow-container {
-      min-height: 559px; } }
-  @media (max-width: 991px) {
-    #linerservices #liner-services-slideshow-container {
-      min-height: 487px; } }
-  @media (max-width: 767px) {
-    #linerservices #liner-services-slideshow-container {
-      min-height: 575px; } }
-
-#linerservices #linerServicesSlideshowHTML2 {
-  overflow: hidden; }
-  #linerservices #linerServicesSlideshowHTML2 .carousel-caption-wrapper {
-    display: none; }
-  #linerservices #linerServicesSlideshowHTML2 .slick-slide {
-    margin: 4rem 0.9375rem;
-    height: 200px; }
-  #linerservices #linerServicesSlideshowHTML2 .slick-list {
-    margin: -1.875rem; }
-  #linerservices #linerServicesSlideshowHTML2 .slick-prev {
-    left: -48px; }
-  #linerservices #linerServicesSlideshowHTML2 .slick-next {
-    right: -49px; }
+#linerservices, #shipping {
+  /**
+	* Slideshow Navigation carousel
+	*/ }
+  #linerservices #fullscreenButton, #linerservices .fullscreenButton, #shipping #fullscreenButton, #shipping .fullscreenButton {
+    background-image: url(../images/icons/small-w.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    z-index: 999;
+    right: 35px;
+    top: 23px; }
+    #linerservices #fullscreenButton:hover, #linerservices .fullscreenButton:hover, #shipping #fullscreenButton:hover, #shipping .fullscreenButton:hover {
+      background-image: url(../images/icons/small-r.svg); }
+  #linerservices .close-animatedModal, #shipping .close-animatedModal {
+    background-image: url(../images/icons/big-close-w.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    z-index: 999;
+    right: 22px;
+    top: 25px; }
+    #linerservices .close-animatedModal:hover, #shipping .close-animatedModal:hover {
+      background-image: url(../images/icons/big-close-r.svg); }
+  #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content {
+    position: fixed;
+    /* top: 0; */
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    bottom: 0px;
+    padding: 1rem 0 0 3rem; }
+    #linerservices .carousel-caption-wrapper .carousel-caption-content h2, #shipping .carousel-caption-wrapper .carousel-caption-content h2 {
+      font-size: 1.25rem; }
+    #linerservices .carousel-caption-wrapper .carousel-caption-content p, #shipping .carousel-caption-wrapper .carousel-caption-content p {
+      color: black !important; }
+  #linerservices .slick-prev, #shipping .slick-prev {
+    left: 1rem; }
+  #linerservices .slick-next, #shipping .slick-next {
+    right: 1rem; }
+  #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+    position: absolute;
+    z-index: 999; }
+    @media (min-width: 1200px) {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+        margin-top: 8.6rem; } }
+    @media (max-width: 1199px) {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+        margin-top: 6.6rem; } }
+    @media (max-width: 991px) {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+        margin-top: 4.3rem; } }
+  #linerservices .slick-prev:before, #linerservices .slick-next:before, #shipping .slick-prev:before, #shipping .slick-next:before {
+    color: #ef2a21; }
+  #linerservices .slideshow-container, #shipping .slideshow-container {
+    min-height: 559px; }
+    @media (min-width: 1200px) {
+      #linerservices .slideshow-container, #shipping .slideshow-container {
+        min-height: 626px; } }
+    @media (max-width: 1199px) {
+      #linerservices .slideshow-container, #shipping .slideshow-container {
+        min-height: 559px; } }
+    @media (max-width: 991px) {
+      #linerservices .slideshow-container, #shipping .slideshow-container {
+        min-height: 487px; } }
+    @media (max-width: 767px) {
+      #linerservices .slideshow-container, #shipping .slideshow-container {
+        min-height: 575px; } }
+  #linerservices #linerServicesSlideshowHTML2, #linerservices #shippingSlideshowHTML2, #shipping #linerServicesSlideshowHTML2, #shipping #shippingSlideshowHTML2 {
+    overflow: hidden; }
+    #linerservices #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #linerservices #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper {
+      display: none; }
+    #linerservices #linerServicesSlideshowHTML2 .slick-slide, #linerservices #shippingSlideshowHTML2 .slick-slide, #shipping #linerServicesSlideshowHTML2 .slick-slide, #shipping #shippingSlideshowHTML2 .slick-slide {
+      margin: 4rem 0.9375rem;
+      height: 200px; }
+    #linerservices #linerServicesSlideshowHTML2 .slick-list, #linerservices #shippingSlideshowHTML2 .slick-list, #shipping #linerServicesSlideshowHTML2 .slick-list, #shipping #shippingSlideshowHTML2 .slick-list {
+      margin: -1.875rem; }
+    #linerservices #linerServicesSlideshowHTML2 .slick-prev, #linerservices #shippingSlideshowHTML2 .slick-prev, #shipping #linerServicesSlideshowHTML2 .slick-prev, #shipping #shippingSlideshowHTML2 .slick-prev {
+      left: -48px; }
+    #linerservices #linerServicesSlideshowHTML2 .slick-next, #linerservices #shippingSlideshowHTML2 .slick-next, #shipping #linerServicesSlideshowHTML2 .slick-next, #shipping #shippingSlideshowHTML2 .slick-next {
+      right: -49px; }
 
 .z-depth-0 {
   box-shadow: none !important; }
@@ -7851,6 +7847,14 @@ a.bg-danger:focus, a.bg-danger:hover {
     .footer#footer-contact-container .footer-item-wrapper {
       height: 200px; }
 
+#footer-contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 body {
   max-width: 100%;
   max-width: 100vw;
@@ -7953,6 +7957,9 @@ nav .container {
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  **/
 #linerservices #liner-services #liner-services-content-container {
+  text-align: justify !important; }
+
+.content-container {
   text-align: justify !important; }
 
 #blog-header-wrapper {
@@ -8091,11 +8098,3 @@ nav .container {
 
 #post .blog-content-wrapper .learn-more {
   color: #4053a4; }
-
-#footer-contact-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }

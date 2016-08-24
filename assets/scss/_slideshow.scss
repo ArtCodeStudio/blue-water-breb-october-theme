@@ -3,7 +3,7 @@
 
 @import '../../../../plugins/jumplink/slideshow/assets/scss/slideshow.scss';
 
-#animatedModal {
+#animatedModal, .animatedModal {
 	.close-animatedModal {
 		color: white;
 		position: fixed;
@@ -14,7 +14,6 @@
 
 	.modal-content{
 	$arrow-padding: 1rem;
-
 
 		.slick-prev {
 			left: $arrow-padding;
@@ -30,6 +29,7 @@
 			z-index: 999;
 			margin-top: 23.4vw !important;
 			@include media-breakpoint-up(xl) {
+
 			}
 			@include media-breakpoint-down(lg) {
 				//margin-top: 6.6rem;
@@ -129,9 +129,9 @@
 }
 
 
-#linerservices {
+#linerservices, #shipping {
 
-	#fullscreenButton {
+	#fullscreenButton,  .fullscreenButton {
 		background-image: url(../images/icons/small-w.svg);
 		background-repeat: no-repeat;
 		background-position: center bottom;
@@ -206,7 +206,7 @@
 		color: $brand-danger;
 		
 	}
-	#liner-services-slideshow-container {
+	.slideshow-container {
 		min-height: 559px;
 		@include media-breakpoint-up(xl) {
 			min-height: 626px
@@ -220,16 +220,18 @@
 		@include media-breakpoint-down(sm) {
 			min-height: 575px;
 		}
-
-		
 	}
-	#linerServicesSlideshowHTML2 {
+
+	/**
+	* Slideshow Navigation carousel
+	*/
+	#linerServicesSlideshowHTML2, #shippingSlideshowHTML2 {
+
 		overflow: hidden;
-		.carousel-caption-wrapper {
-			display:none;
-		}
 		.carousel-image-wrapper{
-			// margin-left:2rem;
+			.carousel-caption-wrapper {
+				display:none;
+			}
 		}
 		.slick-slide {
 			margin: 4rem $grid-gutter-width/2; // result  0 0.9375rem
@@ -244,15 +246,9 @@
 		.slick-next {
 			right: -49px; //by intention! +1
 		}
-		@include media-breakpoint-down(md) {
-			
-			.slick-carousel{
-				.alternative_caption{
 
-				}
-			}
-		}
 	}
+
 	#fullscreenSlideshow {
 
 		@include media-breakpoint-down(lg) {

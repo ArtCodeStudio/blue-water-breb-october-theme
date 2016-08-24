@@ -173,7 +173,9 @@ nav .container {
 	}
 
 }
-
+.content-container {
+	text-align: justify !important;
+}
 #blog-header-wrapper {
 
 	top: 2.96rem;
@@ -334,7 +336,7 @@ nav .container {
 			}
 		}
 
-		.card{
+		.card {
 			border: 0 !important;
 			transition-delay: 0s;
 			transition-duration: 0.3s;
@@ -354,9 +356,4 @@ nav .container {
 			color: $brand-primary;
 		}
 	}
-}
-
-#footer-contact-container{
-	display:flex;
-	justify-content: space-between;
 }
