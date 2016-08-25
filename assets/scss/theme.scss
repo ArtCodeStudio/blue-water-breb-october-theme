@@ -312,6 +312,9 @@ nav .container {
 		@include media-breakpoint-down(sm) {
 			margin-top: 1.42rem;
 		}
+		@include media-breakpoint-up(xl) {
+			margin-right: 1rem
+		}
 	}
 
 	.blog-content-wrapper {

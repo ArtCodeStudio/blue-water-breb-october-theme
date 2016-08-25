@@ -34,7 +34,7 @@ categoryPage = "all-reports"
                     <h3 class="card-title text-sm-left text-serif">{{ post.title }}</h3>
                 </div>
                 <div class="col-xs-3 p-b-2  hidden-sm-down">
-                    <div class="text-sm-right" id="post-date">{{ post.published_at|date('m.d.y') }}</div>
+                    <div class="text-sm-right" id="post-date">{{ post.published_at|date('m.d.Y') }}</div>
                 </div>
             </div>
 
@@ -42,7 +42,7 @@ categoryPage = "all-reports"
             <div class="row">
                 <div class="col-xs-12 hidden-md-up">
                     <h3 class="card-title text-xs-center text-sm-left text-serif">{{ post.title }}</h3>
-                    <div class="text-sm-left text-xs-center m-b-2" id="post-date">{{ post.published_at|date('m.d.y') }}</div>
+                    <div class="text-sm-left text-xs-center m-b-2" id="post-date">{{ post.published_at|date('F d. Y') }}</div>
                 </div>
             </div>
 

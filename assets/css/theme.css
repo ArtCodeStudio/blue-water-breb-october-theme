@@ -8070,6 +8070,9 @@ nav .container {
   @media (max-width: 767px) {
     #post #post-date {
       margin-top: 1.42rem; } }
+  @media (min-width: 1200px) {
+    #post #post-date {
+      margin-right: 1rem; } }
 
 #post .blog-content-wrapper #blog-posts-list {
   background-color: #eceeef;
