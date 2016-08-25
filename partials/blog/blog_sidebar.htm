@@ -15,7 +15,7 @@
         {% for category in post.categories %}
             <h4 class="text-xs-center text-sm-left text-serif p-y-2">{{ category.name }}</h4>
             {% for post in category.posts %}
-                {% if loop.index <= 5 %}
+                {% if loop.index <= 2 %}
                     <div class="card card-block">
                         <a href="{{ post.slug }}">
                             <div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>

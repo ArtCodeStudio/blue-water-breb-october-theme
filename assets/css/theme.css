@@ -7254,13 +7254,19 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999; }
     @media (min-width: 1200px) {
       #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
-        margin-top: 8.6rem; } }
+        margin-top: 12.1rem; } }
     @media (max-width: 1199px) {
       #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
-        margin-top: 6.6rem; } }
+        margin-top: 9.6rem; } }
     @media (max-width: 991px) {
       #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
-        margin-top: 4.3rem; } }
+        margin-top: 6.3rem; } }
+    @media (max-width: 767px) {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+        margin-top: 10rem; } }
+    @media (max-width: 543px) {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+        display: none; } }
   #linerservices .slick-prev:before, #linerservices .slick-next:before, #shipping .slick-prev:before, #shipping .slick-next:before {
     color: #ef2a21; }
   #linerservices .slideshow-container, #shipping .slideshow-container {
@@ -7420,7 +7426,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   height: 3rem !important;
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
-  border-bottom: 1px solid #4053a4; }
+  border-bottom: 2px solid #4053a4; }
   .navbar-slim .main-navigation {
     margin-top: 0 !important;
     height: 36px; }
@@ -7584,7 +7590,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     height: 2.09rem;
     background-color: #fff;
     z-index: 10001;
-    border-bottom: 1px solid #4053a4; }
+    border-bottom: 2px solid #4053a4; }
     #mobile-nav-wrapper .toggle-sidebar button {
       margin-top: 0.5rem;
       padding-left: 0; }
@@ -7790,7 +7796,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     text-align: center !important;
     margin-top: 163px; }
     .footer#footer-brand-logo-container img {
-      width: 114% !important; }
+      max-width: 38% !important;
+      min-width: 263px; }
   .footer#footer-navigation-wrapper {
     background-color: #ededed; }
   .footer#footer-legal-wrapper, .footer #blog-header-wrapper {

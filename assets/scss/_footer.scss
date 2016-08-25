@@ -36,7 +36,9 @@
 		text-align: center !important;
 		margin-top: 163px; // besser loesen
 		img{
-			width: 114% !important;
+			// width: 114% !important;
+			max-width: 38% !important;
+    		min-width: 263px;
 		}
 	}
 
