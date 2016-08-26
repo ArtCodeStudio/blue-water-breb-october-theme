@@ -7866,7 +7866,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 body {
   max-width: 100%;
   max-width: 100vw;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll; }
 
 hr {
   margin-top: 1rem;
