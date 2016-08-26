@@ -28,9 +28,13 @@ items:
             isExternal: '0'
     -
         title: 'Port Agency'
+        nesting: ''
         type: url
         url: /port-agency
         code: port-agency
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: portagency
@@ -47,6 +51,15 @@ items:
         viewBag:
             isHidden: '0'
             cssClass: offshore
+            isExternal: '0'
+    -
+        title: Fleet
+        type: url
+        url: /fleet
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: fleet
             isExternal: '0'
     -
         title: Contact

@@ -25,53 +25,53 @@ categoryPage = "all-reports"
 <div class="blog-content-wrapper p-t-1" data-target="#blog-content-wrapper" id="blog-content-wrapper"> 
 
     <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 p-b-3  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-content-column">
+                
+                {# TITLE #}
+                <div class="row">
+                    <div class="col-xs-9 p-b-2 p-r-2 hidden-sm-down">
+                        <h3 class="card-title text-sm-left text-serif">{{ post.title }}</h3>
+                    </div>
+                    <div class="col-xs-3 p-b-2  hidden-sm-down">
+                        <div class="text-sm-right" id="post-date">{{ post.published_at|date('m.d.Y') }}</div>
+                    </div>
+                </div>
 
-        <div class="col-xs-12 col-md-8 p-b-3  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-content-column">
-            
-            {# TITLE #}
-            <div class="row">
-                <div class="col-xs-9 p-b-2 p-r-2 hidden-sm-down">
-                    <h3 class="card-title text-sm-left text-serif">{{ post.title }}</h3>
+                {# TITLE xs #}
+                <div class="row">
+                    <div class="col-xs-12 hidden-md-up">
+                        <h3 class="card-title text-xs-center text-sm-left text-serif">{{ post.title }}</h3>
+                        <div class="text-sm-left text-xs-center m-b-2" id="post-date">{{ post.published_at|date('F d. Y') }}</div>
+                    </div>
                 </div>
-                <div class="col-xs-3 p-b-2  hidden-sm-down">
-                    <div class="text-sm-right" id="post-date">{{ post.published_at|date('m.d.Y') }}</div>
-                </div>
-            </div>
 
-            {# TITLE xs #}
-            <div class="row">
-                <div class="col-xs-12 hidden-md-up">
-                    <h3 class="card-title text-xs-center text-sm-left text-serif">{{ post.title }}</h3>
-                    <div class="text-sm-left text-xs-center m-b-2" id="post-date">{{ post.published_at|date('F d. Y') }}</div>
-                </div>
-            </div>
+                
+                {% if post.featured_images.count %}
+                    <div class="featured-images text-center">
+                        {% for image in post.featured_images %}
+                            <p>
+                                <img
+                                    data-src="{{ image.filename }}"
+                                    src="{{ image.path }}"
+                                    alt="{{ image.description }}"
+                                    style="max-width: 100%" />
+                            </p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
 
-            
-            {% if post.featured_images.count %}
-                <div class="featured-images text-center">
-                    {% for image in post.featured_images %}
-                        <p>
-                            <img
-                                data-src="{{ image.filename }}"
-                                src="{{ image.path }}"
-                                alt="{{ image.description }}"
-                                style="max-width: 100%" />
-                        </p>
-                    {% endfor %}
-                </div>
-            {% endif %}
-            
-            <div class="col-xs-12 p-l-0 p-b-3">
+
                 <div class="content">{{ post.content_html|raw }}</div>
+
             </div>
 
-
+            {% partial 'blog/blog_sidebar' 
+                post=post
+            %}
+            
         </div>
                     
-        {% partial 'blog/blog_sidebar' 
-            post=post
-        %}
-        
        
 
     </div>

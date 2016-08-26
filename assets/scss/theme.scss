@@ -319,11 +319,19 @@ nav .container {
 
 	.blog-content-wrapper {
 
+		.content {
+			img {
+				@extend .img-fluid;
+				@extend .center-block;
+			}
+
+		}
+
 		#blog-posts-list {
 			background-color: $gray-lighter;
 			padding-top: $padding-top;
 			#blog-sidebar-title {
-				padding-left:20px; //p-l-1 ist zu wenihger und p-l-2 zu viel
+				padding-left:20px; //p-l-1 ist zu weniger und p-l-2 zu viel
 				@include media-breakpoint-down(xs) {
 					padding-left:0;
 				}
@@ -337,6 +345,8 @@ nav .container {
 			@include media-breakpoint-down(sm) {
 				padding-top: 2rem;
 			}
+
+
 		}
 
 		.card {

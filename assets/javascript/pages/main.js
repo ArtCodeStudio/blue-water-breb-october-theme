@@ -377,6 +377,13 @@ var initAgency = function () {
 
 
 /**
+ * 
+ */
+var initFleet = function () {
+   
+};
+
+/**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
  */
@@ -396,7 +403,8 @@ var initTemplate = {
 	'environment':initEnvironment,
 	'history':initHistory,
 	'copyright': initCopyright,
-	'agency': initAgency
+	'agency': initAgency,
+	'fleet': initFleet
 };
 
 

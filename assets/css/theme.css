@@ -534,7 +534,7 @@ mark,
   content: "\00A0 \2014"; }
 
 .img-fluid, .carousel-inner > .carousel-item > img,
-.carousel-inner > .carousel-item > a > img {
+.carousel-inner > .carousel-item > a > img, #post .blog-content-wrapper .content img {
   display: block;
   max-width: 100%;
   height: auto; }
@@ -4144,7 +4144,7 @@ button.close {
   display: table;
   clear: both; }
 
-.center-block {
+.center-block, #post .blog-content-wrapper .content img {
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -7454,8 +7454,9 @@ a.bg-danger:focus, a.bg-danger:hover {
       width: 15rem; }
       @media (max-width: 991px) {
         #navbar-main .navbar-brand img {
-          width: 6rem;
-          margin-top: 2.05rem; } }
+          width: 5.4rem;
+          margin-top: 2.2rem;
+          margin-left: -1rem; } }
     @media (min-width: 1200px) {
       #navbar-main .navbar-brand {
         min-width: 400px !important;

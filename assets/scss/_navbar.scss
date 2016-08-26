@@ -45,8 +45,9 @@ $navbar-brand-width: 150px;
 		img {
 			width:15rem;
 			@include media-breakpoint-down(md) {
-				width:6rem;
-				margin-top: 2.05rem;
+				width: 5.4rem;
+				margin-top: 2.2rem;
+				margin-left: -1rem;
 			}		
 		}
 		

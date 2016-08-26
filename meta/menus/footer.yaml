@@ -27,37 +27,13 @@ items:
             cssClass: jobs
             isExternal: '0'
     -
-        title: Agency
-        type: url
-        url: /agency
+        title: QHSE
+        nesting: '0'
+        type: static-page
         code: ''
+        reference: terms
+        replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: agency
-            isExternal: '0'
-    -
-        title: Environment
-        nesting: ''
-        type: url
-        url: /environment
-        code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: environment
-            isExternal: '0'
-    -
-        title: History
-        nesting: ''
-        type: url
-        url: /history
-        code: history
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: history
             isExternal: '0'
