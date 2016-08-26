@@ -1,5 +1,11 @@
 [viewBag]
 ==
+function onStart()
+{
+   dump($this->post->slug);
+   $this->page->slug = $this->post->slug;
+}
+==
 {#
 # BLOG SIDEBAR NAVIGATION
 #}
@@ -9,13 +15,22 @@
         <div class="border-top"></div>
         <h3 class="text-xs-center  text-sm-left text-serif">Lastest</h3>   
     </div>
+    {% set currentPostSlug =  post.slug%}
 
     {% if post.categories.count %} 
 
         {% for category in post.categories %}
             <h4 class="text-xs-center text-sm-left text-serif p-y-2">{{ category.name }}</h4>
             {% for post in category.posts %}
-                {% if loop.index <= 2 %}
+             
+                {# DO NOT SHOW POST ALREADY SHOWN ON PAGE #}
+                {% if post.slug == currentPostSlug %}
+                    {% set show = false %}
+                {% else %} 
+                    {% set show = true %}
+                {% endif %}
+
+                {% if (loop.index <= 2) and (show == true) %}
                     <div class="card card-block">
                         <a href="{{ post.slug }}">
                             <div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>
@@ -29,6 +44,7 @@
                         </a>
                     </div>
                 {% endif %}
+                
             {% endfor %}
         {% endfor %}
 
