@@ -174,6 +174,8 @@ verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
 
+
+
 [slideshow shippingSlideshowJavaScript1]
 slideshow = 4
 initAuto = 0
@@ -259,6 +261,93 @@ vertical = 0
 verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
+
+#PORT ARENCY ---------------------------------------------------
+[slideshow portAgencySlideshowJavaScript1]
+slideshow = 5
+initAuto = 0
+includeHTML = 0
+includeJavaScript = 1
+injectSlickAssets = 0
+injectSlickTheme = 0
+injectJLSlideshowCSS = 0
+injectJQuery = 0
+showCaptions = 1
+captionPosition = "middle center"
+autoplayOnShow = 1
+nextSlideOnEnd = 1
+accessibility = 1
+adaptiveHeight = 0
+autoplay = 0
+autoplaySpeed = 8000
+arrows = 1
+asNavFor = "#portAgencySlideshowHTML2"
+centerMode = 0
+centerPadding = "0px"
+dots = 0
+draggable = 1
+fade = 0
+focusOnSelect = 1
+infinite = 1
+mobileFirst = 0
+pauseOnFocus = 1
+pauseOnHover = 1
+pauseOnDotsHover = 0
+respondTo = "window"
+slidesToShow = 1
+swipe = 1
+swipeToSlide = 0
+touchMove = 1
+useCSS = 1
+useTransform = 1
+variableWidth = 0
+vertical = 0
+verticalSwiping = 0
+rtl = 0
+waitForAnimate = 1
+
+[slideshow portAgencySlideshowJavaScript2]
+slideshow = 5
+initAuto = 0
+includeHTML = 0
+includeJavaScript = 1
+injectSlickAssets = 0
+injectSlickTheme = 0
+injectJLSlideshowCSS = 0
+injectJQuery = 0
+showCaptions = 0
+captionPosition = "middle center"
+autoplayOnShow = 1
+nextSlideOnEnd = 1
+accessibility = 1
+adaptiveHeight = 0
+autoplay = 0
+autoplaySpeed = 8000
+arrows = 1
+asNavFor = "#portAgencySlideshowHTML1"
+centerMode = 0
+centerPadding = "0px"
+dots = 0
+draggable = 1
+fade = 0
+focusOnSelect = 1
+infinite = 1
+mobileFirst = 0
+pauseOnFocus = 1
+pauseOnHover = 1
+pauseOnDotsHover = 0
+respondTo = "window"
+slidesToShow = 3
+swipe = 1
+swipeToSlide = 0
+touchMove = 1
+useCSS = 1
+useTransform = 1
+variableWidth = 0
+vertical = 0
+verticalSwiping = 0
+rtl = 0
+waitForAnimate = 1
 ==
 {# Scripts#}
 
@@ -293,6 +382,11 @@ waitForAnimate = 1
 {# SHIPPING #}
 {% component 'shippingSlideshowJavaScript1' %}
 {% component 'shippingSlideshowJavaScript2' %}
+
+{# PORT AGENCY #}
+{% component 'portAgencySlideshowJavaScript1' %}
+{% component 'portAgencySlideshowJavaScript2' %}
+
 
 {% framework extras %}
 {% scripts %}

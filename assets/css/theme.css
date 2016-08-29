@@ -7204,11 +7204,11 @@ a.bg-danger:focus, a.bg-danger:hover {
 #home #latest-blog-posts #latest-blog-posts-row .slick-next {
   right: -49px; }
 
-#linerservices, #shipping {
+#linerservices, #shipping, #port_agency {
   /**
 	* Slideshow Navigation carousel
 	*/ }
-  #linerservices #fullscreenButton, #linerservices .fullscreenButton, #shipping #fullscreenButton, #shipping .fullscreenButton {
+  #linerservices #fullscreenButton, #linerservices .fullscreenButton, #shipping #fullscreenButton, #shipping .fullscreenButton, #port_agency #fullscreenButton, #port_agency .fullscreenButton {
     background-image: url(../images/icons/small-w.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -7219,9 +7219,9 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999;
     right: 35px;
     top: 23px; }
-    #linerservices #fullscreenButton:hover, #linerservices .fullscreenButton:hover, #shipping #fullscreenButton:hover, #shipping .fullscreenButton:hover {
+    #linerservices #fullscreenButton:hover, #linerservices .fullscreenButton:hover, #shipping #fullscreenButton:hover, #shipping .fullscreenButton:hover, #port_agency #fullscreenButton:hover, #port_agency .fullscreenButton:hover {
       background-image: url(../images/icons/small-r.svg); }
-  #linerservices .close-animatedModal, #shipping .close-animatedModal {
+  #linerservices .close-animatedModal, #shipping .close-animatedModal, #port_agency .close-animatedModal {
     background-image: url(../images/icons/big-close-w.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -7232,69 +7232,69 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999;
     right: 22px;
     top: 25px; }
-    #linerservices .close-animatedModal:hover, #shipping .close-animatedModal:hover {
+    #linerservices .close-animatedModal:hover, #shipping .close-animatedModal:hover, #port_agency .close-animatedModal:hover {
       background-image: url(../images/icons/big-close-r.svg); }
-  #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content {
+  #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content {
     position: fixed;
     /* top: 0; */
     background-color: rgba(255, 255, 255, 0.75);
     width: 100%;
     bottom: 0px;
     padding: 1rem 0 0 3rem; }
-    #linerservices .carousel-caption-wrapper .carousel-caption-content h2, #shipping .carousel-caption-wrapper .carousel-caption-content h2 {
+    #linerservices .carousel-caption-wrapper .carousel-caption-content h2, #shipping .carousel-caption-wrapper .carousel-caption-content h2, #port_agency .carousel-caption-wrapper .carousel-caption-content h2 {
       font-size: 1.25rem; }
-    #linerservices .carousel-caption-wrapper .carousel-caption-content p, #shipping .carousel-caption-wrapper .carousel-caption-content p {
+    #linerservices .carousel-caption-wrapper .carousel-caption-content p, #shipping .carousel-caption-wrapper .carousel-caption-content p, #port_agency .carousel-caption-wrapper .carousel-caption-content p {
       color: black !important; }
-  #linerservices .slick-prev, #shipping .slick-prev {
+  #linerservices .slick-prev, #shipping .slick-prev, #port_agency .slick-prev {
     left: 1rem; }
-  #linerservices .slick-next, #shipping .slick-next {
+  #linerservices .slick-next, #shipping .slick-next, #port_agency .slick-next {
     right: 1rem; }
-  #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+  #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
     position: absolute;
     z-index: 999; }
     @media (min-width: 1200px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
         margin-top: 12.1rem; } }
     @media (max-width: 1199px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
         margin-top: 9.6rem; } }
     @media (max-width: 991px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
         margin-top: 6.3rem; } }
     @media (max-width: 767px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
         margin-top: 10rem; } }
     @media (max-width: 543px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
         display: none; } }
-  #linerservices .slick-prev:before, #linerservices .slick-next:before, #shipping .slick-prev:before, #shipping .slick-next:before {
+  #linerservices .slick-prev:before, #linerservices .slick-next:before, #shipping .slick-prev:before, #shipping .slick-next:before, #port_agency .slick-prev:before, #port_agency .slick-next:before {
     color: #ef2a21; }
-  #linerservices .slideshow-container, #shipping .slideshow-container {
+  #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
     min-height: 559px; }
     @media (min-width: 1200px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
         min-height: 626px; } }
     @media (max-width: 1199px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
         min-height: 559px; } }
     @media (max-width: 991px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
         min-height: 487px; } }
     @media (max-width: 767px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
         min-height: 575px; } }
-  #linerservices #linerServicesSlideshowHTML2, #linerservices #shippingSlideshowHTML2, #shipping #linerServicesSlideshowHTML2, #shipping #shippingSlideshowHTML2 {
+  #linerservices #linerServicesSlideshowHTML2, #linerservices #shippingSlideshowHTML2, #linerservices #portAgencySlideshowHTML2, #shipping #linerServicesSlideshowHTML2, #shipping #shippingSlideshowHTML2, #shipping #portAgencySlideshowHTML2, #port_agency #linerServicesSlideshowHTML2, #port_agency #shippingSlideshowHTML2, #port_agency #portAgencySlideshowHTML2 {
     overflow: hidden; }
-    #linerservices #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #linerservices #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper {
+    #linerservices #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #linerservices #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #linerservices #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #port_agency #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #port_agency #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #port_agency #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper {
       display: none; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-slide, #linerservices #shippingSlideshowHTML2 .slick-slide, #shipping #linerServicesSlideshowHTML2 .slick-slide, #shipping #shippingSlideshowHTML2 .slick-slide {
+    #linerservices #linerServicesSlideshowHTML2 .slick-slide, #linerservices #shippingSlideshowHTML2 .slick-slide, #linerservices #portAgencySlideshowHTML2 .slick-slide, #shipping #linerServicesSlideshowHTML2 .slick-slide, #shipping #shippingSlideshowHTML2 .slick-slide, #shipping #portAgencySlideshowHTML2 .slick-slide, #port_agency #linerServicesSlideshowHTML2 .slick-slide, #port_agency #shippingSlideshowHTML2 .slick-slide, #port_agency #portAgencySlideshowHTML2 .slick-slide {
       margin: 4rem 0.9375rem;
       height: 200px; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-list, #linerservices #shippingSlideshowHTML2 .slick-list, #shipping #linerServicesSlideshowHTML2 .slick-list, #shipping #shippingSlideshowHTML2 .slick-list {
+    #linerservices #linerServicesSlideshowHTML2 .slick-list, #linerservices #shippingSlideshowHTML2 .slick-list, #linerservices #portAgencySlideshowHTML2 .slick-list, #shipping #linerServicesSlideshowHTML2 .slick-list, #shipping #shippingSlideshowHTML2 .slick-list, #shipping #portAgencySlideshowHTML2 .slick-list, #port_agency #linerServicesSlideshowHTML2 .slick-list, #port_agency #shippingSlideshowHTML2 .slick-list, #port_agency #portAgencySlideshowHTML2 .slick-list {
       margin: -1.875rem; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-prev, #linerservices #shippingSlideshowHTML2 .slick-prev, #shipping #linerServicesSlideshowHTML2 .slick-prev, #shipping #shippingSlideshowHTML2 .slick-prev {
+    #linerservices #linerServicesSlideshowHTML2 .slick-prev, #linerservices #shippingSlideshowHTML2 .slick-prev, #linerservices #portAgencySlideshowHTML2 .slick-prev, #shipping #linerServicesSlideshowHTML2 .slick-prev, #shipping #shippingSlideshowHTML2 .slick-prev, #shipping #portAgencySlideshowHTML2 .slick-prev, #port_agency #linerServicesSlideshowHTML2 .slick-prev, #port_agency #shippingSlideshowHTML2 .slick-prev, #port_agency #portAgencySlideshowHTML2 .slick-prev {
       left: -48px; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-next, #linerservices #shippingSlideshowHTML2 .slick-next, #shipping #linerServicesSlideshowHTML2 .slick-next, #shipping #shippingSlideshowHTML2 .slick-next {
+    #linerservices #linerServicesSlideshowHTML2 .slick-next, #linerservices #shippingSlideshowHTML2 .slick-next, #linerservices #portAgencySlideshowHTML2 .slick-next, #shipping #linerServicesSlideshowHTML2 .slick-next, #shipping #shippingSlideshowHTML2 .slick-next, #shipping #portAgencySlideshowHTML2 .slick-next, #port_agency #linerServicesSlideshowHTML2 .slick-next, #port_agency #shippingSlideshowHTML2 .slick-next, #port_agency #portAgencySlideshowHTML2 .slick-next {
       right: -49px; }
 
 .z-depth-0 {
@@ -7440,11 +7440,13 @@ a.bg-danger:focus, a.bg-danger:hover {
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out; }
   #navbar-main.navbar-slim .navbar-brand {
-    margin-top: 0; }
+    margin-top: 0;
+    width: 5.4rem !important; }
   #navbar-main.navbar-slim img {
+    width: 15rem;
+    width: 5.4rem !important;
     margin-top: 0.4rem !important; }
   #navbar-main .navbar-brand {
-    min-width: 420px;
     height: 64px;
     margin-top: 30px;
     -webkit-transition: all .25s ease-in-out;
@@ -7465,16 +7467,13 @@ a.bg-danger:focus, a.bg-danger:hover {
           margin-left: -1rem; } }
     @media (min-width: 1200px) {
       #navbar-main .navbar-brand {
-        min-width: 400px !important;
-        height: 74px; } }
+        min-width: 400px !important; } }
     @media (min-width: 992px) {
       #navbar-main .navbar-brand {
-        margin-top: 19px;
-        min-width: 279px; } }
+        margin-top: 19px; } }
     @media (max-width: 991px) {
       #navbar-main .navbar-brand {
-        margin-top: 11px;
-        min-width: 145px; } }
+        margin-top: 11px; } }
 
 .border-bottom {
   border-bottom: 1px solid; }

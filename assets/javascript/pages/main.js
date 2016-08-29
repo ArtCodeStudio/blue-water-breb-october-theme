@@ -116,8 +116,6 @@ var sameHeightCards = function (selector) {
 };
 
 
-
-
 /**
  *  
  */
@@ -237,7 +235,8 @@ var initOffshore = function (dataset) {
  * 
  */
 var initPortagency = function (dataset) {
-    
+	portAgencySlideshowJavaScript1Init('#portAgencySlideshowHTML1');
+    portAgencySlideshowJavaScript2Init('#portAgencySlideshowHTML2');
 };
 
 

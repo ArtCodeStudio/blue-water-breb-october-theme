@@ -129,7 +129,7 @@
 }
 
 
-#linerservices, #shipping {
+#linerservices, #shipping, #port_agency {
 
 	#fullscreenButton,  .fullscreenButton {
 		background-image: url(../images/icons/small-w.svg);
@@ -229,7 +229,7 @@
 	/**
 	* Slideshow Navigation carousel
 	*/
-	#linerServicesSlideshowHTML2, #shippingSlideshowHTML2 {
+	#linerServicesSlideshowHTML2, #shippingSlideshowHTML2, #portAgencySlideshowHTML2{
 
 		overflow: hidden;
 		.carousel-image-wrapper{
