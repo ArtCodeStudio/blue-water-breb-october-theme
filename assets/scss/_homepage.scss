@@ -1,0 +1,75 @@
+/*
+ * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+**/
+#home{
+
+	.overview-content-container {
+		margin-top: 1.5rem;
+		text-align: center;
+	}
+	#overview {
+		.learn-more {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+		}
+		.card {
+			border: 1px solid  $transparent;
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 3.75rem;
+			}
+		}
+		.card-block{
+			margin-bottom: 4rem;
+		}
+		.learn-more {
+			.read-more {
+				color:$brand-danger;
+				text-decoration: underline;
+			}
+			.btn {
+			}
+		}
+	}
+	
+	#latest-blog-posts {
+		#latest-blog-posts-row {
+			//margin-bottom:28px !important;
+		}
+	}
+
+	#press-releases {
+
+		.learn-more {
+			position: absolute;
+			bottom: 15px;
+			right: 15px;
+		}
+		.learn-more a {
+			color: $brand-danger;
+		}
+		.description {
+			margin-bottom: 2rem;
+		}
+		.card-group-flex,
+		.card-group-flex-sm,
+		.card-group-flex-md,
+		.card-group-flex-lg {
+			.card {
+				margin: 0 $grid-gutter-width/2;
+				border-left: 1px solid $brand-primary !important;
+			}
+		}
+	}
+
+	#about{
+		#about-teaser-text{
+			p{
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+
+}

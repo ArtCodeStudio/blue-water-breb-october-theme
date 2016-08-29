@@ -2,8 +2,6 @@ description = "javascript files at the bottom of body"
 
 [viewBag]
 
-# HOMEPAGE ---------------------------------------------------
-
 [slideshow slideshowHomeJavaScript]
 slideshow = 2
 initAuto = 0
@@ -47,9 +45,6 @@ verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
 
-
-# LINER-SERVICES ---------------------------------------------------
-
 [slideshow linerServicesSlideshowJavaScript1]
 slideshow = 3
 initAuto = 0
@@ -62,37 +57,38 @@ injectJQuery = 0
 aspectRatio = "ratio-16-9"
 showCaptions = 1
 captionPosition = "middle center"
-adaptiveHeight = 0
-centerMode = 0
-centerPadding = "0px"
 autoplayOnShow = 0
 nextSlideOnEnd = 0
-autoplaySpeed = 360000
-fade = 0
-infinite = 1
-slidesToShow = 1
-rtl = 0
-waitForAnimate = 1
 accessibility = 1
+adaptiveHeight = 0
+autoplay = 0
+autoplaySpeed = 360000
 arrows = 1
 asNavFor = "#linerServicesSlideshowHTML2"
+centerMode = 0
+centerPadding = "0px"
 dots = 0
 draggable = 1
+fade = 0
 focusOnSelect = 0
+infinite = 1
+mobileFirst = 0
 pauseOnFocus = 1
 pauseOnHover = 1
 pauseOnDotsHover = 0
+respondTo = "window"
+responsive = "{{ gallerySlideshowResponsive }}"
+slidesToShow = 1
 swipe = 1
 swipeToSlide = 0
 touchMove = 1
-verticalSwiping = 0
-mobileFirst = 0
-respondTo = "window"
-responsive = "{{ gallerySlideshowResponsive }}"
 useCSS = 1
 useTransform = 1
 variableWidth = 0
 vertical = 0
+verticalSwiping = 0
+rtl = 0
+waitForAnimate = 1
 
 [slideshow linerServicesSlideshowJavaScript2]
 slideshow = 3
@@ -105,37 +101,37 @@ injectJLSlideshowCSS = 0
 injectJQuery = 0
 showCaptions = 1
 captionPosition = "middle center"
-adaptiveHeight = 0
-centerMode = 0
-centerPadding = "0px"
 autoplayOnShow = 0
 nextSlideOnEnd = 0
+accessibility = 1
+adaptiveHeight = 0
 autoplay = 0
 autoplaySpeed = 360000
-fade = 0
-infinite = 1
-slidesToShow = 3
-rtl = 0
-waitForAnimate = 1
-accessibility = 1
 arrows = 1
 asNavFor = "#linerServicesSlideshowHTML1"
+centerMode = 0
+centerPadding = "0px"
 dots = 0
 draggable = 1
+fade = 0
 focusOnSelect = 1
+infinite = 1
+mobileFirst = 0
 pauseOnFocus = 1
 pauseOnHover = 1
 pauseOnDotsHover = 0
+respondTo = "window"
+slidesToShow = 3
 swipe = 1
 swipeToSlide = 0
 touchMove = 1
-verticalSwiping = 0
-mobileFirst = 0
-respondTo = "window"
 useCSS = 1
 useTransform = 1
 variableWidth = 0
 vertical = 0
+verticalSwiping = 0
+rtl = 0
+waitForAnimate = 1
 
 [slideshow fullscreenLinerServicesSlideshowJavaScript]
 slideshow = 3
@@ -178,9 +174,6 @@ vertical = 0
 verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
-
-
-# SHIPPING ---------------------------------------------------
 
 [slideshow shippingSlideshowJavaScript1]
 slideshow = 4
@@ -268,9 +261,6 @@ verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
 
-
-# PORT ARENCY ---------------------------------------------------
-
 [slideshow portAgencySlideshowJavaScript1]
 slideshow = 5
 initAuto = 0
@@ -357,9 +347,6 @@ verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
 
-
-# OFF-SHORE ---------------------------------------------------
-
 [slideshow offshoreSlideshowJavaScript1]
 slideshow = 5
 initAuto = 0
@@ -445,6 +432,10 @@ vertical = 0
 verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
+
+[ShipsList shipsListJavaScript]
+includeHTML = 0
+includeJavaScript = 1
 ==
 {# Scripts#}
 
@@ -489,6 +480,9 @@ waitForAnimate = 1
 {# OFFSHORE #}
 {% component 'offshoreSlideshowJavaScript1' %}
 {% component 'offshoreSlideshowJavaScript2' %}
+
+{# FLEET #}
+{% component 'shipsListJavaScript' %}
 
 {% framework extras %}
 {% scripts %}

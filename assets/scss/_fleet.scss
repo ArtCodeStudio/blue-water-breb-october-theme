@@ -1,0 +1,39 @@
+#fleet{
+	#layout-content {
+		#default-layout-container {
+			.grid {
+				background: #EEE;
+				/* center */
+				margin: 0 auto;
+				.grid-item {
+					width: 350px;
+					float: left;
+					margin-bottom: 30px;
+					background-color: white;
+					transition-delay: 0s;
+					transition-duration: 0.3s;
+					transition-property: box-shadow;
+					transition-timing-function: ease;
+					border: 1px solid  $brand-primary; //$transparent;
+					> * {
+						text-decoration: none;
+						transition-delay: 0s;
+						transition-duration: 0.3s;
+						transition-property: all;
+						transition-timing-function: ease;
+					}
+					&:hover {
+						@extend .z-depth-1-half;
+						border: 1px solid  $brand-primary;
+					}
+					.card-block {
+						.card-title {
+
+						}
+					}
+				}
+			}
+
+		}
+	}
+}

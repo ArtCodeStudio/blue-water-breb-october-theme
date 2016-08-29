@@ -380,9 +380,16 @@ var initAgency = function () {
  * 
  */
 var initFleet = function () {
- 	shipsListInit();
+ 	shipsListJavaScriptInit();
 };
 
+
+/**
+ * 
+ */
+var initTermsAndConditions = function () {
+
+};
 
 /**
  * Run JavaScript for for special template
@@ -405,7 +412,8 @@ var initTemplate = {
 	'history':initHistory,
 	'copyright': initCopyright,
 	'agency': initAgency,
-	'fleet': initFleet
+	'fleet': initFleet,
+	'termsandconditions': initTermsAndConditions
 };
 
 
