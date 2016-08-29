@@ -7204,11 +7204,11 @@ a.bg-danger:focus, a.bg-danger:hover {
 #home #latest-blog-posts #latest-blog-posts-row .slick-next {
   right: -49px; }
 
-#linerservices, #shipping, #port_agency {
+#linerservices, #shipping, #port_agency, #offshore {
   /**
 	* Slideshow Navigation carousel
 	*/ }
-  #linerservices #fullscreenButton, #linerservices .fullscreenButton, #shipping #fullscreenButton, #shipping .fullscreenButton, #port_agency #fullscreenButton, #port_agency .fullscreenButton {
+  #linerservices #fullscreenButton, #linerservices .fullscreenButton, #shipping #fullscreenButton, #shipping .fullscreenButton, #port_agency #fullscreenButton, #port_agency .fullscreenButton, #offshore #fullscreenButton, #offshore .fullscreenButton {
     background-image: url(../images/icons/small-w.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -7219,9 +7219,9 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999;
     right: 35px;
     top: 23px; }
-    #linerservices #fullscreenButton:hover, #linerservices .fullscreenButton:hover, #shipping #fullscreenButton:hover, #shipping .fullscreenButton:hover, #port_agency #fullscreenButton:hover, #port_agency .fullscreenButton:hover {
+    #linerservices #fullscreenButton:hover, #linerservices .fullscreenButton:hover, #shipping #fullscreenButton:hover, #shipping .fullscreenButton:hover, #port_agency #fullscreenButton:hover, #port_agency .fullscreenButton:hover, #offshore #fullscreenButton:hover, #offshore .fullscreenButton:hover {
       background-image: url(../images/icons/small-r.svg); }
-  #linerservices .close-animatedModal, #shipping .close-animatedModal, #port_agency .close-animatedModal {
+  #linerservices .close-animatedModal, #shipping .close-animatedModal, #port_agency .close-animatedModal, #offshore .close-animatedModal {
     background-image: url(../images/icons/big-close-w.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -7232,69 +7232,141 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999;
     right: 22px;
     top: 25px; }
-    #linerservices .close-animatedModal:hover, #shipping .close-animatedModal:hover, #port_agency .close-animatedModal:hover {
+    #linerservices .close-animatedModal:hover, #shipping .close-animatedModal:hover, #port_agency .close-animatedModal:hover, #offshore .close-animatedModal:hover {
       background-image: url(../images/icons/big-close-r.svg); }
-  #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content {
+  #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content, #offshore .carousel-caption-wrapper .carousel-caption-content {
     position: fixed;
     /* top: 0; */
     background-color: rgba(255, 255, 255, 0.75);
     width: 100%;
     bottom: 0px;
     padding: 1rem 0 0 3rem; }
-    #linerservices .carousel-caption-wrapper .carousel-caption-content h2, #shipping .carousel-caption-wrapper .carousel-caption-content h2, #port_agency .carousel-caption-wrapper .carousel-caption-content h2 {
+    #linerservices .carousel-caption-wrapper .carousel-caption-content h2, #shipping .carousel-caption-wrapper .carousel-caption-content h2, #port_agency .carousel-caption-wrapper .carousel-caption-content h2, #offshore .carousel-caption-wrapper .carousel-caption-content h2 {
       font-size: 1.25rem; }
-    #linerservices .carousel-caption-wrapper .carousel-caption-content p, #shipping .carousel-caption-wrapper .carousel-caption-content p, #port_agency .carousel-caption-wrapper .carousel-caption-content p {
+    #linerservices .carousel-caption-wrapper .carousel-caption-content p, #shipping .carousel-caption-wrapper .carousel-caption-content p, #port_agency .carousel-caption-wrapper .carousel-caption-content p, #offshore .carousel-caption-wrapper .carousel-caption-content p {
       color: black !important; }
-  #linerservices .slick-prev, #shipping .slick-prev, #port_agency .slick-prev {
+  #linerservices .slick-prev, #shipping .slick-prev, #port_agency .slick-prev, #offshore .slick-prev {
     left: 1rem; }
-  #linerservices .slick-next, #shipping .slick-next, #port_agency .slick-next {
+  #linerservices .slick-next, #shipping .slick-next, #port_agency .slick-next, #offshore .slick-next {
     right: 1rem; }
-  #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
+  #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next, #offshore .slick-prev, #offshore .slick-next {
     position: absolute;
     z-index: 999; }
     @media (min-width: 1200px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next, #offshore .slick-prev, #offshore .slick-next {
         margin-top: 12.1rem; } }
     @media (max-width: 1199px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next, #offshore .slick-prev, #offshore .slick-next {
         margin-top: 9.6rem; } }
     @media (max-width: 991px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next, #offshore .slick-prev, #offshore .slick-next {
         margin-top: 6.3rem; } }
     @media (max-width: 767px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next, #offshore .slick-prev, #offshore .slick-next {
         margin-top: 10rem; } }
     @media (max-width: 543px) {
-      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next {
+      #linerservices .slick-prev, #linerservices .slick-next, #shipping .slick-prev, #shipping .slick-next, #port_agency .slick-prev, #port_agency .slick-next, #offshore .slick-prev, #offshore .slick-next {
         display: none; } }
-  #linerservices .slick-prev:before, #linerservices .slick-next:before, #shipping .slick-prev:before, #shipping .slick-next:before, #port_agency .slick-prev:before, #port_agency .slick-next:before {
+  #linerservices .slick-prev:before, #linerservices .slick-next:before, #shipping .slick-prev:before, #shipping .slick-next:before, #port_agency .slick-prev:before, #port_agency .slick-next:before, #offshore .slick-prev:before, #offshore .slick-next:before {
     color: #ef2a21; }
-  #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
+  #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container, #offshore .slideshow-container {
     min-height: 559px; }
     @media (min-width: 1200px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container, #offshore .slideshow-container {
         min-height: 626px; } }
     @media (max-width: 1199px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container, #offshore .slideshow-container {
         min-height: 559px; } }
     @media (max-width: 991px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container, #offshore .slideshow-container {
         min-height: 487px; } }
     @media (max-width: 767px) {
-      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container {
+      #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container, #offshore .slideshow-container {
         min-height: 575px; } }
-  #linerservices #linerServicesSlideshowHTML2, #linerservices #shippingSlideshowHTML2, #linerservices #portAgencySlideshowHTML2, #shipping #linerServicesSlideshowHTML2, #shipping #shippingSlideshowHTML2, #shipping #portAgencySlideshowHTML2, #port_agency #linerServicesSlideshowHTML2, #port_agency #shippingSlideshowHTML2, #port_agency #portAgencySlideshowHTML2 {
+  #linerservices #linerServicesSlideshowHTML2,
+  #linerservices #shippingSlideshowHTML2,
+  #linerservices #portAgencySlideshowHTML2,
+  #linerservices #offshoreSlideshowHTML2, #shipping #linerServicesSlideshowHTML2,
+  #shipping #shippingSlideshowHTML2,
+  #shipping #portAgencySlideshowHTML2,
+  #shipping #offshoreSlideshowHTML2, #port_agency #linerServicesSlideshowHTML2,
+  #port_agency #shippingSlideshowHTML2,
+  #port_agency #portAgencySlideshowHTML2,
+  #port_agency #offshoreSlideshowHTML2, #offshore #linerServicesSlideshowHTML2,
+  #offshore #shippingSlideshowHTML2,
+  #offshore #portAgencySlideshowHTML2,
+  #offshore #offshoreSlideshowHTML2 {
     overflow: hidden; }
-    #linerservices #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #linerservices #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #linerservices #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #port_agency #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #port_agency #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #port_agency #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper {
+    #linerservices #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #linerservices #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #linerservices #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #linerservices #offshoreSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #shipping #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #shipping #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #shipping #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #shipping #offshoreSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #port_agency #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #port_agency #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #port_agency #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #port_agency #offshoreSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper, #offshore #linerServicesSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #offshore #shippingSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #offshore #portAgencySlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper,
+    #offshore #offshoreSlideshowHTML2 .carousel-image-wrapper .carousel-caption-wrapper {
       display: none; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-slide, #linerservices #shippingSlideshowHTML2 .slick-slide, #linerservices #portAgencySlideshowHTML2 .slick-slide, #shipping #linerServicesSlideshowHTML2 .slick-slide, #shipping #shippingSlideshowHTML2 .slick-slide, #shipping #portAgencySlideshowHTML2 .slick-slide, #port_agency #linerServicesSlideshowHTML2 .slick-slide, #port_agency #shippingSlideshowHTML2 .slick-slide, #port_agency #portAgencySlideshowHTML2 .slick-slide {
+    #linerservices #linerServicesSlideshowHTML2 .slick-slide,
+    #linerservices #shippingSlideshowHTML2 .slick-slide,
+    #linerservices #portAgencySlideshowHTML2 .slick-slide,
+    #linerservices #offshoreSlideshowHTML2 .slick-slide, #shipping #linerServicesSlideshowHTML2 .slick-slide,
+    #shipping #shippingSlideshowHTML2 .slick-slide,
+    #shipping #portAgencySlideshowHTML2 .slick-slide,
+    #shipping #offshoreSlideshowHTML2 .slick-slide, #port_agency #linerServicesSlideshowHTML2 .slick-slide,
+    #port_agency #shippingSlideshowHTML2 .slick-slide,
+    #port_agency #portAgencySlideshowHTML2 .slick-slide,
+    #port_agency #offshoreSlideshowHTML2 .slick-slide, #offshore #linerServicesSlideshowHTML2 .slick-slide,
+    #offshore #shippingSlideshowHTML2 .slick-slide,
+    #offshore #portAgencySlideshowHTML2 .slick-slide,
+    #offshore #offshoreSlideshowHTML2 .slick-slide {
       margin: 4rem 0.9375rem;
       height: 200px; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-list, #linerservices #shippingSlideshowHTML2 .slick-list, #linerservices #portAgencySlideshowHTML2 .slick-list, #shipping #linerServicesSlideshowHTML2 .slick-list, #shipping #shippingSlideshowHTML2 .slick-list, #shipping #portAgencySlideshowHTML2 .slick-list, #port_agency #linerServicesSlideshowHTML2 .slick-list, #port_agency #shippingSlideshowHTML2 .slick-list, #port_agency #portAgencySlideshowHTML2 .slick-list {
+    #linerservices #linerServicesSlideshowHTML2 .slick-list,
+    #linerservices #shippingSlideshowHTML2 .slick-list,
+    #linerservices #portAgencySlideshowHTML2 .slick-list,
+    #linerservices #offshoreSlideshowHTML2 .slick-list, #shipping #linerServicesSlideshowHTML2 .slick-list,
+    #shipping #shippingSlideshowHTML2 .slick-list,
+    #shipping #portAgencySlideshowHTML2 .slick-list,
+    #shipping #offshoreSlideshowHTML2 .slick-list, #port_agency #linerServicesSlideshowHTML2 .slick-list,
+    #port_agency #shippingSlideshowHTML2 .slick-list,
+    #port_agency #portAgencySlideshowHTML2 .slick-list,
+    #port_agency #offshoreSlideshowHTML2 .slick-list, #offshore #linerServicesSlideshowHTML2 .slick-list,
+    #offshore #shippingSlideshowHTML2 .slick-list,
+    #offshore #portAgencySlideshowHTML2 .slick-list,
+    #offshore #offshoreSlideshowHTML2 .slick-list {
       margin: -1.875rem; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-prev, #linerservices #shippingSlideshowHTML2 .slick-prev, #linerservices #portAgencySlideshowHTML2 .slick-prev, #shipping #linerServicesSlideshowHTML2 .slick-prev, #shipping #shippingSlideshowHTML2 .slick-prev, #shipping #portAgencySlideshowHTML2 .slick-prev, #port_agency #linerServicesSlideshowHTML2 .slick-prev, #port_agency #shippingSlideshowHTML2 .slick-prev, #port_agency #portAgencySlideshowHTML2 .slick-prev {
+    #linerservices #linerServicesSlideshowHTML2 .slick-prev,
+    #linerservices #shippingSlideshowHTML2 .slick-prev,
+    #linerservices #portAgencySlideshowHTML2 .slick-prev,
+    #linerservices #offshoreSlideshowHTML2 .slick-prev, #shipping #linerServicesSlideshowHTML2 .slick-prev,
+    #shipping #shippingSlideshowHTML2 .slick-prev,
+    #shipping #portAgencySlideshowHTML2 .slick-prev,
+    #shipping #offshoreSlideshowHTML2 .slick-prev, #port_agency #linerServicesSlideshowHTML2 .slick-prev,
+    #port_agency #shippingSlideshowHTML2 .slick-prev,
+    #port_agency #portAgencySlideshowHTML2 .slick-prev,
+    #port_agency #offshoreSlideshowHTML2 .slick-prev, #offshore #linerServicesSlideshowHTML2 .slick-prev,
+    #offshore #shippingSlideshowHTML2 .slick-prev,
+    #offshore #portAgencySlideshowHTML2 .slick-prev,
+    #offshore #offshoreSlideshowHTML2 .slick-prev {
       left: -48px; }
-    #linerservices #linerServicesSlideshowHTML2 .slick-next, #linerservices #shippingSlideshowHTML2 .slick-next, #linerservices #portAgencySlideshowHTML2 .slick-next, #shipping #linerServicesSlideshowHTML2 .slick-next, #shipping #shippingSlideshowHTML2 .slick-next, #shipping #portAgencySlideshowHTML2 .slick-next, #port_agency #linerServicesSlideshowHTML2 .slick-next, #port_agency #shippingSlideshowHTML2 .slick-next, #port_agency #portAgencySlideshowHTML2 .slick-next {
+    #linerservices #linerServicesSlideshowHTML2 .slick-next,
+    #linerservices #shippingSlideshowHTML2 .slick-next,
+    #linerservices #portAgencySlideshowHTML2 .slick-next,
+    #linerservices #offshoreSlideshowHTML2 .slick-next, #shipping #linerServicesSlideshowHTML2 .slick-next,
+    #shipping #shippingSlideshowHTML2 .slick-next,
+    #shipping #portAgencySlideshowHTML2 .slick-next,
+    #shipping #offshoreSlideshowHTML2 .slick-next, #port_agency #linerServicesSlideshowHTML2 .slick-next,
+    #port_agency #shippingSlideshowHTML2 .slick-next,
+    #port_agency #portAgencySlideshowHTML2 .slick-next,
+    #port_agency #offshoreSlideshowHTML2 .slick-next, #offshore #linerServicesSlideshowHTML2 .slick-next,
+    #offshore #shippingSlideshowHTML2 .slick-next,
+    #offshore #portAgencySlideshowHTML2 .slick-next,
+    #offshore #offshoreSlideshowHTML2 .slick-next {
       right: -49px; }
 
 .z-depth-0 {
@@ -7868,114 +7940,6 @@ a.bg-danger:focus, a.bg-danger:hover {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-body {
-  max-width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: -1;
-  border-top: 1px solid #3a599f !important; }
-
-.section-headline-text .border-top {
-  border-top: solid #4053a4 4px;
-  margin-bottom: 14px;
-  width: 61px; }
-  @media (max-width: 543px) {
-    .section-headline-text .border-top {
-      margin: 0 auto; } }
-
-@media (max-width: 767px) {
-  .section-headline-text h3 {
-    margin-top: 1rem;
-    margin-bottom: 1rem; } }
-
-h3, h4, .card-block .text-sm-right {
-  color: #4053a4; }
-
-nav .container {
-  padding-left: 0; }
-
-#default-layout-container {
-  margin-top: 8rem; }
-  @media (max-width: 767px) {
-    #default-layout-container {
-      margin-top: 4rem; } }
-
-.card {
-  border: 1px solid #4053a4; }
-
-.card-block .text-sm-right {
-  margin-bottom: 15px; }
-
-.nav-link, .card-block {
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease; }
-
-/*
- * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-**/
-#home .overview-content-container {
-  margin-top: 1.5rem;
-  text-align: center; }
-
-#home #overview .learn-more {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%; }
-
-#home #overview .card {
-  border: 1px solid rgba(1, 1, 1, 0); }
-  @media (max-width: 1199px) {
-    #home #overview .card {
-      margin-bottom: 3.75rem; } }
-
-#home #overview .card-block {
-  margin-bottom: 4rem; }
-
-#home #press-releases .learn-more {
-  position: absolute;
-  bottom: 15px;
-  right: 15px; }
-
-#home #press-releases .learn-more a {
-  color: #ef2a21; }
-
-#home #press-releases .description {
-  margin-bottom: 2rem; }
-
-#home #press-releases .card-group-flex .card,
-#home #press-releases .card-group-flex-sm .card,
-#home #press-releases .card-group-flex-md .card,
-#home #press-releases .card-group-flex-lg .card {
-  margin: 0 0.9375rem;
-  border-left: 1px solid #4053a4 !important; }
-
-#home #about #about-teaser-text p {
-  margin-bottom: 2.5rem; }
-
-/*
- * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
- **/
-#linerservices #liner-services #liner-services-content-container {
-  text-align: justify !important; }
-
-.content-container {
-  text-align: justify !important; }
-
 #blog-header-wrapper {
   top: 2.9rem;
   width: 100%;
@@ -8115,3 +8079,111 @@ nav .container {
 
 #post .blog-content-wrapper .learn-more {
   color: #4053a4; }
+
+body {
+  max-width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: -1;
+  border-top: 1px solid #3a599f !important; }
+
+.section-headline-text .border-top {
+  border-top: solid #4053a4 4px;
+  margin-bottom: 14px;
+  width: 61px; }
+  @media (max-width: 543px) {
+    .section-headline-text .border-top {
+      margin: 0 auto; } }
+
+@media (max-width: 767px) {
+  .section-headline-text h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem; } }
+
+h3, h4, .card-block .text-sm-right {
+  color: #4053a4; }
+
+nav .container {
+  padding-left: 0; }
+
+#default-layout-container {
+  margin-top: 8rem; }
+  @media (max-width: 767px) {
+    #default-layout-container {
+      margin-top: 4rem; } }
+
+.card {
+  border: 1px solid #4053a4; }
+
+.card-block .text-sm-right {
+  margin-bottom: 15px; }
+
+.nav-link, .card-block {
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
+
+/*
+ * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+**/
+#home .overview-content-container {
+  margin-top: 1.5rem;
+  text-align: center; }
+
+#home #overview .learn-more {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; }
+
+#home #overview .card {
+  border: 1px solid rgba(1, 1, 1, 0); }
+  @media (max-width: 1199px) {
+    #home #overview .card {
+      margin-bottom: 3.75rem; } }
+
+#home #overview .card-block {
+  margin-bottom: 4rem; }
+
+#home #press-releases .learn-more {
+  position: absolute;
+  bottom: 15px;
+  right: 15px; }
+
+#home #press-releases .learn-more a {
+  color: #ef2a21; }
+
+#home #press-releases .description {
+  margin-bottom: 2rem; }
+
+#home #press-releases .card-group-flex .card,
+#home #press-releases .card-group-flex-sm .card,
+#home #press-releases .card-group-flex-md .card,
+#home #press-releases .card-group-flex-lg .card {
+  margin: 0 0.9375rem;
+  border-left: 1px solid #4053a4 !important; }
+
+#home #about #about-teaser-text p {
+  margin-bottom: 2.5rem; }
+
+/*
+ * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ **/
+#linerservices #liner-services #liner-services-content-container {
+  text-align: justify !important; }
+
+.content-container {
+  text-align: justify !important; }

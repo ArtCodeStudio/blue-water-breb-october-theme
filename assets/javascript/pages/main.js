@@ -227,7 +227,8 @@ var initShipping = function (dataset) {
  * 
  */
 var initOffshore = function (dataset) {
-
+	offshoreSlideshowJavaScript1Init('#offshoreSlideshowHTML1');
+    offshoreSlideshowJavaScript2Init('#offshoreSlideshowHTML2');
 };
 
 
@@ -379,8 +380,9 @@ var initAgency = function () {
  * 
  */
 var initFleet = function () {
-   
+ 	shipsListInit();
 };
+
 
 /**
  * Run JavaScript for for special template
