@@ -68,20 +68,20 @@ var changeNavbar = function (dataset) {
 	if (currentNamespace === 'home') { 
 
 		if (scroll_pos >= slideshow_height) {
-			$('.navbar-brand').addClass("brand-hidden" );
+			//$('.navbar-brand').addClass("brand-hidden" );
 			$('#navbar-main').addClass("navbar-slim");
 			$('#slideshowHomeHTML').trigger('jumplink_slideshow_stop');
 			// console.log('stop slideshow triggert');
 
 		} else {
 			$('#navbar-main').removeClass("navbar-slim");
-			$('.navbar-brand').removeClass("brand-hidden");
+			//$('.navbar-brand').removeClass("brand-hidden");
 			$('#slideshowHomeHTML').trigger('jumplink_resume_slideshow');
 			// console.log('jumplink_resume_slideshow  triggert');
 		}
 
 	} else {
-		$('.navbar-brand').addClass("brand-hidden" );
+		//$('.navbar-brand').addClass("brand-hidden" );
 		$('#navbar-main').addClass("navbar-slim");
 	}
 

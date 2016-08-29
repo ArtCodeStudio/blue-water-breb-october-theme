@@ -7439,6 +7439,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     margin-top: 40px;
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out; }
+  #navbar-main.navbar-slim .navbar-brand {
+    margin-top: 0; }
+  #navbar-main.navbar-slim img {
+    margin-top: 0.4rem !important; }
   #navbar-main .navbar-brand {
     min-width: 420px;
     height: 64px;
@@ -7446,11 +7450,13 @@ a.bg-danger:focus, a.bg-danger:hover {
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
     position: absolute;
-    z-index: -1; }
+    z-index: 1; }
     #navbar-main .navbar-brand.brand-hidden {
       opacity: 0 !important;
       height: 0 !important; }
     #navbar-main .navbar-brand img {
+      -webkit-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
       width: 15rem; }
       @media (max-width: 991px) {
         #navbar-main .navbar-brand img {
@@ -7972,7 +7978,7 @@ nav .container {
   text-align: justify !important; }
 
 #blog-header-wrapper {
-  top: 2.96rem;
+  top: 2.9rem;
   width: 100%;
   position: fixed;
   position: fixed;

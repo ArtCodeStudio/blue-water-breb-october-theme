@@ -23,7 +23,7 @@ function onEnd() {
 	<div class="container hidden-sm-down ">
 
 		<nav class="navbar navbar-light {{ navbarClass }}" id="navbar-main">	
-            <a href="/" class="navbar-brand {{ brandClass }}"><img class="fr-dib fr-draggable" src="{{ this.theme.primary_brand | media }}" >	</a>
+            <a href="/" class="navbar-brand"><img class="fr-dib fr-draggable" src="{{ this.theme.primary_brand | media }}" >	</a>
 			{% partial 'navigation/navbar-items'
 				items=main.menuItems
 				class='nav navbar-nav pull-xs-right hidden-sm-down main-navigation'

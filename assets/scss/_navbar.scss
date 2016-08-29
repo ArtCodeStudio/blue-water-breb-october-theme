@@ -24,6 +24,14 @@ $navbar-brand-width: 150px;
 		margin-top: 40px;		
 		transition: all .25s ease-in-out;
 	}
+	&.navbar-slim{
+		.navbar-brand {
+			margin-top: 0;
+		}
+		img{
+			margin-top: 0.4rem !important;
+		}
+	}
 
 	.navbar-brand {
 		min-width: 420px;
@@ -31,11 +39,7 @@ $navbar-brand-width: 150px;
 		margin-top: 30px;
 		transition: all .25s ease-in-out;
 		position: absolute;
-		//background-image: url(../images/logo/BX_RZ_BremerReederei_pos_RGB.png);/* BX_RZ_BremerReederei_pos_4d.svg */
-		// background-repeat: no-repeat;
-		// background-position: center bottom;
-		// background-size: 100% auto;
-		z-index: -1;
+		z-index: 1;
 		
 		&.brand-hidden {
 			opacity:0 !important;
@@ -43,6 +47,7 @@ $navbar-brand-width: 150px;
 		}
 		
 		img {
+			transition: all .25s ease-in-out;
 			width:15rem;
 			@include media-breakpoint-down(md) {
 				width: 5.4rem;
