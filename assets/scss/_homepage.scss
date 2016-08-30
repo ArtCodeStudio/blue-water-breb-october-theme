@@ -26,8 +26,11 @@
 		}
 		.learn-more {
 			.read-more {
+				text-decoration: none;
 				color:$brand-danger;
-				text-decoration: underline;
+				&:hover {
+					border-bottom: 1px solid $brand-danger;
+				}
 			}
 			.btn {
 			}

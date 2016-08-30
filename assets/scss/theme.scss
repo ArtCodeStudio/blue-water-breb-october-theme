@@ -36,6 +36,17 @@ hr {
 	border-top: 1px solid #3a599f !important;
 }
 
+// active state for nested links in full clickable cards
+// .learn-more {
+// 	.active { // fake hover link
+// 		border-bottom: 1px solid  $brand-primary;
+// 		width: 80px;
+// 		float: right;
+// 		margin-bottom: 1.2rem;
+// 	}
+// }
+
+
 .section-headline-text {
 	.border-top {
 		border-top: solid $brand-primary 4px;

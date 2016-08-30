@@ -97,6 +97,22 @@
 					@extend .z-depth-1-half;
 					border: 1px solid  $brand-primary;
 				}
+				a{
+					.card-block{
+						.learn-more {
+							div{
+								
+								&.active { // fake hover link
+									border-bottom: 1px solid  $brand-primary;
+									width: 80px;
+									float: right;
+									margin-bottom: 1.2rem;
+								}
+							}
+						}
+
+					}
+				}
 			}
 			&.no-nav{
 				padding-top: 3rem;

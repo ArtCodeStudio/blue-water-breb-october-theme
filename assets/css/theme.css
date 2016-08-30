@@ -8019,6 +8019,11 @@ a.bg-danger:focus, a.bg-danger:hover {
                 transition-timing-function: ease; }
       #category .blog-content-wrapper #all-posts-container .grid-item:hover, #allreports .blog-content-wrapper #all-posts-container .grid-item:hover {
         border: 1px solid #4053a4; }
+      #category .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div.active, #allreports .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div.active {
+        border-bottom: 1px solid #4053a4;
+        width: 80px;
+        float: right;
+        margin-bottom: 1.2rem; }
     #category .blog-content-wrapper #all-posts-container.no-nav, #allreports .blog-content-wrapper #all-posts-container.no-nav {
       padding-top: 3rem; }
 
@@ -8135,8 +8140,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   margin-bottom: 4rem; }
 
 #home #overview .learn-more .read-more {
-  color: #ef2a21;
-  text-decoration: underline; }
+  text-decoration: none;
+  color: #ef2a21; }
+  #home #overview .learn-more .read-more:hover {
+    border-bottom: 1px solid #ef2a21; }
 
 #home #press-releases .learn-more {
   position: absolute;
@@ -8170,6 +8177,12 @@ hr {
   margin-bottom: 1rem;
   border: -1;
   border-top: 1px solid #3a599f !important; }
+
+.learn-more .active {
+  border-bottom: 1px solid #4053a4;
+  width: 80px;
+  float: right;
+  margin-bottom: 1.2rem; }
 
 .section-headline-text .border-top {
   border-top: solid #4053a4 4px;
