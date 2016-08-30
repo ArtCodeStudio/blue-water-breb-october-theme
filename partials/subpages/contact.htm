@@ -2,16 +2,26 @@
 snippetCode = "contact"
 snippetName = "Contact"
 ==
-<div id="offshore" data-target="#offshore"> 
+<div id="contact" data-target="#contact"> 
 
     <div class="row">
-        <div class="col-xs-12 col-md-5 section-headline-text" >
+        
+        <div class="col-xs-12 col-lg-2 col-xl-4 section-headline-text" >
             <div class="border-top"></div>
-            <h3 class="text-xs-center text-sm-left text-serif">{{ this.page.title }}</h3>  
+            <h3 class="text-xs-center text-sm-left text-serif">Position</h3>  
         </div>
-        <div class="col-xs-12 col-md-7">
-            {% content 'contact.htm' %}
-        </div>
+
+        {% partial 'subpages/_contact' %}
+
     </div>
 
+    <div class="row">
+        <div class="col-xs-12 col-md-2 col-xl-4 section-headline-text" >
+            <div class="border-top"></div>
+            <h3 class="text-xs-center text-sm-left text-serif">Department</h3>  
+        </div>
+        <div class="col-xs-12 col-md-7">
+            
+        </div>
+    </div>
 </div>

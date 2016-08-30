@@ -1,7 +1,7 @@
 [viewBag]
 ==
-<div class="container m-y-3 footer hidden-md-down footer-contact-container" id="footer-contact-container">
-	<div>
+{#<div class="container m-y-3 footer hidden-md-down footer-contact-container" id="footer-contact-container">
+	<div>xl
 		{% partial 'footer/_footer_contact_bremen' %}
 	</div>
 	<div>
@@ -13,10 +13,10 @@
 	<div>
 		{% partial 'footer/_footer_contact_zebruegge' %}
 	</div>
-</div>
+</div>#}
 
-
-<div class="container m-y-3 footer hidden-lg-up hidden-xs-down footer-contact-container-small" >
+{# MD #}
+<div class="container m-y-3 footer hidden-sm-down p-y-3" id="contact-container-md">
 	<div>
 		<div class="m-b-3">
 			{% partial 'footer/_footer_contact_bremen' %}
@@ -35,24 +35,28 @@
 	</div>
 </div>
 
-
-<div class="container m-y-3 footer hidden-xs-down hidden-sm-up " >
+{# SM #}
+<div class="container m-y-3 footer hidden-md-up hidden-xs-down" id="contact-container-sm" >
 	<div>
-		{% partial 'footer/_footer_contact_bremen' %}
+		<div class="m-b-3">
+			{% partial 'footer/_footer_contact_bremen' %}
+		</div>
+		<div>
+			{% partial 'footer/_footer_contact_sassnitz' %}
+		</div>
 	</div>
 	<div>
-		{% partial 'footer/_footer_contact_cuxhaven' %}
-	</div>
-	<div>
-		{% partial 'footer/_footer_contact_sassnitz' %}
-	</div>
-	<div>
-		{% partial 'footer/_footer_contact_zebruegge' %}
+		<div class="m-b-3">
+			{% partial 'footer/_footer_contact_cuxhaven' %}
+		</div>
+		<div>
+			{% partial 'footer/_footer_contact_zebruegge' %}
+		</div>
 	</div>
 </div>
 
-
-<div class="container m-y-3 footer hidden-sm-up" id="footer-contact-container">
+{# XS #}
+<div class="container m-y-3 footer hidden-sm-up" id="contact-container-xs">
 	<div class="row">
 		<div class="col-xs- col-sm-6 col-lg-3 column-1" >
 			<div class="column">

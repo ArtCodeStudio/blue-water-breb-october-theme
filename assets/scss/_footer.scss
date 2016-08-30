@@ -4,7 +4,8 @@
 .footer {
 	display:flex;
 	justify-content: space-between;
-	&.footer-contact-container-small {
+	&.footer-contact-container-small{
+
 		> div:first-child > div {
 			border-right: 1px solid $brand-primary;
 			@include media-breakpoint-up(md) {
@@ -36,7 +37,6 @@
 		text-align: center !important;
 		margin-top: 163px; // besser loesen
 		img{
-			// width: 114% !important;
 			max-width: 38% !important;
     		min-width: 263px;
 		}
