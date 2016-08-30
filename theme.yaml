@@ -8,109 +8,263 @@ code: breb-barba
 form:
     tabs:
         fields:
-            bremen_logo:
-                label: Bremen
-                type: mediafinder
-                mode: image
+
+            # bremen_logo:
+            #     label: Bremen
+            #     type: mediafinder
+            #     mode: image
+            #     tab: Contact
+            location_title:
+                type: section
+                label: Position
                 tab: Contact
+
             location_bremen:
+                label: Bremen
                 default: BREB GmbH & Co.KG
+                placeholder: Name
                 tab: Contact
             location_breme1:
                 default:
+                placeholder: Address
                 tab: Contact
             location_bremen2:
-                default: Universitätsallee 5 
+                default: Universitätsallee 5
+                placeholder: Address 
                 tab: Contact
             location_bremen3:
                 default: 28359 Bremen
+                placeholder: 
                 tab: Contact
             location_bremen4:
                 default: Tel. +49 (0)421 32278-0
+                placeholder: Phone
                 tab: Contact
             location_bremen5:
                 default: Fax +49 (0)421 32278-78
+                placeholder: Fax
                 tab: Contact
             
-            cuxhaven_logo:
-                label: Cuxhaven
-                type: mediafinder
-                mode: image
-                tab: Contact
+            # cuxhaven_logo:
+            #     label: Cuxhaven
+            #     type: mediafinder
+            #     mode: image
+            #     tab: Contact
             location_cuxhaven:
+                label: Cuxhaven
                 default: BREB GmbH & Co.KG
+                placeholder: Address
                 tab: Contact
             location_cuxhaven1:
                 default: Havenhostel Cuxhaven
+                placeholder: Address
                 tab: Contact
             location_cuxhaven2:
                 default: Kpt.-Alexander-Str. 16
+                placeholder: Address
                 tab: Contact
             location_cuxhaven3:
                 default: 27472 Cuxhaven
+                'placeholder': 'ZIP / City, eg: 27472 Cuxhaven'
                 tab: Contact
             location_cuxhaven4:
                 default: Tel. +49 (0)4721 590 54 0
+                placeholder: Phone
                 tab: Contact
             location_cuxhaven5:
                 default: Fax +49 (0)4721 590 54 99
+                placeholder: Fax
                 tab: Contact
 
-            sassnitz_logo:
-                label: Sassnitz
-                type: mediafinder
-                mode: image
-                tab: Contact
+            # sassnitz_logo:
+            #     label: Sassnitz
+            #     type: mediafinder
+            #     mode: image
+            #     tab: Contact
             location_sassnitz:
+                label: Sassnitz
                 default: BREB GmbH & Co.KG
+                placeholder: Address
                 tab: Contact
             location_sassnitz1:
                 default: Hafeneingangsgebäude Sassnitz
+                placeholder: Address
                 tab: Contact
             location_sassnitz2:
                 default: Fährhafen 20b
+                placeholder: Address
                 tab: Contact
             location_sassnitz3:
                 default: 18546 Sassnitz
+                'placeholder': 'ZIP / City, eg: 18546 Sassnitz'
                 tab: Contact
             location_sassnitz4:
                 default: Tel. +49 (0)38392 55 44 0
+                placeholder: Phone
                 tab: Contact
             location_sassnitz5:
-                default: 
+                default:
+                placeholder: Fax 
                 tab: Contact
 
-            Zeebrugge_logo:
-                label: Zeebrugge
-                type: mediafinder
-                mode: image
-                tab: Contact          
+            # Zeebrugge_logo:
+            #     label: Zeebrugge
+            #     type: mediafinder
+            #     mode: image
+            #     tab: Contact          
             location_zeebrugge:
+                label: Zeebrugge
                 default: BREB Belgium bvba
+                placeholder: Address
                 tab: Contact
             location_zeebrugge1:
                 default:
+                placeholder: Address
                 tab: Contact
             location_zeebrugge2:
                 default: Rederskaai 30
+                placeholder: Address
                 tab: Contact
             location_zeebrugge3:
                 default: 8380 Zeebrugge
+                'placeholder': 'ZIP / City, eg: 8380 Zeebrugge'
                 tab: Contact
             location_zeebrugge4:
-                default: 
+                default:
+                placeholder: Phone 
                 tab: Contact
             location_zeebrugge5:
                 default: 
                 tab: Contact
+                placeholder: Fax
 
 
+# CONTACT /DEPARTMENT
+            department_title:
+                type: section
+                label: Department
+                tab: Contact
+            
+            department_chartering_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                label: chartering
+                tab: Contact
+            department_chartering_email:
+                default: chartering@breb.de
+                'placeholder': 'eMail Address, eg: chartering@breb.de'
+                placeholder: eMail
+                tab: Contact   
+
+            department_liner_services_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                label: Liner Services
+                tab: Contact
+            department_liner_services_email:
+                default: liner@breb.de
+                'placeholder': 'eMail Address, eg: liner@breb.de'
+                placeholder: eMail
+                tab: Contact   
+
+            department_operating_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                label: Operating
+                tab: Contact
+            department_operating_email:
+                default: obs@breb.de
+                'placeholder': 'eMail Address, eg: ops@breb.de'
+                placeholder: eMail
+                tab: Contact  
+
+            department_agency_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                label: Agency
+                tab: Contact
+            department_agency_email:
+                default: agency@breb.de
+                'placeholder': 'eMail Address, eg: agency@breb.de'
+                placeholder: eMail
+                tab: Contact  
+
+            department_agency_offshore_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                label: Agency Offshore
+                tab: Contact
+            department_agency_offshore_email:
+                default: offshore@breb.de
+                'placeholder': 'eMail Address, eg: offshore@breb.de'
+                placeholder: eMail
+                tab: Contact  
+            
+            department_agency_sassnitz_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                label: Agency Sassnitz
+                tab: Contact
+            department_agency_sassnitz_email:
+                default: sassnitz@breb.de
+                'placeholder': 'eMail Address, eg: sassnitz@breb.de'
+                placeholder: eMail
+                tab: Contact  
+
+            department_agency_belgium_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                label: Agency Belgium
+                tab: Contact
+            department_agency_belgium_email:
+                default: info@breb.de
+                'placeholder': 'eMail Address, eg: info@breb.de'
+                placeholder: eMail
+                tab: Contact 
+
+            department_accounting_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                'label': 'Accounting (Liner & Managed Vessels)'
+                tab: Contact
+            department_accounting_email:
+                default: accounting@breb.de
+                'placeholder': 'eMail Address, eg: accounting@breb.de'
+                placeholder: eMail
+                tab: Contact 
+
+            department_accounting_agency_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                'label': 'Accounting Agency (Port Agency & Offshore)'
+                tab: Contact
+            department_accounting_agency_email:
+                default: accounting-cux@breb.de
+                'placeholder': 'eMail Address, eg: accounting-cux@breb.de'
+                placeholder: eMail
+                tab: Contact 
+
+            department_administration_phone:
+                default: +49 (0)4721 123 45 6
+                'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
+                'label': 'Administration'
+                tab: Contact
+            department_administration_email:
+                default: info@breb.de
+                'placeholder': 'eMail Address, eg: info@breb.de'
+                placeholder: eMail
+                tab: Contact 
+
+
+# BLOG
             max_blog_posts:
                 label: Max Aricles / Page
                 type: number
                 default: 9
                 tab: Blog
 
+
+# BRAND
             primary_brand:
                 label: Primary Logo
                 type: mediafinder
@@ -122,3 +276,6 @@ form:
                 type: mediafinder
                 mode: image
                 tab: Brand 
+
+
+           
