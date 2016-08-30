@@ -316,22 +316,6 @@ var initBlog = function (dataset) {
 	}
 	initMasonry();   
 
-	// Fake Hover for read more link
-	// $(".grid-item").on('hover', function() {
-	// 	console.log('hover!!!');
-	// });
-
-	
-	$( ".grid-item" ).hover(
-		function() {
-			$( this ).find('.learn-more div').addClass( "active" );
-		}, function() {
-			$( this ).find('.learn-more div').removeClass( "active" );
-		}
-	);
-
-	//$( "td" ).off( "mouseenter mouseleave" );
-
 };
 
 /**
@@ -548,16 +532,7 @@ var initTemplates = function () {
   
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
 
-	$( "#post .blog-content-wrapper .card" ).hover(
-		function() {
-			$( this ).find('.learn-more div').addClass( "active" );
-		}, function() {
-			$( this ).find('.learn-more div').removeClass( "active" );
-		}
-	);
 	
-
-
 	// Stop ALL slideshows
     $(document).trigger('jumplink_slideshow_stop');
 	

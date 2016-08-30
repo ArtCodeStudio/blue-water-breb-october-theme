@@ -7964,8 +7964,6 @@ a.bg-danger:focus, a.bg-danger:hover {
 	**/ }
   #blog-header-wrapper .blog-header-container {
     text-align: center; }
-  #blog-header-wrapper.active {
-    opacity: 1; }
   #blog-header-wrapper .blog-header-container #blog-filter .nav-link {
     color: white;
     margin-top: 3rem; }
@@ -8019,11 +8017,15 @@ a.bg-danger:focus, a.bg-danger:hover {
                 transition-timing-function: ease; }
       #category .blog-content-wrapper #all-posts-container .grid-item:hover, #allreports .blog-content-wrapper #all-posts-container .grid-item:hover {
         border: 1px solid #4053a4; }
-      #category .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div.active, #allreports .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div.active {
-        border-bottom: 1px solid #4053a4;
+      #category .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div, #allreports .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div {
         width: 80px;
         float: right;
         margin-bottom: 1.2rem; }
+        #category .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div:hover, #allreports .blog-content-wrapper #all-posts-container .grid-item a .card-block .learn-more div:hover {
+          border-bottom: 1px solid #4053a4;
+          border-bottom: 1px solid #4053a4;
+          line-height: 22px;
+          margin-top: 1px; }
     #category .blog-content-wrapper #all-posts-container.no-nav, #allreports .blog-content-wrapper #all-posts-container.no-nav {
       padding-top: 3rem; }
 

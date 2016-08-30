@@ -16,10 +16,10 @@
 	.blog-header-container {
 		text-align:center;
 	}
-	&.active {
-		// display:block;
-		opacity:1;
-	}
+	// &.active {
+	// 	// display:block;
+	// 	opacity:1;
+	// }
 
 	.blog-header-container {
 		#blog-filter {
@@ -101,12 +101,14 @@
 					.card-block{
 						.learn-more {
 							div{
-								
-								&.active { // fake hover link
+								width: 80px;
+    							float: right;
+								margin-bottom: 1.2rem;
+								&:hover { // fake hover link
 									border-bottom: 1px solid  $brand-primary;
-									width: 80px;
-									float: right;
-									margin-bottom: 1.2rem;
+									border-bottom: 1px solid #4053a4;
+									line-height: 22px; // prevent jump after hoveer
+									margin-top: 1px; // prevent jump 
 								}
 							}
 						}
