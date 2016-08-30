@@ -9,10 +9,10 @@
 		> div:first-child > div {
 			border-right: 1px solid $brand-primary;
 			@include media-breakpoint-up(md) {
-				padding-right: 153px //perfect center
+				padding-right: 6rem; //153px //perfect center
 			}
 			@include media-breakpoint-down(sm) {
-				padding-right:81px //perfect center
+				padding-right:1.5rem;//81px //perfect center
 			}
 		}
 

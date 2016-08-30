@@ -7856,10 +7856,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     border-right: 1px solid #4053a4; }
     @media (min-width: 768px) {
       .footer.footer-contact-container-small > div:first-child > div {
-        padding-right: 153px; } }
+        padding-right: 6rem; } }
     @media (max-width: 767px) {
       .footer.footer-contact-container-small > div:first-child > div {
-        padding-right: 81px; } }
+        padding-right: 1.5rem; } }
   .footer.footer-contact-container-small div h6 {
     color: #ef2a21;
     font-weight: 700; }
@@ -8173,10 +8173,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   border-right: 1px solid #4053a4; }
   @media (min-width: 768px) {
     #contact .row .container#contact-container-sm > div:first-child > div, #contact .row .container#contact-container-md > div:first-child > div {
-      padding-right: 153px; } }
+      padding-right: 6rem; } }
   @media (max-width: 767px) {
     #contact .row .container#contact-container-sm > div:first-child > div, #contact .row .container#contact-container-md > div:first-child > div {
-      padding-right: 81px; } }
+      padding-right: 3rem; } }
 
 #contact .row .container#contact-container-sm div h6, #contact .row .container#contact-container-md div h6 {
   color: #ef2a21;
@@ -8215,6 +8215,25 @@ a.bg-danger:focus, a.bg-danger:hover {
         border-right: none !important; }
         #contact .row .container#contact-container-xs .row > div .column {
           padding-left: 30%; } }
+
+#contact .row .contact-department div div h6 {
+  font-weight: 700;
+  color: #4053a4;
+  display: inline; }
+
+#contact .row .contact-department div div .font-size-sm {
+  display: inline;
+  font-size: 0.875rem; }
+
+#contact .row .contact-department > div {
+  margin-bottom: 2rem; }
+  @media (max-width: 991px) {
+    #contact .row .contact-department > div {
+      padding-left: 30%; } }
+
+@media (max-width: 991px) {
+  #contact .row .contact-department {
+    padding-top: 2rem; } }
 
 body {
   max-width: 100%;

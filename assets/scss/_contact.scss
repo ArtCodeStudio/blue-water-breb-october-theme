@@ -4,6 +4,7 @@
 #contact {
 
 	.row {
+
 		.container {
 			
 			&#contact-container-md {
@@ -14,10 +15,10 @@
 				> div:first-child > div {
 					border-right: 1px solid $brand-primary;
 					@include media-breakpoint-up(md) {
-						padding-right: 153px //perfect center
+						padding-right: 6rem; 
 					}
 					@include media-breakpoint-down(sm) {
-						padding-right:81px //perfect center
+						padding-right: 3rem;
 					}
 				}
 				div {
@@ -75,10 +76,32 @@
 					}
 				}
 			}
+		}
 
-
-
-
+		.contact-department {
+			div {
+				div {
+					h6 {
+						font-weight: 700;
+						color:$brand-primary;
+						display:inline
+					}
+					.font-size-sm {
+						display:inline;
+						font-size: $font-size-sm;
+					}
+				}
+			}
+			> div{
+				margin-bottom: 2rem;
+				@include media-breakpoint-down(md) {
+					padding-left: 30%;
+				}
+			}
+			@include media-breakpoint-down(md) {
+				padding-top: 2rem;
+			}
+			
 		}
 	}
 
