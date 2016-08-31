@@ -222,9 +222,7 @@ var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlid
  * 
  */
 var initShipping = function (dataset) {
-	
 	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenShippingSlideshowHTML" );
-
 	shippingSlideshowJavaScript1Init('#shippingSlideshowHTML1');
     shippingSlideshowJavaScript2Init('#shippingSlideshowHTML2');
     fullscreenShippingSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
@@ -235,8 +233,10 @@ var initShipping = function (dataset) {
  * 
  */
 var initOffshore = function (dataset) {
+	initializeAnimatedModal( "#offshoreFullscreenButton", "offshoreAnimatedModal", "#fullscreenOffshoreSlideshowHTML" );
 	offshoreSlideshowJavaScript1Init('#offshoreSlideshowHTML1');
     offshoreSlideshowJavaScript2Init('#offshoreSlideshowHTML2');
+	fullscreenOffshoreSlideshowJavaScriptInit('#fullscreenOffshoreSlideshowHTML');
 };
 
 
@@ -244,8 +244,10 @@ var initOffshore = function (dataset) {
  * 
  */
 var initPortagency = function (dataset) {
+	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenPortAgencySlideshowHTML" );
 	portAgencySlideshowJavaScript1Init('#portAgencySlideshowHTML1');
     portAgencySlideshowJavaScript2Init('#portAgencySlideshowHTML2');
+	fullscreenShippingSlideshowJavaScriptInit('#fullscreenPortAgencySlideshowHTML');
 };
 
 

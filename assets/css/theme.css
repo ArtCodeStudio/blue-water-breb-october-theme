@@ -7208,7 +7208,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   /**
 	* Slideshow Navigation carousel
 	*/ }
-  #linerservices .fullscreenButton, #shipping .fullscreenButton, #port_agency .fullscreenButton, #offshore .fullscreenButton {
+  #linerservices .fullscreen-button, #shipping .fullscreen-button, #port_agency .fullscreen-button, #offshore .fullscreen-button {
     background-image: url(../images/icons/small-w.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -7219,7 +7219,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999;
     right: 35px;
     top: 23px; }
-    #linerservices .fullscreenButton:hover, #shipping .fullscreenButton:hover, #port_agency .fullscreenButton:hover, #offshore .fullscreenButton:hover {
+    #linerservices .fullscreen-button:hover, #shipping .fullscreen-button:hover, #port_agency .fullscreen-button:hover, #offshore .fullscreen-button:hover {
       background-image: url(../images/icons/small-r.svg); }
   #linerservices .close-animated-modal, #shipping .close-animated-modal, #port_agency .close-animated-modal, #offshore .close-animated-modal {
     background-image: url(../images/icons/big-close-w.svg);
