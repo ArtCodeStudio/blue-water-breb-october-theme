@@ -12,8 +12,8 @@
 		top: 1rem;
 	}
 
-	.modal-content{
-	$arrow-padding: 1rem;
+	.modal-content {
+		$arrow-padding: 1rem;
 
 		.slick-prev {
 			left: $arrow-padding;
@@ -131,7 +131,7 @@
 
 #linerservices, #shipping, #port_agency, #offshore {
 
-	#fullscreenButton,  .fullscreenButton {
+	.fullscreenButton {
 		background-image: url(../images/icons/small-w.svg);
 		background-repeat: no-repeat;
 		background-position: center bottom;
@@ -150,7 +150,7 @@
 			background-image: url(../images/icons/small-r.svg);
 		}
 	}
-	.close-animatedModal {
+	.close-animated-modal{
 		background-image: url(../images/icons/big-close-w.svg);
 		background-repeat: no-repeat;
 		background-position: center bottom;

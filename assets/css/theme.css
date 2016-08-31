@@ -7208,7 +7208,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   /**
 	* Slideshow Navigation carousel
 	*/ }
-  #linerservices #fullscreenButton, #linerservices .fullscreenButton, #shipping #fullscreenButton, #shipping .fullscreenButton, #port_agency #fullscreenButton, #port_agency .fullscreenButton, #offshore #fullscreenButton, #offshore .fullscreenButton {
+  #linerservices .fullscreenButton, #shipping .fullscreenButton, #port_agency .fullscreenButton, #offshore .fullscreenButton {
     background-image: url(../images/icons/small-w.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -7219,9 +7219,9 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999;
     right: 35px;
     top: 23px; }
-    #linerservices #fullscreenButton:hover, #linerservices .fullscreenButton:hover, #shipping #fullscreenButton:hover, #shipping .fullscreenButton:hover, #port_agency #fullscreenButton:hover, #port_agency .fullscreenButton:hover, #offshore #fullscreenButton:hover, #offshore .fullscreenButton:hover {
+    #linerservices .fullscreenButton:hover, #shipping .fullscreenButton:hover, #port_agency .fullscreenButton:hover, #offshore .fullscreenButton:hover {
       background-image: url(../images/icons/small-r.svg); }
-  #linerservices .close-animatedModal, #shipping .close-animatedModal, #port_agency .close-animatedModal, #offshore .close-animatedModal {
+  #linerservices .close-animated-modal, #shipping .close-animated-modal, #port_agency .close-animated-modal, #offshore .close-animated-modal {
     background-image: url(../images/icons/big-close-w.svg);
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -7232,7 +7232,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     z-index: 999;
     right: 22px;
     top: 25px; }
-    #linerservices .close-animatedModal:hover, #shipping .close-animatedModal:hover, #port_agency .close-animatedModal:hover, #offshore .close-animatedModal:hover {
+    #linerservices .close-animated-modal:hover, #shipping .close-animated-modal:hover, #port_agency .close-animated-modal:hover, #offshore .close-animated-modal:hover {
       background-image: url(../images/icons/big-close-r.svg); }
   #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content, #offshore .carousel-caption-wrapper .carousel-caption-content {
     position: fixed;

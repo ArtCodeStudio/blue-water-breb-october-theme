@@ -1,0 +1,14 @@
+
+<a class="hidden-xs-down fullscreenButton" id="{{ fullscreenButtonID }}" href="#{{ name }}"></a>
+
+<div id="{{ name }}">
+
+	{#THIS IS IMPORTANT! to close the modal, the  name has to match the name given on the ID  class="close-animatedModal"#}
+	<div id='bt' class="close-{{ name }} text-xs-center close-animated-modal"></div>
+
+	<div class="modal-content">
+		
+		{% component modalContent %}
+	</div>
+
+</div>

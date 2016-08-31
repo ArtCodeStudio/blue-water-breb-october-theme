@@ -143,17 +143,23 @@ waitForAnimate = 1
 						
 			<div class="col-md-12 col-lg-7 slideshow-container" >
 
-				<a class="hidden-xs-down" id="fullscreenButton" href="#animatedModal"></a>
+				{#<a class="hidden-xs-down" id="fullscreenButton" href="#myAnimatedModal"></a>
 		
-				<div id="animatedModal">
-					{#THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal"#}
-					<div class="close-animatedModal text-xs-center" style="color:white"></div>
+				<div id="myAnimatedModal">
+					<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal"-->
+					<div class="close-myAnimatedModal text-xs-center" style="color:white"></div>
 						
 					<div class="modal-content">
 						{% component 'fullscreenLinerServicesSlideshowHTML' %}
 					</div>
-				</div>
-
+				</div>#}
+				
+				{% partial '/subpages/_animated_modal' 
+					fullscreenButtonID = 'linerServicesFullscreenButton'
+					name = 'linerServicesAnimatedModal'
+					modalContent = 'fullscreenLinerServicesSlideshowHTML'
+				%}
+				
 				<script>
 					var gallerySlideshowResponsive= [
 						{

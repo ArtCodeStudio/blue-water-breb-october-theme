@@ -1,5 +1,4 @@
 var cache = {
-	initialized: false,
     lastElementClicked: null,
     $navbarMain: $('#navbar-main'),
 	$blogFilter: $('#blog-filter'),
@@ -199,26 +198,36 @@ var initHome = function (dataset) {
 		
 };
 
+/**
+ * Initialize Fullscreen Slideshow Modal
+ */	
+var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlideshowID ) {
+	$(fullscreenButtonID).animatedModal({
+		
+		color: "#fff", 
+		overflow:"hidden",
+		modalTarget: name,
+
+		beforeOpen: function () { // not working properly in safari....
+			$(fullscreenSlideshowID).slick('setPosition');
+		},
+		afterOpen: function () { // ... safari fix.
+			$(fullscreenSlideshowID).slick('setPosition');
+		},
+	});
+
+}
 
 /**
  * 
  */
 var initShipping = function (dataset) {
-	// Initialize Fullscreen Slideshow Modal
-	// $("#fullscreenButton").animatedModal({
-	// 	"color": "#fff", //primary-brand,
-	// 	"overflow":"hidden",
-	// 	beforeOpen: function () { // not working properly in safari....
-	// 		// $("#fullscreenShippingSlideshowHTML").slick('setPosition');
-	// 	},
-	// 	afterOpen: function () { // ... safari fix.
-	// 		// $("#fullscreenShippingSlideshowHTML").slick('setPosition');
-	// 	},
-	// });
+	
+	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenShippingSlideshowHTML" );
 
-	 shippingSlideshowJavaScript1Init('#shippingSlideshowHTML1');
-     shippingSlideshowJavaScript2Init('#shippingSlideshowHTML2');
-//	fullscreenShippingSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
+	shippingSlideshowJavaScript1Init('#shippingSlideshowHTML1');
+    shippingSlideshowJavaScript2Init('#shippingSlideshowHTML2');
+    fullscreenShippingSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
 };
 
 
@@ -245,17 +254,7 @@ var initPortagency = function (dataset) {
  */
 var initLinerservices = function (dataset) {
 
-	// Initialize Fullscreen Slideshow Modal
-	$("#liner-services #fullscreenButton").animatedModal({
-		"color": "#fff", //primary-brand,
-		"overflow":"hidden",
-		beforeOpen: function () { // not working properly in safari....
-			$("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
-		},
-		afterOpen: function () { // ... safari fix.
-			$("#fullscreenLinerServicesSlideshowHTML").slick('setPosition');
-		},
-	});
+	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
 
 	linerServicesSlideshowJavaScript1Init('#linerServicesSlideshowHTML1');
     linerServicesSlideshowJavaScript2Init('#linerServicesSlideshowHTML2');
@@ -290,10 +289,10 @@ var initBlog = function (dataset) {
 			var threshold = 10 ;
 			var scroll_pos = $(window).scrollTop();
 			if(scroll_pos >= threshold) {
-				$('#blog-header-wrapper').addClass('blog-nav-low-height');
+				cache.$blogHeader.addClass('blog-nav-low-height');
 				$('#blog-header-wrapper .blog-header-container .nav-link').addClass('blog-nav-small');
 			} else {
-				$('#blog-header-wrapper').removeClass('blog-nav-low-height');
+				cache.$blogHeader.removeClass('blog-nav-low-height');
 				$('#blog-header-wrapper .blog-header-container .nav-link').removeClass('blog-nav-small');
 			}
 		};
