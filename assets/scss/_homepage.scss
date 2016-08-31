@@ -29,7 +29,8 @@
 				text-decoration: none;
 				color:$brand-danger;
 				&:hover {
-					border-bottom: 1px solid $brand-danger;
+					text-decoration: underline;
+					// border-bottom: 1px solid $brand-danger;
 				}
 			}
 			.btn {

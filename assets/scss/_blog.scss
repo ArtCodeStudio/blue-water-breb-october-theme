@@ -104,11 +104,11 @@
 								width: 80px;
     							float: right;
 								margin-bottom: 1.2rem;
-								&:hover { // fake hover link
-									border-bottom: 1px solid  $brand-primary;
-									border-bottom: 1px solid #4053a4;
-									line-height: 22px; // prevent jump after hoveer
-									margin-top: 1px; // prevent jump 
+								&:hover { 
+									text-decoration: underline;
+									//border-bottom: 1px solid  $brand-primary;
+									// line-height: 22px; // prevent jump after hoveer
+									// margin-top: 1px; // prevent jump 
 								}
 							}
 						}
@@ -164,7 +164,6 @@
 				@extend .img-fluid;
 				@extend .center-block;
 			}
-
 		}
 
 		#blog-posts-list {
@@ -185,8 +184,6 @@
 			@include media-breakpoint-down(sm) {
 				padding-top: 2rem;
 			}
-
-
 		}
 
 		.card {
@@ -206,7 +203,13 @@
 		}
 
 		.learn-more {
+			height: 1.5rem;
 			color: $brand-primary;
+			div {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
