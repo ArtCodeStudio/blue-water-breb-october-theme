@@ -203,7 +203,6 @@ var initHome = function (dataset) {
  */	
 var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlideshowID ) {
 	$(fullscreenButtonID).animatedModal({
-		
 		color: "#fff", 
 		overflow:"hidden",
 		modalTarget: name,
@@ -215,7 +214,6 @@ var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlid
 			$(fullscreenSlideshowID).slick('setPosition');
 		},
 	});
-
 }
 
 /**
@@ -257,7 +255,6 @@ var initPortagency = function (dataset) {
 var initLinerservices = function (dataset) {
 
 	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
-
 	linerServicesSlideshowJavaScript1Init('#linerServicesSlideshowHTML1');
     linerServicesSlideshowJavaScript2Init('#linerServicesSlideshowHTML2');
 	fullscreenLinerServicesSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
