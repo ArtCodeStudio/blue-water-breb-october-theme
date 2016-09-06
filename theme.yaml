@@ -278,4 +278,21 @@ form:
                 tab: Brand 
 
 
-           
+# DOWNLOADS
+            liner_services_downloads:
+                label: Liner Services Downloads
+                type: repeater
+                tab: Downloads 
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: The title of the document
+                            label: Title
+                            tab: Downloads 
+
+                        file:
+                            label: File 
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads 
