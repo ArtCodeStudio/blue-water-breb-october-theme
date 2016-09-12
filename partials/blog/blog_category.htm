@@ -12,6 +12,8 @@
 			page=page
 		%}
 
+		{% set _image = ship.image|mediathumb_resize('width', 350) %}
+
 		{#
 		GRID
 		#}
@@ -23,9 +25,9 @@
 
 						{% if post.featured_images.count %}
 							<div class="featured-images text-center "> 
-								{% set image = post.featured_images[0] %}
+								{% set image = post.featured_images[0].thumb(auto,350)%}
 								<div class="background-box ratio-16-9" 
-										style="display:block; background-image: url({{ image.path }});" 
+										style="display:block; background-image: url({{ image }});" 
 										title="{{ image.description }}">
 								</div>
 							</div>
