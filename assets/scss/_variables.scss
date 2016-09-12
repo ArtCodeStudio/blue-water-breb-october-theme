@@ -35,7 +35,7 @@ $theme-folder:                 'themes/breb' !default;
 $gray-dark:                 #373a3c !default;
 $gray:                      #55595c !default;
 $gray-light:                #818a91 !default;
-$gray-lighter:              #eceeef !default;
+$gray-lighter:              rgb(243,242,241	);
 $gray-lightest:             #f7f7f9 !default;
 
 $brand-primary:             rgb(64, 83, 164);
@@ -234,7 +234,7 @@ $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
 
 $table-bg:                      transparent !default;
-$table-bg-accent:               #f9f9f9 !default;
+$table-bg-accent:               $gray-lighter; //#f9f9f9 !default;
 $table-bg-hover:                #f5f5f5 !default;
 $table-bg-active:               $table-bg-hover !default;
 

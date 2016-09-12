@@ -153,13 +153,13 @@ waitForAnimate = 1
 					<ul class="download-list p-y-2 p-l-0">
 						{% for item in this.theme.liner_services_downloads %}
 							<li>
-								<a class="no-barba" target="_blank" href="{{ item.file | media }}">{{item.title}}</a>
+								<a class="no-barba download-item" target="_blank" href="{{ item.file | media }}" download>{{item.title}}</a>
 							</li>
 						{% endfor %}
 					</ul>
 
 					{% if this.theme.liner_services_downloads | length  > 1 %}
-						<a class="download-all-link" href="#">Download all documents</a>
+						<a class="no-barba download-all-link" href="#" download>Download all documents</a>
 					{% endif %}
 
 				</div>
