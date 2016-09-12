@@ -8157,6 +8157,9 @@ a.bg-danger:focus, a.bg-danger:hover {
   #home #overview .learn-more .read-more:hover {
     text-decoration: underline; }
 
+#home #latest-blog-posts .bg-primary {
+  height: 268px; }
+
 #home #press-releases .learn-more {
   position: absolute;
   bottom: 15px;

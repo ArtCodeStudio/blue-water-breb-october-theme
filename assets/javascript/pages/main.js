@@ -263,29 +263,39 @@ var initLinerservices = function (dataset) {
     linerServicesSlideshowJavaScript2Init('#linerServicesSlideshowHTML2');
 	fullscreenLinerServicesSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
 	
-	function downloadURL(url) {
-		var hiddenIFrameID = 'hiddenDownloader',
-			iframe = document.getElementById(hiddenIFrameID);
-		if (iframe === null) {
-			iframe = document.createElement('iframe');
-			iframe.id = hiddenIFrameID;
-			iframe.style.display = 'none';
-			document.body.appendChild(iframe);
-		}
-		iframe.src = url;
-	};
+	// function downloadURL(url) {
+	// 	var hiddenIFrameID = 'hiddenDownloader',
+	// 		iframe = document.getElementById(hiddenIFrameID);
+	// 	if (iframe === null) {
+	// 		iframe = document.createElement('iframe');
+	// 		iframe.id = hiddenIFrameID;
+	// 		iframe.style.display = 'none';
+	// 		document.body.appendChild(iframe);
+	// 	}
+	// 	iframe.src = url;
+	// };
 
-	// Init Multidownload
+//	Init Multidownload
 	// $('.download-all-link').click( function (e) {
     // 	e.preventDefault();
+	// 	var files = [];
     // 	$('.download-list li a').each( function (index, object) {
 	// 		var $self =  $(this)[0];
-	// 		//  setInterval(function(){ 
 	// 		// 	 $self.click();
 	// 		// }, 500);
-	// 		//  console.log($(this).attr('href'));
+	// 		  console.log(encodeURI($(this).attr('href')));
+	// 		  files.push(encodeURI($(this).attr('href')));
 	// 		//  downloadURL($(this).attr('href'));
-	// 	})		
+	// 	})	
+	// 	console.log(files);
+	// 	multiDownload(files);
+	// 	//$('.download-item').multiDownload({ delay: 500 });	
+	// });
+
+	// document.querySelector('#download-btn').addEventListener('click', function (e) {
+	// 	var files = e.target.dataset.files.split(' ');
+	// 	//console.log(files);
+	// 	//multiDownload(files);
 	// });
 
 };
