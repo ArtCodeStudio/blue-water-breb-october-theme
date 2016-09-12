@@ -8092,6 +8092,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   margin: 0 auto; }
   #fleet #layout-content #default-layout-container .grid .grid-item {
     width: 350px;
+    height: 413px;
     float: left;
     margin-bottom: 30px;
     background-color: white;
@@ -8114,6 +8115,18 @@ a.bg-danger:focus, a.bg-danger:hover {
       transition-property: all;
       -webkit-transition-timing-function: ease;
               transition-timing-function: ease; }
+    #fleet #layout-content #default-layout-container .grid .grid-item .card-block {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0; }
+      #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table {
+        margin-top: 1.4rem; }
+        #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td, #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table th {
+          padding: 0.5rem 0 0.5rem 0.5rem;
+          font-size: 0.85rem;
+          border-top: none; }
+          #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td.data, #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table th.data {
+            color: #4053a4; }
 
 /*
  * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––

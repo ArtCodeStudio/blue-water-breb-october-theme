@@ -129,6 +129,11 @@ verticalSwiping = 0
 rtl = 0
 waitForAnimate = 1
 ==
+function onStart() {
+	//dump( $this->theme->liner_services_downloads );
+}
+
+==
 <div id="liner-services" data-target="#liner-services"> 
     
         <div class="row">
@@ -158,9 +163,9 @@ waitForAnimate = 1
 						{% endfor %}
 					</ul>
 
-					{% if this.theme.liner_services_downloads | length  > 1 %}
+					{#{% if this.theme.liner_services_downloads | length  > 1 %}
 						<a class="no-barba download-all-link" href="#" download>Download all documents</a>
-					{% endif %}
+					{% endif %}#}
 
 				</div>
 
