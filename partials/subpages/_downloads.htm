@@ -1,0 +1,22 @@
+
+
+
+{% if  downloads  | length  > 0 %}
+	{% if downloads  | length  > 1 %}
+		<h6 class="text-serif">You can download these documents:</h6>
+	{% else %}
+		<h6 class="text-serif">You can download this document:</h6>
+	{% endif %}
+	
+	<ul class="download-list p-y-2 p-l-0">
+		{% for item in  downloads  %}
+			<li>
+				<a class="no-barba download-item" target="_blank" href="{{ item.file | media }}" download>{{item.title}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+	{% if downloads  | length  > 1 %}
+		<a class="no-barba download-all-link" href="{{ downloadAll( downloads, zipFileName ) }}" download>Download all documents</a>
+	{% endif %}
+{% endif %}

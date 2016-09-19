@@ -149,23 +149,10 @@ function onStart() {
 						{% content 'liner_services.htm' %}
 					</div>
 					
-					{% if this.theme.liner_services_downloads | length  > 1 %}
-						<h6 class="text-serif">You can download these documents:</h6>
-					{% else %}
-						<h6 class="text-serif">You can download this document:</h6>
-					{% endif %}
-					
-					<ul class="download-list p-y-2 p-l-0">
-						{% for item in this.theme.liner_services_downloads %}
-							<li>
-								<a class="no-barba download-item" target="_blank" href="{{ item.file | media }}" download>{{item.title}}</a>
-							</li>
-						{% endfor %}
-					</ul>
-
-					{% if this.theme.liner_services_downloads | length  > 1 %}
-						<a class="no-barba download-all-link" href="{{ downloadAll(this.theme.liner_services_downloads) }}" download>Download all documents</a>
-					{% endif %}
+					{% partial '/subpages/_downloads' 
+						downloads = this.theme.liner_services_downloads
+						zipFileName = 'Breb Liner-Services Documents.zip'
+					%}
 
 				</div>
 

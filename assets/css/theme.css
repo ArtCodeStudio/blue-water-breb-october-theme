@@ -8305,31 +8305,34 @@ nav .container {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease; }
 
+.download-list {
+  list-style: none; }
+  .download-list li a {
+    color: black;
+    padding-left: 4rem; }
+    .download-list li a::before {
+      content: url(../images/icons/download1.svg);
+      position: absolute;
+      margin-left: -2.5rem;
+      margin-top: -0.1rem; }
+
+.download-all-link {
+  margin-left: 4rem;
+  color: black; }
+  .download-all-link::before {
+    position: absolute;
+    margin-top: -0.2rem;
+    margin-left: -3rem;
+    content: url(../images/icons/download2.svg); }
+
+h6 {
+  color: #4053a4; }
+
 /*
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
  **/
 #linerservices #liner-services #liner-services-content-container {
   text-align: justify !important; }
-  #linerservices #liner-services #liner-services-content-container h6 {
-    color: #4053a4; }
-  #linerservices #liner-services #liner-services-content-container .download-list {
-    list-style: none; }
-    #linerservices #liner-services #liner-services-content-container .download-list li a {
-      color: black;
-      padding-left: 4rem; }
-      #linerservices #liner-services #liner-services-content-container .download-list li a::before {
-        content: url(../images/icons/download1.svg);
-        position: absolute;
-        margin-left: -2.5rem;
-        margin-top: -0.1rem; }
-  #linerservices #liner-services #liner-services-content-container .download-all-link {
-    margin-left: 4rem;
-    color: black; }
-    #linerservices #liner-services #liner-services-content-container .download-all-link::before {
-      position: absolute;
-      margin-top: -0.2rem;
-      margin-left: -3rem;
-      content: url(../images/icons/download2.svg); }
 
 .content-container {
   text-align: justify !important; }

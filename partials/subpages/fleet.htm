@@ -6,4 +6,10 @@ snippetName = "Fleet"
 includeHTML = 1
 includeJavaScript = 0
 ==
+
 {% component 'shipsListHTML' %}
+
+{% partial '/subpages/_downloads' 
+	downloads = this.theme.fleet_downloads
+	zipFileName = 'Breb Fleet Documents.zip'
+%}

@@ -6,17 +6,6 @@ snippetName = "Contact"
 
     <div class="row">
         
-        <div class="col-xs-12 col-lg-3 col-xl-4 section-headline-text m-b-2" >
-            <div class="border-top"></div>
-            <h3 class="text-xs-center text-sm-left text-serif">Position</h3>  
-        </div>
-
-        {% partial 'subpages/_contact_position' %}
-
-    </div>
-
-    <div class="row">
-        
         <div class="col-xs-12 col-lg-3 col-xl-4 section-headline-text" >
             <div class="border-top"></div>
             <h3 class="text-xs-center text-sm-left text-serif">Department</h3>  
@@ -24,5 +13,14 @@ snippetName = "Contact"
 
         {% partial 'subpages/_contact_department' %}
         
+    </div>
+
+    <div class="row">
+        <div class="container m-y-3  m-l-3" id="contact-container-md">
+            {% partial '/subpages/_downloads' 
+                downloads = this.theme.contact_downloads
+                zipFileName = 'Breb Fleet Documents.zip'
+            %}
+        </div>
     </div>
 </div>

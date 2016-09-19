@@ -279,6 +279,23 @@ form:
 
 
 # DOWNLOADS
+            shipping_downloads:
+                label: Shipping Downloads
+                type: repeater
+                tab: Downloads 
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: The title of the document
+                            label: Title
+                            tab: Downloads 
+                        file:
+                            label: File 
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads 
+
             liner_services_downloads:
                 label: Liner Services Downloads
                 type: repeater
@@ -290,9 +307,77 @@ form:
                             placeholder: The title of the document
                             label: Title
                             tab: Downloads 
-
                         file:
                             label: File 
                             type: mediafinder
                             mode: file
                             tab: Downloads 
+
+            port_agency_downloads:    
+                label: Port Agency Downloads
+                type: repeater
+                tab: Downloads 
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: The title of the document
+                            label: Title
+                            tab: Downloads 
+                        file:
+                            label: File 
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads 
+
+            offshore_downloads:
+                label: OffShore Downloads
+                type: repeater
+                tab: Downloads 
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: The title of the document
+                            label: Title
+                            tab: Downloads 
+                        file:
+                            label: File 
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads 
+
+            fleet_downloads:
+                label: Fleet Downloads
+                type: repeater
+                tab: Downloads 
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: The title of the document
+                            label: Title
+                            tab: Downloads 
+                        file:
+                            label: File 
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads 
+
+            contact_downloads:
+                label: Contact Downloads
+                type: repeater
+                tab: Downloads 
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: The title of the document
+                            label: Title
+                            tab: Downloads 
+                        file:
+                            label: File 
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads 
+

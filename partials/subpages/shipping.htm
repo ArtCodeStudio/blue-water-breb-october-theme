@@ -138,6 +138,10 @@ waitForAnimate = 1
 				<div  class="p-y-3 content-container">             
 					{% content 'shipping.htm' %}
 				</div>
+				{% partial '/subpages/_downloads' 
+					downloads = this.theme.shipping_downloads
+					zipFileName = 'Shipping Offshore Documents.zip'
+				%}
 			</div>
 
 			<div class="col-md-12 col-lg-7 slideshow-container" >
