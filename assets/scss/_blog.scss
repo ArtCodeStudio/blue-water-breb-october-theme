@@ -162,7 +162,7 @@
 		.content {
 			img {
 				@extend .img-fluid;
-				@extend .center-block;
+				@extend .m-x-auto;
 			}
 		}
 

@@ -7,6 +7,7 @@
 
 		<div id='{{ str_camel(__SELF__.alias) }}'">
 			{% for i, slide in __SELF__.slideshow.slides %}
+				{% if 1==1 %}
 					<div class="fullscreen-slide" style="height: 100vh; vertical-align: middle; line-height: 100vh; background-color: #000">
 					    <img class="img-fluid img-responsive" {{imgSrc}}="{{ __SELF__.getResizedImage(slide.image) }}" style="margin: auto; max-height: 100vh; display: inline-block">
 
@@ -15,7 +16,35 @@
 							{{ slide.description | raw }}
 					    </div>
 					</div>
+				{% else %}
+					<div class="carousel-image-wrapper">
+
+							{% if slide.aspect_ratio == 'custom' %}
+								<div class="background-box" style="padding-top: {{ 100.0 / slide.custom_ratio}}%; background-image: url({{ __SELF__.getResizedImage(slide.image) }});" alt="{{ __SELF__.getResizedImage(slide.image) }}"></div>
+							{% elseif slide.aspect_ratio != blank %}
+								<div class="background-box {{slide.aspect_ratio}}" style="background-image: url({{ __SELF__.getResizedImage(slide.image) }});" alt="{{ __SELF__.getResizedImage(slide.image) }}"></div>
+							{% elseif __SELF__.property('aspectRatio') == 'custom' %}
+								<div class="background-box" style="padding-top: {{ 100.0 / __SELF__.property('customRatio') }}%; background-image: url({{ __SELF__.getResizedImage(slide.image) }});" src="{{ __SELF__.getResizedImage(slide.image) }}" alt="{{ __SELF__.getResizedImage(slide.image) }}"></div>
+							{% elseif __SELF__.property('aspectRatio') != blank %}
+								<div class="background-box {{ __SELF__.property('aspectRatio') }}" style="background-image: url({{ __SELF__.getResizedImage(slide.image) }});" src="{{ __SELF__.getResizedImage(slide.image) }}" alt="{{ __SELF__.getResizedImage(slide.image) }}"></div>
+							{% else %}
+								<div class="img-responsive img-fluid" src="{{ __SELF__.getResizedImage(slide.image) }}" alt="{{ __SELF__.getResizedImage(slide.image) }}"></div>
+							{% endif %}
+
+							{% if slide.name != blank or slide.description != blank  %}
+								<div class="carousel-caption-wrapper {{slide.caption_position != 'auto' ? slide.caption_position : __SELF__.property('captionPosition')}}">
+									<div class="carousel-caption-content">
+										<h2>{{ slide.name | raw }}</h2>
+										{{ slide.description | raw }}
+									</div>
+								</div>
+							{% endif %}
+					</div>
+				{% endif %}
+				
 			{% endfor %}
 		</div>
+
+						
 
 {% endif %}

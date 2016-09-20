@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.2",
+    "bootstrap": "v4.0.0-alpha.4",
     "slick-carousel": "^1.6.0",
     "font-awesome": "^4.6.3",
     "simpler-sidebar": "^2.0.2",
