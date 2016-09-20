@@ -20,7 +20,7 @@
 			h6 {
 				color: $brand-danger;
 				font-weight:700;
-				&#cuxhaven {
+				&.cuxhaven {
 					color: $brand-primary;
 					img {
 						width: 11px;
@@ -70,7 +70,7 @@
 			h6 {
 				color: $brand-danger;
 				font-weight:700;
-				&#cuxhaven {
+				&.cuxhaven {
 					color: $brand-primary;
 					img {
 						width: 11px;

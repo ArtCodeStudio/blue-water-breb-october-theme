@@ -7863,9 +7863,9 @@ a.bg-danger:focus, a.bg-danger:hover {
   .footer.footer-contact-container-small div h6 {
     color: #ef2a21;
     font-weight: 700; }
-    .footer.footer-contact-container-small div h6#cuxhaven {
+    .footer.footer-contact-container-small div h6.cuxhaven {
       color: #4053a4; }
-      .footer.footer-contact-container-small div h6#cuxhaven img {
+      .footer.footer-contact-container-small div h6.cuxhaven img {
         width: 11px;
         margin-top: -4px; }
   .footer::after {
@@ -7897,9 +7897,9 @@ a.bg-danger:focus, a.bg-danger:hover {
     .footer#footer-contact-container div h6 {
       color: #ef2a21;
       font-weight: 700; }
-      .footer#footer-contact-container div h6#cuxhaven {
+      .footer#footer-contact-container div h6.cuxhaven {
         color: #4053a4; }
-        .footer#footer-contact-container div h6#cuxhaven img {
+        .footer#footer-contact-container div h6.cuxhaven img {
           width: 11px;
           margin-top: -4px; }
     .footer#footer-contact-container::after {

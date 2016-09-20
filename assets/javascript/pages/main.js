@@ -432,6 +432,13 @@ var initTermsAndConditions = function () {
 };
 
 /**
+ * 
+ */
+var initImprint = function () {
+
+};
+
+/**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
  */
@@ -453,7 +460,8 @@ var initTemplate = {
 	'copyright': initCopyright,
 	'agency': initAgency,
 	'fleet': initFleet,
-	'termsandconditions': initTermsAndConditions
+	'termsandconditions': initTermsAndConditions,
+	'imprint': initImprint
 };
 
 
