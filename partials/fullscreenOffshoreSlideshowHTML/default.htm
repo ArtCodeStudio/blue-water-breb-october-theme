@@ -1,0 +1,21 @@
+{% if __SELF__.slideshow.slides %}
+	{% if __SELF__.property('lazyLoad') %}
+		{% set imgSrc = "data-lazy" %}
+	{% else %}
+		{% set imgSrc = "src" %}
+	{% endif %}
+
+		<div id='{{ str_camel(__SELF__.alias) }}'">
+			{% for i, slide in __SELF__.slideshow.slides %}
+					<div class="fullscreen-slide" style="height: 100vh; vertical-align: middle; line-height: 100vh; background-color: #000">
+					    <img class="img-fluid img-responsive" {{imgSrc}}="{{ __SELF__.getResizedImage(slide.image) }}" style="margin: auto; max-height: 100vh; display: inline-block">
+
+					    <div class="caption-wrapper" style="position: absolute; bottom: 0; left: 0; right:0; margin-top: 70vh; background-color: rgba(255,255,255,0.75); z-index: 1337; line-height: normal; padding: 1rem 0 0 3rem">
+					    	<h2>{{ slide.name | raw }}</h2>
+							{{ slide.description | raw }}
+					    </div>
+					</div>
+			{% endfor %}
+		</div>
+
+{% endif %}

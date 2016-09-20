@@ -277,6 +277,18 @@ form:
                 mode: image
                 tab: Brand 
 
+# QHSE
+            # qhse_logo:
+            #     label: QHSE Logo
+            #     type: mediafinder
+            #     mode: image
+            #     tab: QHSE 
+
+            # qhse_certificate:
+            #     label: QHSE Certificate
+            #     type: mediafinder
+            #     mode: file
+            #     tab: QHSE 
 
 # DOWNLOADS
             shipping_downloads:
@@ -381,3 +393,19 @@ form:
                             mode: file
                             tab: Downloads 
 
+            qhse_downloads:
+                'label': 'Terms & QHSE Downloads'
+                type: repeater
+                tab: Downloads 
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: The title of the document
+                            label: Title
+                            tab: Downloads 
+                        file:
+                            label: File 
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads 
