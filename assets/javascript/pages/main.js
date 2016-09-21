@@ -220,11 +220,12 @@ var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlid
  * 
  */
 var initShipping = function (dataset) {
+	console.log('init');
 	// Initialize Slideshow
 	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenShippingSlideshowHTML" );
-	shippingSlideshowJavaScript1Init('#shippingSlideshowHTML1');
-    shippingSlideshowJavaScript2Init('#shippingSlideshowHTML2');
-    fullscreenShippingSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
+	slideshowJavaScriptInit('#slideshowHTML');
+    subSlideshowJavaScriptInit('#subSlideshowHTML');
+    fullscreenSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
 };
 
 
@@ -234,9 +235,9 @@ var initShipping = function (dataset) {
 var initOffshore = function (dataset) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#offshoreFullscreenButton", "offshoreAnimatedModal", "#fullscreenOffshoreSlideshowHTML" );
-	offshoreSlideshowJavaScript1Init('#offshoreSlideshowHTML1');
-    offshoreSlideshowJavaScript2Init('#offshoreSlideshowHTML2');
-	fullscreenOffshoreSlideshowJavaScriptInit('#fullscreenOffshoreSlideshowHTML');
+	slideshowJavaScriptInit('#slideshowHTML');
+    subSlideshowJavaScriptInit('#subSlideshowHTML');
+	fullscreenSlideshowJavaScriptInit('#fullscreenOffshoreSlideshowHTML');
 };
 
 
@@ -246,9 +247,9 @@ var initOffshore = function (dataset) {
 var initPortagency = function (dataset) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenPortAgencySlideshowHTML" );
-	portAgencySlideshowJavaScript1Init('#portAgencySlideshowHTML1');
-    portAgencySlideshowJavaScript2Init('#portAgencySlideshowHTML2');
-	fullscreenShippingSlideshowJavaScriptInit('#fullscreenPortAgencySlideshowHTML');
+	slideshowJavaScriptInit('#slideshowHTML');
+    subSlideshowJavaScriptInit('#subSlideshowHTML');
+	fullscreenSlideshowJavaScriptInit('#fullscreenPortAgencySlideshowHTML');
 };
 
 
@@ -259,45 +260,10 @@ var initLinerservices = function (dataset) {
 
 	// Initialize Slideshow
 	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
-	linerServicesSlideshowJavaScript1Init('#linerServicesSlideshowHTML1');
-    linerServicesSlideshowJavaScript2Init('#linerServicesSlideshowHTML2');
-	fullscreenLinerServicesSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
+	slideshowJavaScriptInit('#slideshowHTML');
+    subSlideshowJavaScriptInit('#subSlideshowHTML');
+	fullscreenSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
 	
-	// function downloadURL(url) {
-	// 	var hiddenIFrameID = 'hiddenDownloader',
-	// 		iframe = document.getElementById(hiddenIFrameID);
-	// 	if (iframe === null) {
-	// 		iframe = document.createElement('iframe');
-	// 		iframe.id = hiddenIFrameID;
-	// 		iframe.style.display = 'none';
-	// 		document.body.appendChild(iframe);
-	// 	}
-	// 	iframe.src = url;
-	// };
-
-//	Init Multidownload
-	// $('.download-all-link').click( function (e) {
-    // 	e.preventDefault();
-	// 	var files = [];
-    // 	$('.download-list li a').each( function (index, object) {
-	// 		var $self =  $(this)[0];
-	// 		// 	 $self.click();
-	// 		// }, 500);
-	// 		  console.log(encodeURI($(this).attr('href')));
-	// 		  files.push(encodeURI($(this).attr('href')));
-	// 		//  downloadURL($(this).attr('href'));
-	// 	})	
-	// 	console.log(files);
-	// 	multiDownload(files);
-	// 	//$('.download-item').multiDownload({ delay: 500 });	
-	// });
-
-	// document.querySelector('#download-btn').addEventListener('click', function (e) {
-	// 	var files = e.target.dataset.files.split(' ');
-	// 	//console.log(files);
-	// 	//multiDownload(files);
-	// });
-
 };
 
 

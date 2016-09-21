@@ -2,7 +2,7 @@
 snippetCode = "port_agency"
 snippetName = "Port Agency"
 
-[slideshow portAgencySlideshowHTML1]
+[slideshow slideshowHTML]
 slideshow = 5
 initAuto = 0
 includeHTML = 1
@@ -49,7 +49,7 @@ useTransform = 1
 variableWidth = 0
 vertical = 0
 
-[slideshow portAgencySlideshowHTML2]
+[slideshow subSlideshowHTML]
 slideshow = 5
 initAuto = 0
 includeHTML = 1
@@ -96,8 +96,8 @@ useTransform = 1
 variableWidth = 0
 vertical = 0
 
-[slideshow fullscreenPortAgencySlideshowHTML]
-slideshow = 4
+[slideshow fullscreenSlideshowHTML]
+slideshow = 5
 initAuto = 0
 includeHTML = 1
 includeJavaScript = 0
@@ -165,10 +165,10 @@ vertical = 0
                 {% partial '/subpages/_animated_modal' 
                     fullscreenButtonID = 'portAgencyFullscreenButton'
                     name = 'portAgencyAnimatedModal'
-                    modalContent = 'fullscreenPortAgencySlideshowHTML'
+                    modalContent = 'fullscreenSlideshowHTML'
                 %}
-                {% component 'portAgencySlideshowHTML1' %}
-				{% component 'portAgencySlideshowHTML2' %}
+				{% component 'slideshowHTML' %}
+				{% component 'subSlideshowHTML' %}
             </div>
 
         </div>

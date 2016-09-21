@@ -4,7 +4,7 @@ description = "Shipping"
 snippetCode = "shipping"
 snippetName = "Shipping"
 
-[slideshow shippingSlideshowHTML1]
+[slideshow slideshowHTML]
 slideshow = 4
 initAuto = 0
 includeHTML = 1
@@ -45,7 +45,7 @@ useTransform = 1
 variableWidth = 0
 vertical = 0
 
-[slideshow shippingSlideshowHTML2]
+[slideshow subSlideshowHTML]
 slideshow = 4
 initAuto = 0
 includeHTML = 1
@@ -86,7 +86,7 @@ useTransform = 1
 variableWidth = 0
 vertical = 0
 
-[slideshow fullscreenShippingSlideshowHTML]
+[slideshow fullscreenSlideshowHTML]
 slideshow = 4
 initAuto = 0
 includeHTML = 1
@@ -150,11 +150,11 @@ waitForAnimate = 1
 				{% partial '/subpages/_animated_modal' 
 					fullscreenButtonID = 'shippingFullscreenButton'
 					name = 'shippingAnimatedModal'
-					modalContent = 'fullscreenShippingSlideshowHTML'
+					modalContent = 'fullscreenSlideshowHTML'
 				%}
 
-				{% component 'shippingSlideshowHTML1' %}
-				{% component 'shippingSlideshowHTML2' %}
+				{% component 'slideshowHTML' %}
+				{% component 'subSlideshowHTML' %}
 			</div>
 
 
