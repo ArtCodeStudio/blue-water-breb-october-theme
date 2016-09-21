@@ -1,6 +1,6 @@
 var cache = {
-    lastElementClicked: null,
-    $navbarMain: $('#navbar-main'),
+	lastElementClicked: null,
+	$navbarMain: $('#navbar-main'),
 	$blogFilter: $('#blog-filter'),
 	$blogHeader: $('#blog-header-wrapper'),
 	$sidebar: $("#sidebar"),
@@ -17,57 +17,57 @@ var currentNamespace = null;
  * Homepage Latest log Posts Carousel
  */
 var initCarousel = function () {
-    
-    var $latestBlogPostsCarousel = $(".latest-blog-posts-carousel");
-    
-    // only init if slick is not already initialized
-    if( !$latestBlogPostsCarousel.hasClass('slick-initialized') ) {
-    	$latestBlogPostsCarousel.slick({
-    		slidesToShow: 3,
-    		slidesToScroll: 1,
-    		autoplay: false,
-    		autoplaySpeed: 2000,
-    		centerMode: false,
-    		centerPadding: '0',
-    		infinite: true,
-    		responsive: [
-        		{
-        			breakpoint: 1024,
-        			settings: {
-        				slidesToShow: 3,
-        				slidesToScroll: 3,
-        			}
-        		},
-        		{
-        			breakpoint: 992,
-        				settings: {
-        					slidesToShow: 2,
-        					slidesToScroll: 2
-        				}
-        		},
-        		{
-        			breakpoint: 562,
-        				settings: {
-        					slidesToShow: 1,
-        					slidesToScroll: 1
-        				}
-        		}
-    		]
-    	});
-    }
+
+	var $latestBlogPostsCarousel = $(".latest-blog-posts-carousel");
+
+	// only init if slick is not already initialized
+	if( !$latestBlogPostsCarousel.hasClass('slick-initialized') ) {
+		$latestBlogPostsCarousel.slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			autoplay: false,
+			autoplaySpeed: 2000,
+			centerMode: false,
+			centerPadding: '0',
+			infinite: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+					}
+				},
+				{
+					breakpoint: 992,
+						settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2
+						}
+				},
+				{
+					breakpoint: 562,
+						settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						}
+				}
+			]
+		});
+	}
 };
 
 
 /**
- * 
- * 
+ *
+ *
  */
 var changeNavbar = function (dataset) {
-    
+
 	var slideshow_height = 809 ;
 	var scroll_pos = $(window).scrollTop();
 
-	if (currentNamespace === 'home') { 
+	if (currentNamespace === 'home') {
 
 		if (scroll_pos >= slideshow_height) {
 			//$('.navbar-brand').addClass("brand-hidden" );
@@ -91,48 +91,48 @@ var changeNavbar = function (dataset) {
 
 
 /**
- * Set each card to the height of the heightest card to get all cards with the same height 
+ * Set each card to the height of the heightest card to get all cards with the same height
  */
 var sameHeightCards = function (selector) {
 	var t = 0;
-    var t_elem;
+	var t_elem;
 	$cards = $(selector);
-    // get heightest height
-    $cards.each(function () {
-        $this = $(this);
-        // reset height
-        $this.css('min-height', 'auto');
-        if ( $this.outerHeight() > t ) {
-            t_elem=this;
-            t=$this.outerHeight();
-        }
-    });
-    
-    // set all smaller cards to the height of the heightest card
-    $cards.each(function () {
-        $this = $(this);
-        if($this.outerHeight() != t) {
-            $this.css('min-height',t);
-        }
-    });
+	// get heightest height
+	$cards.each(function () {
+		$this = $(this);
+		// reset height
+		$this.css('min-height', 'auto');
+		if ( $this.outerHeight() > t ) {
+			t_elem=this;
+			t=$this.outerHeight();
+		}
+	});
+
+	// set all smaller cards to the height of the heightest card
+	$cards.each(function () {
+		$this = $(this);
+		if($this.outerHeight() != t) {
+			$this.css('min-height',t);
+		}
+	});
 };
 
 
 /**
- *  
+ *
  */
 var initSidebar = function (dataset) {
-	
+
 	transformicons.add('.tcon');
 
  	/**
-     * @see http://dcdeiv.github.io/simpler-sidebar/
+	 * @see http://dcdeiv.github.io/simpler-sidebar/
 	 * https://github.com/simple-sidebar/simpler-sidebar/issues/25#issuecomment-236579696
-     */
+	 */
 	var $sidebar = $( "#sidebar" );
 	var mask = true;
 	/* only initialize sidebar once */
-	if ( ! $sidebar.hasClass('initialized') ) { 
+	if ( ! $sidebar.hasClass('initialized') ) {
 
 		$sidebar
 		.show() // already tried to remove
@@ -181,29 +181,29 @@ var initSidebar = function (dataset) {
 
 
 /**
- * 
+ *
  */
 var initHome = function (dataset) {
-    
-    slideshowHomeJavaScriptInit('#slideshowHomeHTML');
+
+	slideshowHomeJavaScriptInit('#slideshowHomeHTML');
 	initCarousel();
 
 	if(! cache.homeInitialized ) { // just add ONE event listener
 		$(window).on('scrollstop', function () {
 			// console.log('-----onscrollstop');
-		    changeNavbar(dataset);
+			changeNavbar(dataset);
 		});
 		cache.homeInitialized = true;
 	}
-		
+
 };
 
 /**
  * Initialize Fullscreen Slideshow Modal
- */	
+ */
 var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlideshowID ) {
 	$(fullscreenButtonID).animatedModal({
-		color: "#fff", 
+		color: "#fff",
 		overflow:"hidden",
 		modalTarget: name,
 
@@ -217,66 +217,66 @@ var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlid
 }
 
 /**
- * 
+ *
  */
 var initShipping = function (dataset) {
-	console.log('init');
+
 	// Initialize Slideshow
 	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenShippingSlideshowHTML" );
 	slideshowJavaScriptInit('#slideshowHTML');
-    subSlideshowJavaScriptInit('#subSlideshowHTML');
-    fullscreenSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
+	subSlideshowJavaScriptInit('#subSlideshowHTML');
+	fullscreenSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
 };
 
 
 /**
- * 
+ *
  */
 var initOffshore = function (dataset) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#offshoreFullscreenButton", "offshoreAnimatedModal", "#fullscreenOffshoreSlideshowHTML" );
 	slideshowJavaScriptInit('#slideshowHTML');
-    subSlideshowJavaScriptInit('#subSlideshowHTML');
+	subSlideshowJavaScriptInit('#subSlideshowHTML');
 	fullscreenSlideshowJavaScriptInit('#fullscreenOffshoreSlideshowHTML');
 };
 
 
 /**
- * 
+ *
  */
 var initPortagency = function (dataset) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenPortAgencySlideshowHTML" );
 	slideshowJavaScriptInit('#slideshowHTML');
-    subSlideshowJavaScriptInit('#subSlideshowHTML');
+	subSlideshowJavaScriptInit('#subSlideshowHTML');
 	fullscreenSlideshowJavaScriptInit('#fullscreenPortAgencySlideshowHTML');
 };
 
 
 /**
- * 
+ *
  */
 var initLinerservices = function (dataset) {
 
 	// Initialize Slideshow
 	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
 	slideshowJavaScriptInit('#slideshowHTML');
-    subSlideshowJavaScriptInit('#subSlideshowHTML');
+	subSlideshowJavaScriptInit('#subSlideshowHTML');
 	fullscreenSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
-	
+
 };
 
 
 /**
- * 
+ *
  */
 var initContact = function (dataset) {
-    
+
 };
 
 
 /**
- * 
+ *
  */
 var initAbout = function (dataset) {
 
@@ -285,7 +285,7 @@ var initAbout = function (dataset) {
 
 
 /**
- * 
+ *
  */
 var initBlog = function (dataset) {
 
@@ -300,7 +300,7 @@ var initBlog = function (dataset) {
 				$('#blog-header-wrapper .blog-header-container .nav-link').removeClass('blog-nav-small');
 			}
 		};
-		
+
 		if( ! cache.blogInitialized ) {
 			$(window).on('scrollstop', function () {
 				changeBlogHeaderHeight();
@@ -308,7 +308,7 @@ var initBlog = function (dataset) {
 			cache.blogInitialized = true;
 		}
 		changeBlogHeaderHeight();
-		
+
 		var initMasonry = function() {
 			$('.grid').masonry({
 			itemSelector: '.grid-item',
@@ -317,73 +317,73 @@ var initBlog = function (dataset) {
 			gutter:30
 			});
 		}
-		initMasonry();   
+		initMasonry();
 
-	
+
 
 };
 
 /**
- * 
+ *
  */
 var initAllReports = function () {
-    initBlog();
+	initBlog();
 };
 
 /**
- * 
+ *
  */
 var initCategory = function () {
-    initBlog();
+	initBlog();
 };
 
 
 /**
- * 
+ *
  */
 var initPost = function () {
-    initBlog();
+	initBlog();
 };
 
 /**
- * 
+ *
  */
 var initJobs = function () {
-   
+
 };
 
 /**
- * 
+ *
  */
 var initEnvironment = function () {
-   
+
 };
 
 /**
- * 
+ *
  */
 var initHistory = function () {
-   
+
 };
 
 /**
- * 
+ *
  */
 var initCopyright = function () {
-   
+
 };
 
 
 /**
- * 
+ *
  */
 var initAgency = function () {
-   
+
 };
 
 
 /**
- * 
+ *
  */
 var initFleet = function () {
  	shipsListJavaScriptInit();
@@ -391,14 +391,14 @@ var initFleet = function () {
 
 
 /**
- * 
+ *
  */
 var initTermsAndConditions = function () {
 
 };
 
 /**
- * 
+ *
  */
 var initImprint = function () {
 
@@ -409,16 +409,16 @@ var initImprint = function () {
  * E.g. templates/product.liquid
  */
 var initTemplate = {
-    'home': initHome,
-    'offshore': initOffshore,
-    'portagency': initPortagency,
-    'linerservices': initLinerservices,
-    'contact': initContact,
-    'shipping': initShipping,
-    'about': initAbout,
-    'category': initCategory,
-    'post': initPost,
-    'blog': initBlog,
+	'home': initHome,
+	'offshore': initOffshore,
+	'portagency': initPortagency,
+	'linerservices': initLinerservices,
+	'contact': initContact,
+	'shipping': initShipping,
+	'about': initAbout,
+	'category': initCategory,
+	'post': initPost,
+	'blog': initBlog,
 	'allreports': initAllReports,
 	'jobs': initJobs,
 	'environment':initEnvironment,
@@ -449,7 +449,7 @@ var setNav = function (selector, dataset) {
 	if ( selector == '.allreports' || selector == '.category' || selector == '.post') {
 		cache.$navbarMain.find('.main-navigation .nav-item.reports').addClass('active');
 		if ( !dataset.blogCategory ) {
-         	dataset.blogCategorySlug = 'allreports';
+		 	dataset.blogCategorySlug = 'allreports';
 		}
 		cache.$sidebar.find('.list-group .reports .'+dataset.blogCategorySlug).addClass('active');
 		console.log('.list-group reports a '+dataset.blogCategorySlug)
@@ -465,18 +465,18 @@ var setNav = function (selector, dataset) {
  * Handle main Nav / blog filter active state
  */
 var setNavActive = function (dataset, currentStatus) {
-    console.log(dataset);
+	console.log(dataset);
 	var lastClicked = null;
-	
+
 	// split dataset.blogPostCategories string to array of categories
 	if( dataset && typeof(dataset.blogPostCategories) === 'string' ) {
 	   dataset.blogPostCategories = dataset.blogPostCategories.split(',');
-	   
-    	if( typeof(dataset.blogPostCategories) === 'string' ) {
-    	   dataset.blogPostCategories = [dataset.blogPostCategories]; // not working?
-    	}
+
+		if( typeof(dataset.blogPostCategories) === 'string' ) {
+		   dataset.blogPostCategories = [dataset.blogPostCategories]; // not working?
+		}
 	}
-	
+
 	if ( lastClicked == 'all'){
 		lastClicked ='allreports';
 	}
@@ -494,7 +494,7 @@ var setNavActive = function (dataset, currentStatus) {
   	resetNav();
 
   	setNav('.'+dataset.namespace,dataset);
-		
+
 	var setBlogFilterActiveState = function ( lastClicked ) {
 		// Schoener waere es hier das vorhandene data-attribute zuy verwenden, nur fehlt mir nich der passende selektor
 		// cache.$blogFilter.filter('[data-category="'+lastClicked+'"]').addClass('btn-white-outline'); ???
@@ -538,36 +538,36 @@ var setNavActive = function (dataset, currentStatus) {
  * Init Javascripts insite of barba.js
  */
 var initTemplates = function () {
-    
+
   Barba.Dispatcher.on('linkClicked', function (el) {
-    cache.lastElementClicked = el;
+	cache.lastElementClicked = el;
   });
-  
+
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
 
-	
-	// Stop ALL slideshows
-    $(document).trigger('jumplink_slideshow_stop');
-	
-	// console.log("barba.js new page ready. Dataset: ", container);
-    currentNamespace = currentStatus.namespace;
-	// TODO is a new load necessary?
-    // Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs
-    changeNavbar(container.dataset);
-    initSidebar();
 
-    if(typeof(initTemplate[currentStatus.namespace]) === 'function' ) {
-      initTemplate[currentStatus.namespace](container.dataset);
-    } else {
-      console.error("Template not defined: "+currentStatus.namespace);
-    }
-	
+	// Stop ALL slideshows
+	$(document).trigger('jumplink_slideshow_stop');
+
+	// console.log("barba.js new page ready. Dataset: ", container);
+	currentNamespace = currentStatus.namespace;
+	// TODO is a new load necessary?
+	// Hyphenator.run(); // https://github.com/mnater/Hyphenator/blob/wiki/en_HowToUseHyphenator.md#step-by-step-advanced-wo-hyphenator_loaderjs
+	changeNavbar(container.dataset);
+	initSidebar();
+
+	if(typeof(initTemplate[currentStatus.namespace]) === 'function' ) {
+	  initTemplate[currentStatus.namespace](container.dataset);
+	} else {
+	  console.error("Template not defined: "+currentStatus.namespace);
+	}
+
 	/**
 	 * Show/hide Blog Header (Filter)
 	 */
-	if( currentStatus.namespace === 'blog' || 
-		currentStatus.namespace === 'allreports' || 
-		currentStatus.namespace === 'category' || 
+	if( currentStatus.namespace === 'blog' ||
+		currentStatus.namespace === 'allreports' ||
+		currentStatus.namespace === 'category' ||
 		currentStatus.namespace === 'post') {
 			// wenn ich das direkt in scss setzte gibt es einen srung und kein fade
 			// cache.$blogHeader.addClass('active');
@@ -582,7 +582,7 @@ var initTemplates = function () {
 			}
 		},250);
 	}
-    setNavActive(container.dataset, currentStatus);
+	setNavActive(container.dataset, currentStatus);
 
   });
 };
@@ -593,51 +593,51 @@ var initTemplates = function () {
  */
 var FadeTransition = Barba.BaseTransition.extend({
   start: function () {
-    /**
-     * This function is automatically called as soon the Transition starts
-     * this.newContainerLoading is a Promise for the loading of the new container
-     * (Barba.js also comes with an handy Promise polyfill!)
-     */
+	/**
+	 * This function is automatically called as soon the Transition starts
+	 * this.newContainerLoading is a Promise for the loading of the new container
+	 * (Barba.js also comes with an handy Promise polyfill!)
+	 */
 
-    // As soon the loading is finished and the old page is faded out, let's fade the new page
-    Promise
-      .all([this.newContainerLoading, this.fadeOut()])
-      .then(this.fadeIn.bind(this))
+	// As soon the loading is finished and the old page is faded out, let's fade the new page
+	Promise
+	  .all([this.newContainerLoading, this.fadeOut()])
+	  .then(this.fadeIn.bind(this))
 	  .then(	$('html,body').animate({ scrollTop: 0 }, 'slow') );
   },
 
   fadeOut: function () {
-    /**
-     * this.oldContainer is the HTMLElement of the old Container
-     */
+	/**
+	 * this.oldContainer is the HTMLElement of the old Container
+	 */
 
-    return $(this.oldContainer).animate({ opacity: 0 }).promise();
+	return $(this.oldContainer).animate({ opacity: 0 }).promise();
   },
 
   fadeIn: function () {
-    /**
-     * this.newContainer is the HTMLElement of the new Container
-     * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-     * Please note, newContainer is available just after newContainerLoading is resolved!
-     */
-    var _this = this;
-    var $el = $(this.newContainer);
+	/**
+	 * this.newContainer is the HTMLElement of the new Container
+	 * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
+	 * Please note, newContainer is available just after newContainerLoading is resolved!
+	 */
+	var _this = this;
+	var $el = $(this.newContainer);
 
-    $(this.oldContainer).hide();
+	$(this.oldContainer).hide();
 
-    $el.css({
-      visibility : 'visible',
-      opacity : 0
-    });
+	$el.css({
+	  visibility : 'visible',
+	  opacity : 0
+	});
 
-    $el.animate({ opacity: 1 }, 400, function () {
-      /**
-       * Do not forget to call .done() as soon your transition is finished!
-       * .done() will automatically remove from the DOM the old Container
-       */
+	$el.animate({ opacity: 1 }, 400, function () {
+	  /**
+	   * Do not forget to call .done() as soon your transition is finished!
+	   * .done() will automatically remove from the DOM the old Container
+	   */
 
-      _this.done();
-    });
+	  _this.done();
+	});
   }
 });
 
@@ -650,11 +650,11 @@ var initBarba = function () {
    * Next step, you have to tell Barba to use the new Transition
    */
   Barba.Pjax.getTransition = function () {
-    /**
-     * Here you can use your own logic!
-     * For example you can use different Transition based on the current page or link...
-     */
-    return FadeTransition;
+	/**
+	 * Here you can use your own logic!
+	 * For example you can use different Transition based on the current page or link...
+	 */
+	return FadeTransition;
   };
   // activate precache
   Barba.Prefetch.init();
@@ -664,9 +664,9 @@ var initBarba = function () {
 
 
 /**
- * 
+ *
  */
 $(document).ready(function (){
-    initBarba();
+	initBarba();
 
 });
