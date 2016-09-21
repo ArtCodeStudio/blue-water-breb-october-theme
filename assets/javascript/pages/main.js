@@ -217,27 +217,64 @@ var initializeAnimatedModal = function( fullscreenButtonID, name, fullscreenSlid
 }
 
 /**
+ * initSlickFullscreenNav
+ */
+var initSlickFullscreenNav = function( section ) {
+ 	var $captionWrapper = $(".caption-wrapper"); // we need the new on each page
+	slideshowJavaScriptInit( section + ' #slideshowHTML');
+	subSlideshowJavaScriptInit( section + ' #subSlideshowHTML');
+	fullscreenSlideshowJavaScriptInit(section + ' #fullscreenSlideshowHTML');
+
+	function showCaption() {
+		$captionWrapper.addClass('visible');
+	}
+
+	function hideCaption() {
+		$captionWrapper.removeClass('visible');
+	}
+	
+	$( section + " .slick-next").on('click',function(){
+		$('#fullscreenSlideshowHTML').slick('slickNext');
+	});
+
+	$(section + "  .slick-prev").on('click',function(){
+		$('#fullscreenSlideshowHTML').slick('slickPrev');
+	});	
+
+	// $( section + " .slick-next").on('mouseenter', function() {
+	// 	console.log('enter next');
+	// });
+
+	// $( section + " .slick-prev").on('mouseenter', function() {
+	// 	console.log('enter prev');
+	// });
+	
+	$(".caption-wrapper").on('mouseenter',function() {
+		showCaption();
+	});
+	
+	$(".caption-wrapper").on('mouseleave',function() {
+		hideCaption();
+	});
+}
+
+/**
  *
  */
 var initShipping = function (dataset) {
 
 	// Initialize Slideshow
-	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenShippingSlideshowHTML" );
-	slideshowJavaScriptInit('#slideshowHTML');
-	subSlideshowJavaScriptInit('#subSlideshowHTML');
-	fullscreenSlideshowJavaScriptInit('#fullscreenShippingSlideshowHTML');
+	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenSlideshowHTML" );
+	initSlickFullscreenNav('#shipping');
 };
-
 
 /**
  *
  */
 var initOffshore = function (dataset) {
 	// Initialize Slideshow
-	initializeAnimatedModal( "#offshoreFullscreenButton", "offshoreAnimatedModal", "#fullscreenOffshoreSlideshowHTML" );
-	slideshowJavaScriptInit('#slideshowHTML');
-	subSlideshowJavaScriptInit('#subSlideshowHTML');
-	fullscreenSlideshowJavaScriptInit('#fullscreenOffshoreSlideshowHTML');
+	initializeAnimatedModal( "#offshoreFullscreenButton", "offshoreAnimatedModal", "#fullscreenSlideshowHTML" );
+	initSlickFullscreenNav('#offshore');
 };
 
 
@@ -246,10 +283,8 @@ var initOffshore = function (dataset) {
  */
 var initPortagency = function (dataset) {
 	// Initialize Slideshow
-	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenPortAgencySlideshowHTML" );
-	slideshowJavaScriptInit('#slideshowHTML');
-	subSlideshowJavaScriptInit('#subSlideshowHTML');
-	fullscreenSlideshowJavaScriptInit('#fullscreenPortAgencySlideshowHTML');
+	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenSlideshowHTML" );
+	initSlickFullscreenNav('#portagency');
 };
 
 
@@ -257,12 +292,9 @@ var initPortagency = function (dataset) {
  *
  */
 var initLinerservices = function (dataset) {
-
 	// Initialize Slideshow
 	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
-	slideshowJavaScriptInit('#slideshowHTML');
-	subSlideshowJavaScriptInit('#subSlideshowHTML');
-	fullscreenSlideshowJavaScriptInit('#fullscreenLinerServicesSlideshowHTML');
+	initSlickFullscreenNav('#liner-services');
 
 };
 
@@ -465,7 +497,7 @@ var setNav = function (selector, dataset) {
  * Handle main Nav / blog filter active state
  */
 var setNavActive = function (dataset, currentStatus) {
-	console.log(dataset);
+	// console.log(dataset);
 	var lastClicked = null;
 
 	// split dataset.blogPostCategories string to array of categories

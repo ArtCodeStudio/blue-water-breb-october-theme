@@ -9,7 +9,11 @@ includeJavaScript = 0
 
 {% component 'shipsListHTML' %}
 
-{% partial '/subpages/_downloads' 
-	downloads = this.theme.fleet_downloads
-	zipFileName = 'Breb Fleet Documents.zip'
-%}
+<div class="row">
+	<div class="m-y-3 m-x-auto download-partial" >          
+		{% partial '/subpages/_downloads' 
+			downloads = this.theme.fleet_downloads
+			zipFileName = 'Breb Fleet Documents.zip'
+		%}
+	</div>
+</div>

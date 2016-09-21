@@ -14,13 +14,14 @@ snippetName = "Contact"
         {% partial 'subpages/_contact_department' %}
         
     </div>
-{#http://v4-alpha.getbootstrap.com/layout/grid/#example-offsetting-columns#}
+
     <div class="row">
-        <div class="m-y-3 col-xs-12 col-md-12 col-lg-7 offset-xs-3   offset-xl-4 " >          
+        <div class="m-y-3 col-xs-12 col-md-12 col-lg-7 offset-xs-3 offset-xl-4" >          
             {% partial '/subpages/_downloads' 
                 downloads = this.theme.contact_downloads
-                zipFileName = 'Breb Fleet Documents.zip'
+                zipFileName = 'Breb Contact Documents.zip'
             %}
         </div>
     </div>
+
 </div>
