@@ -35,7 +35,7 @@
 	}
 	&#footer-brand-logo-container {
 		text-align: center !important;
-		margin-top: 163px; // besser loesen
+		// margin-top: 163px; // besser loesen
 		img{
 			max-width: 38% !important;
     		min-width: 263px;
@@ -106,7 +106,7 @@
 				@include media-breakpoint-down(xs) {
 					border-right : none !important;
 					.column {
-						padding-left: 30%;
+						//padding-left: 30%;
 					}
 				}
 				@include media-breakpoint-between(sm,md) {

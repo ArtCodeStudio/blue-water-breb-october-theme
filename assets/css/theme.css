@@ -8029,8 +8029,7 @@ a.text-danger:focus, a.text-danger:hover {
   .footer::after {
     content: none; }
   .footer#footer-brand-logo-container {
-    text-align: center !important;
-    margin-top: 163px; }
+    text-align: center !important; }
     .footer#footer-brand-logo-container img {
       max-width: 38% !important;
       min-width: 263px; }
@@ -8075,9 +8074,7 @@ a.text-danger:focus, a.text-danger:hover {
       border-right: 1px solid #4053a4; }
       @media (max-width: 543px) {
         .footer#footer-contact-container .row > div {
-          border-right: none !important; }
-          .footer#footer-contact-container .row > div .column {
-            padding-left: 30%; } }
+          border-right: none !important; } }
 
 @media (min-width: 544px) and (max-width: 991px) {
   .footer#footer-contact-container .row > div .column {
@@ -8400,9 +8397,6 @@ a.text-danger:focus, a.text-danger:hover {
 
 #contact .row .contact-department > div {
   margin-bottom: 2rem; }
-  @media (max-width: 991px) {
-    #contact .row .contact-department > div {
-      padding-left: 30%; } }
 
 @media (max-width: 991px) {
   #contact .row .contact-department {
@@ -8484,7 +8478,8 @@ nav .container {
     content: url(../images/icons/download2.svg); }
 
 h6 {
-  color: #4053a4; }
+  color: #4053a4;
+  font-weight: 600; }
 
 /*
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––

@@ -94,9 +94,9 @@
 			}
 			> div{
 				margin-bottom: 2rem;
-				@include media-breakpoint-down(md) {
-					padding-left: 30%;
-				}
+				// @include media-breakpoint-down(md) {
+				// 	padding-left: 30%;
+				// }
 			}
 			@include media-breakpoint-down(md) {
 				padding-top: 2rem;
