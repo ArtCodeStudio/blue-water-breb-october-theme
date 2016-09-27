@@ -700,5 +700,4 @@ var initBarba = function () {
  */
 $(document).ready(function (){
 	initBarba();
-
 });
