@@ -1,85 +1,17 @@
 <div class="col-xs-12 col-md-12 col-lg-7 offset-xs-4 contact-department">
 
-	<div>
-		<div>
-			<h6 class="text-serif">Chartering</h6>
-		</div>
-		<div>{{ this.theme.department_chartering_phone }}</div>
-		<div>{{ this.theme.department_chartering_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Liner Services</h6>
-		</div>
-		<div>{{ this.theme.department_liner_services_phone }}</div>
-		<div>{{ this.theme.department_liner_services_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Operating</h6>
-		</div>
-		<div>{{ this.theme.department_operating_phone }}</div>
-		<div>{{ this.theme.department_operating_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Agency</h6>
-		</div>
-		<div>{{ this.theme.department_agency_phone }}</div>
-		<div>{{ this.theme.department_agency_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Agency Offshore</h6>
-		</div>
-		<div>{{ this.theme.department_agency_offshore_phone }}</div>
-		<div>{{ this.theme.department_agency_offshore_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif"> Agency Sassnitz</h6>
-		</div>
-		<div>{{ this.theme.department_agency_sassnitz_phone }}</div>
-		<div>{{ this.theme.department_agency_sassnitz_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Agency Belgium</h6>
-		</div>
-		<div>{{ this.theme.department_agency_belgium_phone }}</div>
-		<div>{{ this.theme.department_agency_belgium_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Accounting</h6>
-		</div>
-		<div>{{ this.theme.department_accounting_phone }}</div>
-		<div>{{ this.theme.department_accounting_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Accounting Agency</h6> 
-			<div class='font-size-sm'>(Liner / Managed Vessels)</div>
-		</div>
-		<div>{{ this.theme.department_accounting_agency_phone }}</div>
-		<div>{{ this.theme.department_accounting_agency_email }}</div>
-	</div>
-
-	<div>
-		<div>
-			<h6 class="text-serif">Administration</h6>
-			<div class='font-size-sm'>(Port Agency / Offshore)</div>
-		</div>
-		<div>{{ this.theme.department_administration_phone }}</div>
-		<div>{{ this.theme.department_administration_email }}</div>
-	</div>
-
+	{% for department in  this.theme.contact_departments %}
+		{% if department.active %}
+			<div>
+				<div>
+					<h6 class="text-serif">{{department.title}}</h6>
+					{% if department.sub_title != ''%}
+						<div class='font-size-sm'>({{department.sub_title}})</div>
+					{% endif %}
+				</div> 
+				<div>{{ department.phone }}</div>
+				<div>{{ department.email }}</div>
+			</div>
+		{% endif %}
+	{% endfor %}
 </div>

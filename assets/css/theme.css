@@ -8403,8 +8403,10 @@ a.text-danger:focus, a.text-danger:hover {
   display: inline; }
 
 #contact .row .contact-department div div .font-size-sm {
-  display: inline;
   font-size: 0.875rem; }
+  @media (min-width: 544px) {
+    #contact .row .contact-department div div .font-size-sm {
+      display: inline; } }
 
 #contact .row .contact-department > div {
   margin-bottom: 2rem; }

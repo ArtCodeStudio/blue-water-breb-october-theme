@@ -87,7 +87,9 @@
 						display:inline
 					}
 					.font-size-sm {
-						display:inline;
+						@include media-breakpoint-up(sm) {
+							display:inline;
+						}				
 						font-size: $font-size-sm;
 					}
 				}
