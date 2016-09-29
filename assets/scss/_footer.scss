@@ -63,7 +63,7 @@
 	}
 
 
-	&#footer-contact-container {
+	&.footer-contact-container {
 		display:flex;
 		justify-content: space-between;
 		line-height: 20px;
@@ -147,7 +147,7 @@
 	}
 }
 
-#footer-contact-container {
+.footer-contact-container {
 	display:flex;
 	justify-content: space-between;
 }
@@ -158,5 +158,12 @@
 		.img-fluid{
 			display:inline!important;
 		}
+	}
+}
+
+.footer-contact-container-xs {
+	.column {
+		width: 193px;
+		margin: 0 auto;
 	}
 }

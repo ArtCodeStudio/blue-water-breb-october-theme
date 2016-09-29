@@ -144,17 +144,47 @@ form:
                 type: section
                 label: Department
                 tab: Contact
-            
+
+            contact_departments:
+                type: repeater
+                tab: Contact 
+                form:
+                    fields:
+                        title:
+                            default: 
+                            'placeholder': 'The title of the Department e.g.: Chartering'
+                            label: Title
+                            tab: Contact 
+                        sub_title:
+                            default: 
+                            'placeholder': 'The subtitle of the Department e.g.: Port Agency / Offshore'
+                            label: Subtitle
+                            tab: Contact 
+                        email:
+                            label: Phone Number 
+                            placeholder: Phone Number 
+                            tab: Contact      
+                        phone:
+                            label: eMail Address 
+                            placeholder: eMail Address 
+                            tab: Contact      
+                        active:
+                            label: Show
+                            type: switch
+                            tab: Contact      
+
             department_chartering_phone:
                 default: +49 (0)4721 123 45 6
                 'placeholder': 'Phone, eg: +49 (0)4721 123 45 6'
-                label: chartering
+                label: Chartering
                 tab: Contact
+
             department_chartering_email:
                 default: chartering@breb.de
                 'placeholder': 'eMail Address, eg: chartering@breb.de'
                 placeholder: eMail
                 tab: Contact   
+
 
             department_liner_services_phone:
                 default: +49 (0)4721 123 45 6
@@ -166,6 +196,7 @@ form:
                 'placeholder': 'eMail Address, eg: liner@breb.de'
                 placeholder: eMail
                 tab: Contact   
+
 
             department_operating_phone:
                 default: +49 (0)4721 123 45 6
@@ -381,7 +412,7 @@ form:
                             tab: Downloads 
 
             qhse_downloads:
-                'label': 'QHSE Downloads'
+                'label': 'Terms & QHSE Downloads'
                 type: repeater
                 tab: Downloads 
                 form:
