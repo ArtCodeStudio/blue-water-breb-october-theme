@@ -1,0 +1,25 @@
+[viewBag]
+snippetCode = "qhse"
+snippetName = "QHSE"
+==
+<div id="qhse" data-target="#qhse"> 
+
+        <div class="row">
+  
+            <div class="col-xs-12 col-lg-5 section-headline-text" >
+                <div class="border-top"></div>
+                <h3 class="text-xs-center text-sm-left text-serif">QHSE-Policy</h3>  
+            </div>
+            
+            <div class="col-xs-12 col-lg-7 offset-lg-4">
+                {% content 'qhse.htm' %}
+                <br>
+                {% partial '/subpages/_downloads' 
+                    downloads = this.theme.qhse_downloads
+                    zipFileName = 'QHSE Documents.zip'
+				%}
+            </div>
+        </div>
+   
+
+</div>

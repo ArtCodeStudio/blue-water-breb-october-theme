@@ -1,6 +1,15 @@
 name: main
 items:
     -
+        title: QHSE
+        type: url
+        url: /qhse
+        code: qhse
+        viewBag:
+            isHidden: '0'
+            cssClass: qhse
+            isExternal: '0'
+    -
         title: Shipping
         nesting: ''
         type: url
@@ -54,9 +63,13 @@ items:
             isExternal: '0'
     -
         title: Fleet
+        nesting: ''
         type: url
         url: /fleet
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: fleet

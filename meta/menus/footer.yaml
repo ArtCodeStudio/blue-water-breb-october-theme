@@ -30,10 +30,10 @@ items:
         title: QHSE
         nesting: '0'
         type: static-page
-        code: ''
-        reference: terms
+        code: qhse
+        reference: qhse
         replace: '0'
         viewBag:
             isHidden: '0'
-            cssClass: agency
+            cssClass: qhse
             isExternal: '0'

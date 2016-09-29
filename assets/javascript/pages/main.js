@@ -437,6 +437,13 @@ var initImprint = function () {
 };
 
 /**
+ *
+ */
+var initQHSE = function () {
+
+};
+
+/**
  * Run JavaScript for for special template
  * E.g. templates/product.liquid
  */
@@ -459,7 +466,8 @@ var initTemplate = {
 	'agency': initAgency,
 	'fleet': initFleet,
 	'termsandconditions': initTermsAndConditions,
-	'imprint': initImprint
+	'imprint': initImprint,
+	'qhse': initQHSE
 };
 
 

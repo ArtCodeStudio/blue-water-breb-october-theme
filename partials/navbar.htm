@@ -20,18 +20,19 @@ function onEnd() {
 {% endif %}
 
 <div class="navbar-wrapper bg-body navbar-fixed-top">
-	<div class="container hidden-sm-down ">
+	<div class="container hidden-md-down ">
 
 		<nav class="navbar navbar-light {{ navbarClass }}" id="navbar-main">	
             <a href="/" class="navbar-brand"><img class="fr-dib fr-draggable" src="{{ this.theme.primary_brand | media }}" >	</a>
 			{% partial 'navigation/navbar-items'
 				items=main.menuItems
-				class='nav navbar-nav pull-xs-right hidden-sm-down main-navigation'
+				class='nav navbar-nav pull-xs-right hidden-md-down main-navigation'
 				itemClass='nav-item'
 			%}
 		</nav>
 	</div>
 </div>
+
 {% partial 'navigation/sidebar'
 	main_items=main.menuItems
 	footer_items=footer.menuItems

@@ -1,0 +1,11 @@
+[viewBag]
+==
+<div class="container" id="footer-certificates-container">
+	<div class='row'>
+		<div class="col-xs-12">
+			{% for certificate in  this.theme.certificates %}
+				<img class="img-fluid" src="{{ certificate.file |media }}">
+			{% endfor %}
+		</div>
+	</div>
+</div>

@@ -8029,6 +8029,7 @@ a.text-danger:focus, a.text-danger:hover {
   .footer::after {
     content: none; }
   .footer#footer-brand-logo-container {
+    border-top: 1px solid #4053a4;
     text-align: center !important; }
     .footer#footer-brand-logo-container img {
       max-width: 38% !important;
@@ -8094,6 +8095,12 @@ a.text-danger:focus, a.text-danger:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+#footer-certificates-container .row {
+  text-align: center; }
+  #footer-certificates-container .row .img-fluid, #footer-certificates-container .row .carousel-inner > .carousel-item > img, #footer-certificates-container .row
+  .carousel-inner > .carousel-item > a > img, #footer-certificates-container .row #post .blog-content-wrapper .content img, #post .blog-content-wrapper .content #footer-certificates-container .row img {
+    display: inline !important; }
 
 #blog-header-wrapper {
   top: 2.9rem;
@@ -8407,12 +8414,6 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   overflow-y: scroll; }
-
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: -1;
-  border-top: 1px solid #3a599f !important; }
 
 .section-headline-text .border-top {
   border-top: solid #4053a4 4px;
