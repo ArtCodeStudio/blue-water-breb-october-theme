@@ -51,7 +51,7 @@ $navbar-brand-width: 150px;
 		
 		img {
 			transition: all .25s ease-in-out;
-			width:15rem;
+			width:14rem;
 			@include media-breakpoint-down(md) {
 				width: 5.4rem;
 				margin-top: 2.2rem;
@@ -71,7 +71,7 @@ $navbar-brand-width: 150px;
 		}
 
 		@include media-breakpoint-up(lg) {
-			margin-top: 19px;
+			margin-top: 1.5rem;
 			//min-width: 279px;
 		}
 

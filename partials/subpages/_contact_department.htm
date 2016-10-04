@@ -10,7 +10,7 @@
 					{% endif %}
 				</div> 
 				<div>{{ department.phone }}</div>
-				<div>{{ department.email }}</div>
+				<div><a href="mailto:{{ department.email }}">{{ department.email }}</a></div>
 			</div>
 		{% endif %}
 	{% endfor %}

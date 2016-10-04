@@ -139,7 +139,30 @@ form:
                 placeholder: Fax
 
 
-# CONTACT /DEPARTMENT
+# CONTACT / BUTTON eMail
+            contact_link_title:
+                type: section
+                label: Emails for Contact Button on Pages
+                tab: Contact
+            shipping_email:
+                label: Shipping
+                placeholder: eMail
+                tab: Contact
+            liner_services_email:
+                label: Liner Services
+                placeholder: eMail
+                tab: Contact
+            offshore_email:
+                label: Offshore
+                placeholder: eMail
+                tab: Contact
+            portagency_email:
+                label: Port Agency
+                placeholder: eMail
+                tab: Contact
+
+
+# CONTACT / DEPARTMENT
             department_title:
                 type: section
                 label: Department
@@ -160,11 +183,11 @@ form:
                             'placeholder': 'The subtitle of the Department e.g.: Port Agency / Offshore'
                             label: Subtitle
                             tab: Contact 
-                        email:
+                        phone:
                             label: Phone Number 
                             placeholder: Phone Number 
                             tab: Contact      
-                        phone:
+                        email:
                             label: eMail Address 
                             placeholder: eMail Address 
                             tab: Contact      

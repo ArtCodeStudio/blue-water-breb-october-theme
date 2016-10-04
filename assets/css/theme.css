@@ -7651,9 +7651,6 @@ a.text-danger:focus, a.text-danger:hover {
 /*
 * MAIN NAVIGATION –––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
-.nav-link:focus {
-  color: rgba(0, 0, 0, 0.3); }
-
 .navbar-slim {
   padding-bottom: 0 !important;
   height: 3rem !important;
@@ -7692,7 +7689,7 @@ a.text-danger:focus, a.text-danger:hover {
     #navbar-main .navbar-brand img {
       -webkit-transition: all .25s ease-in-out;
       transition: all .25s ease-in-out;
-      width: 15rem; }
+      width: 14rem; }
       @media (max-width: 991px) {
         #navbar-main .navbar-brand img {
           width: 5.4rem;
@@ -7703,7 +7700,7 @@ a.text-danger:focus, a.text-danger:hover {
         min-width: 400px !important; } }
     @media (min-width: 992px) {
       #navbar-main .navbar-brand {
-        margin-top: 19px; } }
+        margin-top: 1.5rem; } }
     @media (max-width: 991px) {
       #navbar-main .navbar-brand {
         margin-top: 11px; } }
