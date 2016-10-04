@@ -135,9 +135,13 @@ waitForAnimate = 1
 			<div class="col-md-12 col-lg-5 p-b-3 section-headline-text" >
 				<div class="border-top"></div>
 				<h3 class="text-xs-center text-sm-left text-serif">{{ this.page.title }}</h3>  
+				
 				<div  class="p-y-3 content-container">             
 					{% content 'shipping.htm' %}
 				</div>
+
+				<a href="#" class="btn btn-blue-outline m-b-3">contact</a>
+
 				{% partial '/subpages/_downloads' 
 					downloads = this.theme.shipping_downloads
 					zipFileName = 'Shipping Offshore Documents.zip'
