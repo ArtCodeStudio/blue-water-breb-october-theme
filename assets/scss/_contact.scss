@@ -89,6 +89,7 @@
 					.font-size-sm {
 						@include media-breakpoint-up(sm) {
 							display:inline;
+						
 						}				
 						font-size: $font-size-sm;
 					}

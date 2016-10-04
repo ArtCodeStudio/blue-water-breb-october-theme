@@ -476,6 +476,7 @@ var initTemplate = {
  */
 var resetNav = function () {
    	cache.$navbarMain.find('ul.nav.navbar-nav li').removeClass('active');
+	cache.$navbarMain.find('ul.nav.navbar-nav li a').blur();
  	cache.$blogFilter.find('a').removeClass('btn-white-outline');
 	cache.$sidebar.find('.list-group a').removeClass('active');
 };
@@ -505,7 +506,7 @@ var setNav = function (selector, dataset) {
  * Handle main Nav / blog filter active state
  */
 var setNavActive = function (dataset, currentStatus) {
-	// console.log(dataset);
+	
 	var lastClicked = null;
 
 	// split dataset.blogPostCategories string to array of categories
@@ -584,7 +585,6 @@ var initTemplates = function () {
   });
 
   Barba.Dispatcher.on('newPageReady', function (currentStatus, oldStatus, container) {
-
 
 	// Stop ALL slideshows
 	$(document).trigger('jumplink_slideshow_stop');

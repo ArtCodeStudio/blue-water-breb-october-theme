@@ -7651,6 +7651,9 @@ a.text-danger:focus, a.text-danger:hover {
 /*
 * MAIN NAVIGATION –––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
+.nav-link:focus {
+  color: rgba(0, 0, 0, 0.3); }
+
 .navbar-slim {
   padding-bottom: 0 !important;
   height: 3rem !important;
