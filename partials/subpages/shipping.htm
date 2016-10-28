@@ -140,8 +140,10 @@ waitForAnimate = 1
 					{% content 'shipping.htm' %}
 				</div>
 
-				<a href="mailto:{{this.theme.shipping_email}}" class="btn btn-blue-outline m-b-3">contact</a>
-
+				<div class="text-xs-center text-sm-left">
+					<a href="mailto:{{this.theme.shipping_email}}" class="btn btn-blue-outline m-b-3">contact</a>
+				</div>
+				
 				{% partial '/subpages/_downloads' 
 					downloads = this.theme.shipping_downloads
 					zipFileName = 'Shipping Offshore Documents.zip'

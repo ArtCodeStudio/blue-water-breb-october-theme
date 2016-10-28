@@ -154,9 +154,11 @@ vertical = 0
 				<div class="p-y-3 content-container">             
                      {% content 'port_agency.htm' %}
 				</div>
-
-                <a href="mailto:{{this.theme.portagency_email}}" class="btn btn-blue-outline m-b-3">contact</a>
-
+		        
+                <div class="text-xs-center text-sm-left">
+                    <a href="mailto:{{this.theme.portagency_email}}" class="btn btn-blue-outline m-b-3">contact</a>
+                </div>
+                
                 {% partial '/subpages/_downloads' 
 					downloads = this.theme.port_agency_downloads
 					zipFileName = 'Breb Port Agency Documents.zip'
