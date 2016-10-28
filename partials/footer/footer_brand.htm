@@ -2,13 +2,23 @@
 snippetCode = "footer_brand"
 snippetName = "Footer Brand"
 ==
-<div class="container footer m-t-3 p-t-2" id="footer-brand-logo-container">
-    <div class="row">
+<div class="container footer footer-brand-logo-container m-t-3 p-t-2 p-x-1 hidden-md-down" id="_footer-brand-logo-container">
+    <div class="">
         <a href="/">
-            <div class="col-xs-12">
+            <div class="p-t-2 col-xs-12 text-xs-center image-wrapper">
                 <p><img class="fr-dib fr-draggable" src="{{ this.theme.secondary_brand | media }}"></p>
             </div>
         </a>
     </div>
+</div>
 
+{# XS - MD #}
+<div class="footer footer-brand-logo-container p-x-1 hidden-lg-up">
+    <div>
+        <a href="/">
+            <div class="p-t-2 text-xs-center image-wrapper">
+                <p><img class="fr-dib fr-draggable" src="{{ this.theme.secondary_brand | media }}"></p>
+            </div>
+        </a>
+    </div>
 </div>

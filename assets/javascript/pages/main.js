@@ -227,10 +227,12 @@ var initSlickFullscreenNav = function( section ) {
 
 	function showCaption() {
 		$captionWrapper.addClass('visible');
+		$captionWrapper.find('button').addClass('visible');
 	}
 
 	function hideCaption() {
 		$captionWrapper.removeClass('visible');
+		$captionWrapper.find('button').removeClass('visible');
 	}
 	
 	$( section + " .slick-next").on('click',function(){
@@ -241,14 +243,6 @@ var initSlickFullscreenNav = function( section ) {
 		$('#fullscreenSlideshowHTML').slick('slickPrev');
 	});	
 
-	// $( section + " .slick-next").on('mouseenter', function() {
-	// 	console.log('enter next');
-	// });
-
-	// $( section + " .slick-prev").on('mouseenter', function() {
-	// 	console.log('enter prev');
-	// });
-	
 	$(".caption-wrapper").on('mouseenter',function() {
 		showCaption();
 	});

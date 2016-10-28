@@ -3,6 +3,8 @@
 
 @import '../../../../plugins/jumplink/slideshow/assets/scss/slideshow.scss';
 
+
+
 #animatedModal, .animatedModal {
 	.close-animatedModal {
 		color: white;
@@ -165,7 +167,9 @@
 			background-image: url(../images/icons/big-close-r.svg);
 		}		
 	}
-
+	// .carousel-caption-wrapper {
+	// 	position: relative;
+	// }
 	.carousel-caption-wrapper .carousel-caption-content {
 		// padding-left: 59px;
 		position: fixed;
@@ -187,26 +191,37 @@
 	.slick-next {
 		right: 1rem;
 	}
+
+		.slick-prev {
+		left: 1rem;		
+	}
+
 	#slideshowHTML, #subSlideshowHTML {
 		.slick-prev, .slick-next {
 				position: absolute;
 				z-index: 999;
 				
-				@include media-breakpoint-up(xl) {
+			/*	@include media-breakpoint-up(xl) {
 					margin-top: 12.1rem;
 				}
 				@include media-breakpoint-down(lg) {
 					margin-top: 9.6rem;
 				}
 				@include media-breakpoint-down(md) {
-					margin-top: 6.3rem;
+					//margin-top: 6.3rem;
+					margin-top: 13.37rem;
 				}
 				@include media-breakpoint-down(sm) {
 					margin-top: 10rem;
 				}
 				@include media-breakpoint-down(xs) {
 					display:none;
-				}
+				}*/
+
+		    top: 100%;
+		    -webkit-transform: translate(0, -3.25rem);
+		    -ms-transform: translate(0, -3.25rem);
+		    transform: translate(0, -3.25rem);
 
 			
 		}
@@ -264,22 +279,64 @@
 
 	#fullscreenSlideshowHTML {
 		.caption-nav {
-			.white{
+			height: 6rem; 
+			position: absolute; 
+			bottom: 0; 
+			left: 0; 
+			right:0; 
+			margin-top: 70vh;  
+			z-index: 1337; 
+			line-height: normal; 
+			padding: 1rem 0 0 3rem;
+			
+		}
+		.white{
+			&:before{
+				color:white;
+			}
+		}
+		>button{ // hide slick default arrows , settings seam to have no effect ?!
+			&.slick-prev{
+				display:none !important;
+			}
+			&.slick-next{
+				display:none !important;
+			}
+		}
+		.caption-wrapper {
+			opacity:1;
+			transition: opacity .25s ease-in-out;
+			transition-delay: 0s;
+			transition-duration: 0.3s;
+			transition-property: all;
+			transition-timing-function: ease;
+			background-color: rgba(255,255,255,0); //0.75
+			position: absolute; 
+			bottom: 0; 
+			left: 0; 
+			right:0; 
+			margin-top: 70vh; 
+			z-index: 1337; 
+			line-height: normal; 
+			padding: 1rem 0 0 3rem;
+			.slick-prev, .slick-next {
 				&:before{
 					color:white;
 				}
 			}
-
-		}
-		.caption-wrapper {
-			opacity:0;
-				transition: opacity .25s ease-in-out;
-				transition-delay: 0s;
-				transition-duration: 0.3s;
-				transition-property: all;
-				transition-timing-function: ease;
 			&.visible {
 				opacity:1;
+				background-color: rgba(255,255,255,0.75);
+			}
+			&:hover{
+				//background-color: rgba(255,255,255,0.75); //
+			}
+			button {
+				&.visible {
+					&:before{
+						color: $brand-danger;
+					}
+				}
 			}
 		}
 	}

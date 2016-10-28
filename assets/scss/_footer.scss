@@ -33,14 +33,28 @@
 	&::after{
 		content:none;
 	}
+
+	&.footer-brand-logo-container {
+		.image-wrapper {
+			border-top:1px solid $brand-primary;
+			p{
+				img{
+					max-width: 38% !important;
+					min-width: 263px;
+				}
+			}
+		}
+	}
+
 	&#footer-brand-logo-container {
-		border-top:1px solid $brand-primary;
 		text-align: center !important;
-		// margin-top: 163px; // besser loesen
+		border-top:1px solid $brand-primary;
+
 		img{
 			max-width: 38% !important;
-    		min-width: 263px;
+			min-width: 263px;
 		}
+		
 	}
 
 	&#footer-navigation-wrapper{

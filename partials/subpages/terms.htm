@@ -6,12 +6,20 @@ snippetName = "Terms and Conditions"
 
         <div class="row">
   
-            {#<div class="col-xs-12 col-lg-5 section-headline-text" >#}
-                {#<div class="border-top"></div>
-                <h3 class="text-xs-center text-sm-left text-serif">{{ this.page.title }}</h3>  #}
-            {#</div>#}
+            <div class="col-xs-12 col-lg-4 section-headline-text" >
+                <div class="border-top"></div>
+                <p class='text-xs-center text-sm-left'>Non-binding Recommendation for</p>
+                <h3 class="text-xs-center text-sm-left text-serif p-b-1">{{ this.page.title }}</h3>  
+                
+                <div class='text-xs-center text-sm-left'>for Ship Brokers and Ship Agents in Germany</div>
+                
+                <div class='text-xs-center text-sm-left'>(In case of doubt the German wording is valid)</div>
+
+            </div>
+            <br>
             
-            <div class="col-xs-12 col-lg-7 offset-lg-4">
+            <div class="col-xs-12 col-lg-8 " id="terms-content-container">
+            
                 {% content 'terms.htm' %}
                 <br>
                 {% partial '/subpages/_downloads' 

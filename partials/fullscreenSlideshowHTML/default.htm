@@ -6,11 +6,13 @@
 
 						<div style="height: 100vh; background-size: cover; background-position: center center; background-image: url({{ __SELF__.getResizedImage(slide.image) }});" alt="{{ __SELF__.getResizedImage(slide.image) }}">	
 						</div>
-						<div class="caption-nav" style=" height: 6rem; position: absolute; bottom: 0; left: 0; right:0; margin-top: 70vh;  z-index: 1337; line-height: normal; padding: 1rem 0 0 3rem">
+						
+						{#<div class="caption-nav">
 							<button type="button" class="slick-prev white">Previous</button>
 							<button type="button" class="slick-next white">Next</button>
-					    </div>
-						<div class="caption-wrapper" style=" background-color: rgba(255,255,255,0.75); position: absolute; bottom: 0; left: 0; right:0; margin-top: 70vh;  z-index: 1337; line-height: normal; padding: 1rem 0 0 3rem">
+					    </div>#}
+
+						<div class="caption-wrapper">
 							<button type="button" class="slick-prev">Previous</button>
 								<h2>{{ slide.name | raw }}</h2>
 								{{ slide.description | raw }}

@@ -142,3 +142,27 @@ h6 {
 	width: 270px;
 }
 
+
+#terms {
+	
+	.section-headline-text {
+		@include media-breakpoint-down(xs) {
+			p{
+				margin-top:1rem;
+			}
+		}
+	}
+
+	#terms-content-container{
+		@include media-breakpoint-down(md) {
+
+			margin-top: 2rem;
+
+		}	
+		@include media-breakpoint-down(xs) {
+			h6{
+				text-align: center;
+			}
+		}
+	}
+}
