@@ -7872,7 +7872,8 @@ a.text-danger:focus, a.text-danger:hover {
   #sidebar .sidebar-wrapper {
     position: relative;
     height: 100%;
-    overflow: auto; }
+    overflow: auto;
+    margin-top: 2.6rem; }
     #sidebar .sidebar-wrapper .list-group .list-group-item {
       border: none;
       padding: 0.75rem 2.4rem; }
@@ -8065,12 +8066,6 @@ a.text-danger:focus, a.text-danger:hover {
   .footer.footer-brand-logo-container .image-wrapper {
     border-top: 1px solid #4053a4; }
     .footer.footer-brand-logo-container .image-wrapper p img {
-      max-width: 38% !important;
-      min-width: 263px; }
-  .footer#footer-brand-logo-container {
-    text-align: center !important;
-    border-top: 1px solid #4053a4; }
-    .footer#footer-brand-logo-container img {
       max-width: 38% !important;
       min-width: 263px; }
   .footer#footer-navigation-wrapper {
