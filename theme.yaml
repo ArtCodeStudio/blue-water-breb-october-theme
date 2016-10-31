@@ -203,6 +203,12 @@ form:
                 default: 9
                 tab: Blog
 
+# LINES (Liner Services Lines Image )
+            linerservices_lines:
+                label: Liner Services Lines Image
+                type: mediafinder
+                mode: image
+                tab: Liner Services 
 
 # BRAND
             primary_brand:
