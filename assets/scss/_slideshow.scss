@@ -167,24 +167,33 @@
 			background-image: url(../images/icons/big-close-r.svg);
 		}		
 	}
-	// .carousel-caption-wrapper {
-	// 	position: relative;
-	// }
-	.carousel-caption-wrapper .carousel-caption-content {
-		// padding-left: 59px;
-		position: fixed;
-		/* top: 0; */
-		background-color: rgba(255, 255, 255, 0.75); //sassify me
-		width: 100%;
-		bottom: 0px;
-		padding: 1rem 0 0 3rem;
-		h2 {
-			font-size: $font-size-lg;
+
+	.carousel-caption-wrapper {
+		@include media-breakpoint-down(xs) {
+			position: relative;
 		}
-		p {
-			color:black !important;;
+		.carousel-caption-content {
+
+			position: fixed;
+			background-color: rgba(255, 255, 255, 0.75); //sassify me
+			width: 100%;
+			bottom: 0px;
+			padding: 1rem 0 0 3rem;
+			@include media-breakpoint-down(xs) {
+				position: relative;
+				padding: 1rem 0 0 0rem;
+			}
+			
+			h2 {
+				font-size: $font-size-lg;
+			}
+			p {
+				color:black !important;
+			}
+
 		}
 	}
+	
 	.slick-prev {
 		left: 1rem;		
 	}
@@ -202,7 +211,7 @@
 			z-index: 999;
 				
 			@include media-breakpoint-down(xs) {
-				display:none;
+				display:none !important;
 			}
 
 		    top: 100%;

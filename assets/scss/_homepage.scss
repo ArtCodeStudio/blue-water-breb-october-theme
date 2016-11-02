@@ -20,6 +20,9 @@
 			@include media-breakpoint-down(lg) {
 				margin-bottom: 3.75rem;
 			}
+			img{
+				max-width:150px
+			}
 		}
 		.card-block{
 			margin-bottom: 4rem;
@@ -33,8 +36,7 @@
 					// border-bottom: 1px solid $brand-danger;
 				}
 			}
-			.btn {
-			}
+
 		}
 	}
 	

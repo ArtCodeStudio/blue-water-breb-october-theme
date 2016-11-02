@@ -22,7 +22,7 @@
 @import 'homepage';
 @import 'contact';
 @import 'animate';
-
+@import 'lists';
 
 body {
 	max-width: 100%; // fallback
@@ -140,6 +140,11 @@ h6 {
 			
 			text-align: justify !important;
 			
+		}
+	}
+	#liner-services-tab-images-container {		
+		#line-images { // hide tabs navigation
+			display:none;
 		}
 	}
 

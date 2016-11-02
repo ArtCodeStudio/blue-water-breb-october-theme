@@ -204,8 +204,18 @@ form:
                 tab: Blog
 
 # LINES (Liner Services Lines Image )
-            linerservices_lines:
-                label: Liner Services Lines Image
+            linerservices_lines_all:
+                label: Liner Services (All Routes)
+                type: mediafinder
+                mode: image
+                tab: Liner Services 
+            linerservices_lines_adriatic:
+                label: Liner Services (Adriatic Lines)
+                type: mediafinder
+                mode: image
+                tab: Liner Services 
+            linerservices_lines_continental:
+                label: Liner Services (Continental Lines)
                 type: mediafinder
                 mode: image
                 tab: Liner Services 

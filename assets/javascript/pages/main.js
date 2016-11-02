@@ -290,6 +290,13 @@ var initLinerservices = function (dataset) {
 	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
 	initSlickFullscreenNav('#liner-services');
 
+	$('#line-names a').click( function (e) {
+		e.preventDefault()
+		console.log('click',e)
+		console.log($(this).data('index'));
+		$('#line-images li:eq('+$(this).data('index') +') a').tab('show')
+	})
+
 };
 
 
