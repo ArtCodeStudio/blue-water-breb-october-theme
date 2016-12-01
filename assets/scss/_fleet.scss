@@ -36,15 +36,18 @@
 								 margin-top: 1.4rem;
 								td, th{
 									padding: 0.5rem 0 0.5rem 0.5rem;
-									font-size:0.85rem;
+									font-size:0.76rem; //0.85rem;
 									border-top: none;
 									&.data{
 										color:$brand-primary;
 									}
 								}
-
+								td:not(:first-child){
+									padding-left:0.3rem;
+								}
 							}
 						}
+
 						.card-title {
 
 						}

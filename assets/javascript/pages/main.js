@@ -292,10 +292,27 @@ var initLinerservices = function (dataset) {
 
 	$('#line-names a').click( function (e) {
 		e.preventDefault()
-		console.log('click',e)
-		console.log($(this).data('index'));
-		$('#line-images li:eq('+$(this).data('index') +') a').tab('show')
-	})
+		var index = $(this).data('index');	
+		$('.lines-route-images-container img').removeClass('active');
+
+		switch( index ) {
+			case 0: 
+				console.log('0');
+				$('.lines-route-images-container .lines-route-image-1').addClass('active');
+			break;
+
+			case 1: 
+				console.log('1');
+				$('.lines-route-images-container .lines-route-image-2').addClass('active');
+			break;
+
+			case 2: 
+				console.log('2');
+				$('.lines-route-images-container .lines-route-image-3').addClass('active');
+			break;  
+		}
+
+	});
 
 };
 

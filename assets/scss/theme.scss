@@ -137,14 +137,39 @@ h6 {
 
 	#liner-services{
 		#liner-services-content-container {
-			
 			text-align: justify !important;
-			
 		}
 	}
-	#liner-services-tab-images-container {		
-		#line-images { // hide tabs navigation
-			display:none;
+	.liner-services-tab-images-container {		
+		min-height: 38.1rem;
+		@include media-breakpoint-down(sm) {
+			min-height: 30rem;
+		}
+		@include media-breakpoint-down(xs) {
+			min-height: 81vw∏
+		}
+
+	}
+	.lines-route-images-container {
+		margin-top:9rem;
+		&.mobile {
+			margin-top:1rem;
+			img {
+				top:1rem;
+			}
+		}
+		img {
+			position:absolute;
+			opacity:0;
+			transition:  512ms;
+			top:9rem;
+			&.active {
+				opacity:1;
+			}
+			&.lines-route-image-background{
+				opacity:1 !important;
+				//osition:inherit;
+			}
 		}
 	}
 

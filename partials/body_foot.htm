@@ -63,43 +63,43 @@ injectJLSlideshowCSS = 0
 injectJQuery = 0
 showCaptions = 1
 captionPosition = "middle center"
-adaptiveHeight = 0
-centerMode = 0
-centerPadding = "0px"
 autoplayOnShow = 1
 nextSlideOnEnd = 1
+accessibility = 1
+adaptiveHeight = 0
 autoplay = 0
 autoplaySpeed = 8000
-fade = 0
-infinite = 1
-slidesToShow = 1
-rtl = 0
-waitForAnimate = 1
-accessibility = 1
 arrows = 0
 asNavFor = "#subSlideshowHTML"
+centerMode = 0
+centerPadding = "0px"
 dots = 0
 draggable = 1
+fade = 0
 focusOnSelect = 1
+infinite = 1
+mobileFirst = 0
 pauseOnFocus = 1
 pauseOnHover = 1
 pauseOnDotsHover = 0
+respondTo = "window"
+slidesToShow = 1
 swipe = 1
 swipeToSlide = 0
 touchMove = 1
+useCSS = 1
+useTransform = 1
+variableWidth = 0
+vertical = 0
 verticalSwiping = 0
+rtl = 0
+waitForAnimate = 1
 useResize = 0
 thumbWidth = 0
 thumbHeight = 0
 thumbMode = "auto"
 thumbQuality = 95
 thumbFiletype = "jpg"
-mobileFirst = 0
-respondTo = "window"
-useCSS = 1
-useTransform = 1
-variableWidth = 0
-vertical = 0
 
 [slideshow subSlideshowJavaScript]
 slideshow = 6
@@ -202,14 +202,6 @@ thumbFiletype = "jpg"
 includeHTML = 0
 includeJavaScript = 1
 ==
-{# Scripts#}
-
-{#
- 'assets/vendor/Hyphenator/Hyphenator.js'
- 'assets/vendor/multiple-filter-masonry-master/multipleFilterMasonry.js',
- 'assets/vendor/isotope/dist/isotope.pkgd.min.js',
-    'assets/vendor/jquery-multidownload/jquery-multidownload.js',
-#}
 <script src="{{ [
     'assets/vendor/jquery/dist/jquery.min.js',
     'assets/vendor/jquery-ui/jquery-ui.min.js',
@@ -231,24 +223,6 @@ includeJavaScript = 1
 
 {# HOMEPAGE #}
 {% component 'slideshowHomeJavaScript' %}
-
-{# LINER-SERVICES #}
-{#{% component 'linerServicesSlideshowJavaScript1' %}
-{% component 'linerServicesSlideshowJavaScript2' %}#}
-
-{# SHIPPING #}
-{#{% component 'shippingSlideshowJavaScript1' %}
-{% component 'shippingSlideshowJavaScript2' %}#}
-
-
-{# PORT AGENCY #}
-{#{% component 'portAgencySlideshowJavaScript1' %}
-{% component 'portAgencySlideshowJavaScript2' %}#}
-
-
-{# OFFSHORE #}
-{#{% component 'offshoreSlideshowJavaScript1' %}
-{% component 'offshoreSlideshowJavaScript2' %}#}
 
 {# SLIDESHOW JS #}
 

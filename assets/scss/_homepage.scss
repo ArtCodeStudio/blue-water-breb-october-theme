@@ -42,6 +42,16 @@
 	
 	#latest-blog-posts {
 		#latest-blog-posts-row {
+			.latest-blog-posts-carousel {
+				.card-block{
+					.card-title{
+						white-space: nowrap; 
+						overflow: hidden;
+						text-overflow: ellipsis; 
+					}
+				}
+
+			}
 			//margin-bottom:28px !important;
 		}
 		.bg-primary{
@@ -67,6 +77,7 @@
 		.card-group-flex-md,
 		.card-group-flex-lg {
 			.card {
+				max-width: 411px;
 				margin: 0 $grid-gutter-width/2;
 				border-left: 1px solid $brand-primary !important;
 			}
