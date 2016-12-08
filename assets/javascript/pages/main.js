@@ -253,13 +253,40 @@ var initSlickFullscreenNav = function( section ) {
 }
 
 /**
+ * 
+ */
+var gotoNextFullscreenSlide = function( event, slick, currentSlide, nextSlide ) {
+	// console.info('gotoNextFullscreenSlide ', nextSlide);
+	$('#fullscreenSlideshowHTML').slick('slickGoTo',nextSlide);
+}
+var gotoNextSlide = function( event, slick, currentSlide, nextSlide ) {
+	// console.info('gotoNextSlide ',nextSlide);
+	$('#slideshowHTML').slick('slickGoTo',nextSlide);
+}
+
+/**
+ * 
+ */
+var initSlideshowSync = function () {
+	// console.info('init!')
+	$(document).on('beforeChange',"#slideshowHTML", gotoNextFullscreenSlide );     
+	$(document).on('beforeChange',"#fullscreenSlideshowHTML", gotoNextSlide );     
+}
+var destroySlideshowSync = function () {
+	// console.info('destroy!')
+	$(document).off('beforeChange', "#slideshowHTML",gotoNextFullscreenSlide );     
+	$(document).off('beforeChange', "#fullscreenSlideshowHTML",gotoNextSlide );   
+}
+
+/**
  *
  */
 var initShipping = function (dataset) {
-
 	// Initialize Slideshow
 	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenSlideshowHTML" );
 	initSlickFullscreenNav('#shipping');
+	destroySlideshowSync();
+	initSlideshowSync();
 };
 
 /**
@@ -267,10 +294,12 @@ var initShipping = function (dataset) {
  */
 var initOffshore = function (dataset) {
 	// Initialize Slideshow
+	// initSlideshowSync();
 	initializeAnimatedModal( "#offshoreFullscreenButton", "offshoreAnimatedModal", "#fullscreenSlideshowHTML" );
 	initSlickFullscreenNav('#offshore');
+	destroySlideshowSync();
+	initSlideshowSync();
 };
-
 
 /**
  *
@@ -279,14 +308,16 @@ var initPortagency = function (dataset) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenSlideshowHTML" );
 	initSlickFullscreenNav('#portagency');
+	destroySlideshowSync();
+	initSlideshowSync();
 };
-
 
 /**
  *
  */
 var initLinerservices = function (dataset) {
 	// Initialize Slideshow
+	// initSlideshowSync();
 	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
 	initSlickFullscreenNav('#liner-services');
 
@@ -294,7 +325,6 @@ var initLinerservices = function (dataset) {
 		e.preventDefault()
 		var index = $(this).data('index');	
 		$('.lines-route-images-container img').removeClass('active');
-
 		switch( index ) {
 			case 0: 
 				console.log('0');
@@ -311,11 +341,10 @@ var initLinerservices = function (dataset) {
 				$('.lines-route-images-container .lines-route-image-3').addClass('active');
 			break;  
 		}
-
 	});
-
+	destroySlideshowSync();
+	initSlideshowSync();
 };
-
 
 /**
  *
@@ -324,15 +353,12 @@ var initContact = function (dataset) {
 
 };
 
-
 /**
  *
  */
 var initAbout = function (dataset) {
 
 };
-
-
 
 /**
  *

@@ -34,11 +34,9 @@ postPage = "post"
                                 <div class="text-sm-right">
                                     {{ post.published_at|date('M d, Y') }}
                                 </div>
-                                
                                 <h4 class="card-title text-lg-left text-serif ">
                                     {{post.title}}
                                 </h4>
-                               
                                 <div class='latest-blog-posts-content-container'>
                                     {{ str_limit(post.summary, 80, '...') }}
                                 </div>
