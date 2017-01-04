@@ -47,19 +47,6 @@
 		
 
 	}
-	#fullscreenSlideshow{
-		.carousel-caption-content {
-			transition: all .25s ease-in-out;
-			opacity: 0;
-			padding: 2.5rem 0 0 5rem;
-			&:hover{
-				opacity: 1;
-			}
-			p{
-				font-size: $font-size-h3;
-			}
-		}
-	}
 
 }
 
@@ -169,16 +156,14 @@
 	}
 
 	.carousel-caption-wrapper {
-		@include media-breakpoint-down(xs) {
 			position: relative;
-		}
 		.carousel-caption-content {
 
-			position: fixed;
+			position: absolute;
 			background-color: rgba(255, 255, 255, 0.75); //sassify me
 			width: 100%;
 			bottom: 0px;
-			padding: 1rem 0 0 3rem;
+			padding: 1rem 3rem 0 3rem;
 			@include media-breakpoint-down(xs) {
 				position: relative;
 				padding: 1rem 0 0 0rem;
@@ -237,7 +222,7 @@
 			min-height: 487px;
 		}
 		@include media-breakpoint-down(sm) {
-			min-height: 575px;
+			min-height: 0;
 		}
 	}
 
@@ -259,7 +244,7 @@
 		}
 		.slick-slide {
 			margin: 4rem $grid-gutter-width/2; // result  0 0.9375rem
-			height:200px;
+			// height:200px;
 		}
 		.slick-list {
 			margin: 0 -$grid-gutter-width;
@@ -283,7 +268,7 @@
 			margin-top: 70vh;  
 			z-index: 1337; 
 			line-height: normal; 
-			padding: 1rem 0 0 3rem;
+			padding: 1rem 3rem 1rem 3rem;
 			
 		}
 		.white{
@@ -301,6 +286,8 @@
 		}
 		.caption-wrapper {
 			opacity:1;
+			display: table;
+			width:100%;
 			transition: opacity .25s ease-in-out;
 			transition-delay: 0s;
 			transition-duration: 0.3s;
@@ -311,16 +298,25 @@
 			bottom: 0; 
 			left: 0; 
 			right:0; 
-			margin-top: 70vh; 
+			min-height: 20vh;
+			height: 20vh;
 			z-index: 1337; 
 			line-height: normal; 
-			padding: 1rem 0 0 3rem;
+			padding: 1rem 3rem 1rem 3rem;
 			.slick-prev, .slick-next {
 				&:before{
 					color:white;
 				}
 			}
+			.caption-content {
+				opacity:0;
+				display: table-cell;
+				vertical-align: middle;
+			}
 			&.visible {
+				.caption-content {
+					opacity: 1;
+				}
 				opacity:1;
 				background-color: rgba(255,255,255,0.75);
 			}
@@ -332,6 +328,16 @@
 					&:before{
 						color: $brand-danger;
 					}
+				}
+				&.slick-prev, &.slick-next {
+					position: absolute;
+					z-index: 1338;
+		    		bottom: 10vh;
+		    		-webkit-transform: translate(0, 50%);
+		    		-ms-transform: translate(0, 50%);
+		    		transform: translate(0, 50%);
+
+			
 				}
 			}
 		}

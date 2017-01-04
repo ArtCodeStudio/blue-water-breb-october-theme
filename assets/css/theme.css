@@ -7274,16 +7274,6 @@ a.text-danger:focus, a.text-danger:hover {
 #animatedModal .modal-content .slick-prev:before, #animatedModal .modal-content .slick-next:before, .animatedModal .modal-content .slick-prev:before, .animatedModal .modal-content .slick-next:before {
   color: #ef2a21; }
 
-#animatedModal #fullscreenSlideshow .carousel-caption-content, .animatedModal #fullscreenSlideshow .carousel-caption-content {
-  -webkit-transition: all .25s ease-in-out;
-  transition: all .25s ease-in-out;
-  opacity: 0;
-  padding: 2.5rem 0 0 5rem; }
-  #animatedModal #fullscreenSlideshow .carousel-caption-content:hover, .animatedModal #fullscreenSlideshow .carousel-caption-content:hover {
-    opacity: 1; }
-  #animatedModal #fullscreenSlideshow .carousel-caption-content p, .animatedModal #fullscreenSlideshow .carousel-caption-content p {
-    font-size: 1.68rem; }
-
 #home .slick-dots {
   position: absolute;
   bottom: 20px;
@@ -7349,23 +7339,22 @@ a.text-danger:focus, a.text-danger:hover {
     top: 25px; }
     #linerservices .close-animated-modal:hover, #shipping .close-animated-modal:hover, #port_agency .close-animated-modal:hover, #offshore .close-animated-modal:hover {
       background-image: url(../images/icons/big-close-r.svg); }
-  @media (max-width: 543px) {
-    #linerservices .carousel-caption-wrapper, #shipping .carousel-caption-wrapper, #port_agency .carousel-caption-wrapper, #offshore .carousel-caption-wrapper {
-      position: relative; } }
-  #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content, #offshore .carousel-caption-wrapper .carousel-caption-content {
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.75);
-    width: 100%;
-    bottom: 0px;
-    padding: 1rem 0 0 3rem; }
-    @media (max-width: 543px) {
-      #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content, #offshore .carousel-caption-wrapper .carousel-caption-content {
-        position: relative;
-        padding: 1rem 0 0 0rem; } }
-    #linerservices .carousel-caption-wrapper .carousel-caption-content h2, #shipping .carousel-caption-wrapper .carousel-caption-content h2, #port_agency .carousel-caption-wrapper .carousel-caption-content h2, #offshore .carousel-caption-wrapper .carousel-caption-content h2 {
-      font-size: 1.25rem; }
-    #linerservices .carousel-caption-wrapper .carousel-caption-content p, #shipping .carousel-caption-wrapper .carousel-caption-content p, #port_agency .carousel-caption-wrapper .carousel-caption-content p, #offshore .carousel-caption-wrapper .carousel-caption-content p {
-      color: black !important; }
+  #linerservices .carousel-caption-wrapper, #shipping .carousel-caption-wrapper, #port_agency .carousel-caption-wrapper, #offshore .carousel-caption-wrapper {
+    position: relative; }
+    #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content, #offshore .carousel-caption-wrapper .carousel-caption-content {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.75);
+      width: 100%;
+      bottom: 0px;
+      padding: 1rem 3rem 0 3rem; }
+      @media (max-width: 543px) {
+        #linerservices .carousel-caption-wrapper .carousel-caption-content, #shipping .carousel-caption-wrapper .carousel-caption-content, #port_agency .carousel-caption-wrapper .carousel-caption-content, #offshore .carousel-caption-wrapper .carousel-caption-content {
+          position: relative;
+          padding: 1rem 0 0 0rem; } }
+      #linerservices .carousel-caption-wrapper .carousel-caption-content h2, #shipping .carousel-caption-wrapper .carousel-caption-content h2, #port_agency .carousel-caption-wrapper .carousel-caption-content h2, #offshore .carousel-caption-wrapper .carousel-caption-content h2 {
+        font-size: 1.25rem; }
+      #linerservices .carousel-caption-wrapper .carousel-caption-content p, #shipping .carousel-caption-wrapper .carousel-caption-content p, #port_agency .carousel-caption-wrapper .carousel-caption-content p, #offshore .carousel-caption-wrapper .carousel-caption-content p {
+        color: black !important; }
   #linerservices .slick-prev, #shipping .slick-prev, #port_agency .slick-prev, #offshore .slick-prev {
     left: 1rem; }
   #linerservices .slick-next, #shipping .slick-next, #port_agency .slick-next, #offshore .slick-next {
@@ -7396,7 +7385,7 @@ a.text-danger:focus, a.text-danger:hover {
         min-height: 487px; } }
     @media (max-width: 767px) {
       #linerservices .slideshow-container, #shipping .slideshow-container, #port_agency .slideshow-container, #offshore .slideshow-container {
-        min-height: 575px; } }
+        min-height: 0; } }
   #linerservices #linerServicesSlideshowHTML2,
   #linerservices #shippingSlideshowHTML2,
   #linerservices #portAgencySlideshowHTML2,
@@ -7450,8 +7439,7 @@ a.text-danger:focus, a.text-danger:hover {
     #offshore #portAgencySlideshowHTML2 .slick-slide,
     #offshore #offshoreSlideshowHTML2 .slick-slide,
     #offshore #subSlideshowHTML .slick-slide {
-      margin: 4rem 0.9375rem;
-      height: 200px; }
+      margin: 4rem 0.9375rem; }
     #linerservices #linerServicesSlideshowHTML2 .slick-list,
     #linerservices #shippingSlideshowHTML2 .slick-list,
     #linerservices #portAgencySlideshowHTML2 .slick-list,
@@ -7515,7 +7503,7 @@ a.text-danger:focus, a.text-danger:hover {
     margin-top: 70vh;
     z-index: 1337;
     line-height: normal;
-    padding: 1rem 0 0 3rem; }
+    padding: 1rem 3rem 1rem 3rem; }
   #linerservices #fullscreenSlideshowHTML .white:before, #shipping #fullscreenSlideshowHTML .white:before, #port_agency #fullscreenSlideshowHTML .white:before, #offshore #fullscreenSlideshowHTML .white:before {
     color: white; }
   #linerservices #fullscreenSlideshowHTML > button.slick-prev, #shipping #fullscreenSlideshowHTML > button.slick-prev, #port_agency #fullscreenSlideshowHTML > button.slick-prev, #offshore #fullscreenSlideshowHTML > button.slick-prev {
@@ -7524,6 +7512,8 @@ a.text-danger:focus, a.text-danger:hover {
     display: none !important; }
   #linerservices #fullscreenSlideshowHTML .caption-wrapper, #shipping #fullscreenSlideshowHTML .caption-wrapper, #port_agency #fullscreenSlideshowHTML .caption-wrapper, #offshore #fullscreenSlideshowHTML .caption-wrapper {
     opacity: 1;
+    display: table;
+    width: 100%;
     -webkit-transition: opacity .25s ease-in-out;
     transition: opacity .25s ease-in-out;
     -webkit-transition-delay: 0s;
@@ -7539,17 +7529,30 @@ a.text-danger:focus, a.text-danger:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    margin-top: 70vh;
+    min-height: 20vh;
+    height: 20vh;
     z-index: 1337;
     line-height: normal;
-    padding: 1rem 0 0 3rem; }
+    padding: 1rem 3rem 1rem 3rem; }
     #linerservices #fullscreenSlideshowHTML .caption-wrapper .slick-prev:before, #linerservices #fullscreenSlideshowHTML .caption-wrapper .slick-next:before, #shipping #fullscreenSlideshowHTML .caption-wrapper .slick-prev:before, #shipping #fullscreenSlideshowHTML .caption-wrapper .slick-next:before, #port_agency #fullscreenSlideshowHTML .caption-wrapper .slick-prev:before, #port_agency #fullscreenSlideshowHTML .caption-wrapper .slick-next:before, #offshore #fullscreenSlideshowHTML .caption-wrapper .slick-prev:before, #offshore #fullscreenSlideshowHTML .caption-wrapper .slick-next:before {
       color: white; }
+    #linerservices #fullscreenSlideshowHTML .caption-wrapper .caption-content, #shipping #fullscreenSlideshowHTML .caption-wrapper .caption-content, #port_agency #fullscreenSlideshowHTML .caption-wrapper .caption-content, #offshore #fullscreenSlideshowHTML .caption-wrapper .caption-content {
+      opacity: 0;
+      display: table-cell;
+      vertical-align: middle; }
     #linerservices #fullscreenSlideshowHTML .caption-wrapper.visible, #shipping #fullscreenSlideshowHTML .caption-wrapper.visible, #port_agency #fullscreenSlideshowHTML .caption-wrapper.visible, #offshore #fullscreenSlideshowHTML .caption-wrapper.visible {
       opacity: 1;
       background-color: rgba(255, 255, 255, 0.75); }
+      #linerservices #fullscreenSlideshowHTML .caption-wrapper.visible .caption-content, #shipping #fullscreenSlideshowHTML .caption-wrapper.visible .caption-content, #port_agency #fullscreenSlideshowHTML .caption-wrapper.visible .caption-content, #offshore #fullscreenSlideshowHTML .caption-wrapper.visible .caption-content {
+        opacity: 1; }
     #linerservices #fullscreenSlideshowHTML .caption-wrapper button.visible:before, #shipping #fullscreenSlideshowHTML .caption-wrapper button.visible:before, #port_agency #fullscreenSlideshowHTML .caption-wrapper button.visible:before, #offshore #fullscreenSlideshowHTML .caption-wrapper button.visible:before {
       color: #ef2a21; }
+    #linerservices #fullscreenSlideshowHTML .caption-wrapper button.slick-prev, #linerservices #fullscreenSlideshowHTML .caption-wrapper button.slick-next, #shipping #fullscreenSlideshowHTML .caption-wrapper button.slick-prev, #shipping #fullscreenSlideshowHTML .caption-wrapper button.slick-next, #port_agency #fullscreenSlideshowHTML .caption-wrapper button.slick-prev, #port_agency #fullscreenSlideshowHTML .caption-wrapper button.slick-next, #offshore #fullscreenSlideshowHTML .caption-wrapper button.slick-prev, #offshore #fullscreenSlideshowHTML .caption-wrapper button.slick-next {
+      position: absolute;
+      z-index: 1338;
+      bottom: 10vh;
+      -webkit-transform: translate(0, 50%);
+      transform: translate(0, 50%); }
 
 .z-depth-0 {
   box-shadow: none !important; }
@@ -8218,7 +8221,6 @@ a.text-danger:focus, a.text-danger:hover {
       padding-top: 3rem; }
 
 #category .grid, #allreports .grid {
-  background: #EEE;
   /* center */
   margin: 0 auto; }
 
@@ -8281,6 +8283,8 @@ a.text-danger:focus, a.text-danger:hover {
 #fleet #layout-content #default-layout-container .grid {
   /* center */
   margin: 0 auto; }
+  #fleet #layout-content #default-layout-container .grid .grid-sizer {
+    width: 40%; }
   #fleet #layout-content #default-layout-container .grid .grid-item {
     width: 350px;
     height: 413px;
@@ -10944,13 +10948,14 @@ h6 {
   text-align: justify !important; }
 
 #linerservices .liner-services-tab-images-container {
-  min-height: 38.1rem; }
-  @media (max-width: 767px) {
-    #linerservices .liner-services-tab-images-container {
-      min-height: 30rem; } }
+  min-height: 29.1rem; }
   @media (max-width: 543px) {
     #linerservices .liner-services-tab-images-container {
-      min-height: 81vw∏; } }
+      min-height: 80vw; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #linerservices .liner-services-tab-images-container {
+    min-height: 37rem; } }
 
 #linerservices .lines-route-images-container {
   margin-top: 9rem; }

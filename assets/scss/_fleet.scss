@@ -4,9 +4,14 @@
 			.grid {
 				//  background: $gray-lightest;
 				/* center */
+
+				.grid-sizer { 
+					width: 40%; 
+				}
+
 				margin: 0 auto;
 				.grid-item {
-					width: 350px;
+					width:  350px; //40%;
 					height: 413px;
 					float: left;
 					margin-bottom: 30px;
@@ -53,7 +58,14 @@
 						}
 					}
 				}
+
+				// &.XS {
+				// 	.grid-item {
+				// 		width:87vw;
+				// 	}
+				// }
 			}
+		
 
 		}
 	}

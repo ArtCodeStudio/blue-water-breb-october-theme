@@ -141,12 +141,15 @@ h6 {
 		}
 	}
 	.liner-services-tab-images-container {		
-		min-height: 38.1rem;
-		@include media-breakpoint-down(sm) {
-			min-height: 30rem;
-		}
+		min-height: 29.1rem;
 		@include media-breakpoint-down(xs) {
-			min-height: 81vw∏
+			min-height: 80vw;//30rem;
+		}
+		// @include media-breakpoint-down(xs) {
+		// 	min-height: 81vw∏
+		// }
+		@include media-breakpoint-only(md)  {
+			min-height: 37rem;
 		}
 
 	}
