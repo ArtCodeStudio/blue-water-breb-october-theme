@@ -10943,7 +10943,16 @@ h6 {
 
 /*
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ 
  **/
+@media (min-width: 1200px) {
+  #linerservices {
+    min-height: 1402px; } }
+
+@media (max-width: 1199px) {
+  #linerservices {
+    min-height: 1308px; } }
+
 #linerservices #liner-services #liner-services-content-container {
   text-align: justify !important; }
 
