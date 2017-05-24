@@ -1,7 +1,9 @@
 #fleet{
 	#layout-content {
 		#default-layout-container {
-			.grid {
+			
+	
+			.grid , .grid-sm{
 				//  background: $gray-lightest;
 				/* center */
 
@@ -64,6 +66,15 @@
 				// 		width:87vw;
 				// 	}
 				// }
+			}
+
+			.grid-sm {
+				max-width:350px;
+				.grid-item {
+					width: 99.2%;
+    				max-width: 350px; 
+    				margin-left: 1px;
+				}
 			}
 		
 

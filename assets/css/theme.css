@@ -8322,12 +8322,12 @@ a.text-danger:focus, a.text-danger:hover {
   #post .blog-content-wrapper .learn-more div:hover {
     text-decoration: underline; }
 
-#fleet #layout-content #default-layout-container .grid {
+#fleet #layout-content #default-layout-container .grid, #fleet #layout-content #default-layout-container .grid-sm {
   /* center */
   margin: 0 auto; }
-  #fleet #layout-content #default-layout-container .grid .grid-sizer {
+  #fleet #layout-content #default-layout-container .grid .grid-sizer, #fleet #layout-content #default-layout-container .grid-sm .grid-sizer {
     width: 40%; }
-  #fleet #layout-content #default-layout-container .grid .grid-item {
+  #fleet #layout-content #default-layout-container .grid .grid-item, #fleet #layout-content #default-layout-container .grid-sm .grid-item {
     width: 350px;
     height: 413px;
     float: left;
@@ -8342,7 +8342,7 @@ a.text-danger:focus, a.text-danger:hover {
     -webkit-transition-timing-function: ease;
             transition-timing-function: ease;
     border: 1px solid #4053a4; }
-    #fleet #layout-content #default-layout-container .grid .grid-item > * {
+    #fleet #layout-content #default-layout-container .grid .grid-item > *, #fleet #layout-content #default-layout-container .grid-sm .grid-item > * {
       text-decoration: none;
       -webkit-transition-delay: 0s;
               transition-delay: 0s;
@@ -8352,20 +8352,27 @@ a.text-danger:focus, a.text-danger:hover {
       transition-property: all;
       -webkit-transition-timing-function: ease;
               transition-timing-function: ease; }
-    #fleet #layout-content #default-layout-container .grid .grid-item .card-block {
+    #fleet #layout-content #default-layout-container .grid .grid-item .card-block, #fleet #layout-content #default-layout-container .grid-sm .grid-item .card-block {
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0; }
-      #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table {
+      #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table, #fleet #layout-content #default-layout-container .grid-sm .grid-item .card-block .content-container table {
         margin-top: 1.4rem; }
-        #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td, #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table th {
+        #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td, #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table th, #fleet #layout-content #default-layout-container .grid-sm .grid-item .card-block .content-container table td, #fleet #layout-content #default-layout-container .grid-sm .grid-item .card-block .content-container table th {
           padding: 0.5rem 0 0.5rem 0.5rem;
           font-size: 0.76rem;
           border-top: none; }
-          #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td.data, #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table th.data {
+          #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td.data, #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table th.data, #fleet #layout-content #default-layout-container .grid-sm .grid-item .card-block .content-container table td.data, #fleet #layout-content #default-layout-container .grid-sm .grid-item .card-block .content-container table th.data {
             color: #4053a4; }
-        #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td:not(:first-child) {
+        #fleet #layout-content #default-layout-container .grid .grid-item .card-block .content-container table td:not(:first-child), #fleet #layout-content #default-layout-container .grid-sm .grid-item .card-block .content-container table td:not(:first-child) {
           padding-left: 0.3rem; }
+
+#fleet #layout-content #default-layout-container .grid-sm {
+  max-width: 350px; }
+  #fleet #layout-content #default-layout-container .grid-sm .grid-item {
+    width: 99.2%;
+    max-width: 350px;
+    margin-left: 1px; }
 
 /*
  * HOMEPAGE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
