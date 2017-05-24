@@ -21,11 +21,14 @@ postPage = "post"
 slug = "{{ :slug }}"
 displayEmpty = 0
 categoryPage = "all-reports"
+
+[SeoBlogPost]
+post = "post"
 ==
 <div class="blog-content-wrapper p-t-1" data-target="#blog-content-wrapper" id="blog-content-wrapper"> 
-
     <div class="container">
         <div class="row">
+             
             <div class="col-xs-12 col-md-8 p-b-3  section-headline-text {% if blogCategories.categories|length == 0 %}no-nav{% endif %}"  id="blog-content-column">
                 
                 {# TITLE #}

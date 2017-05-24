@@ -1,3 +1,4 @@
+[googleTracker]
 ==
 <!DOCTYPE html>
 <html>
@@ -5,7 +6,7 @@
         {% partial 'html_head' %}
     </head>
     <body>
-    
+        {% component 'googleTracker' %}
         {% partial 'navbar' %}
         {% partial 'blog/blog_header' %} 
         
@@ -16,6 +17,7 @@
             >
                 <section id="layout-content">
                     {% page %}
+                    
                 </section>
             </div>
         </div>
