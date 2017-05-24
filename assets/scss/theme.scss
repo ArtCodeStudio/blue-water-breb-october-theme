@@ -132,9 +132,16 @@ h6 {
 
 /*
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ 
  **/
 #linerservices {
 
+	@include media-breakpoint-up(xl) {
+		min-height: 1402px; 
+	}
+	@include media-breakpoint-down(lg) {
+		min-height: 1308px;
+	}
 	#liner-services{
 		#liner-services-content-container {
 			text-align: justify !important;
@@ -209,3 +216,4 @@ h6 {
 		}
 	}
 }
+    

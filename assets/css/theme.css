@@ -7068,7 +7068,7 @@ a.text-danger:focus, a.text-danger:hover {
   font-family: "Open Sans", sans-serif; }
 
 .text-serif {
-  font-family: "Playfair Display", serif; }
+  font-family: "Yrsa-Regular", serif; }
 
 /* Slider */
 .slick-slider {
@@ -7389,6 +7389,36 @@ a.text-danger:focus, a.text-danger:hover {
     padding-top: 56.25%; }
   .box.ratio-3-4:before {
     padding-top: 133.33%; }
+
+@-webkit-keyframes arrow-jump {
+  0% { }
+  50% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px); }
+  100% { } }
+
+.scroll-down {
+  display: block;
+  color: white;
+  position: absolute;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  left: 50vw;
+  right: 50vw;
+  left: calc(50vw - 25px);
+  right: calc(50vw - 25px);
+  cursor: pointer; }
+  .scroll-down .fa {
+    -webkit-animation: arrow-jump 1s infinite;
+    /* Safari 4+ */
+    /* Fx 5+ */
+    /* Opera 12+ */
+    animation: arrow-jump 1s infinite;
+    /* IE 10+, Fx 29+ */
+    color: white;
+    display: block;
+    font-size: 50px; }
 
 #animatedModal .close-animatedModal, .animatedModal .close-animatedModal {
   color: white;
@@ -8165,6 +8195,18 @@ a.text-danger:focus, a.text-danger:hover {
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-top,
         .card-group-flex-lg .card:not(:first-child):not(:last-child) .card-img-bottom {
           border-radius: 0; } }
+
+@font-face {
+  font-family: Yrsa-Medium;
+  src: url(https://breb.de/themes/breb-barba/assets/fonts/Yrsa-Medium.ttf); }
+
+@font-face {
+  font-family: Yrsa-Light;
+  src: url(https://breb.de/themes/breb-barba/assets/fonts/Yrsa-Light.ttf); }
+
+@font-face {
+  font-family: Yrsa-Regular;
+  src: url(https://breb.de/themes/breb-barba/assets/fonts/Yrsa-Regular.ttf); }
 
 /*
  * FOOTER  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -11088,7 +11130,16 @@ h6 {
 
 /*
  * SUBPAGES –––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+ 
  **/
+@media (min-width: 1200px) {
+  #linerservices {
+    min-height: 1402px; } }
+
+@media (max-width: 1199px) {
+  #linerservices {
+    min-height: 1308px; } }
+
 #linerservices #liner-services #liner-services-content-container {
   text-align: justify !important; }
 

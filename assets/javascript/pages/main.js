@@ -195,6 +195,12 @@ var initHome = function (dataset) {
 		});
 		cache.homeInitialized = true;
 	}
+	
+	$('.scroll-down').click(function() {      
+        $('html, body').animate({
+            scrollTop: $("#layout-content").offset().top - 40
+        }, 2000);
+    });
 
 };
 

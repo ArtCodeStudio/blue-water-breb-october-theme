@@ -1,0 +1,29 @@
+[viewBag]
+==
+{% if __SELF__.slideshow.slides %}
+
+		<div id='{{ str_camel(__SELF__.alias) }}'>
+			{% for i, slide in __SELF__.slideshow.slides %}
+					<div class="fullscreen-slide" style="height: 100vh; position: relative;">
+
+						<div style="height: 100vh; position: relative; background-size: cover; background-position: center center; background-image: url({{ __SELF__.getResizedImage(slide.image) }});" alt="{{ __SELF__.getResizedImage(slide.image) }}">	
+						</div>
+
+						<div class="caption-wrapper">
+							<button type="button" class="slick-prev">Previous</button>
+							<div class="caption-content">
+								<h2>{{ slide.name | raw }}</h2>
+								{{ slide.description | raw }}
+							</div>
+							<button type="button" class="slick-next">Next</button>
+					    </div>
+
+					</div>
+			{% endfor %}
+		</div>
+		
+        <div class="scroll-down" title="Next">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+
+{% endif %}
