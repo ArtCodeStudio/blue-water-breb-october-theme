@@ -8,21 +8,29 @@
 				/* center */
 
 				.grid-sizer { 
-					width: 40%; 
+					width: 350px; 
+					
+					@include media-breakpoint-down(xs) {
+						width: 100%;
+					}
 				}
 
 				margin: 0 auto;
 				.grid-item {
-					width:  350px; //40%;
+					.grid-item-inner {
+					  width:  calc(100vw - 30px);
+					  max-width: 348px;
+					  background-color: white;
+						border: 1px solid  $brand-primary; //$transparent;
+					}
+					width: 350px;
 					height: 413px;
 					float: left;
 					margin-bottom: 30px;
-					background-color: white;
 					transition-delay: 0s;
 					transition-duration: 0.3s;
 					transition-property: box-shadow;
-					transition-timing-function: ease;
-					border: 1px solid  $brand-primary; //$transparent;
+					transition-timing-function: ease;					
 					> * {
 						text-decoration: none;
 						transition-delay: 0s;
@@ -42,7 +50,8 @@
 							table {
 								 margin-top: 1.4rem;
 								td, th{
-									padding: 0.5rem 0 0.5rem 0.5rem;
+									text-align: left;
+									padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 									font-size:0.76rem; //0.85rem;
 									border-top: none;
 									&.data{
