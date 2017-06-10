@@ -394,7 +394,7 @@ var initBlog = function (dataset) {
 		var initMasonry = function() {
 			$('.grid').masonry({
 			itemSelector: '.grid-item',
-			columnWidth: 350,
+			columnWidth: '.grid-sizer',
 			isFitWidth: true,
 			gutter:30
 			});

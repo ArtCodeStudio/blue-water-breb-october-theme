@@ -76,26 +76,39 @@
 				padding-top: 2rem;
 			}
 
+			.grid-sizer { 
+				width: 350px; 
+				
+				@include media-breakpoint-down(xs) {
+					width: 100%;
+				}
+			}
+
 			.grid-item {
+
+				.grid-item-inner {
+					width:  calc(100vw - 30px);
+					max-width: 348px;
+					background-color: white;
+					border: 1px solid  $transparent;
+					&:hover {
+						@extend .z-depth-1-half;
+						border: 1px solid  $brand-primary;
+					}
+				}
 				width: 350px;
 				float: left;
 				margin-bottom: 30px;
-				background-color: white;
 				transition-delay: 0s;
 				transition-duration: 0.3s;
 				transition-property: box-shadow;
 				transition-timing-function: ease;
-				border: 1px solid  $transparent;
 				> * {
 					text-decoration: none;
 					transition-delay: 0s;
 					transition-duration: 0.3s;
 					transition-property: all;
 					transition-timing-function: ease;
-				}
-				&:hover {
-					@extend .z-depth-1-half;
-					border: 1px solid  $brand-primary;
 				}
 				a{
 					.card-block{

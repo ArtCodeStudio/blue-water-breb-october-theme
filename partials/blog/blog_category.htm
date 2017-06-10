@@ -18,38 +18,39 @@
 		GRID
 		#}
 		<div class="grid">
-
+		  <div class="grid-sizer"></div>
 			{% for post in posts %}
 				<div class="grid-item {{ post.categories[0].name|slug }}" data-category="{{ post.categories[0].name|slug }}">
-					<a href="{{ post.url }}" class="" data-category="{{ post.categories[0].name|slug }}">
+					<div class="grid-item-inner">
+						<a href="{{ post.url }}" class="" data-category="{{ post.categories[0].name|slug }}">
 
-						{% if post.featured_images.count %}
-							<div class="featured-images text-center "> 
-								{% set image = post.featured_images[0].thumb(auto,350)%}
-								<div class="background-box ratio-16-9" 
-										style="display:block; background-image: url({{ image }});" 
-										title="{{ image.description }}">
+							{% if post.featured_images.count %}
+								<div class="featured-images text-center "> 
+									{% set image = post.featured_images[0].thumb(auto,350)%}
+									<div class="background-box ratio-16-9" 
+											style="display:block; background-image: url({{ image }});" 
+											title="{{ image.description }}">
+									</div>
 								</div>
+							{% endif %}
+
+							<div class="card-block">
+								
+								<div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>
+								<h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
+
+								<div class='latest-blog-posts-content-container'>
+									{{ post.summary }} {{colums}}
+								</div>
+
+								<div class="learn-more m-x-auto text-xs-right p-t-1">
+									<div class=''>read more</div>
+								</div>
+
 							</div>
-						{% endif %}
 
-						<div class="card-block">
-							
-							<div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>
-							<h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
-
-							<div class='latest-blog-posts-content-container'>
-								{{ post.summary }} {{colums}}
-							</div>
-
-							<div class="learn-more m-x-auto text-xs-right p-t-1">
-								<div class=''>read more</div>
-							</div>
-
-						</div>
-
-					</a>
-
+						</a>
+					</div>
 				</div>
 			{% endfor %} 
 		</div>
