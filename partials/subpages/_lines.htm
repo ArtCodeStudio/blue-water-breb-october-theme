@@ -10,17 +10,7 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist" id="line-names">
             <li class="nav-item">
-                <a class="nav-link active " data-toggle="tab" href="#all-lines" data-index="0" role="tab">
-                    <div class="hidden-xs-down">
-                        All Lines
-                    </div>
-                    <div class="hidden-sm-up">
-                        All
-                    </div>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link " data-toggle="tab" href="#adriatic-line"  data-index="1"  role="tab">
+                <a class="nav-link active" data-toggle="tab" href="#adriatic-line"  data-index="0"  role="tab">
                     <div class="hidden-xs-down">
                         Adriatic Line
                     </div>
@@ -30,7 +20,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#continental-line"  data-index="2"  role="tab">
+                <a class="nav-link" data-toggle="tab" href="#continental-line"  data-index="1"  role="tab">
                     <div class="hidden-xs-down">
                         Continental Line
                     </div>
@@ -44,20 +34,15 @@
         {# MOBILE LINER SERVICES LINES IMAGEs #}
         <div class="col-xs-12 col-lg-7 p-b-3 hidden-lg-up liner-services-tab-images-container">
             <div class="lines-route-images-container mobile">
-                <img class="lines-route-image-background"src="{{this.theme.linerservices_lines_background | media}}" alt="linerservices lines background">
-                <img class="lines-route-image-1 active" src="{{this.theme.linerservices_lines_all | media}}"  alt="all lines">
-                <img class="lines-route-image-2" src="{{this.theme.linerservices_lines_adriatic | media}}"  alt="adriatic lines">
-                <img class="lines-route-image-3" src="{{this.theme.linerservices_lines_continental | media}}" alt="continental lines">
+                <img class="lines-route-image-background" src="{{this.theme.linerservices_lines_background | media}}" alt="linerservices lines background">
+                <img class="lines-route-image-1 active" src="{{this.theme.linerservices_lines_adriatic | media}}"  alt="adriatic lines">
+                <img class="lines-route-image-2" src="{{this.theme.linerservices_lines_continental | media}}" alt="continental lines">
             </div>
         </div>
     
         <!-- Tab panes -->
         <div class="tab-content p-b-2">
-            <div class="tab-pane m-t-1 fade active in" id="all-lines" role="tabpanel">
-                {% partial 'subpages/_adriatic-line.htm' %}
-                {% partial 'subpages/_continental-line.htm' %}
-            </div>
-            <div class="tab-pane m-t-1 fade" id="adriatic-line" role="tabpanel">
+            <div class="tab-pane m-t-1 fade active in" id="adriatic-line" role="tabpanel">
                 {% partial 'subpages/_adriatic-line.htm' %}
             </div>
             
@@ -73,9 +58,8 @@
     <div class="col-xs-12 col-lg-7 p-b-3 hidden-md-down liner-services-tab-images-container">
         <div class="lines-route-images-container" >
             <img class="lines-route-image-background" src="{{this.theme.linerservices_lines_background | media}}" alt="linerservices lines background">
-            <img class="lines-route-image-1 active" src="{{this.theme.linerservices_lines_all | media}}"  alt="all lines">
-            <img class="lines-route-image-2" src="{{this.theme.linerservices_lines_adriatic | media}}"  alt="adriatic lines">
-            <img class="lines-route-image-3" src="{{this.theme.linerservices_lines_continental | media}}" alt="continental lines">
+            <img class="lines-route-image-1 active" src="{{this.theme.linerservices_lines_adriatic | media}}"  alt="adriatic lines">
+            <img class="lines-route-image-2" src="{{this.theme.linerservices_lines_continental | media}}" alt="continental lines">
         </div>
     </div>
     
