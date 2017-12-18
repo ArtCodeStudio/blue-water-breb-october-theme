@@ -1,10 +1,12 @@
 [viewBag]
 ==
+<?php
 function onStart()
 {
    // dump($this->post->slug);
    $this->page->slug = $this->post->slug;
 }
+?>
 ==
 {#
 # BLOG SIDEBAR NAVIGATION
@@ -36,7 +38,7 @@ function onStart()
                             <div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>
                             <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
                             <div class='latest-blog-posts-content-container'>
-                                {{ post.summary }}
+                                {{ post.summary | raw }}
                             </div>
                             <div class="learn-more m-x-auto text-xs-right">
                                 <div>read more</div>
@@ -57,7 +59,7 @@ function onStart()
                         <div class="text-xs-right">{{ post.published_at|date('M d, Y') }}</div>
                         <h4 class="card-title text-lg-left text-serif">{{ post.title }}</h4>
                         <div class='latest-blog-posts-content-container'>
-                            {{ post.summary }}
+                            {{ post.summary | raw }}
                         </div>
                         <div class="learn-more m-x-auto text-xs-right">
                             <div>read more</div>
