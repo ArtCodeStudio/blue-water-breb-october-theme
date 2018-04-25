@@ -38,7 +38,7 @@ postPage = "post"
                                     {{post.title}}
                                 </h4>
                                 <div class='latest-blog-posts-content-container'>
-                                    {{ str_limit(post.summary, 80, '...') }}
+                                    {{ str_limit(post.summary, 80, '...') | striptags }}
                                 </div>
                                 <div class="learn-more m-x-auto text-xs-right">
                                     <a href="{{ post.url }}" class="">read more</a>

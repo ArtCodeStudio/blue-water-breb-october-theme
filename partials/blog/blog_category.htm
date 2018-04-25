@@ -26,11 +26,14 @@
 
 							{% if post.featured_images.count %}
 								<div class="featured-images text-center "> 
-									{% set image = post.featured_images[0].thumb(auto,350)%}
+									{% set image = post.featured_images[0].thumb(auto,800)%}
+									<!--
 									<div class="background-box ratio-16-9" 
 											style="display:block; background-image: url({{ image }});" 
 											title="{{ image.description | raw }}">
 									</div>
+									-->
+									<img class="img-fluid w-100" src="{{image}}" alt="">
 								</div>
 							{% endif %}
 

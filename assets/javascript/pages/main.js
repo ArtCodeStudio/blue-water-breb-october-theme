@@ -392,12 +392,17 @@ var initBlog = function (dataset) {
 		changeBlogHeaderHeight();
 
 		var initMasonry = function() {
-			$('.grid').masonry({
-			itemSelector: '.grid-item',
-			columnWidth: '.grid-sizer',
-			isFitWidth: true,
-			gutter:30
+		    var $grid = $('.grid');
+			$grid.masonry({
+    			itemSelector: '.grid-item',
+    			columnWidth: '.grid-sizer',
+    			isFitWidth: true,
+    			gutter:30
 			});
+			
+            $grid.imagesLoaded().progress( function() {
+              $grid.masonry('layout');
+            });
 		}
 		initMasonry();
 
