@@ -494,6 +494,27 @@ var initImprint = function () {
 /**
  *
  */
+var initLegalDisclosure = function () {
+	
+};
+
+/**
+ *
+ */
+var initPrivacyPolicy = function () {
+	
+};
+
+/**
+ *
+ */
+var initNewsletter = function () {
+	
+};
+
+/**
+ *
+ */
 var initQHSE = function () {
 
 };
@@ -522,7 +543,10 @@ var initTemplate = {
 	'fleet': initFleet,
 	'termsandconditions': initTermsAndConditions,
 	'imprint': initImprint,
-	'qhse': initQHSE
+	'qhse': initQHSE,
+	'privacypolicy': initPrivacyPolicy,
+	'impressum–legaldisclosure': initLegalDisclosure,
+	'newsletter': initNewsletter,
 };
 
 
