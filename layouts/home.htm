@@ -1,4 +1,6 @@
 [staticPage]
+useContent = 1
+default = 0
 
 [slideshow slideshowHomeHTML]
 slideshow = 7
@@ -57,7 +59,9 @@ thumbFiletype = "jpg"
         {% partial 'html_head' %}
     </head>
     <body>
-        {% component 'googleTracker' %}
+        {% if google_analytics_on %}
+            {% component 'googleTracker' %}
+        {% endif %}
         {% partial 'navbar' %}          
         {% partial 'blog/blog_header' %} 
         <div id="barba-wrapper">

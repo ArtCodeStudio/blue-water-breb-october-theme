@@ -1,12 +1,16 @@
 [googleTracker]
 ==
+{% set google_analytics_on = false %}
+
 <!DOCTYPE html>
 <html>
     <head>
         {% partial 'html_head' %}
     </head>
     <body>
-        {% component 'googleTracker' %}
+        {% if google_analytics_on %}
+            {% component 'googleTracker' %}
+        {% endif %}
         {% partial 'navbar' %}
         {% partial 'blog/blog_header' %} 
         
