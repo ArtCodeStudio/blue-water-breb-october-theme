@@ -183,7 +183,8 @@ var initSidebar = function (dataset) {
 /**
  *
  */
-var initHome = function (dataset) {
+var initHome = function (container) {
+	var dataset = container.dataset;
 
 	slideshowHomeJavaScriptInit('#slideshowHomeHTML');
 	initCarousel();
@@ -287,7 +288,7 @@ var destroySlideshowSync = function () {
 /**
  *
  */
-var initShipping = function (dataset) {
+var initShipping = function (container) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#shippingFullscreenButton", "shippingAnimatedModal", "#fullscreenSlideshowHTML" );
 	initSlickFullscreenNav('#shipping');
@@ -298,7 +299,7 @@ var initShipping = function (dataset) {
 /**
  *
  */
-var initOffshore = function (dataset) {
+var initOffshore = function (container) {
 	// Initialize Slideshow
 	// initSlideshowSync();
 	initializeAnimatedModal( "#offshoreFullscreenButton", "offshoreAnimatedModal", "#fullscreenSlideshowHTML" );
@@ -310,7 +311,7 @@ var initOffshore = function (dataset) {
 /**
  *
  */
-var initPortagency = function (dataset) {
+var initPortagency = function (container) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenSlideshowHTML" );
 	initSlickFullscreenNav('#portagency');
@@ -321,7 +322,7 @@ var initPortagency = function (dataset) {
 /**
  *
  */
-var initLinerservices = function (dataset) {
+var initLinerservices = function (container) {
 	// Initialize Slideshow
 	// initSlideshowSync();
 	initializeAnimatedModal( "#linerServicesFullscreenButton", "linerServicesAnimatedModal", "#fullscreenLinerServicesSlideshowHTML" );
@@ -355,22 +356,21 @@ var initLinerservices = function (dataset) {
 /**
  *
  */
-var initContact = function (dataset) {
+var initContact = function (container) {
 
 };
 
 /**
  *
  */
-var initAbout = function (dataset) {
+var initAbout = function (container) {
 
 };
 
 /**
  *
  */
-var initBlog = function (dataset) {
-
+var initBlog = function (container) {
 		var changeBlogHeaderHeight = function (event) {
 			var threshold = 10 ;
 			var scroll_pos = $(window).scrollTop();
@@ -413,14 +413,14 @@ var initBlog = function (dataset) {
 /**
  *
  */
-var initAllReports = function () {
+var initAllReports = function (container) {
 	initBlog();
 };
 
 /**
  *
  */
-var initCategory = function () {
+var initCategory = function (container) {
 	initBlog();
 };
 
@@ -428,43 +428,35 @@ var initCategory = function () {
 /**
  *
  */
-var initPost = function () {
+var initPost = function (container) {
 	initBlog();
 };
 
 /**
  *
  */
-var initJobs = function () {
+var initJobs = function (container) {
 
 };
 
 /**
  *
  */
-var initEnvironment = function () {
+var initEnvironment = function (container) {
 
 };
 
 /**
  *
  */
-var initHistory = function () {
+var initHistory = function (container) {
 
 };
 
 /**
  *
  */
-var initCopyright = function () {
-
-};
-
-
-/**
- *
- */
-var initAgency = function () {
+var initCopyright = function (container) {
 
 };
 
@@ -472,7 +464,15 @@ var initAgency = function () {
 /**
  *
  */
-var initFleet = function () {
+var initAgency = function (container) {
+
+};
+
+
+/**
+ *
+ */
+var initFleet = function (container) {
  	shipsListJavaScriptInit();
 };
 
@@ -480,36 +480,41 @@ var initFleet = function () {
 /**
  *
  */
-var initTermsAndConditions = function () {
+var initTermsAndConditions = function (container) {
 
 };
 
 /**
  *
  */
-var initImprint = function () {
+var initImprint = function (container) {
 
 };
 
 /**
  *
  */
-var initLegalDisclosure = function () {
+var initLegalDisclosure = function (container) {
 	
 };
 
 /**
  *
  */
-var initPrivacyPolicy = function () {
+var initPrivacyPolicy = function (container) {
 	
 };
 
 /**
  *
  */
-var initNewsletter = function () {
-	
+var initNewsletter = function (container) {
+	var js = container.querySelectorAll("script");
+	if (js) {
+		js.forEach(function(script) {
+			eval(script.innerHTML);
+		});
+	}
 };
 
 /**
@@ -676,7 +681,7 @@ var initTemplates = function () {
 	initSidebar();
 
 	if(typeof(initTemplate[currentStatus.namespace]) === 'function' ) {
-	  initTemplate[currentStatus.namespace](container.dataset);
+	  initTemplate[currentStatus.namespace](container);
 	} else {
 	  console.error("Template not defined: "+currentStatus.namespace);
 	}
