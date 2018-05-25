@@ -30,10 +30,23 @@ items:
         title: QHSE
         nesting: '0'
         type: static-page
+        url: ''
         code: qhse
         reference: qhse
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
             cssClass: qhse
+            isExternal: '0'
+    -
+        title: Newsletter
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: newsletter
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
             isExternal: '0'

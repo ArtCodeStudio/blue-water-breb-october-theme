@@ -8075,9 +8075,8 @@ a.text-danger:focus, a.text-danger:hover {
 
 .invalid-feedback {
   visibility: hidden;
-  color: #ef2a21;
-  line-height: 0.75rem;
-  font-size: 0.75rem; }
+  color: red;
+  line-height: 0.75rem; }
 
 form.was-validated .invalid-feedback {
   visibility: visible; }

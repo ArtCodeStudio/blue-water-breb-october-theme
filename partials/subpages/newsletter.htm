@@ -1,0 +1,204 @@
+description = "Newsletter"
+
+[viewBag]
+snippetCode = "newsletter"
+snippetName = "Newsletter"
+==
+<div id="about" data-target="#about"> 
+
+        <div class="row">
+  
+            <div class="col-xs-12 col-md-4 section-headline-text" >
+                <div class="border-top"></div>
+                <h3 class="text-xs-center text-sm-left  text-serif">{{this.page.title}}</h3>  
+            </div>
+            
+            <div class="col-xs-12 col-md-8" style="min-height:280px">
+              <div id="responseContainer" style="visibility:hidden;position:relative"></div>
+              <div id="formContainer" style="position:relative">
+                {% content 'newsletter.htm' %}
+                <form id="newsletter-form" class="needs-validation" novalidate action="https://newslettertool2.1und1.de//subscriber-frontend/subscribe/99412d83-4207-4bae-b342-e51cd1f766d6" method="POST">
+                
+                  <div class="form-group">
+                    <label class="form-control-label" for="email">E-Mail*</label>
+                    <input class="form-control" type="email" name="email" id="emailInput" required></input>
+                    <div id="emailInvalidFeedback" class="invalid-feedback p-t-1">
+                      Please enter a valid e-mail address.
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label class="form-control-label" for="company">Company</label>
+                    <input class="form-control" type="text" id="companyInput" name="company"></input>
+                    <div id="companyInvalidFeedback" class="invalid-feedback p-t-1">
+                      Please enter your company name.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-control-label" for="firstName">First name</label>
+                    <input class="form-control" type="text" id="firstNameInput" name="firstName"></input>
+                    <div id="firstNameInvalidFeedback" class="invalid-feedback p-t-1">
+                      Please enter your first name.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-control-label" for="lastName">Last name</label>
+                    <input class="form-control" type="text" id="lastNameInput" name="lastName"></input>
+                    <div id="lastNameInvalidFeedback" class="invalid-feedback p-t-1">
+                      Please enter your last name.
+                    </div>
+                  </div>
+                  
+                  <div class="form-group p-l-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="termsCheckbox" name="terms" required>
+                      <label class="form-check-label" for="terms">
+                        I hereby accept the <a href="/terms">Terms and Conditions</a>.*
+                      </label>
+                    </div>
+                    <div id="termsInvalidFeedback" class="invalid-feedback">
+                      You must accept the terms and conditions to subscribe to our newsletter.
+                    </div>
+                  </div>
+                  
+                  <div class="form-group p-l-1">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="privacyCheckbox" name="privacy" required>
+                      <label class="form-check-label" for="privacy">
+                        I hereby accept the <a href="/privacy-policy">Privacy Policy</a>.*
+                      </label>
+                    </div>
+                    <div id="privacyInvalidFeedback" class="invalid-feedback">
+                      You must accept the privacy policy to subscribe to our newsletter.
+                    </div>
+                  </div>
+
+                  <div class="p-t-1 form-group">
+                    <button class="btn btn-blue-outline m-b-3" type="submit">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  /*
+   * Serialize an array of form elements into a query string.
+   */
+  function toParam(elements) {
+    var ret = [], len = elements.length;
+    for( var i = 0; i < len; i++ ) {
+      if (elements[i].name && !elements[i].disabled && (elements[i].checked || elements[i].type != "checkbox")) {
+        ret.push(encodeURIComponent(elements[i].name) + "=" + encodeURIComponent(elements[i].value));
+      }
+    }
+    return ret.join("&").replace(/%20/g, "+");
+  }
+  /*
+   * Serialize a form into a query string.
+   */
+  function serialize(form) {
+    return toParam(form.elements);
+  }
+  function displayResponse(responseText) {
+    var responseContainer = document.getElementById('responseContainer');
+    var formContainer = document.getElementById('formContainer');
+    responseContainer.innerHTML = responseText;
+    formContainer.style.visibility = 'hidden';
+    responseContainer.style.visibility = 'visible';
+    responseContainer.style.opacity = 0;
+    var $el = $(responseContainer);
+    $el.animate({ opacity: 1 }, 400, function () {
+        formContainer.parentNode.removeChild(formContainer);
+        $("html, body").animate({ scrollTop: 0 }, 250);
+    });
+  }
+  function submitForm(form) {
+    var xhr = new window.XMLHttpRequest();
+    var url = "https://newslettertool2.1und1.de//subscriber-frontend/subscribe/99412d83-4207-4bae-b342-e51cd1f766d6";
+    var responseContainer = document.getElementById('responseContainer');
+    var formContainer = document.getElementById('formContainer');
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          var response = document.createElement('html');
+          // We need this additional assignment to an HTML element; the innerHTML getter will return only the body content.
+          response.innerHTML = xhr.responseText;
+          displayResponse(response.innerHTML);
+        } else {
+          displayResponse('<h4 class="text-danger">An error occurred.</h3>');
+        }
+      }
+    };
+    xhr.open('POST', url, true);
+    xhr.timeout = 40000;
+    xhr.ontimeout = function() {
+      displayRepsonse('<h4 class="text-danger">Request timed out.</h3>');
+    }
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    var params = serialize(form);
+    xhr.send(params);
+  }
+
+  window.addEventListener('load', function() {
+    var form = document.getElementById('newsletter-form');
+    var emailInput = document.getElementById('emailInput');
+    var emailInvalidFeedback = document.getElementById('emailInvalidFeedback');
+    var firstNameInput = document.getElementById('firstNameInput');
+    var firstNameInvalidFeedback = document.getElementById('firstNameInvalidFeedback');
+    var lastNameInput = document.getElementById('lastNameInput');
+    var lastNameInvalidFeedback = document.getElementById('lastNameInvalidFeedback');
+    var companyInput = document.getElementById('companyInput');
+    var companyInvalidFeedback = document.getElementById('companyInvalidFeedback');
+    var termsCheckbox = document.getElementById('termsCheckbox');
+    var termsInvalidFeedback = document.getElementById('termsInvalidFeedback');
+    var privacyCheckbox = document.getElementById('privacyCheckbox');
+    var privacyInvalidFeedback = document.getElementById('privacyInvalidFeedback');
+    form.addEventListener('submit', function(event) {
+      var checkYourBoxes = false;
+      if (emailInput.checkValidity() === false) {
+        emailInvalidFeedback.style.visibility="visible";
+        checkYourBoxes = true;
+      } else {
+        emailInvalidFeedback.style.visibility="hidden";
+      }
+      if (termsCheckbox.checkValidity() === false) {
+        termsInvalidFeedback.style.visibility="visible";
+        checkYourBoxes = true;
+      } else {
+        termsInvalidFeedback.style.visibility="hidden";
+      }
+      if (privacyCheckbox.checkValidity() === false) {
+        privacyInvalidFeedback.style.visibility="visible";
+        checkYourBoxes = true;
+      } else {
+        privacyInvalidFeedback.style.visibility="hidden";
+      }
+      if (checkYourBoxes) {
+        event.preventDefault();
+        event.stopPropagation();
+      } else {
+        if (firstNameInput.value.trim() === '') {
+            firstNameInput.value = ' - ';
+        }
+        if (lastNameInput.value.trim() === '') {
+            lastNameInput.value = ' - ';
+        }
+        if (companyInput.value.trim() === '') {
+            companyInput.value = ' - ';
+        }
+        submitForm(form);
+        event.preventDefault();
+      }
+    }, false);
+  }, true);
+})();
+</script>

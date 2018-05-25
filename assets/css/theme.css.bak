@@ -8073,15 +8073,6 @@ a.text-danger:focus, a.text-danger:hover {
   font-family: Yrsa-Regular;
   src: url(https://breb.de/themes/breb-barba/assets/fonts/Yrsa-Regular.ttf); }
 
-.invalid-feedback {
-  visibility: hidden;
-  color: #ef2a21;
-  line-height: 0.75rem;
-  font-size: 0.75rem; }
-
-form.was-validated .invalid-feedback {
-  visibility: visible; }
-
 /*
  * FOOTER  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 **/
@@ -11079,3 +11070,13 @@ h6 {
 @media (max-width: 543px) {
   #terms #terms-content-container h6 {
     text-align: center; } }
+
+form .invalid-feedback {
+  visibility: hidden;
+  color: red;
+  font-size: 0.75rem;
+  line-height: 0.75rem; }
+
+form.was-validated .invalid-feedback {
+  visibility: visible; }
+

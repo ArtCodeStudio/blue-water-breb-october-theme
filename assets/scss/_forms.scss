@@ -1,0 +1,11 @@
+.invalid-feedback {
+  visibility:hidden;
+  color: $brand-danger;
+  line-height: 0.75rem;
+  font-size: 0.75rem;
+}
+form.was-validated {
+  .invalid-feedback {
+    visibility: visible;
+  }
+}
