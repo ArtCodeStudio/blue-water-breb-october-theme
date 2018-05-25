@@ -17,7 +17,7 @@ snippetName = "Newsletter"
               <div id="responseContainer" style="visibility:hidden;position:relative"></div>
               <div id="formContainer" style="position:relative">
                 {% content 'newsletter.htm' %}
-                <form id="newsletter-form" class="needs-validation" novalidate action="https://newslettertool2.1und1.de//subscriber-frontend/subscribe/99412d83-4207-4bae-b342-e51cd1f766d6" method="POST">
+                <form id="newsletter-form" class="needs-validation" novalidate>
                 
                   <div class="form-group">
                     <label class="form-control-label" for="email">E-Mail*</label>
@@ -76,7 +76,7 @@ snippetName = "Newsletter"
                   </div>
 
                   <div class="p-t-1 form-group">
-                    <button class="btn btn-blue-outline m-b-3" type="submit">Subscribe</button>
+                    <button class="btn btn-blue-outline m-b-3" id="submitButton">Subscribe</button>
                   </div>
                 </form>
               </div>
@@ -87,9 +87,6 @@ snippetName = "Newsletter"
 </div>
 
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
   /*
    * Serialize an array of form elements into a query string.
    */
@@ -121,7 +118,12 @@ snippetName = "Newsletter"
         $("html, body").animate({ scrollTop: 0 }, 250);
     });
   }
-  function submitForm(form) {
+  function submitForm() {
+    console.log('submitForm()');
+    if (!validateInput()) {
+      return;
+    }
+    var form = document.getElementById('newsletter-form');
     var xhr = new window.XMLHttpRequest();
     var url = "https://newslettertool2.1und1.de//subscriber-frontend/subscribe/99412d83-4207-4bae-b342-e51cd1f766d6";
     var responseContainer = document.getElementById('responseContainer');
@@ -148,7 +150,7 @@ snippetName = "Newsletter"
     xhr.send(params);
   }
 
-  window.addEventListener('load', function() {
+  function validateInput() {
     var form = document.getElementById('newsletter-form');
     var emailInput = document.getElementById('emailInput');
     var emailInvalidFeedback = document.getElementById('emailInvalidFeedback');
@@ -162,43 +164,44 @@ snippetName = "Newsletter"
     var termsInvalidFeedback = document.getElementById('termsInvalidFeedback');
     var privacyCheckbox = document.getElementById('privacyCheckbox');
     var privacyInvalidFeedback = document.getElementById('privacyInvalidFeedback');
-    form.addEventListener('submit', function(event) {
-      var checkYourBoxes = false;
-      if (emailInput.checkValidity() === false) {
-        emailInvalidFeedback.style.visibility="visible";
-        checkYourBoxes = true;
-      } else {
-        emailInvalidFeedback.style.visibility="hidden";
+
+    var checkYourBoxes = false;
+    if (emailInput.checkValidity() === false) {
+      emailInvalidFeedback.style.visibility="visible";
+      checkYourBoxes = true;
+    } else {
+      emailInvalidFeedback.style.visibility="hidden";
+    }
+    if (termsCheckbox.checkValidity() === false) {
+      termsInvalidFeedback.style.visibility="visible";
+      checkYourBoxes = true;
+    } else {
+      termsInvalidFeedback.style.visibility="hidden";
+    }
+    if (privacyCheckbox.checkValidity() === false) {
+      privacyInvalidFeedback.style.visibility="visible";
+      checkYourBoxes = true;
+    } else {
+      privacyInvalidFeedback.style.visibility="hidden";
+    }
+    if (checkYourBoxes) {
+      return false;
+    } else {
+      if (firstNameInput.value.trim() === '') {
+        firstNameInput.value = ' - ';
       }
-      if (termsCheckbox.checkValidity() === false) {
-        termsInvalidFeedback.style.visibility="visible";
-        checkYourBoxes = true;
-      } else {
-        termsInvalidFeedback.style.visibility="hidden";
+      if (lastNameInput.value.trim() === '') {
+        lastNameInput.value = ' - ';
       }
-      if (privacyCheckbox.checkValidity() === false) {
-        privacyInvalidFeedback.style.visibility="visible";
-        checkYourBoxes = true;
-      } else {
-        privacyInvalidFeedback.style.visibility="hidden";
+      if (companyInput.value.trim() === '') {
+        companyInput.value = ' - ';
       }
-      if (checkYourBoxes) {
-        event.preventDefault();
-        event.stopPropagation();
-      } else {
-        if (firstNameInput.value.trim() === '') {
-            firstNameInput.value = ' - ';
-        }
-        if (lastNameInput.value.trim() === '') {
-            lastNameInput.value = ' - ';
-        }
-        if (companyInput.value.trim() === '') {
-            companyInput.value = ' - ';
-        }
-        submitForm(form);
-        event.preventDefault();
-      }
-    }, false);
-  }, true);
-})();
+      return true;
+    }
+  }
+
+  document.getElementById('submitButton').addEventListener('click', function(event) {
+    submitForm();
+    event.preventDefault();
+  });
 </script>
