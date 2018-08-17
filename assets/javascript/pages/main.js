@@ -406,6 +406,26 @@ var initBlog = function (container) {
 		}
 		initMasonry();
 
+		var currentUrl = location.href;
+		var protocolEndIndex = currentUrl.indexOf('//');
+		var currentProtocol = currentUrl.substr(0, protocolEndIndex);
+		var currentDomain = currentUrl.substr(protocolEndIndex+2);
+		var domainEndIndex = currentDomain.indexOf('/');
+		if (domainEndIndex !== -1) {
+			currentDomain = currentDomain.substr(0, domainEndIndex);
+		}
+		var currentBaseUrl = currentProtocol + '//' + currentDomain;
+		var storagePath = '/storage';
+		var themePath = octoberThemeAbsolutePath.substr(currentBaseUrl.length);
+		Array.from(container.querySelectorAll('a')).forEach(function (anchor) {
+			var url = anchor.href;
+			['pdf','eps','txt','doc','docx','odt','odf','xls','png','jpg','gif','svg','bmp','wav','mp3','mp4','m4a','ogg','zip','rar'].some(function(ending) {
+				if(url.endsWith('.'+ending)) {
+					anchor.className += ' no-barba';
+					return  true;
+				}
+			});
+		});
 
 
 };
@@ -414,14 +434,14 @@ var initBlog = function (container) {
  *
  */
 var initAllReports = function (container) {
-	initBlog();
+	initBlog(container);
 };
 
 /**
  *
  */
 var initCategory = function (container) {
-	initBlog();
+	initBlog(container);
 };
 
 
@@ -429,7 +449,7 @@ var initCategory = function (container) {
  *
  */
 var initPost = function (container) {
-	initBlog();
+	initBlog(container);
 };
 
 /**
