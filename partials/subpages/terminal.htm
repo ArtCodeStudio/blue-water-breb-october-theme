@@ -1,0 +1,39 @@
+description = "terminal"
+
+[viewBag]
+==
+<div id="terminal" data-target="#terminal"> 
+
+        <div class="row">
+            
+			<div class="col-md-12 col-lg-5 p-b-3 section-headline-text" >
+				<div class="border-top"></div>
+				<h3 class="text-xs-center text-sm-left text-serif">{{ this.page.title }}</h3>  
+				
+				<div  class="p-y-3 content-container">             
+					{% content 'terminal.htm' %}
+				</div>
+
+				<div class="text-xs-center text-sm-left">
+					<a href="mailto:{{this.theme.terminal_email}}" class="btn btn-blue-outline m-b-3">contact</a>
+				</div>
+				
+				{% partial '/subpages/_downloads' 
+					downloads = this.theme.terminal_downloads
+					zipFileName = 'Terminal Documents.zip'
+				%}
+			</div>
+
+			<div class="col-md-12 col-lg-7 slideshow-container" >
+
+				{% partial '/subpages/_animated_modal' 
+					fullscreenButtonID = 'terminalFullscreenButton'
+					name = 'terminalAnimatedModal'
+					modalContent = 'fullscreenSlideshowHTML'
+				%}
+
+				{% component 'slideshowHTML' %}
+				{% component 'subSlideshowHTML' %}
+			</div>
+        </div>
+  </div>

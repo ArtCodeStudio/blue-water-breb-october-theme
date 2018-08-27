@@ -3,153 +3,123 @@ description: ''
 author: JumpLink
 homepage: 'http://jumplink.eu/'
 code: breb-barba
-
-# Indentation MUST be Spaces not Tabs !
 form:
     tabs:
         fields:
-
-            # bremen_logo:
-            #     label: Bremen
-            #     type: mediafinder
-            #     mode: image
-            #     tab: Contact
             location_title:
                 type: section
                 label: Position
                 tab: Contact
-
             location_bremen:
                 label: Bremen
-                default: BREB GmbH & Co.KG
+                default: 'BREB GmbH & Co.KG'
                 placeholder: Name
                 tab: Contact
             location_breme1:
-                default:
+                default: null
                 placeholder: Address
                 tab: Contact
             location_bremen2:
-                default: Universitätsallee 5
-                placeholder: Address 
+                default: 'Universitätsallee 5'
+                placeholder: Address
                 tab: Contact
             location_bremen3:
-                default: 28359 Bremen
-                placeholder: 
+                default: '28359 Bremen'
+                placeholder: null
                 tab: Contact
             location_bremen4:
-                default: Tel. +49 (0)421 32278-0
+                default: 'Tel. +49 (0)421 32278-0'
                 placeholder: Phone
                 tab: Contact
             location_bremen5:
-                default: Fax +49 (0)421 32278-78
+                default: 'Fax +49 (0)421 32278-78'
                 placeholder: Fax
                 tab: Contact
-            
-            # cuxhaven_logo:
-            #     label: Cuxhaven
-            #     type: mediafinder
-            #     mode: image
-            #     tab: Contact
             location_cuxhaven:
                 label: Cuxhaven
-                default: BREB GmbH & Co.KG
+                default: 'BREB GmbH & Co.KG'
                 placeholder: Address
                 tab: Contact
             location_cuxhaven1:
-                default: Havenhostel Cuxhaven
+                default: 'Havenhostel Cuxhaven'
                 placeholder: Address
                 tab: Contact
             location_cuxhaven2:
-                default: Kpt.-Alexander-Str. 16
+                default: 'Kpt.-Alexander-Str. 16'
                 placeholder: Address
                 tab: Contact
             location_cuxhaven3:
-                default: 27472 Cuxhaven
-                'placeholder': 'ZIP / City, eg: 27472 Cuxhaven'
+                default: '27472 Cuxhaven'
+                placeholder: 'ZIP / City, eg: 27472 Cuxhaven'
                 tab: Contact
             location_cuxhaven4:
-                default: Tel. +49 (0)4721 590 54 0
+                default: 'Tel. +49 (0)4721 590 54 0'
                 placeholder: Phone
                 tab: Contact
             location_cuxhaven5:
-                default: Fax +49 (0)4721 590 54 99
+                default: 'Fax +49 (0)4721 590 54 99'
                 placeholder: Fax
                 tab: Contact
-
-            # sassnitz_logo:
-            #     label: Sassnitz
-            #     type: mediafinder
-            #     mode: image
-            #     tab: Contact
             location_sassnitz:
                 label: Sassnitz
-                default: BREB GmbH & Co.KG
+                default: 'BREB GmbH & Co.KG'
                 placeholder: Address
                 tab: Contact
             location_sassnitz1:
-                default: Hafeneingangsgebäude Sassnitz
+                default: 'Hafeneingangsgebäude Sassnitz'
                 placeholder: Address
                 tab: Contact
             location_sassnitz2:
-                default: Fährhafen 20b
+                default: 'Fährhafen 20b'
                 placeholder: Address
                 tab: Contact
             location_sassnitz3:
-                default: 18546 Sassnitz
-                'placeholder': 'ZIP / City, eg: 18546 Sassnitz'
+                default: '18546 Sassnitz'
+                placeholder: 'ZIP / City, eg: 18546 Sassnitz'
                 tab: Contact
             location_sassnitz4:
-                default: Tel. +49 (0)38392 55 44 0
+                default: 'Tel. +49 (0)38392 55 44 0'
                 placeholder: Phone
                 tab: Contact
             location_sassnitz5:
-                default:
-                placeholder: Fax 
+                default: null
+                placeholder: Fax
                 tab: Contact
-
-            # Zeebrugge_logo:
-            #     label: Zeebrugge
-            #     type: mediafinder
-            #     mode: image
-            #     tab: Contact          
             location_zeebrugge:
                 label: Zeebrugge
-                default: BREB Belgium bvba
+                default: 'BREB Belgium bvba'
                 placeholder: Address
                 tab: Contact
             location_zeebrugge1:
-                default:
+                default: null
                 placeholder: Address
                 tab: Contact
             location_zeebrugge2:
-                default: Rederskaai 30
+                default: 'Rederskaai 30'
                 placeholder: Address
                 tab: Contact
             location_zeebrugge3:
-                default: 8380 Zeebrugge
-                'placeholder': 'ZIP / City, eg: 8380 Zeebrugge'
+                default: '8380 Zeebrugge'
+                placeholder: 'ZIP / City, eg: 8380 Zeebrugge'
                 tab: Contact
             location_zeebrugge4:
-                default:
-                placeholder: Phone 
+                default: null
+                placeholder: Phone
                 tab: Contact
             location_zeebrugge5:
-                default: 
+                default: null
                 tab: Contact
                 placeholder: Fax
-
-
-# CONTACT / BUTTON eMail
             contact_link_title:
                 type: section
-                label: Emails for Contact Button on Pages
+                label: 'Emails for Contact Button on Pages'
                 tab: Contact
             shipping_email:
                 label: Shipping
                 placeholder: eMail
                 tab: Contact
             liner_services_email:
-                label: Liner Services
+                label: 'Liner Services'
                 placeholder: eMail
                 tab: Contact
             offshore_email:
@@ -157,231 +127,223 @@ form:
                 placeholder: eMail
                 tab: Contact
             portagency_email:
-                label: Port Agency
+                label: 'Port Agency'
                 placeholder: eMail
                 tab: Contact
-
-
-# CONTACT / DEPARTMENT
             department_title:
                 type: section
                 label: Department
                 tab: Contact
-
             contact_departments:
                 type: repeater
-                tab: Contact 
+                tab: Contact
                 form:
                     fields:
                         title:
-                            default: 
-                            'placeholder': 'The title of the Department e.g.: Chartering'
+                            default: null
+                            placeholder: 'The title of the Department e.g.: Chartering'
                             label: Title
-                            tab: Contact 
+                            tab: Contact
                         sub_title:
-                            default: 
-                            'placeholder': 'The subtitle of the Department e.g.: Port Agency / Offshore'
+                            default: null
+                            placeholder: 'The subtitle of the Department e.g.: Port Agency / Offshore'
                             label: Subtitle
-                            tab: Contact 
+                            tab: Contact
                         phone:
-                            label: Phone Number 
-                            placeholder: Phone Number 
-                            tab: Contact      
+                            label: 'Phone Number'
+                            placeholder: 'Phone Number'
+                            tab: Contact
                         email:
-                            label: eMail Address 
-                            placeholder: eMail Address 
-                            tab: Contact      
+                            label: 'eMail Address'
+                            placeholder: 'eMail Address'
+                            tab: Contact
                         active:
                             label: Show
                             type: switch
-                            tab: Contact      
-
-# BLOG
+                            tab: Contact
             max_blog_posts:
-                label: Max Aricles / Page
+                label: 'Max Aricles / Page'
                 type: number
                 default: 9
                 tab: Blog
-
-# LINES (Liner Services Lines Image )
             linerservices_lines_all:
-                label: Liner Services (All Routes)
+                label: 'Liner Services (All Routes)'
                 type: mediafinder
                 mode: image
-                tab: Liner Services 
+                tab: 'Liner Services'
             linerservices_lines_adriatic:
-                label: Liner Services (Adriatic Lines)
+                label: 'Liner Services (Adriatic Lines)'
                 type: mediafinder
                 mode: image
-                tab: Liner Services 
+                tab: 'Liner Services'
             linerservices_lines_continental:
-                label: Liner Services (Continental Lines)
+                label: 'Liner Services (Continental Lines)'
                 type: mediafinder
                 mode: image
-                tab: Liner Services 
+                tab: 'Liner Services'
             linerservices_lines_background:
-                label: Liner Services (Background, no routes)
+                label: 'Liner Services (Background, no routes)'
                 type: mediafinder
                 mode: image
-                tab: Liner Services 
-# BRAND
+                tab: 'Liner Services'
             primary_brand:
-                label: Primary Logo
+                label: 'Primary Logo'
                 type: mediafinder
                 mode: image
-                tab: Brand 
-
+                tab: Brand
             secondary_brand:
-                label: Secundary Logo
+                label: 'Secundary Logo'
                 type: mediafinder
                 mode: image
-                tab: Brand 
-
-# DOWNLOADS
+                tab: Brand
             shipping_downloads:
-                label: Shipping Downloads
+                label: 'Shipping Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-
+                            tab: Downloads
             liner_services_downloads:
-                label: Liner Services Downloads
+                label: 'Liner Services Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-
-            port_agency_downloads:    
-                label: Port Agency Downloads
+                            tab: Downloads
+            port_agency_downloads:
+                label: 'Port Agency Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-
+                            tab: Downloads
             offshore_downloads:
-                label: OffShore Downloads
+                label: 'OffShore Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-
+                            tab: Downloads
             fleet_downloads:
-                label: Fleet Downloads
+                label: 'Fleet Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-
+                            tab: Downloads
             contact_downloads:
-                label: Contact Downloads
+                label: 'Contact Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-
+                            tab: Downloads
             qhse_downloads:
-                'label': 'Terms & QHSE Downloads'
+                label: 'Terms & QHSE Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-
+                            tab: Downloads
             terms_downloads:
-                'label': 'Terms Downloads'
+                label: 'Terms Downloads'
                 type: repeater
-                tab: Downloads 
+                tab: Downloads
                 form:
                     fields:
                         title:
                             default: Document
-                            placeholder: The title of the document
+                            placeholder: 'The title of the document'
                             label: Title
-                            tab: Downloads 
+                            tab: Downloads
                         file:
-                            label: File 
+                            label: File
                             type: mediafinder
                             mode: file
-                            tab: Downloads 
-            
+                            tab: Downloads
             certificates:
-                'label': 'Certificates'
+                label: Certificates
                 type: repeater
-                tab: Certificates 
+                tab: Certificates
                 form:
                     fields:
                         file:
-                            label: Image 
+                            label: Image
                             type: mediafinder
                             mode: image
-                            tab: Certificates 
+                            tab: Certificates
+require:
+    - RainLab.Pages
+    - Xeor.ContentType
+    - Romanov.ClearCacheWidget
+    - RainLab.GoogleAnalytics
+    - Renatio.SeoManager
+    - ToughDeveloper.ImageResizer
+    - manogi.Mediathumb
+    - Adrenth.Redirect
+    - JumpLink.Slideshow
+    - JumpLink.Ships
+    - JumpLink.DownloadBundle

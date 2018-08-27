@@ -68,7 +68,7 @@
 
 	&.footer-contact-container {
 		display:flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		line-height: 20px;
 		div {
 			h6 {
@@ -152,7 +152,7 @@
 
 .footer-contact-container {
 	display:flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 #footer-certificates-container{
