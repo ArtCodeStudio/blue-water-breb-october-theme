@@ -1,0 +1,37 @@
+// v4.0.0-alpha.2 -> stable
+.mx-auto{
+    @extend .m-x-auto;
+}
+
+// stable -> v4.0.0-alpha.2
+/*
+.m-x-auto{
+    @extend .mx-auto;
+}
+
+.text-xs-center {
+    @extend .text-center;
+}
+
+.hidden-xs-up {
+    @extend .d-none;
+}
+
+.hidden-sm-up {
+    @extend .d-sm-none;
+}
+
+.hidden-md-up {
+    @extend .d-md-none;
+}
+
+.hidden-lg-up {
+    @extend .d-lg-none;
+}
+
+
+.hidden-xl-up {
+    @extend .d-xl-none;
+}
+*/
+

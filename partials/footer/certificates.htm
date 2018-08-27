@@ -2,10 +2,10 @@
 ==
 <div class="container p-b-2" id="footer-certificates-container">
 	<div class='row'>
-		<div class="col-xs-12">
-			{% for certificate in  this.theme.certificates %}
-				<img class="img-fluid" src="{{ certificate.file | media }}">
-			{% endfor %}
-		</div>
+    	{% for certificate in  this.theme.certificates %}
+    	    <div class="col">
+    		    <img class="img-fluid" src="{{ certificate.file | media }}">
+    		</div>
+    	{% endfor %}
 	</div>
 </div>

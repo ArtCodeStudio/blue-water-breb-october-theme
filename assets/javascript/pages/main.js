@@ -311,6 +311,19 @@ var initOffshore = function (container) {
 /**
  *
  */
+var initTerminal = function (container) {
+	// Initialize Slideshow
+	// initSlideshowSync();
+	initializeAnimatedModal( "#terminalFullscreenButton", "terminalAnimatedModal", "#fullscreenSlideshowHTML" );
+	initSlickFullscreenNav('#terminal');
+	destroySlideshowSync();
+	initSlideshowSync();
+};
+
+
+/**
+ *
+ */
 var initPortagency = function (container) {
 	// Initialize Slideshow
 	initializeAnimatedModal( "#portAgencyFullscreenButton", "portAgencyAnimatedModal", "#fullscreenSlideshowHTML" );
@@ -551,6 +564,7 @@ var initQHSE = function () {
 var initTemplate = {
 	'home': initHome,
 	'offshore': initOffshore,
+	'terminal': initTerminal,
 	'portagency': initPortagency,
 	'linerservices': initLinerservices,
 	'contact': initContact,

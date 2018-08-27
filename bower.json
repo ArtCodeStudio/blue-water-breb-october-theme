@@ -2,7 +2,8 @@
   "name": "breb-october-theme",
   "authors": [
     "Pascal Garber <pascal@jumplink.eu>",
-    "Marc Wensauer <marc@jumplink.me>"
+    "Marc Wensauer <marc@jumplink.me>",
+    "Maya Philine Henze <artwork@jumplink.me>"
   ],
   "description": "",
   "main": "",
@@ -16,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.4",
+    "bootstrap": "4.0.0-alpha.4",
     "slick-carousel": "^1.6.0",
     "font-awesome": "^4.6.3",
     "simpler-sidebar": "^2.0.2",
@@ -32,6 +33,6 @@
   },
   "resolutions": {
     "jquery": "1.9.1 - 2",
-    "bootstrap": "v4.0.0-alpha.2"
+    "bootstrap": "4.0.0-alpha.4"
   }
 }

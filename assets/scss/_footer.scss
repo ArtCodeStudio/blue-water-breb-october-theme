@@ -3,33 +3,8 @@
 **/
 .footer {
 	display:flex;
-	justify-content: space-between;
-	&.footer-contact-container-small{
+	justify-content: center;
 
-		> div:first-child > div {
-			border-right: 1px solid $brand-primary;
-			@include media-breakpoint-up(md) {
-				padding-right: 6rem; //153px //perfect center
-			}
-			@include media-breakpoint-down(sm) {
-				padding-right:1.5rem;//81px //perfect center
-			}
-		}
-
-		div {
-			h6 {
-				color: $brand-danger;
-				font-weight:700;
-				&.cuxhaven {
-					color: $brand-primary;
-					img {
-						width: 11px;
-						margin-top: -4px;
-					}
-				}
-			}
-		}	
-	}
 	&::after{
 		content:none;
 	}
@@ -68,7 +43,7 @@
 
 	&.footer-contact-container {
 		display:flex;
-		justify-content: space-around;
+		justify-content: center;
 		line-height: 20px;
 		div {
 			h6 {
@@ -83,91 +58,33 @@
 				}
 			}
 		}
-		&::after{
-			content:none;
-		}
 
-		> div:not(:last-child) {
+
+		[class^="col-"]:not(:last-child) {
 			border-right: 1px solid $brand-primary;
-			@include media-breakpoint-up(xl) {
-				padding-right: 58px;
+			@include media-breakpoint-down(xs) {
+				border-right : none !important;
 			}
-			@include media-breakpoint-down(lg) {
-				padding-right: 24px;
-			}
-
-
-		}
-
-		.row {
-			//margin-left:3%;
-			// all items get right border except the last 
-			> div{
-				height:210px;
-
-				border-right : 1px solid $brand-primary;
-
-				@include media-breakpoint-down(xs) {
-					border-right : none !important;
-					.column {
-						//padding-left: 30%;
-					}
-				}
-				@include media-breakpoint-between(sm,md) {
-					
-					.column {
-						padding-left: 2rem;
-					}
-					&.column-2, &.column-4 {
-						border-right : none;
-					}
-				}
-				// @include media-breakpoint-only(sm) {
-				// 	.column {
-				// 		padding-left: 2rem;
-				// 	}
-				// }
-				@include media-breakpoint-up(sm) {
-
-				}
-
-				@include media-breakpoint-up(lg) {
-					//border-right : 1px solid $brand-primary;
-					&:last-child{
-						border-right : none;
-					}
-				}
-			}
-		}
-
-		.footer-item-wrapper {
-			height: 200px;
-			
-			
 		}
 
 
 	}
 }
 
-.footer-contact-container {
-	display:flex;
-	justify-content: space-around;
-}
+#footer-certificates-container {
+	.row {
+		text-align: center;
+		display: flex;
+		justify-content: center;
 
-#footer-certificates-container{
-	.row{
-		text-align:center;
+         .col {
+             align-self: center
+         }
+		
 		.img-fluid{
 			display:inline!important;
 			max-height: 65px;
+			width: 100%;
 		}
-	}
-}
-
-.footer-contact-container-xs {
-	.column {
-		width: 193px;
-		margin: 0 auto;
 	}
 }

@@ -4,15 +4,15 @@
 //font-family-sans-serif-italic
 @font-face {
     font-family: Yrsa-Medium ;
-    src: url(https://breb.de/themes/breb-barba/assets/fonts/Yrsa-Medium.ttf);
+    src: url('/#{$theme-folder}/assets/fonts/Yrsa-Medium.ttf');
 }
 
 @font-face {
     font-family: Yrsa-Light ;
-    src: url(https://breb.de/themes/breb-barba/assets/fonts/Yrsa-Light.ttf);
+    src: url('/#{$theme-folder}/assets/fonts/Yrsa-Light.ttf');
 }
 
 @font-face {
     font-family: Yrsa-Regular ;
-    src: url(https://breb.de/themes/breb-barba/assets/fonts/Yrsa-Regular.ttf);
+    src: url('/#{$theme-folder}/assets/fonts/Yrsa-Regular.ttf');
 }

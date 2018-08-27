@@ -2,9 +2,10 @@
 
 @import 'variables';
 
-@import '../vendor/bootstrap/scss/bootstrap.scss';
-@import '../vendor/font-awesome/scss/font-awesome.scss';
+@import '../vendor/bootstrap/scss/bootstrap';
+@import '../vendor/font-awesome/scss/font-awesome';
 
+@import 'fix';
 
 @import 'helper';
 @import 'layout';
