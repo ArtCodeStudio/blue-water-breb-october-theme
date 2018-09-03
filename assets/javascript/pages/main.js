@@ -564,7 +564,7 @@ var initQHSE = function () {
 var initTemplate = {
 	'home': initHome,
 	'offshore': initOffshore,
-	'terminal': initTerminal,
+	'terminalcuxhaven': initTerminal,
 	'portagency': initPortagency,
 	'linerservices': initLinerservices,
 	'contact': initContact,

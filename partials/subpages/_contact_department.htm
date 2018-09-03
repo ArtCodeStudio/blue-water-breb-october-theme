@@ -1,3 +1,5 @@
+[viewBag]
+==
 <div class="col-xs-12 col-md-12 col-lg-7 offset-xs-4 contact-department">
 
 	{% for department in  this.theme.contact_departments %}
@@ -11,6 +13,7 @@
 				</div> 
 				<div>{{ department.phone }}</div>
 				<div><a href="mailto:{{ department.email }}">{{ department.email }}</a></div>
+				<div><a href="mailto:{{ department.email2 }}">{{ department.email2 }}</a></div>
 			</div>
 		{% endif %}
 	{% endfor %}

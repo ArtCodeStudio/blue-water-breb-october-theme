@@ -157,6 +157,10 @@ form:
                             label: 'eMail Address'
                             placeholder: 'eMail Address'
                             tab: Contact
+                        email2:
+                            label: 'eMail Address 2'
+                            placeholder: 'eMail Address 2'
+                            tab: Contact
                         active:
                             label: Show
                             type: switch
@@ -196,6 +200,22 @@ form:
                 type: mediafinder
                 mode: image
                 tab: Brand
+            terminal_downloads:
+                label: 'Terminal Downloads'
+                type: repeater
+                tab: Downloads
+                form:
+                    fields:
+                        title:
+                            default: Document
+                            placeholder: 'The title of the document'
+                            label: Title
+                            tab: Downloads
+                        file:
+                            label: File
+                            type: mediafinder
+                            mode: file
+                            tab: Downloads
             shipping_downloads:
                 label: 'Shipping Downloads'
                 type: repeater
