@@ -1,10 +1,13 @@
 [googleTracker]
+
+[SeoCmsPage]
 ==
 {% set google_analytics_on = false %}
 
 <!DOCTYPE html>
 <html>
     <head>
+        {% component 'SeoCmsPage' %}
         {% partial 'html_head' %}
     </head>
     <body>

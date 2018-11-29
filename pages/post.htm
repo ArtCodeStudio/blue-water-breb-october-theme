@@ -4,6 +4,8 @@ layout = "blog"
 is_hidden = 0
 robot_index = "index"
 robot_follow = "follow"
+contentType = "html"
+force_show = 0
 
 [blogPost]
 slug = "{{ :slug }}"
@@ -25,6 +27,7 @@ categoryPage = "all-reports"
 [SeoBlogPost]
 post = "post"
 ==
+{% component 'SeoBlogPost' data=post %}
 <div class="blog-content-wrapper p-t-1" data-target="#blog-content-wrapper" id="blog-content-wrapper"> 
     <div class="container">
         <div class="row">
