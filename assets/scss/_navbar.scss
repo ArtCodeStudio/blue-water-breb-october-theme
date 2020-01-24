@@ -16,6 +16,33 @@ $navbar-brand-width: 150px;
 	}
 }
 
+#mobile-nav-wrapper {
+    position: fixed;
+    height: 2.54rem;
+    background-color: $body-bg;
+    width: 100%;
+    top: 0;
+    z-index: 3001;
+	padding: 0;
+	.toggle-sidebar {
+		// max-width: 34rem;
+    	margin: 0 auto;
+		height: 2.09rem;
+		background-color:$body-bg;
+		z-index: 666;
+		border-bottom: 1px solid $brand-primary;
+
+		button{
+			margin-top: 0.5rem;
+			padding-left: 0;
+		}
+		
+		&:focus {
+			outline:0;
+		}
+	}
+}
+
 #navbar-main {
 	transition: all .25s ease-in-out;
 	height:110px;

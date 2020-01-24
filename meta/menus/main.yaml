@@ -1,19 +1,6 @@
 name: main
 items:
     -
-        title: QHSE
-        nesting: ''
-        type: url
-        url: /qhse
-        code: qhse
-        reference: ''
-        cmsPage: ''
-        replace: ''
-        viewBag:
-            isHidden: '0'
-            cssClass: qhse
-            isExternal: '0'
-    -
         title: 'Port Agency'
         nesting: ''
         type: url
@@ -40,6 +27,28 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: QHSE
+        nesting: ''
+        type: url
+        url: /qhse
+        code: qhse
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: qhse
+            isExternal: '0'
+    -
+        title: Jobs
+        type: url
+        url: /jobs
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: Contact
         nesting: ''
         type: url
@@ -53,14 +62,10 @@ items:
             cssClass: contact
             isExternal: '0'
     -
-        title: Reports
-        nesting: ''
+        title: News
         type: url
         url: /reports
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: reports

@@ -1,11 +1,12 @@
-// v4.0.0-alpha.2 -> stable
-.mx-auto{
+// Bootstrap v4.0.0-alpha.2 -> stable
+.mx-auto {
     @extend .m-x-auto;
 }
 
-// stable -> v4.0.0-alpha.2
+
+// Bootstrap stable -> v4.0.0-alpha.2
 /*
-.m-x-auto{
+.m-x-auto {
     @extend .mx-auto;
 }
 

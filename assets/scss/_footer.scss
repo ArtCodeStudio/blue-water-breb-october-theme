@@ -22,11 +22,13 @@
 	}
 
 	&#footer-navigation-wrapper{
-		background-color:$gray-lighter;// #ededed;
+		background-color: $gray-lighter;
 	}
 
-	&#footer-legal-wrapper, #blog-header-wrapper {
-		background-color: $brand-primary;
+
+	
+	&#footer-legal-wrapper {
+	    background-color: #033c6b;
 		a{
 			color: white;
 		}
@@ -74,17 +76,37 @@
 #footer-certificates-container {
 	.row {
 		text-align: center;
-		display: flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 		justify-content: center;
-
-         .col {
-             align-self: center
-         }
+        
+        .col-auto {
+            float: left;
+            width: auto;
+        }
 		
-		.img-fluid{
-			display:inline!important;
-			max-height: 65px;
-			width: 100%;
+		.certificates-row {
+		    // border-right: solid 1px black;
+		    img { 
+    			display: inline !important;
+    			height: 80px;
+		    }
+		}
+		.sozial-row {
+
+		    a {
+		        color: black;
+		        svg { 
+        			display: inline !important;
+        			height: 50px;
+        			
+    		    }
+    		    &:hover, &:focus {
+		            color: white;
+    		    }
+		    }
 		}
 	}
 }

@@ -50,7 +50,7 @@
 						.content-container {
 							table {
 								 margin-top: 1rem;
-								td, th{
+								td, th {
 									text-align: left;
 									padding: 0.5rem 0.25rem 0.5rem 0.5rem;
 									font-size:0.76rem; //0.85rem;
@@ -59,7 +59,7 @@
 										color:$brand-primary;
 									}
 								}
-								td:not(:first-child){
+								td:not(:first-child) {
 									padding-left:0.3rem;
 								}
 							}

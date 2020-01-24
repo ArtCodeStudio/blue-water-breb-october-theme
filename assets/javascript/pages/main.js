@@ -67,7 +67,7 @@ var changeNavbar = function (dataset) {
 	var slideshow_height = 809 ;
 	var scroll_pos = $(window).scrollTop();
 
-	if (currentNamespace === 'home') {
+	if (currentNamespace === 'home' || currentNamespace === 'bluewaterbreb') {
 
 		if (scroll_pos >= slideshow_height) {
 			//$('.navbar-brand').addClass("brand-hidden" );
@@ -563,6 +563,7 @@ var initQHSE = function () {
  */
 var initTemplate = {
 	'home': initHome,
+	'bluewaterbreb': initHome,
 	'offshore': initOffshore,
 	'terminalcuxhaven': initTerminal,
 	'portagency': initPortagency,
