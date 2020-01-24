@@ -32,7 +32,7 @@ $navbar-brand-width: 150px;
 		z-index: 666;
 		border-bottom: 1px solid $brand-primary;
 
-		button{
+		button {
 			margin-top: 0.5rem;
 			padding-left: 0;
 		}
@@ -51,15 +51,14 @@ $navbar-brand-width: 150px;
 		margin-top: 40px;		
 		transition: all .25s ease-in-out;
 	}
-	&.navbar-slim{
+	&.navbar-slim {
 		.navbar-brand {
 			margin-top: 0;
 			width: 5.4rem !important;
 		}
-		img{
+		img {
 			width:15rem;
-			width: 5.4rem !important;
-			margin-top: 0.4rem !important;
+		    width: 10rem !important;
 		}
 	}
 

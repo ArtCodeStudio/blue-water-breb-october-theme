@@ -28,7 +28,7 @@
 
 	
 	&#footer-legal-wrapper {
-	    background-color: #033c6b;
+	    background-color: $blue-dark;
 		a{
 			color: white;
 		}
@@ -91,13 +91,13 @@
 		    // border-right: solid 1px black;
 		    img { 
     			display: inline !important;
-    			height: 80px;
+    			height: 90px;
 		    }
 		}
 		.sozial-row {
 
 		    a {
-		        color: black;
+		        color: $blue-dark;
 		        svg { 
         			display: inline !important;
         			height: 50px;
