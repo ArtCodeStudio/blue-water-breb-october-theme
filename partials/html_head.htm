@@ -19,7 +19,9 @@ description = "Meta Tags"
 
 <meta name="theme-color" content="#1E88E5">
 
-<link href="{{ ['assets/scss/theme.scss'] | theme }}" rel="stylesheet">
+{# Gebaut per `npm run build` (dart-sass), nicht mehr von Winter zur Laufzeit kompiliert -
+   dessen scssphp verwirft bei `#home, #bluewaterbreb { ... }` den zweiten Selektor. #}
+<link href="{{ ['assets/css/theme.css'] | theme }}" rel="stylesheet">
 
 {% styles %}
 <script>
